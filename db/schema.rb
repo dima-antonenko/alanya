@@ -292,56 +292,47 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "project_categories", force: :cascade do |t|
-    t.string   "title"
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "sku"
     t.text     "description"
-    t.string   "meta_title"
-    t.string   "meta_description"
-    t.string   "meta_keywords"
+    t.string   "start_price"
+    t.string   "final_price"
+    t.string   "type_deal"
+    t.string   "rooms"
+    t.integer  "area"
+    t.string   "condition"
+    t.integer  "to_center"
+    t.integer  "mount_build"
+    t.integer  "year_build"
+    t.boolean  "has_conditioning"
+    t.boolean  "has_white_goods"
+    t.boolean  "has_furniture"
+    t.boolean  "has_water_heater"
+    t.boolean  "has_tapu"
+    t.boolean  "has_iskana"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
-  add_index "project_categories", ["description"], name: "index_project_categories_on_description"
-  add_index "project_categories", ["meta_description"], name: "index_project_categories_on_meta_description"
-  add_index "project_categories", ["meta_keywords"], name: "index_project_categories_on_meta_keywords"
-  add_index "project_categories", ["meta_title"], name: "index_project_categories_on_meta_title"
-  add_index "project_categories", ["title"], name: "index_project_categories_on_title"
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.decimal  "some_area",        precision: 5, scale: 2
-    t.decimal  "total_area",       precision: 5, scale: 2
-    t.decimal  "living_area",      precision: 5, scale: 2
-    t.decimal  "length",           precision: 5, scale: 2
-    t.decimal  "width",            precision: 5, scale: 2
-    t.integer  "storey"
-    t.integer  "rooms"
-    t.integer  "bedrooms"
-    t.integer  "wc"
-    t.string   "meta_title"
-    t.string   "meta_description"
-    t.string   "meta_keywords"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.string   "avatar"
-  end
-
-  add_index "projects", ["bedrooms"], name: "index_projects_on_bedrooms"
+  add_index "projects", ["area"], name: "index_projects_on_area"
+  add_index "projects", ["condition"], name: "index_projects_on_condition"
   add_index "projects", ["description"], name: "index_projects_on_description"
-  add_index "projects", ["length"], name: "index_projects_on_length"
-  add_index "projects", ["living_area"], name: "index_projects_on_living_area"
-  add_index "projects", ["meta_description"], name: "index_projects_on_meta_description"
-  add_index "projects", ["meta_keywords"], name: "index_projects_on_meta_keywords"
-  add_index "projects", ["meta_title"], name: "index_projects_on_meta_title"
+  add_index "projects", ["final_price"], name: "index_projects_on_final_price"
+  add_index "projects", ["has_conditioning"], name: "index_projects_on_has_conditioning"
+  add_index "projects", ["has_furniture"], name: "index_projects_on_has_furniture"
+  add_index "projects", ["has_iskana"], name: "index_projects_on_has_iskana"
+  add_index "projects", ["has_tapu"], name: "index_projects_on_has_tapu"
+  add_index "projects", ["has_water_heater"], name: "index_projects_on_has_water_heater"
+  add_index "projects", ["has_white_goods"], name: "index_projects_on_has_white_goods"
+  add_index "projects", ["mount_build"], name: "index_projects_on_mount_build"
+  add_index "projects", ["name"], name: "index_projects_on_name"
   add_index "projects", ["rooms"], name: "index_projects_on_rooms"
-  add_index "projects", ["some_area"], name: "index_projects_on_some_area"
-  add_index "projects", ["storey"], name: "index_projects_on_storey"
-  add_index "projects", ["title"], name: "index_projects_on_title"
-  add_index "projects", ["total_area"], name: "index_projects_on_total_area"
-  add_index "projects", ["wc"], name: "index_projects_on_wc"
-  add_index "projects", ["width"], name: "index_projects_on_width"
+  add_index "projects", ["sku"], name: "index_projects_on_sku"
+  add_index "projects", ["start_price"], name: "index_projects_on_start_price"
+  add_index "projects", ["to_center"], name: "index_projects_on_to_center"
+  add_index "projects", ["type_deal"], name: "index_projects_on_type_deal"
+  add_index "projects", ["year_build"], name: "index_projects_on_year_build"
 
   create_table "site_variables", force: :cascade do |t|
     t.string   "name"
