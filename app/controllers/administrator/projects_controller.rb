@@ -11,10 +11,6 @@ class Administrator::ProjectsController < AdministratorController
 	def edit
 		@project = Project.find(params[:id])
     @project_attachments = ProjectAttacment.where(project_id: @project.id)
-    @project_attachments_dop_photos = @project_attachments.where(place: "dop_photo")
-		@project_attachments_plans = @project_attachments.where(place: "plan")
-    @project_attachments_fasads = @project_attachments.where(place: "fasad")
-    @project_attachments_areas = @project_attachments.where(place: "area")
   end
 
   	# GET /projects/new
@@ -58,7 +54,7 @@ class Administrator::ProjectsController < AdministratorController
       if @project.save
         if params[:images] != nil
           params[:images].each do |image|
-           ProjectAttacment.create(project_id: @project.id, image: image, place: params['place'])
+           ProjectAttacment.create(project_id: @project.id, image: image)
         end
        end 
        

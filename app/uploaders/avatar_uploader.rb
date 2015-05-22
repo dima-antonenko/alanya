@@ -13,8 +13,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
 
 
-  version :thumb do
-   process :resize_to_fit => [50, 50]
+  version :normal do
+   process :resize_to_fit => [800, 600]
   end
 
   version :mini_admin do

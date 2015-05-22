@@ -313,6 +313,7 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.boolean  "has_iskana"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "avatar"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"
