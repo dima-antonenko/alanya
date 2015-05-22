@@ -305,15 +305,21 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.integer  "to_center"
     t.integer  "mount_build"
     t.integer  "year_build"
-    t.boolean  "has_conditioning"
-    t.boolean  "has_white_goods"
-    t.boolean  "has_furniture"
-    t.boolean  "has_water_heater"
-    t.boolean  "has_tapu"
-    t.boolean  "has_iskana"
+    t.string   "has_conditioning"
+    t.string   "has_white_goods"
+    t.string   "has_furniture"
+    t.string   "has_water_heater"
+    t.string   "has_tapu"
+    t.string   "has_iskana"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "avatar"
+    t.string   "type_object"
+    t.string   "to_airport"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "meta_keywords"
+    t.string   "meta_copyright"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

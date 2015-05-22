@@ -31,7 +31,7 @@ class Administrator::ProjectsController < AdministratorController
         params[:project_attachments]['image'].each do |a|
           @project_attachment = @project.project_attachments.create!(:image => a, :project_id => @project.id)
        end
-        format.html { redirect_to '/administrator/projects', notice: 'Project was successfully created.' }
+        format.html { redirect_to 'administrator/projects/test' , notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -58,7 +58,7 @@ class Administrator::ProjectsController < AdministratorController
         end
        end 
        
-        format.html { redirect_to '/administrator/projects' , notice: 'Project was successfully updated.' }
+        format.html { render :update , notice: 'Project was successfully updated.' }
         format.json { render :index, status: :ok, location: @project }
       else
         format.html { render :update }
@@ -78,7 +78,9 @@ class Administrator::ProjectsController < AdministratorController
   private
 
   def project_params
-      params.require(:project).permit(:title, :description, :meta_title, :meta_description, :meta_keywords, :avatar,  project_attachments_attributes: [:id, :project_id, :image])
+      params.require(:project).permit(:description, :meta_title, :meta_description, :meta_keywords, :avatar,
+      :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
+      :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning)
   end
 
   def set_project
