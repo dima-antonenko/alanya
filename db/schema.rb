@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518225901) do
+ActiveRecord::Schema.define(version: 20150523080546) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -292,6 +292,29 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "project_categories", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "avatar"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "meta_keywords"
+    t.string   "meta_copyright"
+  end
+
+  add_index "project_categories", ["avatar"], name: "index_project_categories_on_avatar"
+  add_index "project_categories", ["description"], name: "index_project_categories_on_description"
+  add_index "project_categories", ["title"], name: "index_project_categories_on_title"
+
+  create_table "project_category_attacments", force: :cascade do |t|
+    t.integer  "project_category_id"
+    t.string   "image"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "sku"
@@ -305,14 +328,14 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.integer  "to_center"
     t.integer  "mount_build"
     t.integer  "year_build"
-    t.boolean  "has_conditioning", default: false
-    t.boolean  "has_white_goods",  default: false
-    t.boolean  "has_furniture",    default: false
-    t.boolean  "has_water_heater", default: false
-    t.boolean  "has_tapu",         default: false
-    t.boolean  "has_iskana",       default: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.boolean  "has_conditioning",    default: false
+    t.boolean  "has_white_goods",     default: false
+    t.boolean  "has_furniture",       default: false
+    t.boolean  "has_water_heater",    default: false
+    t.boolean  "has_tapu",            default: false
+    t.boolean  "has_iskana",          default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "avatar"
     t.string   "type_object"
     t.integer  "to_airport"
@@ -320,6 +343,7 @@ ActiveRecord::Schema.define(version: 20150518225901) do
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.string   "meta_copyright"
+    t.integer  "project_category_id"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"
@@ -334,6 +358,7 @@ ActiveRecord::Schema.define(version: 20150518225901) do
   add_index "projects", ["has_white_goods"], name: "index_projects_on_has_white_goods"
   add_index "projects", ["mount_build"], name: "index_projects_on_mount_build"
   add_index "projects", ["name"], name: "index_projects_on_name"
+  add_index "projects", ["project_category_id"], name: "index_projects_on_project_category_id"
   add_index "projects", ["rooms"], name: "index_projects_on_rooms"
   add_index "projects", ["sku"], name: "index_projects_on_sku"
   add_index "projects", ["start_price"], name: "index_projects_on_start_price"

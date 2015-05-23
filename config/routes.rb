@@ -11,8 +11,11 @@ Rails.application.routes.draw do
     resources :posts, only: [:show]
   end
 
-  
+  resources :project_categories  do
     resources :projects
+  end
+  
+    
     
 
 
@@ -33,6 +36,8 @@ Rails.application.routes.draw do
 
   namespace :administrator do
     resources :projects
+    resources :project_categories
+    
     resources :orders
     resources :post_categories
     resources :posts
