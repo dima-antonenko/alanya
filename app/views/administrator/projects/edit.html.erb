@@ -32,7 +32,7 @@
 							<i class="icon-basket font-green-sharp"></i>
 							<span class="caption-subject font-green-sharp bold uppercase">
 							<%= @project.name %> </span>
-							<span class="caption-helper">редактирование проекта %></span>
+							<span class="caption-helper">редактирование проекта</span>
 						</div>
 						<div class="actions btn-set">
 							<a href="/administrator/projects" class="btn btn-default btn-circle"> Назад </a>
@@ -169,7 +169,7 @@
 																Кондиционеры
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_conditioning, options_for_select([['Не выбрано', nil] ,['Есть', 'true'], ['Нету', false]]), {},{class: "btn"}) %>
+																<%= f.select(:has_conditioning, options_for_select([['Не выбрано', nil] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">

@@ -16,12 +16,12 @@ class CreateProjectCategories < ActiveRecord::Migration
       t.integer  :mount_build, index: true
       t.integer  :year_build, index: true
 
-      t.string  :has_conditioning, index: true
-      t.string  :has_white_goods, index: true
-      t.string  :has_furniture, index: true
-      t.string  :has_water_heater, index: true
-      t.string  :has_tapu, index: true
-      t.string  :has_iskana, index: true
+      t.boolean  :has_conditioning, index: true, default: false
+      t.boolean  :has_white_goods, index: true, default: false
+      t.boolean  :has_furniture, index: true, default: false
+      t.boolean  :has_water_heater, index: true, default: false
+      t.boolean  :has_tapu, index: true, default: false
+      t.boolean  :has_iskana, index: true, default: false
 
 
       t.timestamps null: false

@@ -1,7 +1,7 @@
 <header class="booking-item-header">
                     <div class="row">
-                        <div class="col-md-8">
-                            <h2 class="lh1em">Midtown Manhattan Oversized</h2>
+                        <div class="col-md-7">
+                            <h2 class="lh1em"><%= @project.name %></h2>
                             <!-- 
                             <p class="lh1em text-small"><i class="fa fa-map-marker"></i> 6782 Sarasea Circle, Siesta Key, FL 34242</p>
                             <ul class="list list-inline text-small">
@@ -13,8 +13,8 @@
                             </ul>
                             -->
                         </div>
-                        <div class="col-md-4">
-                            <p class="booking-item-header-price"> от <span class="text-lg">$250</span> до <span class="text-lg">$250</span></p>
+                        <div class="col-md-5">
+                            <p class="booking-item-header-price"> от <span class="text-lg"><%= @project.start_price %> &euro;</span> до <span class="text-lg"><%= @project.final_price %> &euro;</span></p>
                         </div>
                     </div>
                 </header>
