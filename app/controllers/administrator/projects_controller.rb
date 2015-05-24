@@ -1,25 +1,25 @@
 class Administrator::ProjectsController < AdministratorController
 
- before_action :set_project, only: [:edit, :update, :destroy, :delete]
+  before_action :set_project, only: [:edit, :update, :destroy, :delete]
 
 
-	def index
-		@projects = Project.paginate(:page => params[:page], :per_page => 10)
-		render 'administrator/projects/index'
-	end
+  def index
+    @projects = Project.paginate(:page => params[:page], :per_page => 10)
+    render 'administrator/projects/index'
+  end
 
-	def edit
-		@project = Project.find(params[:id])
+  def edit
+    @project = Project.find(params[:id])
     @project_attachments = ProjectAttacment.where(project_id: @project.id)
   end
 
-  	# GET /projects/new
+  # GET /projects/new
   def new
     @project = Project.new
     @project_attachment = @project.project_attachments.build
   end
 
- 
+
 
   # POST /projects
   # POST /projects.json
@@ -30,7 +30,7 @@ class Administrator::ProjectsController < AdministratorController
       if @project.save
         params[:project_attachments]['image'].each do |a|
           @project_attachment = @project.project_attachments.create!(:image => a, :project_id => @project.id)
-       end
+        end
         format.html { redirect_to 'administrator/projects/test' , notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
@@ -45,19 +45,19 @@ class Administrator::ProjectsController < AdministratorController
   def update
     @project = Project.find(params[:id])
     @project.assign_attributes(project_params)
-    
+
     unless @project.valid?
-    Rails.logger.debug @project.errors.full_messages
+      Rails.logger.debug @project.errors.full_messages
     end
 
     respond_to do |format|
       if @project.save
         if params[:images] != nil
           params[:images].each do |image|
-           ProjectAttacment.create(project_id: @project.id, image: image)
+            ProjectAttacment.create(project_id: @project.id, image: image)
+          end
         end
-       end 
-       
+
         format.html { render :update , notice: 'Project was successfully updated.' }
         format.json { render :index, status: :ok, location: @project }
       else
@@ -78,13 +78,13 @@ class Administrator::ProjectsController < AdministratorController
   private
 
   def project_params
-      params.require(:project).permit(:description, :meta_title, :meta_description, :meta_keywords, :avatar,
-      :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
-      :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning)
+    params.require(:project).permit(:description, :meta_title, :meta_description, :meta_keywords, :avatar,
+                                    :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
+                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning)
   end
 
   def set_project
-      @project = Project.find(params[:id],)
-    end
+    @project = Project.find(params[:id],)
+  end
 
 end
