@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523080546) do
+ActiveRecord::Schema.define(version: 20150524125932) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -365,6 +365,24 @@ ActiveRecord::Schema.define(version: 20150523080546) do
   add_index "projects", ["to_center"], name: "index_projects_on_to_center"
   add_index "projects", ["type_deal"], name: "index_projects_on_type_deal"
   add_index "projects", ["year_build"], name: "index_projects_on_year_build"
+
+  create_table "questions", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "skype"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "questions", ["email"], name: "index_questions_on_email"
+  add_index "questions", ["message"], name: "index_questions_on_message"
+  add_index "questions", ["name"], name: "index_questions_on_name"
+  add_index "questions", ["phone"], name: "index_questions_on_phone"
+  add_index "questions", ["project_id"], name: "index_questions_on_project_id"
+  add_index "questions", ["skype"], name: "index_questions_on_skype"
 
   create_table "site_variables", force: :cascade do |t|
     t.string   "name"

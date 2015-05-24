@@ -22,3 +22,17 @@
     </div>
     <input class="btn btn-primary" type="submit" value="Отправить" />
 </form>
+
+<%= form_for  Question.new() do |f| %>
+    <div class="field">
+    <label>Имя</label>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label>skype</label>
+    <%= f.text_field :skype %>
+  </div>
+   <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>    

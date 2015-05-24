@@ -15,10 +15,10 @@ Rails.application.routes.draw do
   resources :project_categories  do
     resources :projects
   end
-  
-    
-    
 
+  resources :questions
+
+  
 
 
 

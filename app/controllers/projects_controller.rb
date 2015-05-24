@@ -4,12 +4,16 @@ class ProjectsController < ApplicationController
   # GET /products/1.json
 
   def show
+    @question = Question.new(project_id: @project.id)
   end
 
   def index
     @projects = Project.all
   end
   
+  def create_question
+    render 'administrator/projects/update'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
