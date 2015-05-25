@@ -7,5 +7,7 @@ class Project < ActiveRecord::Base
 	accepts_nested_attributes_for :project_attachments, allow_destroy: true
 
 	has_many :questions
+
+	has_and_belongs_to_many :managers
 	
 end

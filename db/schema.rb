@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524125932) do
+ActiveRecord::Schema.define(version: 20150525163221) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -116,6 +116,30 @@ ActiveRecord::Schema.define(version: 20150524125932) do
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id"
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
+
+  create_table "managers", force: :cascade do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "description"
+    t.string   "skype"
+    t.string   "languages"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "managers", ["avatar"], name: "index_managers_on_avatar"
+  add_index "managers", ["description"], name: "index_managers_on_description"
+  add_index "managers", ["languages"], name: "index_managers_on_languages"
+  add_index "managers", ["name"], name: "index_managers_on_name"
+  add_index "managers", ["skype"], name: "index_managers_on_skype"
+
+  create_table "managers_projects", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "manager_id"
+  end
+
+  add_index "managers_projects", ["manager_id"], name: "index_managers_projects_on_manager_id"
+  add_index "managers_projects", ["project_id"], name: "index_managers_projects_on_project_id"
 
   create_table "menu_items", force: :cascade do |t|
     t.integer  "menu_id"
