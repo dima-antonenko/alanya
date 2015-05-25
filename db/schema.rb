@@ -123,14 +123,18 @@ ActiveRecord::Schema.define(version: 20150525163221) do
     t.string   "description"
     t.string   "skype"
     t.string   "languages"
+    t.string   "email"
+    t.string   "phone"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "managers", ["avatar"], name: "index_managers_on_avatar"
   add_index "managers", ["description"], name: "index_managers_on_description"
+  add_index "managers", ["email"], name: "index_managers_on_email"
   add_index "managers", ["languages"], name: "index_managers_on_languages"
   add_index "managers", ["name"], name: "index_managers_on_name"
+  add_index "managers", ["phone"], name: "index_managers_on_phone"
   add_index "managers", ["skype"], name: "index_managers_on_skype"
 
   create_table "managers_projects", force: :cascade do |t|

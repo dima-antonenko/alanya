@@ -6,6 +6,8 @@ class CreateManagers < ActiveRecord::Migration
       t.string :description, index: true
       t.string :skype, index: true
       t.string :languages, index: true
+      t.string :email, index: true
+      t.string :phone, index: true
       t.timestamps null: false
     end
 
