@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
 
 	before_destroy :ensure_not_referenced_by_any_line_item
 
-	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "220x180" }, :default_url => "/images/:style/missing.png"
+	
 
     
 	private
