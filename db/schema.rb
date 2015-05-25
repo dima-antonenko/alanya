@@ -372,6 +372,7 @@ ActiveRecord::Schema.define(version: 20150525163221) do
     t.string   "meta_keywords"
     t.string   "meta_copyright"
     t.integer  "project_category_id"
+    t.integer  "some_manager"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

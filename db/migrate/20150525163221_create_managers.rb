@@ -15,5 +15,7 @@ class CreateManagers < ActiveRecord::Migration
       t.belongs_to :project, index: true
       t.belongs_to :manager, index: true
     end
+
+    add_column :projects, :some_manager, :integer, index: true
   end
 end

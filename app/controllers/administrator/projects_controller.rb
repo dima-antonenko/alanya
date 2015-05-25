@@ -46,6 +46,10 @@ class Administrator::ProjectsController < AdministratorController
     @project = Project.find(params[:id])
     @project.assign_attributes(project_params)
 
+    if params[:project][:some_manager]
+      ManagersProject.create!(project_id: @project.id, manager_id: @project.some_manager )
+    end  
+
     unless @project.valid?
       Rails.logger.debug @project.errors.full_messages
     end
@@ -80,7 +84,7 @@ class Administrator::ProjectsController < AdministratorController
   def project_params
     params.require(:project).permit(:description, :meta_title, :meta_description, :meta_keywords, :avatar,
                                     :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
-                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning)
+                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning, :some_manager)
   end
 
   def set_project
