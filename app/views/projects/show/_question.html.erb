@@ -23,10 +23,22 @@
     <input class="btn btn-primary" type="submit" value="Отправить" />
 </form>
 
-<%= form_for  Question.new() do |f| %>
+<%= form_for ([@project, @project.questions.build]) do |f| %>
     <div class="field">
     <label>Имя</label>
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label>email</label>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <label>phone</label>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <label>message</label>
+    <%= f.text_field :message %>
   </div>
   <div class="field">
     <label>skype</label>

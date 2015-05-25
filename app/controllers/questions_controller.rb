@@ -23,20 +23,10 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.json
   def create
-    @question = Question.new(question_params)
+    @project = Project.find(params[:project_id])
+    @question = @project.questions.create(question_params)
+    redirect_to :back
 
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question,
-          notice: 'Question was successfully created.' }
-        format.json { render action: 'show', status: :created,
-          location: @question }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @question.errors,
-          status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /questions/1
@@ -68,11 +58,12 @@ class QuestionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
-      @question = Question.find(params[:id])
+      @question = Question.find(params[:project_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white
     # list through.
     def question_params
-      params.require(:question)
+      params.require(:question).permit(:project_id, :name, :skype, :email, :phone, :message)
+    end  
 end
