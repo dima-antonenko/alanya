@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     resources :questions, only: [:create]
   end
   
+  resources :projects  do
+    resources :managers
+  end
 
 
 
@@ -40,7 +43,6 @@ Rails.application.routes.draw do
     resources :projects
     resources :managers
     resources :project_categories
-    resources :orders
     resources :post_categories
     resources :posts
     resources :site_variables

@@ -9,6 +9,9 @@ class ManagersController < ApplicationController
     @project_categories = Manager.all
   end
 
+  def destroy
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -18,6 +21,6 @@ class ManagersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def manager_params
-      params.require(:post_category).permit(:avatar)
+      params.require(:manager)
     end
 end

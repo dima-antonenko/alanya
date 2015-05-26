@@ -31,7 +31,7 @@ class Administrator::ProjectsController < AdministratorController
         params[:project_attachments]['image'].each do |a|
           @project_attachment = @project.project_attachments.create!(:image => a, :project_id => @project.id)
         end
-        format.html { redirect_to 'administrator/projects/test' , notice: 'Project was successfully created.' }
+        format.html { redirect_to :edit , notice: 'Проект добавлен' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -62,7 +62,7 @@ class Administrator::ProjectsController < AdministratorController
           end
         end
 
-        format.html { render :update , notice: 'Project was successfully updated.' }
+        format.html { redirect_to :back , notice: 'Информация обновлена' }
         format.json { render :index, status: :ok, location: @project }
       else
         format.html { render :update }

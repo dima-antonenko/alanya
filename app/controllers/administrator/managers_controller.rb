@@ -50,7 +50,7 @@ class Administrator::ManagersController < AdministratorController
    def destroy
     @manager.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrator/managerrs', notice: 'Product category was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Информация обновлена' }
       format.json { head :no_content }
     end
   end
