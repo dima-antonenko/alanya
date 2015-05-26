@@ -16,7 +16,7 @@ class Administrator::ProjectsController < AdministratorController
   # GET /projects/new
   def new
     @project = Project.new
-    @project_attachment = @project.project_attachments.build
+    #@project_attachment = @project.project_attachments.build
   end
 
 
@@ -26,12 +26,21 @@ class Administrator::ProjectsController < AdministratorController
   def create
     @project = Project.new(project_params)
 
+    @project.assign_attributes(project_params)
+
+    if params[:project][:some_manager]
+      ManagersProject.create!(project_id: @project.id, manager_id: @project.some_manager )
+    end
+
     respond_to do |format|
       if @project.save
-        params[:project_attachments]['image'].each do |a|
-          @project_attachment = @project.project_attachments.create!(:image => a, :project_id => @project.id)
+
+        if params[:images] != nil
+          params[:images].each do |image|
+            ProjectAttacment.create(project_id: @project.id, image: image)
+          end
         end
-        format.html { redirect_to :edit , notice: 'Проект добавлен' }
+        format.html { redirect_to edit_administrator_project_path(@project) , notice: 'Проект добавлен' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -74,9 +83,11 @@ class Administrator::ProjectsController < AdministratorController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project = Project.find(params[:id])
     @project.destroy
-    redirect_to '/administrator/projects'
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Проект удален' }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -88,7 +99,7 @@ class Administrator::ProjectsController < AdministratorController
   end
 
   def set_project
-    @project = Project.find(params[:id],)
+    @project = Project.find(params[:id])
   end
 
 end

@@ -27,7 +27,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
       end
       respond_to do |format|
         if @project_category.save
-          format.html { redirect_to '/administrator/project_categories', notice: 'Product category was successfully created.' }
+          format.html { redirect_to edit_administrator_project_category_path(@project_category), notice: 'Запись добавлена' }
           format.json { render :index, status: :created, location: @project_category }
         else
           format.html { render :new }
@@ -50,7 +50,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
           end
         end
 
-        format.html { redirect_to '/administrator/project_categories', notice: 'Product category was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Информация обновлена' }
         format.json { render :show, status: :ok, location: @project_category }
       else
         format.html { render :edit }
@@ -64,7 +64,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
   def destroy
     @project_category.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrator/project_categories', notice: 'Product category was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Запись удалена' }
       format.json { head :no_content }
     end
   end
@@ -73,7 +73,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
 
   def project_category_params
     params.require(:project_category).permit(:title, :description,
-                                             :meta_title, :meta_description, :meta_keywords,  :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at,
+                                             :meta_title, :meta_description, :meta_keywords,  :meta_copyright,
                                              :avatar)
   end
 

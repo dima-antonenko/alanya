@@ -56,7 +56,7 @@ class ProjectCategoryAttacmentsController < ApplicationController
   def destroy
     @project_category_attacment.destroy
     respond_to do |format|
-      format.html { redirect_to project_category_attacments_url, notice: 'Project attacment was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Информация обновлена' }
       format.json { head :no_content }
     end
   end

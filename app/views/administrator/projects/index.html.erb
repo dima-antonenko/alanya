@@ -5,6 +5,9 @@
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row">
 				<div class="col-md-12">
+					<% if flash[:notice] %>
+					<div id="prefix_262686894761" class="Metronic-alerts alert alert-success fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><%= flash[:notice] %></div>
+				<% end %>
 					<!-- BEGIN EXAMPLE TABLE PORTLET-->
 					<div class="portlet box grey-cascade">
 						<div class="portlet-title">
@@ -32,14 +35,17 @@
 									 Название
 								</th>
 								<th>
-									 
+									 Артикул
 								</th>
 								<th>
-									 
+									 Начальная стоимость &euro;
 								</th>
+									
 								<th>
-									 
+									 Конечная стоимость &euro;
 								</th>
+									
+
 								<th>
 									 
 								</th>
@@ -53,16 +59,16 @@
 									</td>
 									<td>
 										
-											<%# product.product_category.name %>
+											<%= project.sku %>
 									</td>
 									<td>
-										 <%# product.price %>
+										 <%= project.start_price %> &euro;
 									</td>
 									<td class="center">
-										 <%# product.sku %>
+										 <%= project.final_price %> &euro;
 									</td>
 									<td>
-										 <%# link_to 'Удалить', administrator_product_path(product), method: :delete, data: { confirm: 'Удалить товар ?' } %>
+										 <%= link_to 'Удалить', administrator_project_path(project), method: :delete, data: { confirm: 'Удалить проект ?' } %>
 									</td>
 								</tr>
 							<% end %>
