@@ -1,50 +1,24 @@
 <h4>Задайте свой вопрос</h4>
-<form>
+<%= form_for ([@project, @project.questions.build]) do |f| %>
     <div class="form-group">
         <label>Имя</label>
-        <input class="form-control" type="email"  />
+        <%= f.text_field :name, class: "form-control" %>
     </div>
     <div class="form-group">
         <label>Email</label>
-        <input class="form-control" type="password"  />
+        <%= f.text_field :email, class: "form-control" %>
     </div>
     <div class="form-group">
         <label>Телефон</label>
-        <input class="form-control" type="password"  />
+        <%= f.text_field :phone, class: "form-control" %>
     </div>
     <div class="form-group">
         <label>Skype</label>
-        <input class="form-control" type="password" />
+        <%= f.text_field :skype, class: "form-control" %>
     </div>
     <div class="form-group">
         <label>Сообщение</label>
-        <input class="form-control" type="text"  />
+        <%= f.text_area :message, class: "form-control" %>
     </div>
-    <input class="btn btn-primary" type="submit" value="Отправить" />
-</form>
-
-<%= form_for ([@project, @project.questions.build]) do |f| %>
-    <div class="field">
-    <label>Имя</label>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <label>email</label>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <label>phone</label>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <label>message</label>
-    <%= f.text_field :message %>
-  </div>
-  <div class="field">
-    <label>skype</label>
-    <%= f.text_field :skype %>
-  </div>
-   <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>    
+     <%= f.submit("Задать вопрос")  %>
+<% end %>
