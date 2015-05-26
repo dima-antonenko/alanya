@@ -3,5 +3,7 @@
                 </li>
                 <li><a href="/projects">Все проекты</a>
                 </li>
-                <li class="active"><%= @project.name %></li>
+                <li><a href="<%= project_category_path(@project.project_category) %>"><%= @project.project_category.title %></a>
+                </li>
+                <li class="active"><%= @project.name %>(<%= @project_attacments.count %>)</li>
             </ul>

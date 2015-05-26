@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     @question = Question.new(project_id: @project.id)
+    @project_attacments = ProjectAttacment.where(project_id: @project.id)
   end
 
   def index

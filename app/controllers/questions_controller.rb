@@ -25,7 +25,9 @@ class QuestionsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @question = @project.questions.create(question_params)
-    redirect_to :back
+      if @project.questions.create(question_params)
+        redirect_to :back, notice: 'Ваш вопрос отправлен, спасибо'
+      end  
 
   end
 

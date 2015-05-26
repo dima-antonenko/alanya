@@ -21,22 +21,22 @@ class Administrator::ProjectCategoriesController < AdministratorController
   # POST /product_categories.json
   def create
     @project_category = ProjectCategory.new(project_category_params)
-    
-      respond_to do |format|
-        if @project_category.save
-           if params[:images] != nil
-            params[:images].each do |image|
-              ProjectCategoryAttacment.create(project_category_id: @project_category.id, image: image)
-            end
+
+    respond_to do |format|
+      if @project_category.save
+        if params[:images] != nil
+          params[:images].each do |image|
+            ProjectCategoryAttacment.create(project_category_id: @project_category.id, image: image)
           end
-          format.html { redirect_to edit_administrator_project_category_path(@project_category), notice: 'Запись добавлена' }
-          format.json { render :index, status: :created, location: @project_category }
-        else
-          format.html { render :new }
-          format.json { render json: @project_category.errors, status: :unprocessable_entity }
         end
+        format.html { redirect_to edit_administrator_project_category_path(@project_category), notice: 'Запись добавлена' }
+        format.json { render :index, status: :created, location: @project_category }
+      else
+        format.html { render :new }
+        format.json { render json: @project_category.errors, status: :unprocessable_entity }
       end
-    
+    end
+
   end
 
   # PATCH/PUT /product_categories/1

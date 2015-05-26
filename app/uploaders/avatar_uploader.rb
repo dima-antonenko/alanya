@@ -17,6 +17,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
    process :resize_to_fit => [800, 600]
   end
 
+  version :medium do
+   process :resize_to_fit => [128, 140]
+  end
+
   version :mini_admin do
     # returns a 150x150 image
     process :resize_to_fill => [82, 61]
