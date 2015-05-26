@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  
+
   resources :project_attacments
   resources :project_category_attacments
 
@@ -23,6 +23,11 @@ Rails.application.routes.draw do
   resources :projects  do
     resources :managers
   end
+
+  resources :projects  do
+    resources :project_application_mails
+  end
+
 
 
 

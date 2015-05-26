@@ -8,6 +8,8 @@ class Project < ActiveRecord::Base
 
 	has_many :questions
 
+	has_many :project_application_mails
+
 	has_and_belongs_to_many :managers
 	
 end

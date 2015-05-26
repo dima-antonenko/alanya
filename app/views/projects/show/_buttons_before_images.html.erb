@@ -1,12 +1,25 @@
 <div class="col-md-7">
-                  <ul class="list-inline">
-                        <li><a href="#small-dialog" data-effect="mfp-zoom-out" class="btn btn-primary btn-lg popup-text">Узнать больше</a>
-                        <div id="small-dialog" class="mfp-with-anim mfp-hide mfp-dialog">
-                        <h4>Dialog example</h4>
-                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
-                    </div>
-                        </li>
-                        <li><a class="btn btn-success btn-lg">Посмотреть</a>
-                        </li>
-                    </ul>     
-                </div>
+    <ul class="list-inline">
+        <li><a href="#small-dialog" data-effect="mfp-zoom-out" class="btn btn-primary btn-lg popup-text">Узнать больше</a>
+        <div id="small-dialog" class="mfp-with-anim mfp-hide mfp-dialog">
+            <h5>Прошу выслать инфрмацию по указанному объекту(id: <%= @project.id %>)</h5>
+            <%= form_for ([@project, @project.project_application_mails.build]) do |f| %>
+            <div class="form-group">
+                <label>Имя</label>
+                <%= f.text_field :name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <%= f.text_field :email, class: "form-control" %>
+            </div>
+            <%= f.submit("Отправить заявку")  %>
+            <% end %>
+            
+            
+            
+        </div>
+    </li>
+    <li><a class="btn btn-success btn-lg">Посмотреть</a>
+</li>
+</ul>
+</div>
