@@ -14,19 +14,21 @@ class Administrator::ProjectCategoriesController < AdministratorController
 
   def new
     @project_category = ProjectCategory.new
-    @project_category_attachment = @project_category.project_category_attachments.build
+    #@project_category_attachment = @project_category.project_category_attachments.build
   end
 
   # POST /product_categories
   # POST /product_categories.json
   def create
     @project_category = ProjectCategory.new(project_category_params)
-    if @project_category.save
-      params[:project_category_attachments]['image'].each do |a|
-        @project_category_attachment = @project_category.project_category_attachments.create!(:image => a, :project_category_id => @project_category.id)
-      end
+    
       respond_to do |format|
         if @project_category.save
+           if params[:images] != nil
+            params[:images].each do |image|
+              ProjectCategoryAttacment.create(project_category_id: @project_category.id, image: image)
+            end
+          end
           format.html { redirect_to edit_administrator_project_category_path(@project_category), notice: 'Запись добавлена' }
           format.json { render :index, status: :created, location: @project_category }
         else
@@ -34,7 +36,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
           format.json { render json: @project_category.errors, status: :unprocessable_entity }
         end
       end
-    end
+    
   end
 
   # PATCH/PUT /product_categories/1
