@@ -9,9 +9,9 @@
                 </a>
             </header>
             <div class="thumb-caption">
-                <h5 class="thumb-title"><a class="text-darken" href="<%= project_category_project_path(project.project_category.id, project) %>"><%= project.name %></a></h5>
+                <h5 class="thumb-title"><a class="text-darken" href="<%= project_category_project_path(project.project_category.id, project) %>"><%= project.name %>  (id:<%= project.sku %>)</a></h5>
                 <p class="mb0"><i class="fa fa-map-marker"></i>  <%= project.project_category.title%> &nbsp;
-                <i class="fa fa-map-marker"></i>  <%= project.rooms %></small>
+                <i class="fa fa-institution"></i>  <%= project.rooms %> </small>
                 </p>
                 <% if project.start_price != '0' %>
                 <p class="mb0 text-darken"><small>от </small><span class="text-lg lh1em text-color"><%= project.start_price %> &euro;</span><small> до </small>
