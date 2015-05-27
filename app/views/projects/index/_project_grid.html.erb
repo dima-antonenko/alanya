@@ -3,7 +3,7 @@
     <div class="col-md-4">
         <div class="thumb">
             <header class="thumb-header">
-                <a class="hover-img" href="#">
+                <a class="hover-img" href="<%= project_category_project_path(project.project_category.id, project) %>">
                     <img src="<%= project.avatar.normal %>"  />
                     <h5 class="hover-title-center">Подробнее</h5>
                 </a>
@@ -13,7 +13,7 @@
                 <p class="mb0"><i class="fa fa-map-marker"></i>  <%= project.project_category.title%> &nbsp;
                 <i class="fa fa-map-marker"></i>  <%= project.rooms %></small>
                 </p>
-                <% if project.start_price != nil %>
+                <% if project.start_price != '0' %>
                 <p class="mb0 text-darken"><small>от </small><span class="text-lg lh1em text-color"><%= project.start_price %> &euro;</span><small> до </small>
                 <span class="text-lg lh1em text-color"><%= project.final_price %> &euro;</span></p>
                 <% else %>

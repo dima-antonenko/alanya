@@ -1,6 +1,19 @@
 <div class="col-md-5">
                        
                         <ul class="booking-list">
+                             <li>
+                                <div class="booking-item booking-item-small">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            Артикул:
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <%= @project.sku %>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <div class="booking-item booking-item-small">
                                     <div class="row">
@@ -25,7 +38,7 @@
                                             Район:
                                         </div>
                                         <div class="col-xs-5">
-                                            <a href="<%= project_category_path(@project.project_category) %>" class="booking-item-title" ><%= @project.project_category.title %> </a>
+                                            <%= @project.project_category.title %>
                                         </div>
                                         
                                     </div>
