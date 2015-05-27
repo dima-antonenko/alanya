@@ -224,10 +224,20 @@ $('.nav-drop').dropit();
 
 
 $("#price-slider").ionRangeSlider({
-    min: 130,
-    max: 575,
+    min: 1000,
+    max: 20000,
     type: 'double',
-    prefix: "$",
+    prefix: "&euro;",
+    // maxPostfix: "+",
+    prettify: false,
+    hasGrid: true
+});
+
+$("#distance-slider").ionRangeSlider({
+    min: 10,
+    max: 1500,
+    type: 'double',
+    prefix: "",
     // maxPostfix: "+",
     prettify: false,
     hasGrid: true
