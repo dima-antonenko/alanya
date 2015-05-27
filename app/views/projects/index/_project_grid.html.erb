@@ -1,0 +1,29 @@
+<div class="row row-wrap">
+<% @projects.each do |project| %>
+    <div class="col-md-4">
+        <div class="thumb">
+            <header class="thumb-header">
+                <a class="hover-img" href="#">
+                    <img src="<%= project.avatar.normal %>" alt="Image Alternative text" title="hotel 1" />
+                    <h5 class="hover-title-center">Book Now</h5>
+                </a>
+            </header>
+            <div class="thumb-caption">
+                <h5 class="thumb-title"><a class="text-darken" href="#"><%= project.name %></a></h5>
+                <p class="mb0"><i class="fa fa-map-marker"></i>  <%= project.project_category.title%> &nbsp;
+                <i class="fa fa-map-marker"></i>  <%= project.rooms %></small>
+                </p>
+                <% if project.start_price != nil %>
+                <p class="mb0 text-darken"><small>от </small><span class="text-lg lh1em text-color"><%= project.start_price %> &euro;</span><small> до </small>
+                <span class="text-lg lh1em text-color"><%= project.final_price %> &euro;</span></p>
+                <% else %>
+                <p class="mb0 text-darken">
+                <span class="text-lg lh1em text-color"><%= project.final_price %> &euro;</span></p>
+                <% end %>
+            </p>
+        </div>
+    </div>
+    </div>
+
+<% end %>
+</div>
