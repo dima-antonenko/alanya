@@ -1,10 +1,7 @@
 class StaticController < ApplicationController
 	def home
 
-		@slider = Slider.first
-		@banners = Banner.all
-		@products = Product.limit(8).order(created_at: :desc)
-		@text_home = SiteVariable.where(place: "page_home")
+		@projects = Project.all
 
 		render 'home'
 	end

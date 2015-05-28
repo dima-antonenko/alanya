@@ -1,98 +1,24 @@
-<% provide(:title, strip_tags(@text_home.where(name: "Title").first.value) ) %>
-<% provide(:description, @text_home.where(name: "Description").first.value) %>
-<% provide(:keywords, @text_home.where(name: "Keywords").first.value) %>
+  <style type="text/css">
+    .hover-img img{
+        width: 262px;
+        height: 197px;
+    }
+</style>
 
   <div class="container">
-           
-            <div class="mfp-with-anim mfp-hide mfp-dialog mfp-search-dialog" id="search-dialog">
-                <form>
-                    <div class="input-daterange" data-date-format="M d, D">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="i-check" type="checkbox" />Кондиционеры</label>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="i-check" type="checkbox" />Бытовая техника</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="i-check" type="checkbox" />Электронагреватель</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="i-check" type="checkbox" />Оформление ТАПУ</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="i-check" type="checkbox" />Оформление ИСКАНА</label>
-                                </div>
-                            </div>
+            <ul class="breadcrumb">
+            
+            </ul>
 
-                        </div>
-                    </div>
-                    <button class="btn btn-primary btn-lg" type="submit">Поиск</button>
-                </form>
-            </div>
             <div class="row">
                <%= render '/projects/sidebar' %>
                 <div class="col-md-9">
-                   <div class="special-area">
-            <div class="owl-carousel owl-slider owl-carousel-area" id="owl-carousel-slider">
-                <div class="bg-holder full text-center text-white">
-                    <div class="bg-mask"></div>
-                    <div class="bg-img" style="background-image:url(img/sl1.jpg);"></div>
-                    <div class="bg-front full-center">
-                        <div class="owl-cap">
-                            
-                            <div class="owl-cap-price"><small>Текст слайда</small>
-                            
-                            </div><a class="btn btn-white btn-ghost" href="#"><i class="fa fa-angle-right"></i> Перейти</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-holder full text-center text-white">
-                    <div class="bg-mask"></div>
-                    <div class="bg-img" style="background-image:url(img/sl2.jpg);"></div>
-                    <div class="bg-front full-center">
-                        <div class="owl-cap">
-                            
-                            <div class="owl-cap-price"><small>Текст слайда</small>
-                            
-                            </div><a class="btn btn-white btn-ghost" href="#"><i class="fa fa-angle-right"></i> Перейти</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="bg-holder full text-center text-white">
-                    <div class="bg-mask"></div>
-                    <div class="bg-img" style="background-image:url(img/sl3.jpg);"></div>
-                    <div class="bg-front full-center">
-                        <div class="owl-cap">
-                            
-                            <div class="owl-cap-price"><small>Текст слайда</small>
-                            
-                            </div><a class="btn btn-white btn-ghost" href="#"><i class="fa fa-angle-right"></i> Перейти</a>
-                        </div>
-                    </div>
-                </div>
+                <%= render '/static/home/slider' %>     
+                   
+               <%= render '/static/home/projects' %>
 
-            </div>
-        </div>
-                  
+               <%= render '/static/home/news' %>       
                 </div>
             </div>
             <div class="gap"></div>
