@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
  
-set :application,  'plitka'
-set :repo_url,     'https://github.com/dima-antonenko/plitka2.git'
+set :application,  'alanya'
+set :repo_url,     'https://github.com/dima-antonenko/alanya.git'
  
 set :shared_path,  "/home/#{fetch(:user)}/projects/#{fetch(:application)}/shared"
 set :bundle_dir,   File.join(fetch(:shared_path), 'gems')
@@ -102,21 +102,10 @@ namespace :deploy do
     end
   end
 
-  desc "build missing paperclip styles"
-  task :build_missing_paperclip_styles do
-    on roles(:app) do
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, "paperclip:refresh:missing_styles"
-        end
-      end
-    end
-  end
-
+ 
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 after :finishing, 'deploy:cleanup'
 
 end
-after("deploy:compile_assets", "deploy:build_missing_paperclip_styles")

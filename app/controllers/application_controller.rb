@@ -22,13 +22,12 @@ class ApplicationController < ActionController::Base
 
 
   def menu
-    @main_menu = Menu.where(place: "main_menu").first
+   
     
   end
 
   def footer
-    @footer_content = SiteVariable.where(place: "footer")
-    @metrica = SiteVariable.where(place: "settings")
+   
   end
 
 end
