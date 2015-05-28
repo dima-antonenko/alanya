@@ -32,7 +32,7 @@ class CreateMenus < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_attachment :slides, :avatar
+    
 
   end
 end
