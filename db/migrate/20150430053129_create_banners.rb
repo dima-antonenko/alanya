@@ -5,6 +5,6 @@ class CreateBanners < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_attachment :banners, :avatar
+    add_column :banners, :avatar
   end
 end
