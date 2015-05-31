@@ -172,7 +172,7 @@
 																Кондиционеры
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_conditioning, options_for_select([['Не выбрано', nil] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_conditioning, options_for_select([['Есть', true], ['Нету', false]],  selected: @project.has_conditioning), {include_blank: 'Не выбрано' }, {class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -442,7 +442,12 @@
 													<div class="col-md-10">
 														 <%= f.text_area :meta_copyright, class: "form-control" %>
 													</div>
-												</div>						
+												</div>
+							<div class="form-group">
+								<% params.each do |param| %>
+									<%= param %></br>
+								<%  end  %>
+							</div>											
 
 												
 																	

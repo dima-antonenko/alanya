@@ -46,6 +46,7 @@ Rails.application.routes.draw do
 
   namespace :administrator do
     resources :projects
+    resources :questions
     resources :managers
     resources :project_categories
     resources :post_categories
