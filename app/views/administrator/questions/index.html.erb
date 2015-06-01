@@ -12,37 +12,35 @@
 					<div class="portlet box grey-cascade">
 						<div class="portlet-title">
 							<div class="caption">
-								Все проекты
+								Все вопросы
 							</div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
 									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="/administrator/projects/new" id="sample_editable_1_new" class="btn green">Добавить новый</a>
-											
-										</div>
 									</div>
-									<div class="col-md-6">
-									</div>
+									
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
 								<th>
-									 Название
+									 Имя
 								</th>
 								<th>
-									 Артикул
+									 Проект
 								</th>
 								<th>
-									 Начальная стоимость &euro;
+									 Email
+								</th>
+								<th>
+									Телефон
 								</th>
 									
 								<th>
-									 Конечная стоимость &euro;
+									Skype
 								</th>
 									
 
@@ -57,15 +55,18 @@
 									<td>
 										 <%= link_to question.name, edit_administrator_question_path(question) %>
 									</td>
+									<td class="center">
+										 <%= link_to question.project.name, project_category_project_path(question.project.project_category, question.project) %>
+									</td>
 									<td>
 										
 											<%= question.email %>
 									</td>
 									<td>
-										 <%= question.phone %> &euro;
+										 <%= question.phone %>
 									</td>
 									<td class="center">
-										 <%= project.skype %> &euro;
+										 <%= question.skype %>
 									</td>
 									<td>
 										 <%= link_to 'Удалить', administrator_question_path(question), method: :delete, data: { confirm: 'Удалить проект ?' } %>
@@ -77,8 +78,6 @@
 
 						</div>
 					</div>
-					<!-- END EXAMPLE TABLE PORTLET-->
-					<%= will_paginate @products %>
 				</div>
 			</div>
 			

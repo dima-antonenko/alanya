@@ -1,0 +1,233 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require font
+ * require jquery.ui.datepicker
+ *= require main
+ *= require colorbox
+ *= require_self
+ */
+
+.img a:focus, a.buy_item_map:focus {
+    outline: none;
+}
+
+.cboxIframe {
+    background: #f1f1f1;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+#ui-datepicker-div {
+  width: 223px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default {
+    padding: 8px 0;
+}
+
+.results .apartment_list {
+    width: 735px;
+}
+
+#datepicker-inner #ui-datepicker-div {
+    left: 0 !important;
+    top: 0 !important;
+    position: relative !important;
+}
+
+#date-start, #date-end, #main-search-input {
+    outline: none;
+}
+
+.form .field_with_errors .input, .form .field_with_errors textarea {
+    border-color: red;
+}
+
+.order_form .field_with_errors .input, .order_form .field_with_errors textarea {
+
+  color: #ed1c24;
+
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ed1c24;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ed1c24;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ed1c24;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ed1c24;
+  }
+}
+
+label.with_error {
+  color: red;
+}
+.transfer_form fieldset {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+.transfer_in.disabled, .transfer_out.disabled {
+  fieldset {
+    opacity: .2;
+  }
+  .disabled_layer {
+    bottom: 0;
+    width: 235px;
+    position: absolute;
+    height: 286px;
+    /* background: white; */
+    /* opacity: .2; */
+    z-index: 2;
+  }
+}
+
+.btn.disabled {
+  background: #939598;
+  text-transform: none;
+  //font-size: 12px;
+  //line-height: 15px;
+  color: white;
+  //padding: 2px 6px 1px;
+}
+
+.sidebar_nav span {
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+  color: #00aeac;
+}
+
+.city_page .sidebar_nav .title span {
+  font-size: 20px;
+  line-height: 36px;
+}
+.city_page .sidebar_nav span {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.transfer_plane.act {
+  background-color: #00aeac;
+  color: white;
+}
+
+.apatment_list_bot {
+  position: relative;
+}
+
+.offer_link .offer_info {
+  display: none;
+}
+
+a.offer_link:hover {
+  .offer_info {
+    display: block;
+  }
+  .plus {
+    display: none;
+  }
+}
+
+.play_video {
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+.buy_item_photos .property_video .play_video, .photo_list img.play_video{
+  height: 26px;
+  width: 32px;
+  margin-top: -13px;
+  margin-left: -16px;
+  border: 0;
+}
+
+.main_slider .play_video {
+  outline: none;
+  -webkit-transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+
+  background: image-url('play_video.png') no-repeat;
+  width: 69px;
+  height: 68px;
+  margin-top: -34px;
+  margin-left: -34px;
+}
+
+.main_slider .play_video:hover {
+  background-position: 0 -68px;
+}
+
+.photo_list .img {
+  position: relative;
+}
+
+.error_text {
+  float: left;
+  width: 240px;
+  padding-left: 6px;
+  margin-top: 16px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #4d4d4d;
+    line-height: 20px;
+    margin-left: 3px;
+  }
+  h1 {
+    font-size: 128px;
+    color: #f27321;
+    font-weight: 400;
+    line-height: 55px;
+  }
+  p {
+    font-size: 17px;
+  }
+}
+
+.error_image {
+  position: relative;
+  left: -24px;
+  top: 4px;
+}
+
+.error_back {
+  background: image-url('error_back.png') no-repeat;
+  width: 222px;
+  height: 41px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  line-height: 45px;
+  position: absolute;
+  top: 555px;
+  left: 384px;
+}
+
+.apartment_list .title a {
+  text-decoration: none;
+}
+

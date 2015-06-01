@@ -1,84 +1,103 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title><%= content_for?(:title) ? yield(:title) : "Alanya Properties" %></title>
 
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-<%= csrf_meta_tags%>
+  <meta name="description" content="<%= yield :description %>"/>
 
-        <title><%= yield(:title) %></title>
-        <meta name="keywords" content="<%= yield(:description) %>">
-        <meta name="description" content="<%= yield(:keywords) %>"> 
+  <%= stylesheet_link_tag "application", :media => "screen, projection" %>
+  <!-- что бы телефон не ломался из-за скайпа -->
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
 
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="keywords" content="Template, html, premium, themeforest" />
-    <meta name="description" content="Traveler - Premium template for travel companies">
-    <meta name="author" content="Tsoy">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
-    <!-- /GOOGLE FONTS -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/icomoon.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/mystyles.css">
-    <script src="/js/modernizr.js"></script>
-
-
+  <!--[if IE 7]>
+  <script>browser_class = 'ie_7';</script><![endif]-->
+  <!--[if IE 8]>
+  <script>browser_class = 'ie_8';</script><![endif]-->
+  <%# render 'shared/ga' if Rails.env.production? %>
 </head>
 
 <body>
+<!-- BEGIN wrapper-->
+<div class="wrapper min_width">
 
-    <!-- FACEBOOK WIDGET -->
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- /FACEBOOK WIDGET -->
-    <div class="global-wrap">
-        
+  <!-- BEGIN header-->
+  <div class="header clearfix">
+    <%= link_to '/', class: 'logo', title: 'Alanya Properties' do %>
+        <img src="logo.png">
+    <% end %>
+    <table class="nav">
+      <tr>
+         <td class="td"><a href="#">Купить</a></td>
+         <td class="td"><a href="#">Купить</a></td>
+         <td class="td"><a href="#">Купить</a></td>
+         <td class="td"><a href="#">Купить</a></td>
+         <td class="td"><a href="#">Купить</a></td>
+         <td class="td"><a href="#">Купить</a></td>
+        <td class="td last_td">
+          <a class="search_item">ПОИСК</a>
 
+          <div class="search_input" style="display:none;">
+            <form action="/search" method="GET">
+              <input class="input" id="main-search-input" type="text" name="q"/><i class="search_btn"></i>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- END header-->
 
- <%= render '/layouts/header/main' %>
+  <!-- BEGIN content-->
+  <div class="content <%= @content_class %>">
+    <%= yield %>
+  </div>
+  <!-- END content-->
 
-        <div class="container">
-            <%= yield %>
-        </div>
+  <!-- BEGIN footer-->
+  <div class="footer">
+    <div class="inner clearfix">
+      <ul class="fot_nav">
+        <li class="li"><a href="#">Купить</a></li>
+        <li class="li"><a href="#">Купить</a></li>
+        <li class="li"><a href="#">Купить</a></li>
+        <li class="li"><a href="#">Купить</a></li>
+      </ul>
+      <div class="fright">
+        <i class="fot_separ"></i>
 
- <%= render '/layouts/footer/main' %>
-
-        <script src="/js/jquery.js"></script>
-        <script src="/js/bootstrap.js"></script>
-        <script src="/js/slimmenu.js"></script>
-        <script src="/js/bootstrap-datepicker.js"></script>
-        <script src="/js/bootstrap-timepicker.js"></script>
-        <script src="/js/nicescroll.js"></script>
-        <script src="/js/dropit.js"></script>
-        <script src="/js/ionrangeslider.js"></script>
-        <script src="/js/icheck.js"></script>
-        <script src="/js/fotorama.js"></script>
-        <script src="/https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="/js/typeahead.js"></script>
-        <script src="/js/card-payment.js"></script>
-        <script src="/js/magnific.js"></script>
-        <script src="/js/owl-carousel.js"></script>
-        <script src="/js/fitvids.js"></script>
-        <script src="/js/tweet.js"></script>
-        <script src="/js/countdown.js"></script>
-        <script src="/js/gridrotator.js"></script>
-        <script src="/js/custom.js"></script>
+        <div class="phone">Телефон : 123456</div>
+        <i class="fot_separ"></i>
+        <a class="icon fot_rss" href="#" title="RSS Feed"></a>
+        <i class="fot_separ"></i>
+        <a class="icon fot_fb" href="#" title="Facebook Page" target="_blank"></a>
+      </div>
     </div>
-</body>
+    <div class="copyright">Копирайт</div>
+  </div>
+  <!-- END footer-->
+</div>
+<!-- END wrapper-->
 
+
+<table class="popup_table hide">
+  <tr>
+    <td class="pt_td">
+      <!-- !!! popup_leaveorder -->
+      <!--<script>visible_popup       = 'popup';</script>-->
+      <div class="popup clearfix">
+        Popup
+        <i class="close"></i>
+      </div>
+      <div class="back none" id="back"></div>
+
+    </td>
+  </tr>
+</table>
+
+<%= render 'shared/ym' if Rails.env.production? %>
+</body>
 </html>
