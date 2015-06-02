@@ -1,6 +1,6 @@
 <style type="text/css">
 .project_heading{
-background-color: #00CDCB;
+background-color: #00CCCA;
 padding: 6px;
 border-radius: 5px 5px 0 0;
 border-bottom: 1px solid #e1e1e1 !important;
@@ -13,9 +13,14 @@ padding-left: 10px;
 .buy_item{
 border: none;
 padding: 0px;
+width: 730px;
+}
+.buy_filter{
+  width: 200px;
 }
 .buy_item_text{
   padding-left: 20px !important;
+  width: 480px;
 }
 .buy_item .item_price{
 min-width: 0;
@@ -28,14 +33,91 @@ font-size: 17px !important;
   margin: 0px !important;
 }
 .fotorama{
-  max-width: 462px !important;
+  max-width: 470px !important;
 }
 .fotorama img {
   height: 250px;
-  width: 450px;
+  width: 470px;
 }
 .description_project{
   padding-top: 10px; 
+}
+.price_area{
+  color: #44C4E4;
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+.buy_item_info{
+  padding-left: 10px;
+  width: 225px !important;
+}
+.project_info .line{
+  line-height: 19px;
+  color: #6d6e70;
+  font-size: 10px;
+  padding-top: 3px;
+}
+.project_info .line .value{
+  float: right !important;
+}
+.project_info{
+  margin-right: 20px;
+}
+
+.line .type{
+  padding-left: 4px;
+}
+
+.line .value{
+  padding-right: 4px;
+}
+.buy_item_text .buttons{
+  margin: 10px 0;
+}
+.buy_item_text .buttons a{
+  font-size: 15px;
+  background-color: #00CCCA;
+    font-size: 13px;
+    line-height: 14px;
+    padding: 8px 10px;
+    margin-right: 15px;
+    color: #4d4d4d;
+}
+.manager_list{
+  float: right;
+  width: 290px
+}
+.manager_list .list .avatar{
+  width: 40%;
+}
+.manager_list img{
+  height: 200px !important;
+  width: 120px !important;
+}
+.description_project{
+  width: 400px;
+  padding-left: 20px;
+  float: left;
+  padding-top: 0;
+  font-size: 15px;
+}
+.bg_dark{
+  background-color: #CCCCCC;
+}
+.bg_light{
+  background-color: #EDEDED ;
+}
+.to_coast{
+  margin-top: 10px;
+}
+.to_coast_list .line{
+  padding-left: 20px;
+}
+.credit_input{
+  width: 100%;
+}
+.credit{
+  margin-top: 10px; 
 }
 </style>
 <div class="buy_page">
@@ -55,25 +137,58 @@ font-size: 17px !important;
          <img src="http://dummyimage.com/600x399/333/fff" />
         </div>
       </div>
-      <div class="description_project">
-        <p>Здесь описание проекта</p>
-      </div>
       
-      <a href="#" class="btn gray back_btn">Назад</a>
-      <a class="btn big send_offer" href="#">ОТПРАВИТЬ ЗАПРОС</a>
+      <div class="buttons">
+      <a class="btn big green_btn more_btn" href="#">Узнать больше</a>
+      <a class="btn big green_btn view_btn" href="#">Посмотреть</a>
+      </div>
+     
       <div class="clear"></div>
     </div>
+
     <div class="buy_item_info">
       <div class="price_area">
-        <span>от 2000$ до 4000$</span>
+        <span>цена: 2000$ - 4000$</span>
       </div>
-      <div class="line bt0"><strong>ID объекта:1234</strong></div>
-      <div class="line">Город: Название города</div>
-      <div class="line">Тип недвижимости: Квартира</div>
-      <div class="line">Общая площадь: 123 кв. м</div>
-      <div class="line">Расстояние до моря: 200 м</div>
+      <div class="project_info">
+        <div class="line bg_dark"><span class="type">Вид сделки:</span>  <span class="value"> Продажа</span></div>
+        <div class="line bg_light"><span class="type">Район:</span>  <span class="value"> Макмутлар</span></div>
+        <div class="line bg_dark"><span class="type">Тип объекта:</span>  <span class="value"> квартира и пентхаус</span></div>
+        <div class="line bg_light"><span class="type">Площадь:</span>  <span class="value"> 216 м2</span></div>
+        <div class="line bg_dark"><span class="type">Состояние:</span>  <span class="value"> строящийся объект</span></div>
+        <div class="line bg_light"><span class="type">До центра:</span>  <span class="value"> 200 м</span></div>
+        <div class="line bg_dark"><span class="type">До аэропорта:</span>  <span class="value"> 100 м</span></div>
+        <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"> 08.2015</span></div>
+      </div>
+      <div class="price_area to_coast">
+        <span>в стоимость входит</span>
+      </div>
+      <div class="project_info to_coast_list">
+        <div class="line bg_dark">Кондиционеры</div>
+        <div class="line bg_dark">Водонагреватели</div>
+        <div class="line bg_dark">Оформление ТАПУ</div>
+      </div>
+
+      <div class="project_info credit">
+        <form>
+          <span class="field">Пероначальный взнос</span><br/>
+          <input type="text" class="credit_input"><br/>
+          <span class="field">Срок кредита</span><br/>
+          <input type="text"><br/>
+          <span class="field">Процентная ставка</span><br/>
+          <input type="text"><br/>
+          <span class="field">Ежемесячный платеж</span><br/>
+          <input type="text">
+        </form>
+      </div>
     </div>
-    <div class="clear"></div>
+
+    <div class="description_project">
+        <%= @project.description.html_safe %>
+      </div>
+
+    
+    
   </div>
   <div class="buy_filter">
     <form action="#"  method="GET">
