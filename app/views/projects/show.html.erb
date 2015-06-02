@@ -1,42 +1,98 @@
 <style type="text/css">
-    .people_class{
-        width:  128px;
-        height: 140px;
-    }
-    .booking-list > li{
-        margin-bottom: 10px
-    }
+  .project_heading{
+    background-color: #00CDCB;
+    padding: 6px;
+    border-radius: 5px 5px 0 0;
+  }
+  .project_heading .h1{
+    font-size: 17px !important;
+    padding-left: 10px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .buy_item{
+    border: none;
+    padding: 0px;
+  }
+  .buy_item .item_price{
+    min-width: 0;
+    border:  0;
+     font-size: 17px !important;
+  }
 </style>
+<div class="buy_page">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+    <div class="project_heading">
+    <div class="item_price">id: 12345</div>
+      <h1 class="h1">Название проекта </h1>
+    </div>
+    <div class="buy_item_text">
+      <div class="buy_item_photos clearfix">
+        <div class="img big"></div>
+      </div>
 
 
-            <%= render '/projects/show/breadcums' %>
-            <%= render '/projects/show/notice' %>
-            <div class="booking-item-details">
-                <%= render '/projects/show/header' %>
-                <div class="row">
-                <%= render '/projects/show/images' %>   
-                    
-                <%= render '/projects/show/params' %>      
-                </div>
-                 <div class="row">
+      Здесь описание проекта 
 
-                <%= render '/projects/show/buttons_before_images' %>    
-                   
-                    <div class="col-md-7">
-                    <%= render '/projects/show/description' %>    
-                        <hr/>
-                            
-                 <%= render '/projects/show/print_send' %>             
+      <a href="#" class="btn gray back_btn">Назад</a>
+      <a class="btn big send_offer" href="#">ОТПРАВИТЬ ЗАПРОС</a>
 
-                            
-                        <hr/>
-                        
-                <%= render '/projects/show/question' %>    
-                    </div>
-                    
-                     <%= render '/projects/show/additional_features' %> 
-                     
-                   <%= render '/projects/show/credit' %> 
-                    <%= render '/projects/show/manager_list' %>  
-              </div>
-        </div>
+      <div class="clear"></div>
+    </div>
+    <div class="buy_item_info">
+
+      <div class="line bt0"><strong>ID объекта:1234</strong></div>
+      <div class="line">Город: Название города</div>
+      <div class="line">Тип недвижимости: Квартира</div>
+      <div class="line">Общая площадь: 123 кв. м</div>
+      <div class="line">Расстояние до моря: 200 м</div>
+
+
+
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <div class="buy_filter">
+    <form action="#"  method="GET">
+    <%# render 'filter' %>
+     <div class="filter_label_holder clearfix">
+<label class="filter_label label_checkbox">
+<input type="checkbox" value="1+1" name="property_type[]" id="property_type_">
+1+1
+</label>
+<label class="filter_label label_checkbox">
+<input type="checkbox" value="2+1" name="property_type[]" id="property_type_">
+2+1
+</label>
+<label class="filter_label label_checkbox">
+<input type="checkbox" value="3+1" name="property_type[]" id="property_type_">
+3+1
+</label>
+<label class="filter_label label_checkbox">
+<input type="checkbox" value="4+1" name="property_type[]" id="property_type_">
+4+1
+</label>
+<label class="filter_label label_checkbox big">
+<input type="checkbox" value="studio" name="property_type[]" id="property_type_">
+Студия
+</label>
+<label class="filter_label label_checkbox big">
+<input type="checkbox" value="penthouse" name="property_type[]" id="property_type_">
+Пентхауз
+</label>
+<label class="filter_label label_checkbox big">
+<input type="checkbox" value="villa" name="property_type[]" id="property_type_">
+Вилла
+</label>
+</div>
+    <div class="filter_section city">
+      <span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
+    </div>
+    </form>
+  </div>
+
+  <div class="clear"></div>
+  
+</div>
