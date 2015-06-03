@@ -2,22 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-  <title><%= content_for?(:title) ? yield(:title) : "Alanya Properties" %></title>
-
-  <meta name="description" content="<%= yield :description %>"/>
-
   <%= stylesheet_link_tag "application", :media => "screen, projection" %>
-  <!-- что бы телефон не ломался из-за скайпа -->
-  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
 
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <!--[if IE 7]>
-  <script>browser_class = 'ie_7';</script><![endif]-->
-  <!--[if IE 8]>
-  <script>browser_class = 'ie_8';</script><![endif]-->
-  <%# render 'shared/ga' if Rails.env.production? %>
 </head>
 
 <body>
