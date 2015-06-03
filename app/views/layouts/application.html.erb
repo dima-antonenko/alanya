@@ -7,6 +7,19 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
+  <script type="text/javascript" src="/src/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="/src/jquery-labelauty.js"></script>
+
+  <link rel="stylesheet" href="/src/jquery-labelauty.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="/src/lby-main.css" type="text/css" media="screen" charset="utf-8">
+
+  <script>
+    $(document).ready(function(){
+      $(".to-labelauty").labelauty({ minimum_width: "155px", checked_label: "lalka", unchecked_label: "lalka", });
+    });
+  </script>
+
+
 </head>
 
 <body>
