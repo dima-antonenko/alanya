@@ -117,19 +117,33 @@ width: 100%;
 margin-top: 10px;
 }
 .distnce_list ul li{
-  display: inline;
+  display: inline-table;
+  margin: 0 -2px;
+
 }
 
 input.home:checked + label{
-   background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 -84px;
    float: left;
     height: 15px;
     overflow: hidden;
-    padding: 18px 0 0;
+    padding:0;
     text-align: center;
     transition: none 0s ease 0s ;
     vertical-align: top;
-    width: 42px;
+    width: 38px;
+}
+
+input.labelauty:not(:checked):not([disabled]) + label{
+  background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 0;
+   float: left;
+    height: 15px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    transition: none 0s ease 0s ;
+    vertical-align: top;
+    width: 38px;
 }
 </style>
 <div class="buy_page">
@@ -197,36 +211,7 @@ input.home:checked + label{
     
     
   </div>
-  <div class="buy_filter">
-    <form action="#"  method="GET">
-      <%# render 'filter' %>
-      <div class="filter_section type">
-        
-        <h2><span class="has-tooltip" title="">Тип недвижимости</span></h2>
-        <div class="filter_label_holder clearfix">
-          <input class="to-labelauty synch-icon labelauty" type="checkbox" checked="none" id="labelauty" style="display: none;"  data-labelauty="no|yes">
-          <input class="to-labelauty synch-icon labelauty" type="checkbox" checked="none" id="labelauty2" style="display: none;"  data-labelauty="|">
-        </div>
-      </div>
-      <div class="filter_section type">
-        
-        <h2><span class="has-tooltip" title="">Расстояние до моря</span></h2>
-        <div class="filter_label_holder clearfix">
-          <div class="distnce_list">
-            <ul>
-              <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty3" style="display: none;"  data-labelauty="|">
-            100м</li>
-          </ul>
-        </div>
-        
-        
-      </div>
-    </div>
-    <div class="filter_section city">
-      <span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
-    </div>
-  </form>
-</div>
+<%= render 'layouts/sidebar' %>
 <div class="clear"></div>
 
 </div>
