@@ -1,65 +1,127 @@
-  <style type="text/css">
-  .distnce_list ul li {
-      font-size: 10px;
+<style type="text/css">
+.distnce_list ul li {
+font-size: 10px;
+}
+.distnce_list ul li .value{
+font-size: 10px;
+float: left;
+clear: both;
+padding-left: 10px;
+}
+input.home.synch-icon + label > span.labelauty-checked-image{
+display: none;
+}
+.filter_label_holder{
+margin-left: 0 !important;
+}
+.input.home:not(:checked):not([disabled]) + label:hover{
+background-color: none !important;
+}
+.has-tooltip {
+cursor: auto;
+font-size: 17px;
+}
 
-    }
-    .distnce_list ul li .value{
-      font-size: 10px;
-      float: left;
-      clear: both;
-      padding-left: 10px; 
-    }
-    input.labelauty.synch-icon + label > span.labelauty-checked-image{
-      display: none;
-    }
-    .filter_label_holder{
-      margin-left: 0 !important;
-    }
+.types_list ul li{
+  display: inline-table;
+  margin-right:  5px;
+  font-weight: bold;
+}
 
-    .input.labelauty:not(:checked):not([disabled]) + label:hover{
-      background-color: none !important;
-    }
-  </style>
-  <div class="buy_filter">
-    <form action="#"  method="GET">
-      <%# render 'filter' %>
-      <div class="filter_section type">
-        
-        <h2><span class="has-tooltip" title="">Тип недвижимости</span></h2>
-        <div class="filter_label_holder clearfix">
-          <input class="to-labelauty synch-icon labelauty" type="checkbox" checked="none" id="labelauty" style="display: none;"  data-labelauty="no|yes">
-          <input class="to-labelauty synch-icon labelauty" type="checkbox" checked="none" id="labelauty2" style="display: none;"  data-labelauty="|">
-        </div>
+.types_list ul li label{
+    float: left;
+    line-height: 9px;
+    padding: 6px 7px;
+}
+
+.types_list ul li label span{
+  margin-left: 0 !important;
+}
+
+input.labelauty.synch-icon + label > span.labelauty-checked-image{
+  display: none !important;
+}
+input.type_project.synch-icon + label{
+  background-color: #00aeac;
+  color: white;
+}
+
+input.type_project.synch-icon + label > span.labelauty-unchecked-image{
+  background-image: none;
+  background-color: red; 
+  display: none !important;
+}
+input.type_project:not(:checked):not([disabled]) + label{
+  background-image: none;
+  background-color: red; 
+  color: black;
+    float: left;
+    line-height: 9px;
+    padding: 6px 7px;
+}
+</style>
+<div class="buy_filter">
+  <form action="#"  method="GET">
+    <%# render 'filter' %>
+    <div class="filter_section type">
+      
+      <h2><span class="has-tooltip" title="">Тип недвижимости</span></h2>
+      <div class="types_list">
+        <ul>
+            <li>
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="a" style="display: none;"  data-labelauty="1+1">
+            </li>
+            <li>
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="b" style="display: none;"  data-labelauty="2+1|2+1">
+            </li>
+            <li>
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="c" style="display: none;"  data-labelauty="3+1|3+1">
+            </li>
+            <li>
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="d" style="display: none;"  data-labelauty="4+1|4+1">
+            </li>
+        </ul>
       </div>
-      <div class="filter_section type">
-        
-        <h2><span class="has-tooltip" title="">Расстояние до моря</span></h2>
-        <div class="filter_label_holder clearfix">
-          <div class="distnce_list">
-            <ul>
-              <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty3" style="display: none;"  data-labelauty="|">
-             <span class="value">10м</span> 
-            </li>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty4" style="display: none;"  data-labelauty="|">
-            <span class="value">100м</span> 
-            </li>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty5" style="display: none;"  data-labelauty="|">
-            <span class="value">200м</span> 
-            </li>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty6" style="display: none;"  data-labelauty="|">
-            <span class="value">300м</span> 
-            </li>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty7" style="display: none;"  data-labelauty="|">
-            <span class="value">400м</span> 
-            </li>
-          </ul>
-        </div>
-        
-        
-      </div>
+      
     </div>
-    <div class="filter_section city">
-      <span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
-    </div>
-  </form>
+    <div class="filter_section type">
+      
+      <h2><span class="has-tooltip" title="">Расстояние до моря</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="distnce_list">
+          <ul>
+            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty3" style="display: none;"  data-labelauty="|">
+            <span class="value">10м</span>
+          </li>
+          <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty4" style="display: none;"  data-labelauty="|">
+          <span class="value">100м</span>
+        </li>
+        <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty5" style="display: none;"  data-labelauty="|">
+        <span class="value">200м</span>
+      </li>
+      <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty6" style="display: none;"  data-labelauty="|">
+      <span class="value">400м</span>
+    </li>
+    <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty7" style="display: none;"  data-labelauty="|">
+    <span class="value">500м</span>
+  </li>
+</ul>
+<ul>
+  <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty8" style="display: none;"  data-labelauty="|">
+  <span class="value">800м</span>
+</li>
+<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty9" style="display: none;"  data-labelauty="|">
+<span class="value">1000м</span>
+</li>
+<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty11" style="display: none;"  data-labelauty="|">
+<span class="value">1500м</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="filter_section city">
+<span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
+</div>
+</form>
 </div>
