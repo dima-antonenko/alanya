@@ -465,3 +465,12 @@ input.home:checked + label{
 input.labelauty:checked + label{
   background-color: none !important; 
 }
+
+.filter_section h2{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.filter_section.type{
+   margin-top: 10px;
+}
