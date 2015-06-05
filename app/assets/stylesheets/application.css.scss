@@ -355,6 +355,7 @@ margin-top: 10px;
 
 input.home:checked + label{
    background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 -84px;
+   background-color: none !important;
    float: left;
     height: 15px;
     overflow: hidden;
@@ -362,11 +363,12 @@ input.home:checked + label{
     text-align: center;
     transition: none 0s ease 0s ;
     vertical-align: top;
-    width: 38px;
+    width: 40px;
 }
 
 input.labelauty:not(:checked):not([disabled]) + label{
   background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 0;
+  background-color: none !important;
    float: left;
     height: 15px;
     overflow: hidden;
@@ -374,16 +376,36 @@ input.labelauty:not(:checked):not([disabled]) + label{
     text-align: center;
     transition: none 0s ease 0s ;
     vertical-align: top;
-    width: 38px;
+    width: 40px;
+
 }
 
-
-.sities_list ul {
-  width: 33%;
+.sities_list ul{
    display: inline-table !important;
   list-style: outside none none !important;
   background: none !important;
   background-color: none !important;
+  float: left;
+}
+
+.sities_list .first {
+  width: 33%;
+   margin-right: 3px
+}
+.sities_list .first{
+  ul li{
+    margin-left: 2px; 
+    
+  }
+}
+ .sities_list .second{
+  width: 33%;
+  margin-right: 3px;
+}
+
+ .sities_list .third{
+  width: 30%;
+  
 }
 
 .sities_list ul li {
@@ -391,6 +413,8 @@ input.labelauty:not(:checked):not([disabled]) + label{
   list-style: outside none none !important;
   background: none !important;
   background-color: none !important;
+  width: 62px;
+  margin-left: 1px !important; 
 }
 
 input.sity.synch-icon + label{
@@ -409,4 +433,35 @@ input.sity.synch-icon + label{
 .sities_list .sity .labelauty-unchecked{
   margin: 0 !important;
   padding: 0 !important;
+}
+
+input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked, input.sity + label > span.labelauty-checked-image + span.labelauty-checked{
+  margin-left:  0px !important;
+  text-align: left !important;
+  width: auto !important;
+}
+.sities_list ul li {
+  padding-bottom: 5px;
+  font-family: Verdana;
+  font-size: 13px !important;
+  text-align: left !important;
+}
+
+input.sity + label > span.labelauty-checked-image + span.labelauty-checked{
+  color: #00aeac !important;
+   font-size: 13px !important;
+   text-align: left !important;
+}
+
+input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked{
+   font-size: 13px !important;
+   text-align: left !important;
+   width: auto !important;
+}
+
+input.home:checked + label{
+  background-color: none !important; 
+}
+input.labelauty:checked + label{
+  background-color: none !important; 
 }

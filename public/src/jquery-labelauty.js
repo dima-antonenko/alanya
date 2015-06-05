@@ -47,7 +47,7 @@
 
 			// Use the greatest width between two text labels ?
 			// If this has a true value, then label width will be the greatest between labels
-			same_width: true
+			same_width: false
 		}, options);
 
 		/*
@@ -159,11 +159,11 @@
 			if( settings.same_width != false && settings.label == true )
 			{
 				var label_object = $object.next( "label[for=" + input_id + "]" );
-				var unchecked_width = label_object.find( "span.labelauty-unchecked" ).width();
+				var unchecked_width = label_object.find( "span.labelauty-unchecked" );
 				var checked_width = label_object.find( "span.labelauty-checked" ).width();
 
 				if( unchecked_width > checked_width )
-					label_object.find( "span.labelauty-checked" ).width( unchecked_width );
+					label_object.find( "span.labelauty-checked" );
 				else
 					label_object.find( "span.labelauty-unchecked" ).width( checked_width );
 			}
