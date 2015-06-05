@@ -229,3 +229,184 @@ a.offer_link:hover {
   text-decoration: none;
 }
 
+
+.project_heading{
+background-color: #00CCCA;
+padding: 6px;
+border-radius: 5px 5px 0 0;
+border-bottom: 1px solid #e1e1e1 !important;
+}
+.project_heading .h1{
+font-size: 17px !important;
+padding-left: 10px;
+}
+.buy_item{
+border: none;
+padding: 0px;
+width: 730px;
+}
+.buy_filter{
+width: 200px;
+}
+.buy_item_text{
+padding-left: 20px !important;
+width: 480px;
+}
+.buy_item .item_price{
+min-width: 0;
+border:  0;
+font-size: 17px !important;
+}
+.buy_item_photos{
+max-width: 462px !important;
+padding-top: 20px;
+margin: 0px !important;
+}
+.fotorama{
+max-width: 470px !important;
+}
+.fotorama img {
+height: 250px;
+width: 470px;
+}
+.description_project{
+padding-top: 10px;
+}
+.price_area{
+color: #44C4E4;
+font-size: 17px;
+padding-bottom: 5px;
+}
+.buy_item_info{
+padding-left: 10px;
+width: 225px !important;
+}
+.project_info .line{
+line-height: 19px;
+color: #6d6e70;
+font-size: 10px;
+padding-top: 3px;
+}
+.project_info .line .value{
+float: right !important;
+}
+.project_info{
+margin-right: 20px;
+}
+.line .type{
+padding-left: 4px;
+}
+.line .value{
+padding-right: 4px;
+}
+.buy_item_text .buttons{
+margin: 10px 0;
+}
+.buy_item_text .buttons a{
+font-size: 15px;
+background-color: #00CCCA;
+font-size: 13px;
+line-height: 14px;
+padding: 8px 10px;
+margin-right: 15px;
+color: #4d4d4d;
+}
+.manager_list{
+float: right;
+width: 290px
+}
+.manager_list .list .avatar{
+width: 40%;
+}
+.manager_list img{
+height: 200px !important;
+width: 120px !important;
+}
+.description_project{
+width: 400px;
+padding-left: 20px;
+float: left;
+padding-top: 0;
+font-size: 15px;
+}
+.bg_dark{
+background-color: #CCCCCC;
+}
+.bg_light{
+background-color: #EDEDED ;
+}
+.to_coast{
+margin-top: 10px;
+}
+.to_coast_list .line{
+padding-left: 20px;
+}
+.credit_input{
+width: 100%;
+}
+.credit{
+margin-top: 10px;
+}
+.distnce_list ul li{
+  display: inline-table;
+  margin: 0 -2px;
+
+}
+
+input.home:checked + label{
+   background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 -84px;
+   float: left;
+    height: 15px;
+    overflow: hidden;
+    padding:0;
+    text-align: center;
+    transition: none 0s ease 0s ;
+    vertical-align: top;
+    width: 38px;
+}
+
+input.labelauty:not(:checked):not([disabled]) + label{
+  background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 0;
+   float: left;
+    height: 15px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    transition: none 0s ease 0s ;
+    vertical-align: top;
+    width: 38px;
+}
+
+
+.sities_list ul {
+  width: 33%;
+   display: inline-table !important;
+  list-style: outside none none !important;
+  background: none !important;
+  background-color: none !important;
+}
+
+.sities_list ul li {
+   display: flex !important;
+  list-style: outside none none !important;
+  background: none !important;
+  background-color: none !important;
+}
+
+input.sity.synch-icon + label{
+   background: none !important;
+  background-color: none !important;
+   color: #4d4d4d !important;
+}
+
+.sities_list ul li label{
+  padding: 0 !important;
+}
+.sities_list .second li label{
+  padding: 0 !important;
+}
+
+.sities_list .sity .labelauty-unchecked{
+  margin: 0 !important;
+  padding: 0 !important;
+}

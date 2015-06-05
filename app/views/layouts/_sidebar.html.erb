@@ -7,6 +7,7 @@ font-size: 10px;
 float: left;
 clear: both;
 padding-left: 10px;
+font-family: Verdana;
 }
 input.home.synch-icon + label > span.labelauty-checked-image{
 display: none;
@@ -24,8 +25,9 @@ font-size: 17px;
 
 .types_list ul li{
   display: inline-table;
-  margin-right:  5px;
-  font-weight: bold;
+  margin-right:  7px;
+  font-weight: normal;
+  font-family: Verdana;
 }
 
 .types_list ul li label{
@@ -61,10 +63,33 @@ input.type_project:not(:checked):not([disabled]) + label{
 }
 input.type_project:not(:checked):not([disabled]) + label{
   background-image: none;
-  background-color: grey;
-   padding: 6px 1px;
-   width: 37px;
+    background: white none repeat scroll 0 0;
+   padding: 6px 0.5px;
+   width: 36px;
+    box-shadow: 1px 1px 3px 0 #a4a4a4;
+    color: #4d4d4d;
 }
+.types_list .second{
+  margin-top: 4px;
+}
+.types_list .second li{
+   margin-right: 0px;
+}
+.types_list .second li label {
+  padding: 6px 7px;
+}
+input.second:not(:checked):not([disabled]) + label{
+  padding: 6px 7px;
+}
+
+.second li .labelauty-unchecked{
+  padding: 0px 6.5px;
+}
+input.sity:not(:checked):not([disabled]) + label{
+  padding: 0 !important;
+}
+
+
 </style>
 <div class="buy_filter">
   <form action="#"  method="GET">
@@ -75,17 +100,29 @@ input.type_project:not(:checked):not([disabled]) + label{
       <div class="types_list">
         <ul>
             <li>
-                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="a" style="display: none;"  data-labelauty="1+1">
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox"  id="a" style="display: none;"  data-labelauty="1+1">
             </li>
             <li>
-                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="b" style="display: none;"  data-labelauty="2+1|2+1">
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" id="b" style="display: none;"  data-labelauty="2+1|2+1">
             </li>
             <li>
-                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="c" style="display: none;"  data-labelauty="3+1|3+1">
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" id="c" style="display: none;"  data-labelauty="3+1|3+1">
             </li>
             <li>
-                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" checked="none" id="d" style="display: none;"  data-labelauty="4+1|4+1">
+                <input class="to-labelauty type_project synch-icon labelauty" type="checkbox" id="d" style="display: none;"  data-labelauty="4+1|4+1">
             </li>
+        </ul>
+         <ul class="second">
+            <li>
+                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="e" style="display: none;"  data-labelauty="Студия">
+            </li>
+            <li>
+                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="f" style="display: none;"  data-labelauty="Пентхауз">
+            </li>
+            <li>
+                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="g" style="display: none;"  data-labelauty="Вилла">
+            </li>
+           
         </ul>
       </div>
       
@@ -96,36 +133,95 @@ input.type_project:not(:checked):not([disabled]) + label{
       <div class="filter_label_holder clearfix">
         <div class="distnce_list">
           <ul>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty3" style="display: none;"  data-labelauty="|">
+            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty3" style="display: none;"  data-labelauty="|">
             <span class="value">10м</span>
           </li>
-          <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty4" style="display: none;"  data-labelauty="|">
+          <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty4" style="display: none;"  data-labelauty="|">
           <span class="value">100м</span>
         </li>
-        <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty5" style="display: none;"  data-labelauty="|">
+        <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty5" style="display: none;"  data-labelauty="|">
         <span class="value">200м</span>
       </li>
-      <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty6" style="display: none;"  data-labelauty="|">
+      <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty6" style="display: none;"  data-labelauty="|">
       <span class="value">400м</span>
     </li>
-    <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty7" style="display: none;"  data-labelauty="|">
+    <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty7" style="display: none;"  data-labelauty="|">
     <span class="value">500м</span>
   </li>
 </ul>
 <ul>
-  <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty8" style="display: none;"  data-labelauty="|">
+  <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty8" style="display: none;"  data-labelauty="|">
   <span class="value">800м</span>
 </li>
-<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty9" style="display: none;"  data-labelauty="|">
+<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty9" style="display: none;"  data-labelauty="|">
 <span class="value">1000м</span>
 </li>
-<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" checked="none" id="labelauty11" style="display: none;"  data-labelauty="|">
+<li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty11" style="display: none;"  data-labelauty="|">
 <span class="value">1500м</span>
 </li>
 </ul>
 </div>
 </div>
 </div>
+ <div class="filter_section type">
+      
+      <h2><span class="has-tooltip" title="">Расположение</span></h2>
+      <div class="sities_list">
+
+         <ul class="first">
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Бордум">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Кемер">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Сиде">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Авсаллар">
+            </li>
+          </ul>
+          <ul class="second">
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Бордум">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Кемер">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Сиде">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Авсаллар">
+            </li>
+          </ul>
+          <ul class="third">
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Бордум">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Кемер">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Сиде">
+            </li>
+            <li>
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Авсаллар">
+            </li>
+          </ul>
+      </div>
+      
+    </div>
 <div class="filter_section city">
 <span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
 </div>
