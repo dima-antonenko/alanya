@@ -150,11 +150,52 @@ input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked, 
 input.home:checked + label{
     background-color: none;
 }
-
+.types_deal {
+  font-size: 15px;
+  font-family: Verdana;
+}
+h2 {
+  font-family: Verdana !important;
+}
+.no_border{
+  border: none !important;
+}
+.btn .search_subm{
+    border: 1px solid #f27321 ;
+    border-radius: 12px !important;
+    font-size: 15px !important;
+    line-height: 11px !important;
+    padding: 12px 73px 8px !important;
+}
+.btn_input {
+   padding: 9px 85px;
+}
+.types_deal{
+   padding-top: 15px;
+}
+.buy_filter .filter_section{
+  border: none;
+}
+.filter_section.type{
+  margin-top: 0px;
+}
+.first_section{
+  border: 1px;
+  border-radius: 5px 5px 0 0 !important; 
+  margin-top: -16px !important;
+}
 </style>
 <div class="buy_filter">
-  <form action="#"  method="GET">
+  <form action="/search"  method="GET">
     <%# render 'filter' %>
+    <div class="filter_section type static_menu_section first_section">
+      <h2><span class="has-tooltip static_menu" title="">Поиск недвижимости</span></h2>
+      <div class="types_deal">
+        <input type="radio" name="browser" value="ie"> Продажа
+        <input type="radio" name="browser" value="opera"> Аренда
+      </div>
+      
+    </div>
     <div class="filter_section type">
       
       <h2><span class="has-tooltip" title="">Тип недвижимости</span></h2>
@@ -188,7 +229,43 @@ input.home:checked + label{
       </div>
       
     </div>
-    <div class="filter_section type">
+     <div class="filter_section type">
+      
+      <h2><span class="has-tooltip  no_border" title="">Расположение</span></h2>
+      <div class="sities_list">
+
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
+            <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Анталья">
+             <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Газипаша">
+              <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Бордум">
+               <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Белек">
+                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity6" style="display: none;"  data-labelauty="Авсаллар">
+
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity7" style="display: none;"  data-labelauty="Кемер">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity8" style="display: none;"  data-labelauty="Кестель">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity9" style="display: none;"  data-labelauty="Махмутлар">
+
+            <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity10" style="display: none;"  data-labelauty="Оба">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity11" style="display: none;"  data-labelauty="Конаклы">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity12" style="display: none;"  data-labelauty="Каргыджак">
+
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity13" style="display: none;"  data-labelauty="Каш">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity14" style="display: none;"  data-labelauty="Сиде">
+           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity15" style="display: none;"  data-labelauty="Тосмур">     
+
+      </div>
+      
+    </div>
+     <div class="filter_section type no_border">
+      
+      <h2><span class="has-tooltip" title="">Цена</span></h2>
+      <div class="prices_list">
+         <div class="start"><input type="text" size="25" placeholder="цена от &euro;"></div>
+         <div class="end"><input type="text" size="20" placeholder="цена до &euro;"></div>
+      </div>
+      
+    </div>
+    <div class="filter_section type no_border">
       
       <h2><span class="has-tooltip" title="">Расстояние до моря</span></h2>
       <div class="filter_label_holder clearfix">
@@ -224,35 +301,101 @@ input.home:checked + label{
 </div>
 </div>
 </div>
- <div class="filter_section type">
-      
-      <h2><span class="has-tooltip" title="">Расположение</span></h2>
-      <div class="sities_list">
 
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
-            <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Анталья">
-             <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Газипаша">
-              <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Бордум">
-               <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Белек">
-                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity6" style="display: none;"  data-labelauty="Авсаллар">
-
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity7" style="display: none;"  data-labelauty="Кемер">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity8" style="display: none;"  data-labelauty="Кестель">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity9" style="display: none;"  data-labelauty="Махмутлар">
-
-            <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity10" style="display: none;"  data-labelauty="Оба">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity11" style="display: none;"  data-labelauty="Конаклы">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity12" style="display: none;"  data-labelauty="Каргыджак">
-
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity13" style="display: none;"  data-labelauty="Каш">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity14" style="display: none;"  data-labelauty="Сиде">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity15" style="display: none;"  data-labelauty="Тосмур">     
-
-      </div>
-      
-    </div>
-<div class="filter_section city">
-<span class="btn btn_input big">ИСКАТЬ<i class="input"><input type="submit"/></i></span>
+<div class="filter_section submit">
+<span class="btn btn_input search_subm">Поиск<i class="input"><input type="submit"/></i></span>
 </div>
 </form>
+
+
+    <div class="filter_section type no_border">
+      
+      <h2><span class="has-tooltip  static_menu" title="">Недвижимость в турции</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="static_sities_list">
+          <ul >
+            <li class="item"><a href="#">Недвижимость в Алании</a>
+              <ul class="sub">
+                  <li class="sub_item"><a href="#">Алания центр</a></li>
+                  <li class="sub_item"><a href="#">Авсалар</a></li>
+                  <li class="sub_item"><a href="#">Конаклы</a></li>
+                  <li class="sub_item"><a href="#">Оба</a></li>
+                  <li class="sub_item"><a href="#">Тохмур</a></li>
+                  <li class="sub_item"><a href="#">Кестель</a></li>
+                  <li class="sub_item"><a href="#">Махмутлар</a></li>
+                  <li class="sub_item"><a href="#">Каргыджак</a></li>
+                  <li class="sub_item"><a href="#">Газипаша</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Недвижимость в Антали</a></li>
+            <li class="item"><a href="#">Недвижимость в Сиде</a></li>
+            <li class="item"><a href="#">Недвижимость в Кемере</a></li>
+            <li class="item"><a href="#">Недвижимость в Бордуме</a></li>
+            <li class="item"><a href="#">Недвижимость в Белеке</a></li>
+            <li class="item"><a href="#">Недвижимость в Каш</a></li>
+          </ul>
+  </div>
+  </div>
+  </div> 
+      <div class="filter_section static_menu_section type no_border">
+      
+      <h2><span class="has-tooltip static_menu" title="">Полезная информация</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="static_sities_list">
+          <ul >
+            <li class="item"><a href="#">Процедура покупки</a></li>
+            <li class="item"><a href="#">Что такое ТАПУ ?</a></li>
+            <li class="item"><a href="#">Оформление вида на жительство</a></li>
+            <li class="item"><a href="#">Ипотечное кредитование</a></li>
+            <li class="item"><a href="#">Наследование</a></li>
+            <li class="item"><a href="#">Прибыль от аренды</a></li>
+            <li class="item"><a href="#">О Турции</a></li>
+          </ul>
+  </div>
+  </div>
+  </div> 
+
+      <div class="filter_section static_menu_section type no_border">
+      
+      <h2><span class="has-tooltip static_menu" title="">Наши услуги</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="static_sities_list">
+          <ul >
+            <li class="item"><a href="#">Обслуживание квартир после покупки</a></li>
+            <li class="item"><a href="#">Страхование недвижимости</a></li>
+            <li class="item"><a href="#">Сдать в аренду</a></li>
+            <li class="item"><a href="#">Ремонт квартир и вилл</a></li>
+            <li class="item"><a href="#">Трансфер из/в аэропорт</a></li>
+            <li class="item"><a href="#">Аренда автомобиля</a></li>
+          </ul>
+  </div>
+  </div>
+  </div> 
+
+  <div class="filter_section static_menu_section type no_border">
+      
+      <h2><span class="has-tooltip static_menu" title="">Наши достижения</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="static_sities_list">
+          <ul >
+            <li class="item"><a href="#">Отзывы клиентов</a></li>
+            <li class="item"><a href="#">Участие в выставках</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>    
+  <div class="filter_section static_menu_section type no_border">
+      
+      <h2><span class="has-tooltip static_menu" title="">Контакты</span></h2>
+      <div class="filter_label_holder clearfix">
+        <div class="static_sities_list">
+          <ul >
+            <li class="item"><a href="#">Офис в Турции</a></li>
+            <li class="item"><a href="#">Офис в Москве</a></li>
+          </ul>
+  </div>
+  </div>
+  </div>
+
+
 </div>

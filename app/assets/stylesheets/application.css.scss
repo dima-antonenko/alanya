@@ -474,3 +474,81 @@ input.labelauty:checked + label{
 .filter_section.type{
    margin-top: 10px;
 }
+.prices_list .start{
+  width: 53%;
+  float: left;
+}
+
+.prices_list .end{
+  width: 47%;
+  float: right;
+}
+
+
+
+.prices_list ::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+.prices_list ::-moz-placeholder { /* Firefox 18- */
+   font-size: 12px 
+}
+
+.prices_list ::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 12px;
+}
+
+.prices_list :-ms-input-placeholder {  
+  font-size: 12px;
+}
+
+.prices_list input{
+  font-size: 18px;
+   padding: 2px 15px 1px;
+}
+
+.static_sities_list ul li ul li{
+  font-family: Verdana;
+   line-height: 24px;
+    list-style: outside none none;
+}
+
+.static_sities_list ul li ul{
+  margin-left: 20px;
+  font-family: Verdana;
+
+   line-height: 24px;
+    list-style: outside none none;
+}
+
+.static_sities_list ul li{
+  font-family: Verdana;
+
+   line-height: 24px;
+    list-style: outside none none;
+
+}
+
+.item a :hover{
+  color:  #00aeac;
+}
+
+.static_menu_section .static_menu{
+  background-color:  #00aeac ;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 4px 9px;
+    text-align: center;
+}
+
+.static_menu_section h2{
+  text-align: center;
+  color: white;
+}
+
+.static_menu_section h2{
+  padding: 5px 0;
+  background: #00aeac none repeat scroll 0 0;
+  margin-left: -12px;
+  margin-right: -12px;
+}
