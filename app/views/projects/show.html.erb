@@ -1,6 +1,6 @@
 <style type="text/css">
 .project_heading{
-background-color: #00CCCA;
+background-color: #00aeac;
 padding: 6px;
 border-radius: 5px 5px 0 0;
 border-bottom: 1px solid #e1e1e1 !important;
@@ -20,7 +20,7 @@ margin-top: 25px;
 }
 .buy_item_text{
 padding-left: 20px !important;
-width: 480px;
+width: 430px;
 }
 .buy_item .item_price{
 min-width: 0;
@@ -33,11 +33,11 @@ padding-top: 20px;
 margin: 0px !important;
 }
 .fotorama{
-max-width: 470px !important;
+max-width: 490px !important;
 }
 .fotorama img {
 height: 250px;
-width: 470px;
+width: 450px;
 }
 .description_project{
 padding-top: 10px;
@@ -48,8 +48,8 @@ font-size: 17px;
 padding-bottom: 5px;
 }
 .buy_item_info{
-padding-left: 10px;
-width: 225px !important;
+
+width: 210px !important;
 }
 .project_info .line{
 line-height: 19px;
@@ -74,7 +74,7 @@ margin: 10px 0;
 }
 .buy_item_text .buttons a{
 font-size: 15px;
-background-color: #00CCCA;
+background-color: #00aeac;
 font-size: 13px;
 line-height: 14px;
 padding: 8px 10px;
@@ -123,8 +123,10 @@ margin-top: 10px;
 
 }
 
-
 </style>
+
+
+
 <div class="buy_page">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
   <div class="buy_item">
@@ -142,13 +144,27 @@ margin-top: 10px;
         </div>
       </div>
       
-      <div class="buttons">
-        <a class="btn big green_btn more_btn" href="#">Узнать больше</a>
-        <a class="btn big green_btn view_btn" href="#">Посмотреть</a>
+      <div class="buttons" id='basic-modal'>
+            
+        <input type='button' name='basic' value='Demo' class='basic'/> or <a href='#' class='basic'>Demo</a>
       </div>
-      
+    
       <div class="clear"></div>
     </div>
+    
+
+
+
+    <div id="basic-modal-content">
+      <p> this is code </p>
+    </div>
+
+    <div style='display:none'>
+      <img src='img/basic/x.png' alt='' />
+    </div>
+    
+ 
+
     <div class="buy_item_info">
       <div class="price_area">
         <span>цена: 2000$ - 4000$</span>

@@ -250,7 +250,7 @@ width: 200px;
 }
 .buy_item_text{
 padding-left: 20px !important;
-width: 480px;
+width: 430px;
 }
 .buy_item .item_price{
 min-width: 0;
@@ -279,7 +279,7 @@ padding-bottom: 5px;
 }
 .buy_item_info{
 padding-left: 10px;
-width: 225px !important;
+width: 205px !important;
 }
 .project_info .line{
 line-height: 19px;
@@ -551,4 +551,8 @@ input.labelauty:checked + label{
   background: #00aeac none repeat scroll 0 0;
   margin-left: -12px;
   margin-right: -12px;
+}
+
+.project_heading{
+  background-color: #00aeac;
 }

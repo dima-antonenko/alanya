@@ -9,17 +9,23 @@
 
   <script type="text/javascript" src="/src/jquery-latest.min.js"></script>
   <script type="text/javascript" src="/src/jquery-labelauty.js"></script>
+  <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
 
   <link rel="stylesheet" href="/src/jquery-labelauty.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="/src/lby-main.css" type="text/css" media="screen" charset="utf-8">
+
+  <link type='text/css' href='/css/demo.css' rel='stylesheet' media='screen' />
+  <link type='text/css' href='/css/basic.css' rel='stylesheet' media='screen' />
+
 
   <script>
     $(document).ready(function(){
       $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
       $(".to-labelauty").sity({minimum_width: "52px" });
     });
-  </script>
 
+    
+  </script>
 
 </head>
 
@@ -101,6 +107,8 @@
   </tr>
 </table>
 
-<%= render 'shared/ym' if Rails.env.production? %>
+
+<script type='text/javascript' src='/js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='/js/basic.js'></script>
 </body>
 </html>
