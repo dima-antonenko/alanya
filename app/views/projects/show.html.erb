@@ -125,6 +125,9 @@ margin-top: 10px;
 
 </style>
 
+<script type="text/javascript">
+
+</script>
 
 
 <div class="buy_page">
@@ -220,16 +223,30 @@ margin-top: 10px;
         <div class="line bg_dark">Оформление ТАПУ</div>
       </div>
       <div class="project_info credit">
-        <form>
-          <span class="field">Пероначальный взнос</span><br/>
-          <input type="text" class="credit_input"><br/>
-          <span class="field">Срок кредита</span><br/>
-          <input type="text"><br/>
-          <span class="field">Процентная ставка</span><br/>
-          <input type="text"><br/>
-          <span class="field">Ежемесячный платеж</span><br/>
-          <input type="text">
-        </form>
+        <form action="#" method="post" id="calculator">
+
+   <label>Первоначальный взнос: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <div class="input" id="cor5">
+   <input name="first_pay" value="3000" id="posName" type="text" />
+   </div>
+
+   <label>Срок кредита, лет: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <div class="input" id="cor5">
+   <input name="year" value="5" id="1" type="text" />
+   </div>
+   
+   <label>Процентная ставка: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <div class="input" id="cor5">
+   <input name="procent" value="10" type="text" />
+   </div>
+
+<label>Ежемесячный платеж: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <div class="input" id="cor5">
+   <input name="platez" value=""  type="text" readonly/>
+   </div>
+<button type="button" id="send4">Посчитать</button>
+</form>
+
       </div>
     </div>
     <div class="description_project">
