@@ -129,7 +129,9 @@ margin-top: 10px;
 
 <div class="buy_page">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
   <div class="buy_item">
+    
     <div class="project_heading">
       <div class="item_price">id: 12345</div>
       <h1 class="h1">Название проекта </h1>
@@ -146,7 +148,7 @@ margin-top: 10px;
       
       <div class="buttons" id='basic-modal'>
             
-       <label title="Контактная форма в модальном окне" class="btn" for="modal-2">Кнопка</label>
+       <label title="Контактная форма в модальном окне" class="btn big green_btn view_btn" for="modal-2">Кнопка</label>
       </div>
     
       <div class="clear"></div>
@@ -173,9 +175,23 @@ margin-top: 10px;
     </div>
   </div>
 </div>
-    
-  
 
+<div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox"  hidden>
+  <div class="modal-wrap" aria-hidden="false" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Заголовок </h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <p>Здесь размещаете любое содержание...</p>
+      </div>
+  
+    </div>
+  </div>
+</div>
 
     
     
