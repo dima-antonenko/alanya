@@ -729,5 +729,126 @@ input.labelauty:checked + label{
 .btn-form:hover{
     background: #f2f2f2;
 }
+.credit{
+  border: none;
+}
 
+.credit input{
+    height: 30px;
+    line-height: normal;
+    width: 170px;
+    font-family: Verdana;
+}
 
+.description_project {
+  outline: 1px solid red;
+  float: left;
+   min-height: 350px;
+}
+
+.credit_condirm{
+  padding: 0 10px;
+  border: 1px solid #00aeac;
+  border-radius: 3px;
+  color: white;
+  background: #00aeac;
+  width: 90px;
+  margin-top: 8px;
+}
+.managers_list{
+ width: 260px;
+  float: right;
+  outline: 1px solid red;
+   margin-top: 25px;
+  ul{
+    li{
+      height: 125px;
+      font-size: 10px;
+      list-style: outside none none;
+    .manager{
+    .photo {
+       width: 40%;
+       float: left;
+
+      img{
+         width: 105px;
+         height: 115px;
+      }
+    }
+    .description{
+      width: 55%;
+      float: right;
+      padding-left: 4px;
+        .field{
+          clear: both !important;
+          position: relative;
+        }
+        .name{
+          font-weight: bold;
+           top: -5px;
+        }
+
+        .post{
+          margin-bottom:5px; 
+          font-style: oblique;
+        }
+        .skype_man {
+          
+        }
+    }
+}
+   }
+ 
+  }
+}
+
+.buttons_before_qus{
+  width: 100%;
+  float:left;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  
+  .share{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px; 
+  }
+  .print{
+
+    color: #00aeac;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 20px;
+
+    }
+
+    .send{
+    
+    color: #00aeac;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    }
+}
+
+.form_question{
+  width: 100%;
+  float: left;
+  border-top: 1px solid  #4d4d4d;
+
+  .fields_left{
+    width: 50%;
+    float:left;
+
+  }
+
+  .fields_right{
+    width: 50%;
+    float:right;
+  }
+}

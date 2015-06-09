@@ -53,9 +53,11 @@ width: 210px !important;
 }
 .project_info .line{
 line-height: 19px;
-color: #6d6e70;
+color: #333;
 font-size: 10px;
 padding-top: 3px;
+ border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
 }
 .project_info .line .value{
 float: right !important;
@@ -64,13 +66,13 @@ float: right !important;
 margin-right: 20px;
 }
 .line .type{
-padding-left: 4px;
+padding-left: 8px;
 }
 .line .value{
-padding-right: 4px;
+padding-right: 5px;
 }
 .buy_item_text .buttons{
-margin: 10px 0;
+margin: 20px 0;
 }
 .buy_item_text .buttons a{
 font-size: 15px;
@@ -81,17 +83,6 @@ padding: 8px 10px;
 margin-right: 15px;
 color: #4d4d4d;
 }
-.manager_list{
-float: right;
-width: 290px
-}
-.manager_list .list .avatar{
-width: 40%;
-}
-.manager_list img{
-height: 200px !important;
-width: 120px !important;
-}
 .description_project{
 width: 400px;
 padding-left: 20px;
@@ -100,16 +91,16 @@ padding-top: 0;
 font-size: 15px;
 }
 .bg_dark{
-background-color: #CCCCCC;
+background-color: #EEEEEE;
 }
 .bg_light{
-background-color: #EDEDED ;
+background-color: #FBFBFB;
 }
 .to_coast{
 margin-top: 10px;
 }
 .to_coast_list .line{
-padding-left: 20px;
+padding-left: 10px;
 }
 .credit_input{
 width: 100%;
@@ -123,11 +114,35 @@ margin-top: 10px;
 
 }
 
+.to_coast_list div:nth-child(2n){
+  background-color: #fbfbfb !important;
+}
+
+.to_coast_list div{
+  color: #4d4d4d;
+  font-size: 12px;
+}
+
+hr{
+  color: black
+
+}
+.view_btn{
+  height: 10px;
+}
+.buttons{
+  margin-top: 20px;
+}
+.buttons .more{
+   background: #00aeac none repeat scroll 0 0;
+    padding: 8px 10px;
+}
+
+.project_params{
+  border-bottom: 1px solid #e1e1e1; 
+}
 </style>
 
-<script type="text/javascript">
-
-</script>
 
 
 <div class="buy_page">
@@ -151,7 +166,8 @@ margin-top: 10px;
       
       <div class="buttons" id='basic-modal'>
             
-       <label title="Контактная форма в модальном окне" class="btn big green_btn view_btn" for="modal-2">Кнопка</label>
+       <label class="more" for="modal-2">Узнать больше</label>
+       <a href="#">Посмотреть</a>
       </div>
     
       <div class="clear"></div>
@@ -204,7 +220,7 @@ margin-top: 10px;
       <div class="price_area">
         <span>цена: 2000$ - 4000$</span>
       </div>
-      <div class="project_info">
+      <div class="project_info project_params">
         <div class="line bg_dark"><span class="type">Вид сделки:</span>  <span class="value"> Продажа</span></div>
         <div class="line bg_light"><span class="type">Район:</span>  <span class="value"> Макмутлар</span></div>
         <div class="line bg_dark"><span class="type">Тип объекта:</span>  <span class="value"> квартира и пентхаус</span></div>
@@ -221,38 +237,125 @@ margin-top: 10px;
         <div class="line bg_dark">Кондиционеры</div>
         <div class="line bg_dark">Водонагреватели</div>
         <div class="line bg_dark">Оформление ТАПУ</div>
+        <div class="line bg_dark">Оформление ТАПУ</div>
+        <div class="line bg_dark">Оформление ТАПУ</div>
       </div>
       <div class="project_info credit">
         <form action="#" method="post" id="calculator">
 
-   <label>Первоначальный взнос: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <label>Первоначальный взнос: </label>
    <div class="input" id="cor5">
    <input name="first_pay" value="3000" id="posName" type="text" />
    </div>
 
-   <label>Срок кредита, лет: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <label>Срок кредита, лет: </label>
    <div class="input" id="cor5">
    <input name="year" value="5" id="1" type="text" />
    </div>
    
-   <label>Процентная ставка: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+   <label>Процентная ставка: </label>
    <div class="input" id="cor5">
    <input name="procent" value="10" type="text" />
    </div>
 
-<label>Ежемесячный платеж: <font color="#FF0000" style="vertical-align: middle;">*</font></label>
+<label>Ежемесячный платеж: </label>
    <div class="input" id="cor5">
    <input name="platez" value=""  type="text" readonly/>
    </div>
-<button type="button" id="send4">Посчитать</button>
+<button type="button" class="credit_condirm" id="send4">посчитать</button>
 </form>
 
       </div>
+
+
     </div>
+
     <div class="description_project">
       <%= @project.description.html_safe %>
+      <div class="buttons_before_qus">
+        <div class="share">
+          Здесь код кнопок
+        </div>
+        <a class="print" href="#">Печать</a>
+        <a class="send" href="#">Отправить по email</a>
+      </div>
     </div>
-    
+
+ <div class="managers_list">
+  <ul>
+    <li>
+      <div class="manager">
+        <div class="photo">
+          <img src="/test.png">
+        </div>
+        <div class="description">
+          <span class="field name">Имя и фамилия</span>
+          <span class="field post">Менеджер по продажам</span><br />
+          <span class="field skype_man">Skype: skypename</span><br/>
+          <span class="field languages">Языки: Русский</span><br/>
+          <span class="field mail">12@mail.ru</span><br/>
+          </div>
+      </div>
+    </li>
+    <li>
+      <div class="manager">
+        <div class="photo">
+          <img src="/test.png">
+        </div>
+        <div class="description">
+          <span class="field name">Имя и фамилия</span><br/>
+          <span class="field post">Менеджер по продажам</span><br />
+          <span class="field skype_man">Skype: skypename</span><br/>
+          <span class="field languages">Языки: Русский</span><br/>
+          <span class="field mail">12@mail.ru</span><br/>
+          </div>
+      </div>
+    </li>
+    <li>
+      <div class="manager">
+        <div class="photo">
+          <img src="/test.png">
+        </div>
+        <div class="description">
+          <span class="field name">Имя и фамилия</span><br/>
+          <span class="field post">Менеджер по продажам</span><br/>
+          <span class="field skype_man">Skype: skypename</span><br/>
+          <span class="field languages">Языки: Русский</span><br/>
+          <span class="field mail">12@mail.ru</span><br/>
+          </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="form_question">
+<div class="heaing">
+  <span>Задайте свой вопрос</span>
+</div>
+  <form action="zz">
+    <div class="fields_left">
+      <div class="form_group">
+        <label > Имя</label>
+        <input type="text" >
+      </div>
+      <div class="form_group">
+        <label > Телефон</label>
+        <input type="text" >
+      </div>
+    </div>
+    <div class="field_right">
+      <div class="form_group">
+        <label > Email</label>
+        <input type="text" >
+      </div>
+      <div class="form_group">
+        <label > Skype</label>
+        <input type="text" >
+      </div>
+    </div>
+  </form>
+</div>
     
   </div>
 <%= render 'layouts/sidebar' %>
