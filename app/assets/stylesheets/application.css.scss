@@ -852,3 +852,82 @@ input.labelauty:checked + label{
     float:right;
   }
 }
+
+.form_question{
+  form{
+     padding-left: 20px;
+    .fields_left, .fields_right{
+      .form_group{ 
+        padding-left: 10px; 
+        label{
+           clear: both !important;
+           float: left;
+           width: 100%;
+           font-family: verdana;
+           font-size: 13px;
+           padding-bottom: 3px;
+           padding-top: 3px;
+        }
+        input{
+          width: 70%;
+          height: 30px;
+        }
+      }  
+    }
+
+    .msg{
+      float: left;
+      clear: both;
+      padding-left: 10px;
+      width: 98%;
+      padding-top: 10px;
+
+       input{
+         width: 86%;
+         height: 60px;
+        } 
+
+          label{
+            clear: both !important;
+           float: left;
+           width: 86%;
+           font-family: Verdana;
+           font-size: 13px;
+            padding-bottom: 3px;
+           padding-top: 3px;
+           
+     
+
+       }
+    }
+  }
+}
+
+.form_question{
+   margin-bottom: 40px;
+
+  .heading{
+    font-family: Verdana !important;
+    font-weight: bold !important;
+    padding-bottom: 10px !important;
+    padding-left: 20px !important;
+    padding-top: 10px !important;
+  }
+
+  .button{
+    width: 30%;
+    float: right;
+    clear: both;
+    padding-top: 10px;
+    .sub{
+      background: #00aeac none repeat scroll 0 0;
+      border: 1px solid #00aeac;
+      border-radius: 3px;
+      color: white;
+      margin-top: 8px;
+      padding: 0 10px;
+      width: 96px;
+      height: 30px;
+    }
+  }
+}
