@@ -48,7 +48,6 @@ font-size: 17px;
 padding-bottom: 5px;
 }
 .buy_item_info{
-
 width: 210px !important;
 }
 .project_info .line{
@@ -56,8 +55,8 @@ line-height: 19px;
 color: #333;
 font-size: 10px;
 padding-top: 3px;
- border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
+border-left: 1px solid #e1e1e1;
+border-right: 1px solid #e1e1e1;
 }
 .project_info .line .value{
 float: right !important;
@@ -110,37 +109,91 @@ width: 100%;
 margin-top: 10px;
 }
 .distnce_list ul li{
-  display: inline-table;
-  margin: 0 -2px;
-
+display: inline-table;
+margin: 0 -2px;
 }
-
 .to_coast_list div:nth-child(2n){
-  background-color: #fbfbfb !important;
+background-color: #fbfbfb !important;
 }
-
 .to_coast_list div{
-  color: #4d4d4d;
-  font-size: 12px;
+color: #4d4d4d;
+font-size: 12px;
 }
-
 hr{
-  color: black
-
+color: black
 }
 </style>
 
+  
+<%= render '/layouts/sidebar' %>
 
-
-<div class="buy_page">
-  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
-
-  <div class="buy_item">
-    
-    
-    
+<div class="clmn_right">
+  
+  <ul class="apartment_list clearfix">
+    <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+   
+  </ul>
   </div>
-<%= render 'layouts/sidebar' %>
-<div class="clear"></div>
-
 </div>
