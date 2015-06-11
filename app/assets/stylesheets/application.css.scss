@@ -963,7 +963,6 @@ nav{
     list-style: none;
     position: relative;
     float: right;
-    margin-right: 100px;
     display: inline-table;
   }
     nav ul li{
@@ -973,7 +972,7 @@ nav{
       transition: all .2s ease-in-out;
     }
 
-    nav ul li:hover{background: rgba(0,0,0,.15);}
+    nav ul li:hover{}
     nav ul li:hover > ul{display: block;}
     nav ul li{
       float: left;
@@ -994,7 +993,7 @@ nav{
         display: none;
         background: #fff;
         position: absolute; 
-        top: 100%;
+        top: 54px;
         box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
         border: 1px solid rgba(0,0,0,.1);
       }
@@ -1015,19 +1014,52 @@ nav{
   padding: 0;
   
   .before_nav{
-    width: 60%;
+    width: 72%;
     float: right;
 
     .phones{
+      width: 63%;
+      float: left;
       .phone{
         text-align: right;
         clear: both;
         float: right;
       }
     }
+
+    .other{
+      width: 29%;
+      text-align: left;
+      float: right;
+      .mail, .skype_in_head{
+        float: left;
+        clear: both;
+      }
+    }
   }
 
   nav{
     float: left;
+    width: 100%;
+     background: rgba(0, 0, 0, 0) url("/src/bg_menu.png") no-repeat scroll 0 23px;
+      font-size: 14px;
+    line-height: 17px;
+    margin: 0 -3px;
+    padding: 14px 0 0 24px;
+
+    ul{
+      padding-top: 19px;
+      li{
+        a{
+            color: #4d4d4d;
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0;
+            padding: 5px 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+      }
+    }
   }
 }         
