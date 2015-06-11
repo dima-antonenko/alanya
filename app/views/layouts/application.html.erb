@@ -33,31 +33,35 @@
 <!-- BEGIN wrapper-->
 <div class="wrapper min_width">
 
-  <!-- BEGIN header-->
-  <div class="header clearfix">
-    <%= link_to '/', class: 'logo', title: 'Alanya Properties' do %>
-        <img src="logo.png">
-    <% end %>
-    <table class="nav">
-      <tr>
-         <td class="td"><a href="#">Купить</a></td>
-         <td class="td"><a href="#">Купить</a></td>
-         <td class="td"><a href="#">Купить</a></td>
-         <td class="td"><a href="#">Купить</a></td>
-         <td class="td"><a href="#">Купить</a></td>
-         <td class="td"><a href="#">Купить</a></td>
-        <td class="td last_td">
-          <a class="search_item">ПОИСК</a>
+<div class="header clearfix no-print main_nav" >
+<a title="Alanya Properties" class="logo" href="/"><img src="/logo.png" alt="Alanya Properties Logo">
+</a>
 
-          <div class="search_input" style="display:none;">
-            <form action="/search" method="GET">
-              <input class="input" id="main-search-input" type="text" name="q"/><i class="search_btn"></i>
-            </form>
-          </div>
-        </td>
-      </tr>
-    </table>
+<div class="before_nav">
+  <div class="phones">
+    <span class= "phone">Телефон для всех регионов России: +7 123 456 78</span>
+    <span class= "phone">Телефон в Турции: +7 123 456 78</span>
+    <span class= "phone">Телефон в Москве: +7 123 456 78</span>
   </div>
+</div>
+
+<nav role='navigation'>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a>
+      <ul>
+        <li><a href="">Our team</a></li>
+        <li><a href="">History</a></li>
+         <li><a href="">Our team</a></li>
+        <li><a href="">History</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>  
+
+</div>
   <!-- END header-->
 
   <!-- BEGIN content-->
