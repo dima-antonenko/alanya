@@ -1016,6 +1016,13 @@ nav{
   .before_nav{
     width: 72%;
     float: right;
+    padding-top: 10px;
+
+    img{
+      width: 25px;
+       margin-top: -6px;
+       margin-right: 5px;
+    }
 
     .phones{
       width: 63%;
@@ -1024,16 +1031,23 @@ nav{
         text-align: right;
         clear: both;
         float: right;
+        padding-bottom: 3px;
       }
     }
 
     .other{
-      width: 29%;
+      width: 33%;
       text-align: left;
       float: right;
+
+      .mail{
+        padding-bottom: 4px; 
+      }
+
       .mail, .skype_in_head{
         float: left;
         clear: both;
+         margin-top: 4px;
       }
     }
   }
@@ -1046,6 +1060,7 @@ nav{
     line-height: 17px;
     margin: 0 -3px;
     padding: 14px 0 0 24px;
+    margin-top: -15px;
 
     ul{
       padding-top: 16px;
@@ -1066,9 +1081,7 @@ nav{
                padding: 5px 8px;
             }
 
-            a:hover{
-              color: red;
-            }
+
 
           .sub{
           padding-left: 30px;
