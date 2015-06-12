@@ -1055,7 +1055,7 @@ nav{
   nav{
     float: left;
     width: 100%;
-     background: rgba(0, 0, 0, 0) url("/src/bg_menu.png") no-repeat scroll 0 23px;
+     background: transparent url("/src/bg_menu.png") no-repeat scroll 0 23px / 960px auto;
       font-size: 14px;
     line-height: 17px;
     margin: 0 -3px;
@@ -1096,11 +1096,21 @@ nav{
 .content {
   padding: 0px;
 }
+.wrapper{
+  background-color: #eeeeee;
+}
+.min_width{
+  width: 980px;
+}
 
 .footer{
-  margin-top: 20px;
-  width: 100%;
+
+  width: 980px;
   float: left;
+  background: #eeeeee none repeat scroll 0 0;
+  clear: both;
+  margin-left: -14px;
+  padding-top: 30px;
 
   .row{
     width: 16%;
@@ -1109,11 +1119,19 @@ nav{
   }
   ul{
     list-style: none;
+     .last{
+      margin-right: -40px !important;
+    }
 
     li{
+      border-bottom: 1px solid gray;
       a{
-        font-size: 10px;
+         font-size: 11px;
+          margin-bottom: 7px;
+          padding-left: 20px;
       }
+     
     }
+
   }
 }         
