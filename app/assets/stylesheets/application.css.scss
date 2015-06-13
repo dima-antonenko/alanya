@@ -7,7 +7,6 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *= require font
  *= require main
  *= require fotorama
  *= require_self
@@ -443,18 +442,18 @@ input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked, 
 .sities_list ul li {
   padding-bottom: 5px;
   font-family: Verdana;
-  font-size: 13px !important;
+  font-size: 12px !important;
   text-align: left !important;
 }
 
 input.sity + label > span.labelauty-checked-image + span.labelauty-checked{
   color: #00aeac !important;
-   font-size: 13px !important;
+   font-size: 12px !important;
    text-align: left !important;
 }
 
 input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked{
-   font-size: 13px !important;
+   font-size: 12px !important;
    text-align: left !important;
    width: auto !important;
 }
@@ -505,6 +504,7 @@ input.labelauty:checked + label{
 .prices_list input{
   font-size: 18px;
    padding: 2px 15px 1px;
+   width: 90px;
 }
 
 .static_sities_list ul li ul li{
@@ -1135,3 +1135,7 @@ nav{
 
   }
 }         
+
+*, *::before, *::after{
+  font-family: Verdana !important;
+}
