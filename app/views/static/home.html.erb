@@ -1,1 +1,281 @@
-this is home
+<style type="text/css">
+.project_heading{
+background-color: #00aeac;
+padding: 6px;
+border-radius: 5px 5px 0 0;
+border-bottom: 1px solid #e1e1e1 !important;
+}
+.project_heading .h1{
+font-size: 17px !important;
+padding-left: 10px;
+}
+.buy_item{
+border: none;
+padding: 0px;
+width: 700px;
+}
+.buy_filter{
+width: 230px;
+margin-top: 25px;
+}
+.buy_item_text{
+padding-left: 20px !important;
+width: 430px;
+}
+.buy_item .item_price{
+min-width: 0;
+border:  0;
+font-size: 17px !important;
+}
+.buy_item_photos{
+max-width: 462px !important;
+padding-top: 20px;
+margin: 0px !important;
+}
+.fotorama{
+max-width: 490px !important;
+}
+.fotorama img {
+height: 250px;
+width: 450px;
+}
+.description_project{
+padding-top: 10px;
+}
+.price_area{
+color: #44C4E4;
+font-size: 17px;
+padding-bottom: 5px;
+}
+.buy_item_info{
+width: 210px !important;
+}
+.project_info .line{
+line-height: 19px;
+color: #333;
+font-size: 10px;
+padding-top: 3px;
+border-left: 1px solid #e1e1e1;
+border-right: 1px solid #e1e1e1;
+}
+.project_info .line .value{
+float: right !important;
+}
+.project_info{
+margin-right: 20px;
+}
+.line .type{
+padding-left: 8px;
+}
+.line .value{
+padding-right: 5px;
+}
+.buy_item_text .buttons{
+margin: 20px 0;
+}
+.buy_item_text .buttons a{
+font-size: 15px;
+background-color: #00aeac;
+font-size: 13px;
+line-height: 14px;
+padding: 8px 10px;
+margin-right: 15px;
+color: #4d4d4d;
+}
+.description_project{
+width: 400px;
+padding-left: 20px;
+float: left;
+padding-top: 0;
+font-size: 15px;
+}
+.bg_dark{
+background-color: #EEEEEE;
+}
+.bg_light{
+background-color: #FBFBFB;
+}
+.to_coast{
+margin-top: 10px;
+}
+.to_coast_list .line{
+padding-left: 10px;
+}
+.credit_input{
+width: 100%;
+}
+.credit{
+margin-top: 10px;
+}
+.distnce_list ul li{
+display: inline-table;
+margin: 0 -2px;
+}
+.to_coast_list div:nth-child(2n){
+background-color: #fbfbfb !important;
+}
+.to_coast_list div{
+color: #4d4d4d;
+font-size: 12px;
+}
+hr{
+color: black
+}
+.view_btn{
+height: 10px;
+}
+.buttons{
+margin-top: 20px;
+}
+.buttons .more{
+background: #00aeac none repeat scroll 0 0;
+padding: 8px 10px;
+}
+.project_params{
+border-bottom: 1px solid #e1e1e1;
+}
+</style>
+<div class="buy_page index_project">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+  <div class="buy_item">
+  <div class="results">
+    <h1>Результаты поиска</h1>
+  </div>
+
+      <ul class="apartment_list clearfix">
+    <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+    <li class="clear">
+
+        <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+          <img src="/test.png">
+          
+          <div class="title">Название проета</div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td>Аталия</td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td>1 + 2</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Подробнее</a>
+          <div class="prise">1 000</div>
+        </div>
+      </div>
+    </li>
+   
+  </ul>
+
+
+  </div>
+  <%= render 'layouts/sidebar' %>
+  <div class="clear"></div>
+</div>

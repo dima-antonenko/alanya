@@ -1139,3 +1139,32 @@ nav{
 *, *::before, *::after{
   font-family: Verdana !important;
 }
+
+.apartment_list{
+  padding: 10px !important;
+  padding-right: 0px !important; 
+  margin: 0 !important;
+
+  .clear{
+    padding: 5px 0; 
+  }
+
+  li{
+    margin: 0px !important;
+    margin-right: 16px !important;
+    width: 214px !important;
+  }
+
+}
+ 
+
+.apatment_list_bot {
+  img{
+    height: 130px;
+    width: 207px;
+  }
+}
+
+.results h1{
+  font-size: 20px !important;
+}

@@ -582,16 +582,16 @@ a.btn:active{ color:#000000 }
     color: #4d4d4d;
 }
 .apartment_list .li{
-    background: image-url('apatment_list_bg.png') repeat-y;
+    background: image-url('/img/apatment_list_bg.png') repeat-y;
     width: 222px;
     float: left;
     margin: 0 0 23px 23px;
 }
 .apatment_list_top{
-    background: image-url('apatment_list_top.png') no-repeat 0 0;
+    background: image-url('/img/apatment_list_top.png') no-repeat 0 0;
 }
 .apatment_list_bot{
-    background: image-url('apatment_list_bot.png') no-repeat 0 bottom;
+    background: image-url('/img/apatment_list_bot.png') no-repeat 0 bottom;
     min-height: 67px;
     padding: 3px 3px 9px;
 }
