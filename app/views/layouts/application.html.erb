@@ -9,7 +9,6 @@
 
   <script type="text/javascript" src="/src/jquery-latest.min.js"></script>
   <script type="text/javascript" src="/src/jquery-labelauty.js"></script>
-  <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
 
   <link rel="stylesheet" href="/src/jquery-labelauty.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="/src/lby-main.css" type="text/css" media="screen" charset="utf-8">
@@ -17,14 +16,14 @@
   <link type='text/css' href='/css/demo.css' rel='stylesheet' media='screen' />
   <link type='text/css' href='/css/basic.css' rel='stylesheet' media='screen' />
 
+   <link href="/owl.carousel.css" rel="stylesheet">
+   <link href="/owl.theme.css" rel="stylesheet">
 
-  <script>
-    $(document).ready(function(){
-      $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
-      $(".to-labelauty").sity({minimum_width: "52px" });
-    });
 
+    <script>
+ 
     
+
   </script>
 
 </head>
@@ -183,6 +182,29 @@
   </tr>
 </table>
 
+
+ 
+    <script src="/owl.carousel.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+    </script>
 
 </body>
 </html>

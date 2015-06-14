@@ -15,8 +15,14 @@
 //= require jquery_ujs
 //= require fotorama
 
-//= require ckeditor/init
 //= require_tree .
+
+     $(document).ready(function(){
+        $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
+        $(".to-labelauty").sity({minimum_width: "52px" });
+      });
+
+
 
 $(document).ready(function() {
 // калькулятор кредита................................./
