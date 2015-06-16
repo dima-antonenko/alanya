@@ -19,4 +19,8 @@ class StaticController < ApplicationController
 	def company_info
 		render '/static/company_info/show'
 	end
+
+	def peoples
+		render '/static/peoples/show'
+	end
 end

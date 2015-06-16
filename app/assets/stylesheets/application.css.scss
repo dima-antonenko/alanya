@@ -1450,5 +1450,59 @@ nav{
       height: 350px;
     }
   }
+}
 
+.peoples{
+  .peoples_list{
+    margin-top: 15px;
+    ul{
+      li{
+        width: 47%;
+        float: left;
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 25px;
+
+        .avatar{
+          width: 45%;
+          float: left;
+        }
+
+        .info{
+          width: 51%;
+          float: right;
+          color: #4d4d4d;
+          font-size: 13px;
+          line-height: 19px;
+
+          .name{
+            color: black;
+            font-size: 16px;
+          }
+          .post{
+            margin-bottom: 6px;
+            float: left;
+            width: 100%;
+          }
+          .phone{ 
+            float: left;
+            width: 100%;
+          }
+          .languages{
+            float: left;
+            width: 100%;
+          }
+          .skype_man{
+            float: left;
+            width: 100%;
+          }
+          .email{
+            float: left;
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
 }

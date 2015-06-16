@@ -69,6 +69,7 @@ Rails.application.routes.draw do
   get '/contacts', to: 'static#contacts'
 
   get '/company_info', to: 'static#company_info'
+  get '/peoples', to: 'static#peoples'
 
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
