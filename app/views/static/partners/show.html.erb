@@ -1,0 +1,89 @@
+<%= render '/layouts/basic_styles.html.erb' %>
+
+<div class="buy_page peoples">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+      
+    <div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox"  hidden>
+  <div class="modal-wrap" aria-hidden="false" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Уведомление </h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <p>Ваш запрос отправлен</p>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="project_heading">
+      <h1 class="h1">Наши партнеры</h1>
+    </div>
+
+    <div class="peoples_list">
+      <ul>
+        <li>
+          <img src="#" class="avatar">
+          <div class="info">
+            <span class="name">Имя и фамилия</span>
+            <span class="post">главный бугалтер</span>
+            <span class="phone">Телефон: +7 123 456</span>
+            <span class="skype_name">Skype: skypename</span>
+            <span class="languages">Языки: English, Russian</span>
+            <span class="email">email@gmail.com</span>
+          </div>
+        </li>
+        <li>
+          <img src="#" class="avatar">
+          <div class="info">
+            <span class="name">Имя и фамилия</span>
+            <span class="post">главный бугалтер</span>
+            <span class="phone">Телефон: +7 123 456</span>
+            <span class="skype_name">Skype: skypename</span>
+            <span class="languages">Языки: English, Russian</span>
+            <span class="email">email@gmail.com</span>
+          </div>
+        </li>
+
+        <li>
+          <img src="#" class="avatar">
+          <div class="info">
+            <span class="name">Имя и фамилия</span>
+            <span class="post">главный бугалтер</span>
+            <span class="phone">Телефон: +7 123 456</span>
+            <span class="skype_name">Skype: skypename</span>
+            <span class="languages">Языки: English, Russian</span>
+            <span class="email">email@gmail.com</span>
+          </div>
+        </li>
+
+        <li>
+          <img src="#" class="avatar">
+          <div class="info">
+            <span class="name">Имя и фамилия</span>
+            <span class="post">главный бугалтер</span>
+            <span class="phone">Телефон: +7 123 456</span>
+            <span class="skype_name">Skype: skypename</span>
+            <span class="languages">Языки: English, Russian</span>
+            <span class="email">email@gmail.com</span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  <%= render 'layouts/ask_form' %>    
+
+  </div>
+<%= render 'layouts/sidebar' %>
+<div class="clear"></div>
+
+</div>

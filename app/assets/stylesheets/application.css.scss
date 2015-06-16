@@ -1506,3 +1506,32 @@ nav{
     }
   }
 }
+
+.reviews{
+  .reviews_list{
+    margin: 0 20px;
+    ul{
+      li{
+        width: 100%;
+        list-style: none;
+        .heading{
+          width: 100%;
+          float: left;
+          padding: 5px;
+          background: #00aeac;
+          border: 1px solid #00aeac;
+          border-radius: 5px;         
+        }
+        .content{
+          width: 100%;
+          float: left;
+          padding: 11px 15px; 
+        }
+      }
+    }
+  }
+}
+
+.review_form{
+  border: none;
+}

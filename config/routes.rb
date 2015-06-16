@@ -70,6 +70,10 @@ Rails.application.routes.draw do
 
   get '/company_info', to: 'static#company_info'
   get '/peoples', to: 'static#peoples'
+  get '/partners', to: 'static#partners'
+  get '/reviews', to: 'static#reviews'
+  get '/free_tour', to: 'static#free_tour'
+  get '/exhibition', to: 'static#exhibition'
 
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'

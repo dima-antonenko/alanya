@@ -23,4 +23,20 @@ class StaticController < ApplicationController
 	def peoples
 		render '/static/peoples/show'
 	end
+
+	def partners
+		render '/static/partners/show'
+	end
+
+	def reviews
+		render '/static/test/reviews'
+	end
+
+	def free_tour
+		render '/static/free_tour/show'
+	end
+
+	def exhibition
+		render '/static/exhibition/show'
+	end
 end
