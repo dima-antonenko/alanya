@@ -22,13 +22,12 @@
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 	background: #869791;
-	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
 }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover{
-	filter: Alpha(Opacity=100);/*IE7 fix*/
+	background: #00aeac;
 	opacity: 1;
 	text-decoration: none;
 }
@@ -46,17 +45,17 @@
 	height: 12px;
 	margin: 5px 7px;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: 0.5;
+	opacity: 0.9;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #869791;
+	background: white;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
-	filter: Alpha(Opacity=100);/*IE7 fix*/
-	opacity: 1;
+	opacity: 0.9;
+	background: #00aeac;
 }
 
 /* If PaginationNumbers is true */
