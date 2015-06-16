@@ -15,4 +15,8 @@ class StaticController < ApplicationController
 		@text_contacts = SiteVariable.where(place: "page_contact")
 		render 'contacts'
 	end
+
+	def company_info
+		render '/static/company_info/show'
+	end
 end

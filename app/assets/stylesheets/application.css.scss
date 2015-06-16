@@ -1166,6 +1166,7 @@ nav{
 
 .results h1{
   font-size: 20px !important;
+  padding-left: 10px;
 }
 
 .item{
@@ -1359,6 +1360,26 @@ nav{
         background-color: #00aeac ;
         float: left;        
       }
+    }
+  }
+}
+
+.apartment_list{
+  .apatment_list_bot{
+    img{
+      float: left !important;
+      z-index: 1 !important;
+    }
+    .sku{
+      color: white;
+      background: #ff9226;
+      padding: 2px 4px;
+      z-index: 5;
+      float: right;
+       margin-bottom: -31px;
+      margin-left: -10px;
+      border-radius: 5px;
+      border: 1px solid;
     }
   }
 }

@@ -68,7 +68,7 @@ Rails.application.routes.draw do
   get '/delivery_and_pay', to: 'static#delivery_and_pay'
   get '/contacts', to: 'static#contacts'
 
-
+  get '/company_info', to: 'static#company_info'
 
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
