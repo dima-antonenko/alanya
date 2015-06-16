@@ -507,26 +507,23 @@ input.labelauty:checked + label{
    width: 90px;
 }
 
-.static_sities_list ul li ul li{
-  font-family: Verdana;
-   line-height: 24px;
-    list-style: outside none none;
-}
 
-.static_sities_list ul li ul{
-  margin-left: 20px;
-  font-family: Verdana;
+.static_sities_list {
+  ul{
+    margin-bottom: -20px;
 
-   line-height: 24px;
-    list-style: outside none none;
-}
+    li{
+      font-family: Verdana;
 
-.static_sities_list ul li{
-  font-family: Verdana;
+      line-height: 24px;
+      list-style: outside none none;
 
-   line-height: 24px;
-    list-style: outside none none;
+    }
 
+    .sub_item{
+        margin-left: 20px;
+      }
+  }
 }
 
 .item a :hover{
@@ -537,13 +534,8 @@ input.labelauty:checked + label{
   background-color:  #00aeac ;
     border: 0 none;
     border-radius: 4px;
-    padding: 4px 9px;
+    padding: 0;
     text-align: center;
-}
-
-.static_menu_section h2{
-  text-align: center;
-  color: white;
 }
 
 .static_menu_section h2{
@@ -551,6 +543,13 @@ input.labelauty:checked + label{
   background: #00aeac none repeat scroll 0 0;
   margin-left: -12px;
   margin-right: -12px;
+  font-size: 16px;
+  text-align: center;
+  color: #4d4d4d ;
+
+  span{
+    padding: 0px;
+  }
 }
 
 .project_heading{
@@ -1335,6 +1334,31 @@ nav{
       text-align: left;
       font-size: 12px;
       margin-left: 7px;
+    }
+  }
+}
+
+.static_menu_section{
+  .banners{
+    width: 100%;
+
+    .banner{
+       margin-bottom: 55px;
+
+      img{
+        width: 100%;
+        height: 200px;  
+      }
+
+      .title{
+        width: 100%;
+        padding: 5px 5px;
+        text-align: center;
+        font-size: 15px;
+        color: #4d4d4d;
+        background-color: #00aeac ;
+        float: left;        
+      }
     }
   }
 }
