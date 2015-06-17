@@ -17,6 +17,8 @@
 
 //= require_tree .
 
+ $('#ca-container').contentcarousel();
+
      $(document).ready(function(){
         $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
         $(".to-labelauty").sity({minimum_width: "52px" });
