@@ -17,16 +17,13 @@
 
 //= require_tree .
 
- $('#ca-container').contentcarousel();
-
-     $(document).ready(function(){
-        $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
-        $(".to-labelauty").sity({minimum_width: "52px" });
-      });
 
 
 
 $(document).ready(function() {
+
+    $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
+        $(".to-labelauty").sity({minimum_width: "52px" });
 // калькулятор кредита................................./
 var Ld = "<img src='load.gif' alt='' />";
 var error = "<span style='font-size: 11px; font-weight: 100;'><font color='#ff0000'>Ошибка!</font> Форма заполненна не корректно!</span>";
