@@ -1541,3 +1541,42 @@ nav{
   float: left;
   height: 270px;
 }
+
+.events_list{
+  margin: 20px 0 0 0 ;
+  font-family: Verdana;
+  color: #4d4d4d ;
+  ul{
+    width: 100%;
+    li{
+      display: inline-table;
+      float: left;
+      width: 30%;
+      list-style: none;
+      margin-left: 14px;
+      margin-bottom: 30px;
+      .avatar{
+        float: left;
+        width: 40%;
+        clear: both;
+        height: 60px;
+      }
+      .title{
+        float: right;
+        width: 55%;
+      }
+      .more{
+        float: right;
+        width: 55%;
+        color: #44c4e4;
+      }
+    }
+  }
+}
+.exhibition{
+  .text{
+     color: #4d4d4d ;
+    padding: 10px;
+    margin-top: -20px;
+  }
+}
