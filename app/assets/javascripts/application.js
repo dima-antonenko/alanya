@@ -15,7 +15,7 @@
 //= require fancybox
 //= require jquery_ujs
 //= require fotorama
-//= require jquery-labelauty
+
 
 //= require_tree .
 
@@ -96,4 +96,6 @@ $(".to-labelauty").labelauty();
                 'transitionIn'      : 'none',
                 'transitionOut'     : 'none'
             });
+
+
         });

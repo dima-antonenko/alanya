@@ -1587,3 +1587,42 @@ nav{
 .apartment_list .prise{
    font-size: 20px;
 }
+
+.sity{
+  .sity_images{
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin-bottom: 15px;
+    li{
+      list-style: none;
+      width: 14%;
+      float: left;
+      margin-left: 16px;
+      background: #00aeac;
+      border-radius: 5px;
+
+      .title{
+        text-align: center;
+        color: white;
+        text-align: center;
+        font-family: Verdana;
+        float: left;
+        width: 100%;
+
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .desc{
+    font-family: Verdana;
+    font-size: 14px;
+    color: #4d4d4d;
+    padding: 15px;
+    margin-top: 10px;
+  }
+}
