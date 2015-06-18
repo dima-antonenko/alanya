@@ -39,4 +39,12 @@ class StaticController < ApplicationController
 	def exhibition
 		render '/static/exhibition/show'
 	end
+
+	def sities
+		render '/static/test/sities'
+	end
+
+	def sity
+		render '/static/test/sity'
+	end
 end

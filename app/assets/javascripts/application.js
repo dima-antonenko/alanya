@@ -12,59 +12,88 @@
 //
 
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
 //= require fotorama
+//= require jquery-labelauty
 
 //= require_tree .
 
-
-
-
 $(document).ready(function() {
 
-    $(".to-labelauty").labelauty({ checked_label: "value1", unchecked_label: "value2",  });
-        $(".to-labelauty").sity({minimum_width: "52px" });
-// калькулятор кредита................................./
-var Ld = "<img src='load.gif' alt='' />";
-var error = "<span style='font-size: 11px; font-weight: 100;'><font color='#ff0000'>Ошибка!</font> Форма заполненна не корректно!</span>";
-var erForm = "";
+$(".to-labelauty").labelauty();
 
-$("#send4").click(function(){
-    $("#h1").html(Ld).show();
-    $("#h2").html(Ld).show();
-    $("#h3").html(Ld).show();
-    $("#h4").html(Ld).show();
-    
-    var amount = 17000;
-        var interest = $("#calculator input[name='procent']").val()/1200;
-    var yearCredit = $("#calculator input[name='year']").val();
-    
-    
-    var Valjuta = $("#calculator select[name='posValjuta']").val();
-    var time = yearCredit * 12 ;
-    /*alert(time);*/
-    
-    function calculatePayment() {
-    var rate = amount * (interest * Math.pow(1 + interest, time)) / (Math.pow(1 + interest, time) - 1);
-    var summaVsego = rate * time;
-    var pereplata = summaVsego - amount;
-    $("#calculator input[name='platez']").val(rate.toFixed(2));
-    $("#h2").text(time);
-    $("#h3").text(summaVsego.toFixed(2));
-    $("#h4").text(pereplata.toFixed(2));
-    }
 
-if (amount == "") {erForm = "yes";}
-if (interest == "") {erForm = "yes";}
-if (yearCredit == "0" && month == "0") {erForm = "yes";}
+            $("a#example1").fancybox();
 
-if (erForm == "") { calculatePayment(); } else {
-$("#h1").html(error);
-$("#h2").html(error);
-$("#h3").html(error);
-$("#h4").html(error); 
-erForm = "";}
-    return false;
-});
+            $("a#example2").fancybox({
+                'overlayShow'   : false,
+                'transitionIn'  : 'elastic',
+                'transitionOut' : 'elastic'
+            });
 
-});
+            $("a#example3").fancybox({
+                'transitionIn'  : 'none',
+                'transitionOut' : 'none'    
+            });
+
+            $("a#example4").fancybox({
+                'opacity'       : true,
+                'overlayShow'   : false,
+                'transitionIn'  : 'elastic',
+                'transitionOut' : 'none'
+            });
+
+            $("a#example5").fancybox();
+
+            $("a#example6").fancybox({
+                'titlePosition'     : 'outside',
+                'overlayColor'      : '#000',
+                'overlayOpacity'    : 0.9
+            });
+
+            $("a#example7").fancybox({
+                'titlePosition' : 'inside'
+            });
+
+            $("a#example8").fancybox({
+                'titlePosition' : 'over'
+            });
+
+            $("a[rel=example_group]").fancybox({
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'titlePosition'     : 'over',
+                'titleFormat'       : function(title, currentArray, currentIndex, currentOpts) {
+                    return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                }
+            });
+
+            /*
+            *   Examples - various
+            */
+
+            $("#various1").fancybox({
+                'titlePosition'     : 'inside',
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none'
+            });
+
+            $("#various2").fancybox();
+
+            $("#various3").fancybox({
+                'width'             : '75%',
+                'height'            : '75%',
+                'autoScale'         : false,
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'type'              : 'iframe'
+            });
+
+            $("#various4").fancybox({
+                'padding'           : 0,
+                'autoScale'         : false,
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none'
+            });
+        });

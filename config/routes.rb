@@ -74,6 +74,8 @@ Rails.application.routes.draw do
   get '/reviews', to: 'static#reviews'
   get '/free_tour', to: 'static#free_tour'
   get '/exhibition', to: 'static#exhibition'
+  get '/sities', to: 'static#sities'
+  get '/sity', to: 'static#sity'
 
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
