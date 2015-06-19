@@ -127,7 +127,7 @@
 																Вид сделки
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:type_deal, options_for_select([['Не выбрано', 'none'] ,['Продажа', 'sale'],['Аренда', 'rent']]), {},{class: "btn"}) %>
+																<%= f.select(:type_deal, options_for_select([['Не выбрано', 'none'] ,['Продажа', 'sale'],['Аренда', 'rent']], selected: @project.type_deal), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -135,7 +135,8 @@
 																Тип объекта
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:type_object, options_for_select([['Не выбрано', 'none'] ,['Квартира', 'flat'],['Пентхаус', 'penthouse'], ['Квартира или пентхаус', 'flat_and_penthouse']]), {},{class: "btn"} ) %>
+																<%= f.select(:type_object, options_for_select([['Не выбрано', 'none'] ,['Квартира', 'flat'],['Пентхаус', 'penthouse'], ['Квартира или пентхаус', 'flat_and_penthouse']],
+																 selected: @project.type_object), {include_blank: 'Не выбрано'},{class: "btn"} ) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -143,7 +144,7 @@
 																Комнат
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:rooms, options_for_select([['Не выбрано', 'none'] ,['1 + 0', '1 + 0'],['1 + 1', '1 + 1'], ['2 + 1', '2 + 1'], ['3 + 1', '3 + 1'], ['4 + 1', '4 + 1'], ['5 + 1', '5 + 1']]) , {},{class: "btn"}) %>
+																<%= f.select(:rooms, options_for_select([['Не выбрано', 'none'] ,['1 + 0', '1 + 0'],['1 + 1', '1 + 1'], ['2 + 1', '2 + 1'], ['3 + 1', '3 + 1'], ['4 + 1', '4 + 1'], ['5 + 1', '5 + 1']], selected: @project.rooms), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -180,7 +181,7 @@
 																Бытовая техника
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_white_goods, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_white_goods, options_for_select([['Не выбрано', nil] ,['Есть', true], ['Нету', false]], selected: @project.has_white_goods), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -188,7 +189,7 @@
 																Электронагреватели
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_water_heater, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_water_heater, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']], selected: @project.has_water_heater), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -196,7 +197,7 @@
 																Мебель
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_furniture, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_furniture, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']], selected: @project.has_furniture), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -204,7 +205,7 @@
 																Оформление ТАПУ
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_tapu, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_tapu, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']], selected: @project.has_tapu), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -212,7 +213,7 @@
 																Оформление ИСКАНА
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:has_iskana, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']]), {},{class: "btn"}) %>
+																<%= f.select(:has_iskana, options_for_select([['Не выбрано', 'nil'] ,['Есть', 'true'], ['Нету', 'false']], selected: @project.has_iskana), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 													</div>
@@ -232,7 +233,7 @@
 																Состояние
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:condition, options_for_select([['Не выбрано', 'none'] ,['Строящийся объект', 'under_construction'], ['Готовый объект', 'ready'], ['Вторичное жилье', 'secondary']]), {},{class: "btn"}) %>
+																<%= f.select(:condition, options_for_select([['Не выбрано', 'none'] ,['Строящийся объект', 'under_construction'], ['Готовый объект', 'ready'], ['Вторичное жилье', 'secondary']], selected: @project.condition), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -240,7 +241,7 @@
 																Район
 															</div>
 															<div class="col-md-2 value">
-																<%= f.select :project_category_id , ProjectCategory.all.collect {|category| [category.title, category.id ]},{}, {class: "btn"} %>
+																<%= f.select :project_category_id , ProjectCategory.all.collect {|category| [category.title, category.id ]},{include_blank: 'Не выбрано'}, {class: "btn"} %>
 															</div>
 														</div>
 														<div class="row static-info">
