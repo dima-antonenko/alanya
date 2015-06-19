@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526202413) do
+ActiveRecord::Schema.define(version: 20150619214808) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -385,6 +385,7 @@ ActiveRecord::Schema.define(version: 20150526202413) do
     t.string   "meta_copyright"
     t.integer  "project_category_id"
     t.integer  "some_manager"
+    t.boolean  "custom_sku",          default: false
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

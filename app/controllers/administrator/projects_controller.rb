@@ -93,9 +93,9 @@ class Administrator::ProjectsController < AdministratorController
   private
 
   def project_params
-    params.require(:project).permit(:description, :meta_title, :meta_description, :meta_keywords, :avatar, :project_category_id,
+    params.require(:project).permit(:description, :meta_title, :meta_description,:meta_copyright, :meta_keywords, :avatar, :project_category_id,
                                     :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
-                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning, :some_manager)
+                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning, :some_manager, :custom_sku)
   end
 
   def set_project
