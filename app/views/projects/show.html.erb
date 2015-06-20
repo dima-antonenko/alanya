@@ -5,45 +5,51 @@
 
   <div class="buy_item">
       
+  <% if flash[:notice] %>
+
     <div class="modal">
-  <input class="modal-open" id="modal-1" type="checkbox"  hidden>
+  <input class="modal-open" id="modal-1" type="checkbox" checked hidden >
   <div class="modal-wrap" aria-hidden="false" role="dialog">
     <label class="modal-overlay" for="modal-1"></label>
     <div class="modal-dialog">
       <div class="modal-header">
         <h2>Уведомление </h2>
-        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+        <label class="btn-close" for="modal-1" aria-hidden="false">×</label>
       </div>
       <div class="modal-body">
-        <p>Ваш запрос отправлен</p>
+        <p><%= flash[:notice] %></p>
       </div>
     
         </div>
       </div>
     </div>
 
-
+<%  end  %>
 
     <div class="project_heading">
-      <div class="item_price">id: 12345</div>
-      <h1 class="h1">Проект 20</h1>
+      <% if @project.custom_sku == false %>
+        <div class="item_price">id: <%= @project.sku %></div>
+      <% else %>
+        <div class="item_price">id: <%= @project.id %></div>
+      <% end %>  
+      <h1 class="h1"><%= @project.name %></h1>
     </div>
     <div class="buy_item_text">
       <div class="buy_item_photos clearfix">
         <div class="fotorama">
-          <img src="/test2/3/1.png" />
-          <img src="/test2/3/2.png" />
-          <img src="/test2/3/3.png" />
-          <img src="/test2/3/4.png" />
-          <img src="/test2/3/5.png" />
-          <img src="/test2/3/6.png" />
+          <img src="<%= @project.avatar.normal %>" />
+
+          <% @project_attacments.each do |project_attachment| %>
+              <img src="<%= project_attachment.image.normal %>" />                                  
+          <% end  %>
+
         </div>
       </div>
       
       <div class="buttons" id='basic-modal'>
             
        <label class="more" for="send_add">Узнать больше</label>
-       <a href="#">Посмотреть</a>
+       <a href="/free_tour">Посмотреть</a>
       </div>
     
       <div class="clear"></div>
@@ -60,12 +66,12 @@
         <label class="btn-close" for="send_add" aria-hidden="true">×</label>
       </div>
       <div class="modal-body">
-          <form>
+          <%= form_for ([@project, @project.project_application_mails.build]) do |f| %>
           <p>Прошу выслать информацию по объекту id: <%= @project.id %></p>
-           <input name="name" placeholder="Укажите ваше имя" class="textbox" required />
-           <input name="name" placeholder="Укажите ваш Email" class="textbox" required />
-              <input name="submit" class="btn btn-form sub" type="submit" value="Отправить" />
-          </form>
+            <%= f.text_field :name, class: "textbox", placeholder: "Имя" %>
+            <%= f.text_field :email, class: "textbox", placeholder: "Email" %>
+               <%= f.submit "Отправить", class:'btn btn-form sub'   %>
+          <% end %>
       </div>
     </div>
   </div>
@@ -76,17 +82,47 @@
     
     <div class="buy_item_info">
       <div class="price_area">
-        <span>цена: 2000$ - 4000$</span>
+        <% if @project.start_price.to_i > 0 %>
+          <span>цена:  <%= number_to_currency(@project.start_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro; -  <%= number_to_currency(@project.final_price, unit: "",delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</span>
+        <% else %> 
+          <span>цена: <%= number_to_currency(@project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</span>
+        <% end %>
       </div>
       <div class="project_info project_params">
-        <div class="line bg_dark"><span class="type">Вид сделки:</span>  <span class="value"> Продажа</span></div>
-        <div class="line bg_light"><span class="type">Район:</span>  <span class="value"> Макмутлар</span></div>
-        <div class="line bg_dark"><span class="type">Тип объекта:</span>  <span class="value"> квартира и пентхаус</span></div>
-        <div class="line bg_light"><span class="type">Площадь:</span>  <span class="value"> 216 м2</span></div>
-        <div class="line bg_dark"><span class="type">Состояние:</span>  <span class="value"> строящийся объект</span></div>
-        <div class="line bg_light"><span class="type">До центра:</span>  <span class="value"> 200 м</span></div>
-        <div class="line bg_dark"><span class="type">До аэропорта:</span>  <span class="value"> 100 м</span></div>
-        <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"> 08.2015</span></div>
+        <div class="line bg_dark"><span class="type">Вид сделки:</span> 
+         <% if @project.type_deal == 'sale' %>
+           <span class="value"> Продажа</span></div>
+         <% elsif @project.type_deal == 'rent' %>
+          <span class="value">Аренда</span></div>
+         <% end %>
+        <div class="line bg_light"><span class="type">Район:</span>  <span class="value"><%= @project.project_category.title %></span></div>
+        <div class="line bg_dark"><span class="type">Тип объекта:</span>  
+       
+        
+        <% if @project.type_object == 'flat' %>
+           <span class="value"> квартира</span>                
+        <% elsif @project.type_object == 'penthouse' %> 
+          <span class="value"> пентхаус</span>                                       
+        <% elsif @project.type_object == 'flat_and_penthouse' %>
+         <span class="value"> квартира и пентхаус</span>                                        
+        <% end %> 
+        </div>
+         <div class="line bg_light"><span class="type">Комнат:</span>  <span class="value"> <%= @project.rooms %></span></div>
+        <div class="line bg_light"><span class="type">Площадь:</span>  <span class="value"> <%= @project.area %> м2</span></div>
+        <div class="line bg_dark"><span class="type">Состояние:</span>
+        
+        <% if @project.condition == 'under_construction' %>    
+           <span class="value"> строящийся объект</span>
+        <% elsif @project.condition == 'ready' %>    
+             <span class="value"> готовый объект</span>
+        <% elsif @project.condition == 'secondary' %>    
+           <span class="value"> вторичное </span>
+        <% end %>
+        </div>
+
+        <div class="line bg_light"><span class="type">До центра:</span>  <span class="value"><%= @project.to_center %> м</span></div>
+        <div class="line bg_dark"><span class="type">До аэропорта:</span>  <span class="value"><%= @project.to_airport %> м</span></div>
+        <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
       </div>
       <div class="price_area to_coast">
         <span>в стоимость входит</span>
@@ -95,6 +131,26 @@
         <div class="line bg_dark">Кондиционеры</div>
         <div class="line bg_dark">Водонагреватели</div>
         <div class="line bg_dark">Оформление ТАПУ</div>
+        
+        <% if @project.has_conditioning == true %>
+          <div class="line bg_dark">Кондиционеры</div>
+        <% end %>
+        <% if @project.has_water_heater == true %>
+          <div class="line bg_dark">Водонагреватель</div>
+        <% end %>
+        <% if @project.has_furniture == true %>
+          <div class="line bg_dark">Мебель</div>
+        <% end %>
+        <% if @project.has_white_goods == true %>
+          <div class="line bg_dark">Бытовая техника</div>
+        <% end %>
+        <% if @project.has_tapu == true %>
+          <div class="line bg_dark">Оформление ТАПУ</div>
+        <% end %>
+        <% if @project.has_iskana == true %>
+          <div class="line bg_dark">Оформление ИСКАНА</div>
+        <% end %>
+
       </div>
       <div class="project_info credit">
         <form action="#" method="post" id="calculator">
