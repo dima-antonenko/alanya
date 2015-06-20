@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619225035) do
+ActiveRecord::Schema.define(version: 20150620230724) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(version: 20150619225035) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "position"
+    t.string   "descriptor"
   end
 
   add_index "menu_items", ["link"], name: "index_menu_items_on_link"
@@ -165,6 +166,7 @@ ActiveRecord::Schema.define(version: 20150619225035) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "place"
+    t.string   "descriptor"
   end
 
   add_index "menus", ["place"], name: "index_menus_on_place"
@@ -411,7 +413,6 @@ ActiveRecord::Schema.define(version: 20150619225035) do
   add_index "projects", ["year_build"], name: "index_projects_on_year_build"
 
   create_table "questions", force: :cascade do |t|
-    t.integer  "project_id"
     t.string   "name"
     t.string   "email"
     t.string   "phone"
@@ -425,7 +426,6 @@ ActiveRecord::Schema.define(version: 20150619225035) do
   add_index "questions", ["message"], name: "index_questions_on_message"
   add_index "questions", ["name"], name: "index_questions_on_name"
   add_index "questions", ["phone"], name: "index_questions_on_phone"
-  add_index "questions", ["project_id"], name: "index_questions_on_project_id"
   add_index "questions", ["skype"], name: "index_questions_on_skype"
 
   create_table "site_variables", force: :cascade do |t|

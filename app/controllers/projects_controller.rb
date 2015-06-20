@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /products/1.json
 
   def show
-    @question = Question.new(project_id: @project.id)
+    @question = Question.new(params[:question])
     @project_attacments = ProjectAttacment.where(project_id: @project.id)
   end
 
@@ -24,4 +24,5 @@ class ProjectsController < ApplicationController
   def project_params
     params.require(:project).permit(:avatar)
   end
+
 end

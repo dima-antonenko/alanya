@@ -2,34 +2,33 @@
 <div class="heading">
   <span>Задайте свой вопрос</span>
 </div>
-  <form action="zz">
-
+  <%= form_for(@question) do |f| %>
     <div class="fields_left">
       <div class="form_group">
         <label > Имя</label>
-        <input type="text" >
+        <%= f.text_field :name %>
       </div>
       <div class="form_group">
         <label > Телефон</label>
-        <input type="text" >
+        <%= f.text_field :phone %>
       </div>
     </div>
     <div class="fields_right">
       <div class="form_group">
         <label > Email</label>
-        <input type="text" >
+        <%= f.text_field :email %>
       </div>
       <div class="form_group">
         <label > Skype</label>
-        <input type="text" >
+        <%= f.text_field :skype %>
       </div>
     </div>
     <div class="msg">
         <label > Сообщение</label>
-        <input type="text-area" >
+        <%= f.text_field :message %>
     </div>
     <div class="button">
         <input type="submit" class="sub" value="Отправить" >
     </div>
-  </form>
+  <% end %>
 </div>

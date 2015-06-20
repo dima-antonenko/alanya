@@ -16,9 +16,9 @@ Rails.application.routes.draw do
     resources :projects
   end
 
-  resources :projects  do
-    resources :questions, only: [:create]
-  end
+
+  resources :questions, only: [:create]
+
   
   resources :projects  do
     resources :managers

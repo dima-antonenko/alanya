@@ -23,11 +23,17 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.json
   def create
-    @project = Project.find(params[:project_id])
-    @question = @project.questions.create(question_params)
-      if @project.questions.create(question_params)
-        redirect_to :back, notice: 'Ваш вопрос отправлен, спасибо'
-      end  
+    @question = Question.create(question_params)
+
+    respond_to do |format|
+      if @question.save(question_params)
+        format.html { redirect_to :back,
+                      notice: 'Вопрос успешно отправлен' }
+      else
+        format.html { redirect_to :back,
+                      notice: 'Произошла ошибка' }
+      end
+    end
 
   end
 
@@ -37,12 +43,12 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.update(question_params)
         format.html { redirect_to @question,
-          notice: 'Question was successfully updated.' }
+                      notice: 'Question was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
         format.json { render json: @question.errors,
-          status: :unprocessable_entity }
+                      status: :unprocessable_entity }
       end
     end
   end
@@ -58,14 +64,14 @@ class QuestionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_question
-      @question = Question.find(params[:project_id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_question
+    @question = Question.find(params[:project_id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white
-    # list through.
-    def question_params
-      params.require(:question).permit(:project_id, :name, :skype, :email, :phone, :message)
-    end  
+  # Never trust parameters from the scary internet, only allow the white
+  # list through.
+  def question_params
+    params.require(:question).permit(:project_id, :name, :skype, :email, :phone, :message)
+  end
 end
