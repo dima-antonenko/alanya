@@ -1366,6 +1366,7 @@ nav{
 }
 
 .apartment_list{
+  padding-top: 0px !important;
   li{
     border-radius: 5px;
   .apatment_list_bot{
@@ -1688,4 +1689,7 @@ nav{
 .apartment_list .btn{
   margin-top: 0;
   margin-right: 6px;
+}
+.credit{
+  border: none !important;
 }
