@@ -25,6 +25,7 @@ class ProjectApplicationMailsController < ApplicationController
   # POST /project_application_mails.json
   def create
     @project = Project.find(params[:project_id])
+  
     @project_application_mail = @project.project_application_mails.create( project_application_mail_params )
 
     

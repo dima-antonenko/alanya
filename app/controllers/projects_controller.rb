@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @i = 1
   end
 
 

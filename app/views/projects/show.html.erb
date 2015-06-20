@@ -128,9 +128,7 @@
         <span>в стоимость входит</span>
       </div>
       <div class="project_info to_coast_list">
-        <div class="line bg_dark">Кондиционеры</div>
-        <div class="line bg_dark">Водонагреватели</div>
-        <div class="line bg_dark">Оформление ТАПУ</div>
+
         
         <% if @project.has_conditioning == true %>
           <div class="line bg_dark">Кондиционеры</div>
@@ -192,71 +190,48 @@
         <label class="send" for="to_email">Отправить по email</label>
       </div>
     </div>
-
-<div class="modal">
+    
+        <div class="modal">
   <input class="modal-open" id="to_email" type="checkbox" hidden>
   <div class="modal-wrap" aria-hidden="true" role="dialog">
     <label class="modal-overlay" for="modal-2"></label>
     <div class="modal-dialog">
       <div class="modal-header">
-        <h2>Отправить по email</h2>
+        <h2>Отправка информации об объекте на почту</h2>
         <label class="btn-close" for="to_email" aria-hidden="true">×</label>
       </div>
       <div class="modal-body">
-          <form>
-             <input name="name" placeholder="Укажите ваш Email" class="textbox" required />
-              <input name="submit" class="btn btn-form sub" type="submit" value="Отправить" />
-          </form>
+          <%= form_for ([@project, @project.project_application_mails.build]) do |f| %>
+            <%= f.text_field :email, class: "textbox", placeholder: "Email" %>
+               <%= f.submit "Отправить", class:'btn btn-form sub'   %>
+          <% end %>
       </div>
     </div>
   </div>
 </div>
 
 
+
+
  <div class="managers_list">
   <ul>
+   <%  @project.managers.each do |manager| %>
     <li>
       <div class="manager">
         <div class="photo">
-          <img src="/test2/2/1.png">
+          <img src="<%= manager.avatar.medium %>">
         </div>
         <div class="description">
-          <span class="field name">Имя и фамилия</span>
-          <span class="field post">Менеджер по продажам</span><br />
-          <span class="field skype_man">Skype: skypename</span><br/>
-          <span class="field languages">Языки: Русский</span><br/>
-          <span class="field mail">15@mail.ru</span><br/>
+          <span class="field name"><%= manager.name %></span>
+          <span class="field post"><%= manager.description %></span>
+          <span class="field skype_man">Телефон: <%= manager.phone %></span>
+          <span class="field skype_man">Skype: <%= manager.skype %></span>
+          <span class="field languages">Языки: <%= manager.languages %></span>
+          <span class="field mail"><%= manager.email %></span>
           </div>
       </div>
     </li>
-    <li>
-      <div class="manager">
-        <div class="photo">
-          <img src="/test2/2/2.png">
-        </div>
-        <div class="description">
-          <span class="field name">Имя и фамилия</span><br/>
-          <span class="field post">Менеджер по продажам</span><br />
-          <span class="field skype_man">Skype: skypename</span><br/>
-          <span class="field languages">Языки: English</span><br/>
-          <span class="field mail">11@mail.ru</span><br/>
-          </div>
-      </div>
-    </li>
-    <li>
-      <div class="manager">
-        <div class="photo">
-          <img src="/test2/2/4.png">
-        </div>
-        <div class="description">
-          <span class="field name">Имя и фамилия</span><br/>
-          <span class="field post">Менеджер по продажам</span><br/>
-          <span class="field skype_man">Skype: skypename</span><br/>
-          <span class="field languages">Языки: Русский</span><br/>
-          <span class="field mail">10@mail.ru</span><br/>
-          </div>
-      </div>
-    </li>
+   <% end %>
   </ul>
 </div>
 <%= render 'layouts/ask_form' %>    

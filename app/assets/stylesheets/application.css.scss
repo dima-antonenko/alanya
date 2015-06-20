@@ -1366,10 +1366,21 @@ nav{
 }
 
 .apartment_list{
+  li{
+    border-radius: 5px;
   .apatment_list_bot{
+    border-radius: 5px; 
+    width: 100%;
     img{
       float: left !important;
       z-index: 1 !important;
+      margin-top: -1px;
+    }
+    .title{
+      margin-left: 6px;
+      width: 100%;
+      height: 28px;
+      float: left;
     }
     .sku{
       color: white;
@@ -1382,11 +1393,17 @@ nav{
       border-radius: 5px;
       border: 1px solid;
       position: relative;
+      margin-right: 5px;
+      margin-top: 5px;
+      border: 1px solid #ff9226;
     }
   }
+ }
 }
 
-
+.apatment_list_top{
+  border-radius: 5px;
+}
 .company_info{
   .persons_list{
     width: 100%;
@@ -1629,4 +1646,46 @@ nav{
 
 .price_area{
   font-size: 15px !important;
+}
+
+.buy_item{
+  .managers_list{
+    ul{
+      li{
+        .description{
+          .field{
+            width: 100%;
+            float: left;
+            clear: both;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project_info{
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.buttons .more{
+   padding: 7.5px 10px;
+}
+.apartment_list .prise{
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.apatment_list_bot img{
+    height: 130px;
+    width: 213px;
+}
+
+.apatment_list_bot{
+   padding: 0 0 9px;
+}
+.apartment_list .btn{
+  margin-top: 0;
+  margin-right: 6px;
 }
