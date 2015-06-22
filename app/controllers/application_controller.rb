@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
 
   def menu
-   
+   @question = Question.new(params[:question])
     
   end
 

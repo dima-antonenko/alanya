@@ -77,6 +77,9 @@ Rails.application.routes.draw do
   get '/sities', to: 'static#sities'
   get '/sity', to: 'static#sity'
 
+  #get '/search', to: 'project#search'
+  match "/search" => "projects#search", via: [ :get, :post, :patch, :delete ]
+
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
   get '/administrator/blocks_in_footer', to: 'administrator/site_variables#blocks_in_footer'
