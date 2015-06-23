@@ -238,13 +238,13 @@ html{
         </ul>
          <ul class="second">
             <li>
-                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="e" style="display: none;"  data-labelauty="Студия">
+                <input name="flat" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="e" style="display: none;"  data-labelauty="Студия">
             </li>
             <li>
-                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="f" style="display: none;"  data-labelauty="Пентхауз">
+                <input name="penthouse" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="f" style="display: none;"  data-labelauty="Пентхауз">
             </li>
             <li>
-                <input class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="g" style="display: none;"  data-labelauty="Вилла">
+                <input name="flat_and_penthouse" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="g" style="display: none;"  data-labelauty="Вилла">
             </li>
            
         </ul>
@@ -255,26 +255,11 @@ html{
       
       <h2><span class="has-tooltip  no_border" title="">Расположение</span></h2>
       <div class="sities_list">
+  
+          <% @project_categories.each do |project_category| %>
 
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity1" style="display: none;"  data-labelauty="Аланья">
-            <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity2" style="display: none;"  data-labelauty="Анталья">
-             <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity3" style="display: none;"  data-labelauty="Газипаша">
-              <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity4" style="display: none;"  data-labelauty="Бордум">
-               <input class="to-labelauty sity big_mg synch-icon labelauty" type="checkbox" id="sity5" style="display: none;"  data-labelauty="Белек">
-                <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity6" style="display: none;"  data-labelauty="Авсаллар">
-
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity7" style="display: none;"  data-labelauty="Кемер">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity8" style="display: none;"  data-labelauty="Кестель">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity9" style="display: none;"  data-labelauty="Махмутлар">
-
-            <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity10" style="display: none;"  data-labelauty="Оба">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity11" style="display: none;"  data-labelauty="Конаклы">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity12" style="display: none;"  data-labelauty="Каргыджак">
-
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity13" style="display: none;"  data-labelauty="Каш">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity14" style="display: none;"  data-labelauty="Сиде">
-           <input class="to-labelauty sity synch-icon labelauty" type="checkbox" id="sity15" style="display: none;"  data-labelauty="Тосмур">     
-
+           <input name="sity<%= project_category.id %>" class="to-labelauty sity synch-icon labelauty" type="checkbox" id="project_category<%= project_category.id %>" style="display: none;"  data-labelauty="<%= project_category.title %>">
+          <% end %>
       </div>
       
     </div>
@@ -282,8 +267,8 @@ html{
       
       <h2><span class="has-tooltip" title="">Цена</span></h2>
       <div class="prices_list">
-         <div class="start"><input type="text" size="25" placeholder="цена от &euro;"></div>
-         <div class="end"><input type="text" size="20" placeholder="цена до &euro;"></div>
+         <div class="start"><input type="text" name="min_price" size="25" placeholder="цена от &euro;"></div>
+         <div class="end"><input type="text" name="max_price"  size="20" placeholder="цена до &euro;"></div>
       </div>
       
     </div>
@@ -293,30 +278,30 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="distnce_list">
           <ul>
-            <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty3" style="display: none;"  data-labelauty="|">
+            <li><input name="distance10" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty3" style="display: none;"  data-labelauty="|">
             <span class="value">10м</span>
           </li>
-          <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty4" style="display: none;"  data-labelauty="|">
+          <li><input name="distance100" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty4" style="display: none;"  data-labelauty="|">
           <span class="value">100м</span>
         </li>
-        <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty5" style="display: none;"  data-labelauty="|">
+        <li><input name="distance200" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty5" style="display: none;"  data-labelauty="|">
         <span class="value">200м</span>
       </li>
-      <li><input class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty6" style="display: none;"  data-labelauty="|">
+      <li><input name="distance400" class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty6" style="display: none;"  data-labelauty="|">
       <span class="value">400м</span>
     </li>
-    <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty7" style="display: none;"  data-labelauty="|">
+    <li><input name="distance500" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty7" style="display: none;"  data-labelauty="|">
     <span class="value">500м</span>
   </li>
 </ul>
 <ul>
-  <li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty8" style="display: none;"  data-labelauty="|">
+  <li><input name="distance800" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty8" style="display: none;"  data-labelauty="|">
   <span class="value">800м</span>
 </li>
-<li><input class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty9" style="display: none;"  data-labelauty="|">
+<li><input name="distance1000" class="to-labelauty synch-icon home labelauty" type="checkbox" id="labelauty9" style="display: none;"  data-labelauty="|">
 <span class="value">1000м</span>
 </li>
-<li><input class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty11" style="display: none;"  data-labelauty="|">
+<li><input name="distance1500" class="to-labelauty synch-icon home labelauty" type="checkbox"  id="labelauty11" style="display: none;"  data-labelauty="|">
 <span class="value">1500м</span>
 </li>
 </ul>

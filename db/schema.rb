@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620230724) do
+ActiveRecord::Schema.define(version: 20150623035709) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -390,6 +390,7 @@ ActiveRecord::Schema.define(version: 20150620230724) do
     t.boolean  "custom_sku",          default: false
     t.integer  "start_pice",          default: 0
     t.integer  "final_pice",          default: 0
+    t.integer  "to_sea"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

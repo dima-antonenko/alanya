@@ -77,6 +77,9 @@ Rails.application.routes.draw do
   get '/sities', to: 'static#sities'
   get '/sity', to: 'static#sity'
 
+
+   match "/sample" => "projects#sample_data", via: [ :get, :post, :patch, :delete ]
+
   #get '/search', to: 'project#search'
   match "/search" => "projects#search", via: [ :get, :post, :patch, :delete ]
 

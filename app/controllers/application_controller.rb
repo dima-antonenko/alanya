@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
 
 
   def menu
+   @project_categories = ProjectCategory.all
    @question = Question.new(params[:question])
     
   end

@@ -148,13 +148,9 @@ border-bottom: 1px solid #e1e1e1;
 
       <hr/>
     
-      <%= params[:type_deal] %>
-
-      <% @rooms.each do |value| %>
-        <% if params[value] %>
-          <%= value %> --
-        <% end %>  
-      <% end %>
+    <% @projects.each do |project| %>
+      <%= project.name %>/ <%= project.type_deal %> / <%= project.rooms %> / <%= project.type_object %>  / <%= project.rooms %> / <%= project.project_category.title %>/ <%= project.final_price %> <br/>
+    <% end %>
 
   </div>
   <%= render 'layouts/sidebar' %>
