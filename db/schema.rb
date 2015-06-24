@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623035709) do
+ActiveRecord::Schema.define(version: 20150624001517) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -103,6 +103,27 @@ ActiveRecord::Schema.define(version: 20150623035709) do
 
   add_index "connections", ["collection_id"], name: "index_connections_on_collection_id"
   add_index "connections", ["product_category_id"], name: "index_connections_on_product_category_id"
+
+  create_table "dynamic_project_pages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "query"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "meta_keywords"
+    t.string   "meta_copyright"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "project_category_id"
+  end
+
+  add_index "dynamic_project_pages", ["description"], name: "index_dynamic_project_pages_on_description"
+  add_index "dynamic_project_pages", ["meta_copyright"], name: "index_dynamic_project_pages_on_meta_copyright"
+  add_index "dynamic_project_pages", ["meta_description"], name: "index_dynamic_project_pages_on_meta_description"
+  add_index "dynamic_project_pages", ["meta_keywords"], name: "index_dynamic_project_pages_on_meta_keywords"
+  add_index "dynamic_project_pages", ["meta_title"], name: "index_dynamic_project_pages_on_meta_title"
+  add_index "dynamic_project_pages", ["query"], name: "index_dynamic_project_pages_on_query"
+  add_index "dynamic_project_pages", ["title"], name: "index_dynamic_project_pages_on_title"
 
   create_table "line_items", force: :cascade do |t|
     t.integer  "product_id"

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :dynamic_project_pages
+
   resources :project_attacments
   resources :project_category_attacments
 

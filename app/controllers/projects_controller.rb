@@ -75,7 +75,7 @@ class ProjectsController < ApplicationController
       @projects = @projects.where( "final_price >= :min_price ", {min_price: params[:min_price]})
     end
 
-    if params[:max_price].to_i > 0
+    if params[:max_price].to_i >0
       @projects = @projects.where( "final_price <= :min_price ", {min_price: params[:max_price]})
     end
 
