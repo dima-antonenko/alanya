@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624005830) do
+ActiveRecord::Schema.define(version: 20150624015621) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -193,6 +193,7 @@ ActiveRecord::Schema.define(version: 20150624005830) do
     t.datetime "updated_at",   null: false
     t.integer  "position"
     t.string   "descriptor"
+    t.boolean  "sub_two"
   end
 
   add_index "menu_items", ["link"], name: "index_menu_items_on_link"

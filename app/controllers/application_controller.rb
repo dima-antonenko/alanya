@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action  :menu, :footer
-
+  before_action  :menu
   #rescue_from ActiveRecord::RecordNotFound, with: :errors_404
   #rescue_from ActiveRecord::NoMethodError, with: :errors_404
   #rescue_from ActionController::RoutingError, with: :errors_404
@@ -22,13 +21,12 @@ class ApplicationController < ActionController::Base
 
 
   def menu
+   @main_menu = Menu.where(descriptor: "main_menu").first
    @project_categories = ProjectCategory.all
    @question = Question.new(params[:question])
     
   end
 
-  def footer
-   
-  end
+
 
 end

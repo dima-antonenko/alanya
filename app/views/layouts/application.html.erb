@@ -44,47 +44,25 @@
 <a title="Alanya Properties" class="logo" href="/"><img src="/logo.png" alt="Alanya Properties Logo">
 </a>
   <ul>
-      <li><a href="#">Главная</a></li>
-    <li><a href="#">Наши проекты</a>
-      <ul>
-        <li><a href="">Emerald Dreams</a></li>
-        <li><a href="">Emerald Towers</a></li>
-        <li><a href="">Emerald Park</a></li>
-        <li><a href="">Emerald Residence</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Вся недвижимость</a>
-      <ul>
-        <li><a href="">Недвижимость в Алании</a></li>
-        <li><a class="sub" href="">Центр Алании</a></li>
-         <li><a class="sub" href="">Авсаллар</a></li>
-         <li><a class="sub" href="">Махмутлар</a></li>
-         <li><a class="sub" href="">Конаклы</a></li>
-         <li><a class="sub" href="">Оба</a></li>
-         <li><a class="sub" href="">Тосмур</a></li>
-         <li><a class="sub" href="">Кестель</a></li>
-         <li><a class="sub" href="">Каргыджак</a></li>
-         <li><a class="sub" href="">Газипаша</a></li>
-         <li><a href="">Недвижимость в Анталии</a></li> 
-          <li><a href="">Недвижимость в Сиде</a></li> 
-           <li><a href="">Недвижимость в Кемере</a></li> 
-            <li><a href="">Недвижимость в Белеке</a></li> 
-             <li><a href="">Недвижимость в Каш</a></li>
-              <li><a href="">Недвижимость в Бордуме</a></li>
-      </ul>
-    </li>
-    <li><a href="#">О Компании</a>
-      <ul>
-        <li><a href="">Наша история</a></li>
-        <li><a href="">Наша команда</a></li>
-        <li><a href="">Наши партнеры</a></li>
-        <li><a href="">Выставки</a></li>
-        <li><a href="">Отзывы клиентов</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Услуги</a></li>
-    <li><a href="#">Бесплатный тур</a></li>
-    <li><a href="#">Контакты</a></li>
+    <% @main_menu.menu_items.order(:position).each do |main_item| %>
+      <% if main_item.menu_item_id == 0 %>
+        <% if main_item.menu_items.count > 0 %>
+        <li><a href="#"><%= main_item.title %></a>
+          <ul>
+             <% main_item.menu_items.order(:position).each do |second_level_item| %>
+              <% if second_level_item.sub_two == true  %>
+                <li><a class="sub" href="#"><%= second_level_item.title %></a></li>
+              <% else %>
+                <li><a href="#"><%= second_level_item.title %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>  
+        <% else %>
+             <li><a href="#"><%= main_item.title %></a></li>
+        <% end %>
+      <% end %>  
+    <% end %>
   </ul>
 </nav>  
 
