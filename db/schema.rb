@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624001517) do
+ActiveRecord::Schema.define(version: 20150624005830) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -103,6 +103,24 @@ ActiveRecord::Schema.define(version: 20150624001517) do
 
   add_index "connections", ["collection_id"], name: "index_connections_on_collection_id"
   add_index "connections", ["product_category_id"], name: "index_connections_on_product_category_id"
+
+  create_table "dynamic_pages", force: :cascade do |t|
+    t.string   "title"
+    t.string   "descriptor"
+    t.text     "description"
+    t.string   "meta_description"
+    t.string   "meta_keywords"
+    t.string   "meta_copyright"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "dynamic_pages", ["description"], name: "index_dynamic_pages_on_description"
+  add_index "dynamic_pages", ["descriptor"], name: "index_dynamic_pages_on_descriptor"
+  add_index "dynamic_pages", ["meta_copyright"], name: "index_dynamic_pages_on_meta_copyright"
+  add_index "dynamic_pages", ["meta_description"], name: "index_dynamic_pages_on_meta_description"
+  add_index "dynamic_pages", ["meta_keywords"], name: "index_dynamic_pages_on_meta_keywords"
+  add_index "dynamic_pages", ["title"], name: "index_dynamic_pages_on_title"
 
   create_table "dynamic_project_pages", force: :cascade do |t|
     t.string   "title"

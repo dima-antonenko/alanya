@@ -32,45 +32,18 @@
    <div id="content">
 
    <ul class="sity_images">
+    <%  @project_category_attachments.each do |attachment| %>
      <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
+       <a rel="example_group" href="<%= attachment.image.normal %>" ><img alt="" src="<%= attachment.image.normal %>" /></a>
      </li>
-     <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
-     </li>
-     <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
-     </li>
-     <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
-     </li>
-     <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
-     </li>
-     <li>
-       <a rel="example_group" href="/example/9_b.jpg" ><img alt="" src="/example/9_s.jpg" /></a>
-     </li>
+     <% end %>
    </ul>
 
 
   
 
    <div class="desc">
-     <p>
-       У нас собраны лучшие предложения по недвижимости, расположенной в таких
-        известных курортных районах и городах Турции, как Аланья, Белек, Сиде, Анталья,
-        Кемер, Каш, Бодрум и иных привлекательных регионах южного побережья. Мы с радостью подберем для Вас небольшие «студио», просторные квартиры,
-        престижные апартаменты, шикарные пентхаузы, а также роскошные виллы и
-        дома.</p>
-        <p>
-        Почему это выгодно? Наше агентство представляет собственные проекты жилых комплексов,
-        застройщиком которых выступает крупная строительная компания «Торослар
-        Констракшн» (Toroslar Construction).  Это позволяет нам предлагать недвижимость по очень выгодным ценам от
-        застройщиков и на гибких условиях, включая возможности инвестирования на этапе
-        строительства.  Мы напрямую сотрудничаем с рядом ведущих строительных компаний
-        Анатолийского региона, с которыми придерживаемся политики «выгодно и удобно для
-        клиента». 
-     </p>
+    <%= @project_category.description.html_safe %>
    </div>
 
 </div>

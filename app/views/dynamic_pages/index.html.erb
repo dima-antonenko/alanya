@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dynamic Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dynamic_pages.each do |dynamic_page| %>
+      <tr>
+        <td><%= link_to 'Show', dynamic_page %></td>
+        <td><%= link_to 'Edit', edit_dynamic_page_path(dynamic_page) %></td>
+        <td><%= link_to 'Destroy', dynamic_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dynamic page', new_dynamic_page_path %>

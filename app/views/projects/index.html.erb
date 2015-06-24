@@ -155,7 +155,7 @@ border-bottom: 1px solid #e1e1e1;
         <% else %>
         <span class="sku">id: <%= project.sku %></span>
         <% end %>
-           <img src="/test2/1/2.png">
+           <img src="<%= project.avatar.normal %>">
           
           <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
           <table class="table">
@@ -185,7 +185,7 @@ border-bottom: 1px solid #e1e1e1;
    <% end %>
   </ul>
 
-
+<%= will_paginate @products %>
   </div>
   <%= render 'layouts/sidebar' %>
   <div class="clear"></div>

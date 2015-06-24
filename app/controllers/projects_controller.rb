@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.all.paginate(:page => params[:page], :per_page => 36)
     @i = 1
   end
 

@@ -1619,6 +1619,7 @@ nav{
       margin-left: 16px;
       background: #00aeac;
       border-radius: 5px;
+      margin-bottom: 15px;
 
       .title{
         text-align: center;
@@ -1632,6 +1633,8 @@ nav{
 
       img{
         width: 100%;
+        width: 99px;
+        height: 99px;
       }
     }
   }
@@ -1694,3 +1697,24 @@ nav{
   border: none !important;
 }
 
+#content{
+  border: none;
+}
+
+.pagination{
+    margin: 15px;
+    width: 100%;
+    float: left;
+
+   .disabled{
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    color: #939598;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 120%;
+    padding: 5px 8px;
+    text-decoration: none;
+   }
+}

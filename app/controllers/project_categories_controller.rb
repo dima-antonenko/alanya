@@ -2,11 +2,12 @@ class ProjectCategoriesController < ApplicationController
   before_action :set_project_category, only: [:show]
 
   def show
-    
+     @project_category_attachments = ProjectCategoryAttacment.where(project_category_id: @project_category.id)
   end
 
   def index
     @project_categories = ProjectCategory.all
+    @page =  DynamicPage.where(descriptor: "project_categories").first
   end
 
 
