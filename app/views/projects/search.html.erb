@@ -139,18 +139,53 @@ border-bottom: 1px solid #e1e1e1;
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
   <div class="buy_item">
   <div class="results">
-    <h1>Вся недвижимость</h1>
+    <h1>Результаты поиска</h1>
   </div>
 
-      <% params.each do |param| %>
-        <%= param %>
-      <% end %>
-      <hr/>
-    
-    <% @projects.each do |project| %>
-      <%= project.name %>/ <%= project.type_deal %> / <%= project.rooms %> / <%= project.type_object %>  / <%= project.rooms %> / <%= project.project_category.title %>/ <%= project.final_price %> <br/>
-    <% end %>
+      <ul class="apartment_list clearfix">
+      
+      <% @projects.each do |project| %>
 
+      <% if @i < 4 %>
+     <li class="li">
+      <div class="apatment_list_top">
+        <div class="apatment_list_bot clearfix">
+        <% if project.custom_sku == false %>
+        <span class="sku">id: <%= project.id %></span>
+        <% else %>
+        <span class="sku">id: <%= project.sku %></span>
+        <% end %>
+           <img src="<%= project.avatar.normal %>">
+          
+          <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
+          <table class="table">
+            <tr>
+              <th>город:</th>
+              <td><%= project.project_category.title %></td>
+            </tr>
+            <tr>
+              <th>комнат/спален:</th>
+              <td><%= project.rooms %></td>
+            </tr>
+          </table>
+          <a class="btn" href="<%= project_category_project_path(project.project_category.id, project.id) %>">Подробнее</a>
+          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+        </div>
+      </div>
+    </li>
+
+    <% @i = @i + 1 %>
+
+    <% else %>
+
+    <li class="clear">
+    <% @i = 1 %>
+    <% end %>
+   
+   <% end %>
+  </ul>
+
+<%= will_paginate @projects %>
   </div>
   <%= render 'layouts/sidebar' %>
   <div class="clear"></div>

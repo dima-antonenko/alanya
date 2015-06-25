@@ -47,19 +47,19 @@
     <% @main_menu.menu_items.order(:position).each do |main_item| %>
       <% if main_item.menu_item_id == 0 %>
         <% if main_item.menu_items.count > 0 %>
-        <li><a href="#"><%= main_item.title %></a>
+        <li><a href="<%= main_item.link %>"><%= main_item.title %></a>
           <ul>
              <% main_item.menu_items.order(:position).each do |second_level_item| %>
               <% if second_level_item.sub_two == true  %>
-                <li><a class="sub" href="#"><%= second_level_item.title %></a></li>
+                <li><a class="sub" href="<%= second_level_item.link %><"><%= second_level_item.title %></a></li>
               <% else %>
-                <li><a href="#"><%= second_level_item.title %></a></li>
+                <li><a href="<%= second_level_item.link %>"><%= second_level_item.title %></a></li>
               <% end %>
             <% end %>
           </ul>
         </li>  
         <% else %>
-             <li><a href="#"><%= main_item.title %></a></li>
+             <li><a href="<%= main_item.link %>"><%= main_item.title %></a></li>
         <% end %>
       <% end %>  
     <% end %>

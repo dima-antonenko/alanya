@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
   def search
     @project_categories = ProjectCategory.all
     @projects = Project.all
+    @i = 1
 
     @sities_query_array = Array.new
     @rooms_query_array = Array.new
@@ -52,33 +53,32 @@ class ProjectsController < ApplicationController
     end
 
     if @rooms_query_array.count > 0
-      @projects = @projects.where(rooms: @rooms_query_array)
+      @projects = @projects.where(rooms: @rooms_query_array).paginate(:page => params[:page], :per_page => 36)
     end
 
     if @sities_query_array.count > 0
-      @projects = @projects.where(project_category: @sities_query_array)
+      @projects = @projects.where(project_category: @sities_query_array).paginate(:page => params[:page], :per_page => 36)
     end
 
     if @types_object_query_array.count > 0
-      @projects = @projects.where(type_object: @types_object_query_array)
+      @projects = @projects.where(type_object: @types_object_query_array).paginate(:page => params[:page], :per_page => 36)
     end
 
     if @distance_query_array.count > 0
-      @projects = @projects.where(to_sea: @distance_query_array)
+      @projects = @projects.where(to_sea: @distance_query_array).paginate(:page => params[:page], :per_page => 36)
     end
 
     if params[:type_deal]
-      @projects = @projects.where(type_deal: params[:type_deal])
+      @projects = @projects.where(type_deal: params[:type_deal]).paginate(:page => params[:page], :per_page => 36)
     end
 
     if params[:min_price].to_i > 0
-      @projects = @projects.where( "final_price >= :min_price ", {min_price: params[:min_price]})
+      @projects = @projects.where( "final_price >= :min_price ", {min_price: params[:min_price]}).paginate(:page => params[:page], :per_page => 36)
     end
 
     if params[:max_price].to_i >0
-      @projects = @projects.where( "final_price <= :min_price ", {min_price: params[:max_price]})
+      @projects = @projects.where( "final_price <= :min_price ", {min_price: params[:max_price]}).paginate(:page => params[:page], :per_page => 36)
     end
-
    
     render 'projects/search'
 
