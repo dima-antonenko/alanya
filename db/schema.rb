@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624015621) do
+ActiveRecord::Schema.define(version: 20150625010411) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -166,6 +166,7 @@ ActiveRecord::Schema.define(version: 20150624015621) do
     t.string   "phone"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.boolean  "elect"
   end
 
   add_index "managers", ["avatar"], name: "index_managers_on_avatar"
@@ -431,6 +432,7 @@ ActiveRecord::Schema.define(version: 20150624015621) do
     t.integer  "start_pice",          default: 0
     t.integer  "final_pice",          default: 0
     t.integer  "to_sea"
+    t.boolean  "elect"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

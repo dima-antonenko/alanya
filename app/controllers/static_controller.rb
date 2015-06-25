@@ -1,8 +1,8 @@
 class StaticController < ApplicationController
 	def home
 
-		@projects = Project.all
-
+		@projects = Project.where(elect: true).limit(7)
+		@i = 1
 		render 'home'
 	end
 

@@ -102,135 +102,45 @@
 
 
       <ul class="apartment_list clearfix">
-    <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
-          
-          <div class="title">Название проета</div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td>Аталия</td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td>1 + 2</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
-        </div>
-      </div>
-    </li>
-     <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
-          
-          <div class="title">Название проета</div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td>Аталия</td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td>1 + 2</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
-        </div>
-      </div>
-    </li>
-     <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
-          
-          <div class="title">Название проета</div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td>Аталия</td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td>1 + 2</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
-        </div>
-      </div>
-    </li>
-    <li class="clear">
+   <% @projects.each do |project| %>
 
-        <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
-          
-          <div class="title">Название проета</div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td>Аталия</td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td>1 + 2</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
-        </div>
-      </div>
-    </li>
+      <% if @i < 4 %>
      <li class="li">
       <div class="apatment_list_top">
         <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
+        <% if project.custom_sku == false %>
+        <span class="sku">id: <%= project.id %></span>
+        <% else %>
+        <span class="sku">id: <%= project.sku %></span>
+        <% end %>
+           <img src="<%= project.avatar.normal %>">
           
-          <div class="title">Название проета</div>
+          <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
           <table class="table">
             <tr>
               <th>город:</th>
-              <td>Аталия</td>
+              <td><%= project.project_category.title %></td>
             </tr>
             <tr>
               <th>комнат/спален:</th>
-              <td>1 + 2</td>
+              <td><%= project.rooms %></td>
             </tr>
           </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
+          <a class="btn" href="<%= project_category_project_path(project.project_category.id, project.id) %>">Подробнее</a>
+          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
         </div>
       </div>
     </li>
-     <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-          <img src="/test.png">
-          
-          <div class="title">Название проета</div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td>Аталия</td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td>1 + 2</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Подробнее</a>
-          <div class="prise">1 000</div>
-        </div>
-      </div>
-    </li>
+
+    <% @i = @i + 1 %>
+
+    <% else %>
+
+    <li class="clear">
+    <% @i = 1 %>
+    <% end %>
    
+   <% end %>
   </ul>
 
     <div class="page_row">
