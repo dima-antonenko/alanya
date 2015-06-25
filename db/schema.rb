@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625010411) do
+ActiveRecord::Schema.define(version: 20150625012110) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -473,10 +473,11 @@ ActiveRecord::Schema.define(version: 20150625010411) do
 
   create_table "site_variables", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.text     "value"
     t.string   "place"
+    t.integer  "static_page_id"
   end
 
   add_index "site_variables", ["name"], name: "index_site_variables_on_name"
@@ -519,6 +520,8 @@ ActiveRecord::Schema.define(version: 20150625010411) do
     t.string   "meta_keywords"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "descriptor"
+    t.string   "meta_copyright"
   end
 
   add_index "static_pages", ["content"], name: "index_static_pages_on_content"
