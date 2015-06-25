@@ -1,334 +1,194 @@
 <%= render '/layouts/basic_styles.html.erb' %>
-
-
 <style>
-    .wide-container {
-      max-width: 700px;
-      height: 500px;
-      margin: 0 auto;
-    }
-  </style>
+.wide-container {
+max-width: 700px;
+height: 500px;
+margin: 0 auto;
+}
+</style>
 <div class="buy_page index_project">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
   <div class="buy_item">
-
-
-   <div id="demo">
-        <div class="container">
-          <div class="row">
-            <div class="span12">
-              <div id="owl-demo" class="owl-carousel">
-
-                <div class="item"><img src="test.png" alt="The Last of us">
-                  
-                  <div class="description">
-                    <span class="info">
-                      <span class="first">Комплекс Эмеральд парк </span>
-                      <span class="price">12 000$</span>
-                      <span class="second">рассрочка платежа до 1 года </span>
-                    </span>
-                    <div class="spoler">
-                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
-                  </div>  
-                  </div>
-                </div>
-
-                <div class="item"><img src="test.png" alt="The Last of us">
-                  
-                  <div class="description">
-                    <span class="info">
-                      <span class="first">Комплекс Эмеральд парк </span>
-                      <span class="price">12 000$</span>
-                      <span class="second">рассрочка платежа до 1 года </span>
-                    </span>
-                    <div class="spoler">
-                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
-                  </div>  
-                  </div>
-                </div>
-
-                <div class="item"><img src="test.png" alt="The Last of us">
-                  
-                  <div class="description">
-                    <span class="info">
-                      <span class="first">Комплекс Эмеральд парк </span>
-                      <span class="price">12 000$</span>
-                      <span class="second">рассрочка платежа до 1 года </span>
-                    </span>
-                    <div class="spoler">
-                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
-                  </div>  
-                  </div>
-                </div>
-
+    <div id="demo">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div id="owl-demo" class="owl-carousel">
+              <div class="item"><img src="test.png" alt="The Last of us">
                 
-
+                <div class="description">
+                  <span class="info">
+                    <span class="first">Комплекс Эмеральд парк </span>
+                    <span class="price">12 000$</span>
+                    <span class="second">рассрочка платежа до 1 года </span>
+                  </span>
+                  <div class="spoler">
+                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
+                  </div>
+                </div>
               </div>
+              <div class="item"><img src="test.png" alt="The Last of us">
+                
+                <div class="description">
+                  <span class="info">
+                    <span class="first">Комплекс Эмеральд парк </span>
+                    <span class="price">12 000$</span>
+                    <span class="second">рассрочка платежа до 1 года </span>
+                  </span>
+                  <div class="spoler">
+                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item"><img src="test.png" alt="The Last of us">
+                
+                <div class="description">
+                  <span class="info">
+                    <span class="first">Комплекс Эмеральд парк </span>
+                    <span class="price">12 000$</span>
+                    <span class="second">рассрочка платежа до 1 года </span>
+                  </span>
+                  <div class="spoler">
+                    <span>Шикарная и доступная жизнь на берегу средиземного моря <a href="#">далее</a></span>
+                  </div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
+      </div>
     </div>
-
-
-<div class="page_row">
-    <div class="heading">
-      <span>Недвижимость в Турции от застройщика</span>
+    <div class="page_row">
+      <div class="heading">
+        <span>Недвижимость в Турции от застройщика</span>
+      </div>
+      <div class="content">
+        <%= @page.content.html_safe %>
+      </div>
     </div>
-    <div class="content">
-     <%= @page.content.html_safe %>
-    </div>
-  </div>
-
-
-      <ul class="apartment_list clearfix">
-   <% @projects.each do |project| %>
-
+    <ul class="apartment_list clearfix">
+      <% @projects.each do |project| %>
       <% if @i < 4 %>
-     <li class="li">
-      <div class="apatment_list_top">
-        <div class="apatment_list_bot clearfix">
-        <% if project.custom_sku == false %>
-        <span class="sku">id: <%= project.id %></span>
-        <% else %>
-        <span class="sku">id: <%= project.sku %></span>
+      <li class="li">
+        <div class="apatment_list_top">
+          <div class="apatment_list_bot clearfix">
+            <% if project.custom_sku == false %>
+            <span class="sku">id: <%= project.id %></span>
+            <% else %>
+            <span class="sku">id: <%= project.sku %></span>
+            <% end %>
+            <img src="<%= project.avatar.normal %>">
+            
+            <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
+            <table class="table">
+              <tr>
+                <th>город:</th>
+                <td><%= project.project_category.title %></td>
+              </tr>
+              <tr>
+                <th>комнат/спален:</th>
+                <td><%= project.rooms %></td>
+              </tr>
+            </table>
+            <a class="btn" href="<%= project_category_project_path(project.project_category.id, project.id) %>">Подробнее</a>
+            <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+          </div>
+        </div>
+      </li>
+      <% @i = @i + 1 %>
+      <% else %>
+      <li class="clear">
+        <% @i = 1 %>
         <% end %>
-           <img src="<%= project.avatar.normal %>">
-          
-          <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
-          <table class="table">
-            <tr>
-              <th>город:</th>
-              <td><%= project.project_category.title %></td>
-            </tr>
-            <tr>
-              <th>комнат/спален:</th>
-              <td><%= project.rooms %></td>
-            </tr>
-          </table>
-          <a class="btn" href="<%= project_category_project_path(project.project_category.id, project.id) %>">Подробнее</a>
-          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+        
+        <% end %>
+      </ul>
+      <div class="page_row">
+        <div class="heading">
+          <span>Почему выгодно приобретать недвижимость в Турции</span>
+        </div>
+        <div class="content">
+          <%= @block2.value.html_safe %>
         </div>
       </div>
-    </li>
-
-    <% @i = @i + 1 %>
-
-    <% else %>
-
-    <li class="clear">
-    <% @i = 1 %>
-    <% end %>
-   
-   <% end %>
-  </ul>
-
-    <div class="page_row">
-    <div class="heading">
-      <span>Почему выгодно приобретать недвижимость в Турции</span>
+      <div class="page_row">
+        <div class="heading">
+          <span>Полезные новости</span>
+        </div>
+        <div class="content " style="padding: 0px;">
+          <ul class="news_line">
+            <% @helpful_news.each do |post| %>
+            <li>
+              <span class="title"><%= link_to post.title, post_category_post_url(post.post_category, post) %></span>
+              <img src="#" class="avatar">
+              <span class="mini-lead">
+                <%= post.mini_lead %>
+              </span>
+              <a href="<%= post_category_post_url(post.post_category, post) %>" class="more">Подробнее</a>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="page_row">
+        <div class="heading">
+          <span>Полезные статьи</span>
+        </div>
+        <div class="content " style="padding: 0px;">
+          <ul class="news_line">
+            <% @helpful_news.each do |post| %>
+            <li>
+              <span class="title"><%= link_to post.title, post_category_post_url(post.post_category, post) %></span>
+              <img src="#" class="avatar">
+              <span class="mini-lead">
+                <%= post.mini_lead %>
+              </span>
+              <a href="<%= post_category_post_url(post.post_category, post) %>" class="more">Подробнее</a>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="page_row">
+        <div class="heading">
+          <span>Недвижимость в Турции</span>
+        </div>
+        <div class="content">
+        <%= @block2.value.html_safe %>
+        </div>
+      </div>
+      <div class="page_row">
+        <div class="heading">
+          <span>Наши события</span>
+        </div>
+        <div class="content">
+          <ul class="wiget_events_list">
+            <li>
+              <img src="#" class="avatar"/>
+              <span class="title">Мы участники международной выставки в Бельгии</span>
+              <span class="description">9 апреля 2015 года</span>
+            </li>
+            <li>
+              <img src="#" class="avatar"/>
+              <span class="title">Мы участники международной выставки в Бельгии</span>
+              <span class="description">9 апреля 2015 года</span>
+            </li>
+            <li>
+              <img src="#" class="avatar"/>
+              <span class="title">Мы участники международной выставки в Бельгии</span>
+              <span class="description">9 апреля 2015 года</span>
+            </li>
+            <li>
+              <img src="#" class="avatar"/>
+              <span class="title">Мы участники международной выставки в Бельгии</span>
+              <span class="description">9 апреля 2015 года</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
-    <div class="content">
-      <p>
-        В нашем каталоге более 200 объектов недвижимости на побережье Средиземного 
-        и Эгейского морей. </p>
-        <p>
-        У нас собраны лучшие предложения по недвижимости, расположенной в таких 
-        известных курортных районах и городах Турции, как Аланья, Белек, Сиде, Анталья, 
-        Кемер, Каш, Бодрум и иных привлекательных регионах южного побережья. Мы с радостью подберем для Вас небольшие «студио», просторные квартиры, 
-        престижные апартаменты, шикарные пентхаузы, а также роскошные виллы и 
-        дома. </p>
-        <p>
-        Почему это выгодно? Наше агентство представляет собственные проекты жилых комплексов, 
-        застройщиком которых выступает крупная строительная компания «Торослар 
-        Констракшн» (Toroslar Construction).  Это позволяет нам предлагать недвижимость по очень выгодным ценам от 
-        застройщиков и на гибких условиях, включая возможности инвестирования на этапе 
-        строительства.  Мы напрямую сотрудничаем с рядом ведущих строительных компаний 
-        Анатолийского региона, с которыми придерживаемся политики «выгодно и удобно для 
-        клиента».</p> 
-        <p>
-        Почему быстро? Наша команда профессионалов имеет большой опыт работы на рынке недвижимости 
-        Турции. Мы обеспечим законное, надежное и быстрое оформление документов на Вашу 
-        недвижимость в Турции.
-      </p>
-    </div>
+    <%= render 'layouts/sidebar' %>
+    <div class="clear"></div>
   </div>
-
-   <div class="page_row">
-    <div class="heading">
-      <span>Полезные новости</span>
-    </div>
-    <div class="content " style="padding: 0px;">
-      <ul class="news_line">
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-
-  <div class="page_row">
-    <div class="heading">
-      <span>Полезные статьи</span>
-    </div>
-    <div class="content " style="padding: 0px;">
-      <ul class="news_line">
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-        <li>
-          <span class="title">Как получать пенсии пенсионерам за пределами РФ</span>
-          <img src="#" class="avatar">
-          <span class="mini-lead">Порядок выплаты пенсий гражданам проживающим за пределами РФ несколько изменился.
-          Украинцы покупая недвижимость в Турции используют сбережения из личных средств
-          </span>
-          <a href="#" class="more">Подробнее</a>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-
-  <div class="page_row">
-    <div class="heading">
-      <span>Недвижимость в Турции</span>
-    </div>
-    <div class="content">
-      <p>
-        В нашем каталоге более 200 объектов недвижимости на побережье Средиземного 
-        и Эгейского морей. </p>
-        <p>
-        У нас собраны лучшие предложения по недвижимости, расположенной в таких 
-        известных курортных районах и городах Турции, как Аланья, Белек, Сиде, Анталья, 
-        Кемер, Каш, Бодрум и иных привлекательных регионах южного побережья. Мы с радостью подберем для Вас небольшие «студио», просторные квартиры, 
-        престижные апартаменты, шикарные пентхаузы, а также роскошные виллы и 
-        дома. </p>
-        <p>
-        Почему это выгодно? Наше агентство представляет собственные проекты жилых комплексов, 
-        застройщиком которых выступает крупная строительная компания «Торослар 
-        Констракшн» (Toroslar Construction).  Это позволяет нам предлагать недвижимость по очень выгодным ценам от 
-        застройщиков и на гибких условиях, включая возможности инвестирования на этапе 
-        строительства.  Мы напрямую сотрудничаем с рядом ведущих строительных компаний 
-        Анатолийского региона, с которыми придерживаемся политики «выгодно и удобно для 
-        клиента».</p> 
-    </div>
-  </div>
-
-  <div class="page_row">
-    <div class="heading">
-      <span>Наши события</span>
-    </div>
-    <div class="content">
-      <ul class="wiget_events_list">
-        <li>
-          <img src="#" class="avatar"/>
-          <span class="title">Мы участники международной выставки в Бельгии</span>
-          <span class="description">9 апреля 2015 года</span>
-        </li>
-        <li>
-          <img src="#" class="avatar"/>
-          <span class="title">Мы участники международной выставки в Бельгии</span>
-          <span class="description">9 апреля 2015 года</span>
-        </li>
-        <li>
-          <img src="#" class="avatar"/>
-          <span class="title">Мы участники международной выставки в Бельгии</span>
-          <span class="description">9 апреля 2015 года</span>
-        </li>
-        <li>
-          <img src="#" class="avatar"/>
-          <span class="title">Мы участники международной выставки в Бельгии</span>
-          <span class="description">9 апреля 2015 года</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-
-  </div>
-
-
-  <%= render 'layouts/sidebar' %>
-  <div class="clear"></div>
-</div>

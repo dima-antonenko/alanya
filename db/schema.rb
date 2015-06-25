@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625012110) do
+ActiveRecord::Schema.define(version: 20150625064119) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -254,12 +254,14 @@ ActiveRecord::Schema.define(version: 20150625012110) do
     t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.boolean  "to_main_page",        default: false
+    t.string   "mini_lead"
   end
 
   add_index "posts", ["lead"], name: "index_posts_on_lead"
@@ -476,12 +478,11 @@ ActiveRecord::Schema.define(version: 20150625012110) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.text     "value"
-    t.string   "place"
     t.integer  "static_page_id"
+    t.string   "descriptor"
   end
 
   add_index "site_variables", ["name"], name: "index_site_variables_on_name"
-  add_index "site_variables", ["place"], name: "index_site_variables_on_place"
   add_index "site_variables", ["value"], name: "index_site_variables_on_value"
 
   create_table "sliders", force: :cascade do |t|

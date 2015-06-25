@@ -2,6 +2,10 @@ class StaticController < ApplicationController
 	def home
 
 		@projects = Project.where(elect: true).limit(7)
+		@page = StaticPage.where(descriptor: "home").first
+		@block2 = @page.site_variables.where(descriptor: "houses_in_turc").first
+		@helpful_news = Post.where(post_category_id: 1, to_main_page: true)
+		@helpful_posts = Post.where(post_category_id: 2, to_main_page: true)
 		@i = 1
 		render 'home'
 	end
