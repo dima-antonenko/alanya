@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :events
+
   resources :dynamic_pages
 
   resources :dynamic_project_pages

@@ -160,30 +160,17 @@ margin: 0 auto;
       </div>
       <div class="page_row">
         <div class="heading">
-          <span>Наши события</span>
+          <span><a href="/events">Участие в выставках</span>
         </div>
         <div class="content">
           <ul class="wiget_events_list">
+            <% @events.each do |event| %>
             <li>
               <img src="#" class="avatar"/>
-              <span class="title">Мы участники международной выставки в Бельгии</span>
-              <span class="description">9 апреля 2015 года</span>
+              <span class="title"><%= event.title %></span>
+              <span class="description"><%= event.date.to_date %></span>
             </li>
-            <li>
-              <img src="#" class="avatar"/>
-              <span class="title">Мы участники международной выставки в Бельгии</span>
-              <span class="description">9 апреля 2015 года</span>
-            </li>
-            <li>
-              <img src="#" class="avatar"/>
-              <span class="title">Мы участники международной выставки в Бельгии</span>
-              <span class="description">9 апреля 2015 года</span>
-            </li>
-            <li>
-              <img src="#" class="avatar"/>
-              <span class="title">Мы участники международной выставки в Бельгии</span>
-              <span class="description">9 апреля 2015 года</span>
-            </li>
+            <% end %>
           </ul>
         </div>
       </div>

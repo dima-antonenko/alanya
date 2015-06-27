@@ -1718,3 +1718,48 @@ nav{
     text-decoration: none;
    }
 }
+
+
+
+
+  .fancybox-outer{
+    .event_detail{
+      h4{
+        color: #4d4d4d;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 24px;
+        overflow: hidden;
+        margin-left: 10px;
+      }
+      .desc{
+        font-family:Verdana;
+        font-size: 13px;
+        line-height: 19px;
+        color: #4d4d4d;
+        margin: 10px;
+      }
+      ul{
+        li{
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+         display: inline;
+         list-style: none;
+          img{
+            width: 100px;
+            height: 100px;
+          } 
+        }
+      }
+    }
+
+
+.exhibition
+  .text p{
+    font-family:Verdana !important;
+    font-size: 13px !important;
+    line-height: 19px !important;
+    color: #4d4d4d;
+  }
+}

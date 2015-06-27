@@ -1,0 +1,96 @@
+<%= render '/layouts/basic_styles.html.erb' %>
+<style type="text/css">
+  .pp_details, .none{
+    display: none !important; 
+  }
+  .event{
+    display: block;
+  }
+  .event_img{
+    height: 100px;
+    width:  100px;
+  }
+  .text {
+    font-size: 13px;
+    line-height: 19px;
+}
+</style>
+
+<div class="buy_page exhibition">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+      
+    <div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox"  hidden>
+  <div class="modal-wrap" aria-hidden="false" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Уведомление </h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <p>Ваш запрос отправлен</p>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+
+    <div class="project_heading">
+      <h1 class="h1">Наши выставки</h1>
+    </div>
+
+    <div class="events_list" id="">
+      <ul class="gallery clearfix">
+      
+      <% @events.each do |event| %>
+        <li>
+          <img class="avatar" src="#">
+          <span class="title"><%= event.title %></span>
+          <a class="more various" href="#<%= "event#{event.id}" %>" rel="prettyPhoto[inline]">подробнее</a>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="none">
+     <% @events.each do |event| %>
+      <div class="event_detail" id="<%= "event#{event.id}" %>">
+        <h4><%= event.title %></h4>
+        <div class="desc"><%= event.description.html_safe %></div>
+        <ul class="gallery">
+          <li>
+            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+          </li>
+          <li>
+            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+          </li>
+          <li>
+            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+          </li>
+          <li>
+            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+          </li>
+          <li>
+            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+
+
+  </div>
+<%= render 'layouts/sidebar' %>
+<div class="clear"></div>
+
+</div>

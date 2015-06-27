@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625064119) do
+ActiveRecord::Schema.define(version: 20150626233756) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -142,6 +142,22 @@ ActiveRecord::Schema.define(version: 20150625064119) do
   add_index "dynamic_project_pages", ["meta_title"], name: "index_dynamic_project_pages_on_meta_title"
   add_index "dynamic_project_pages", ["query"], name: "index_dynamic_project_pages_on_query"
   add_index "dynamic_project_pages", ["title"], name: "index_dynamic_project_pages_on_title"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "avatar"
+    t.datetime "date"
+    t.text     "lead"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "events", ["avatar"], name: "index_events_on_avatar"
+  add_index "events", ["date"], name: "index_events_on_date"
+  add_index "events", ["description"], name: "index_events_on_description"
+  add_index "events", ["lead"], name: "index_events_on_lead"
+  add_index "events", ["title"], name: "index_events_on_title"
 
   create_table "line_items", force: :cascade do |t|
     t.integer  "product_id"

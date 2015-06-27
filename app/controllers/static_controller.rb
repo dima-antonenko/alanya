@@ -6,6 +6,7 @@ class StaticController < ApplicationController
 		@block2 = @page.site_variables.where(descriptor: "houses_in_turc").first
 		@helpful_news = Post.where(post_category_id: 1, to_main_page: true)
 		@helpful_posts = Post.where(post_category_id: 2, to_main_page: true)
+		@events = Event.all.order(:date).limit(4)
 		@i = 1
 		render 'home'
 	end
