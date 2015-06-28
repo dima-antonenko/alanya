@@ -29,9 +29,7 @@
 								<th>
 									 Имя
 								</th>
-								<th>
-									 Проект
-								</th>
+
 								<th>
 									 Email
 								</th>
@@ -53,10 +51,7 @@
 							<% @questions.each do |question| %>
 								<tr class="odd gradeX">
 									<td>
-										 <%= link_to question.name, edit_administrator_question_path(question) %>
-									</td>
-									<td class="center">
-										 <%= link_to question.project.name, project_category_project_path(question.project.project_category, question.project) %>
+										 <%= link_to question.name, administrator_question_path(question) %>
 									</td>
 									<td>
 										
@@ -80,7 +75,7 @@
 					</div>
 				</div>
 			</div>
-			
+			<%= will_paginate @questions %>
 			<!-- END PAGE CONTENT-->
 		</div>
 	</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150626233756) do
+ActiveRecord::Schema.define(version: 20150627080819) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -488,6 +488,20 @@ ActiveRecord::Schema.define(version: 20150626233756) do
   add_index "questions", ["name"], name: "index_questions_on_name"
   add_index "questions", ["phone"], name: "index_questions_on_phone"
   add_index "questions", ["skype"], name: "index_questions_on_skype"
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "content"
+    t.boolean  "published",  default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "reviews", ["content"], name: "index_reviews_on_content"
+  add_index "reviews", ["email"], name: "index_reviews_on_email"
+  add_index "reviews", ["name"], name: "index_reviews_on_name"
+  add_index "reviews", ["published"], name: "index_reviews_on_published"
 
   create_table "site_variables", force: :cascade do |t|
     t.string   "name"

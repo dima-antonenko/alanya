@@ -38,6 +38,9 @@
 									 Артикул
 								</th>
 								<th>
+									 Район
+								</th>
+								<th>
 									 Начальная стоимость &euro;
 								</th>
 									
@@ -62,6 +65,10 @@
 											<%= project.sku %>
 									</td>
 									<td>
+										
+											<%= project.project_category.title %>
+									</td>
+									<td>
 										 <%= project.start_price %> &euro;
 									</td>
 									<td class="center">
@@ -78,7 +85,7 @@
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
-					<%= will_paginate @products %>
+					<%= will_paginate @projects %>
 				</div>
 			</div>
 			

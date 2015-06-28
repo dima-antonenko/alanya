@@ -32,28 +32,28 @@
 <div class="heading">
   <span>Оставьте свой отзыв</span>
 </div>
-  <form action="zz">
+  <%= form_for @review do |f| %>
 
     <div class="fields_left">
       <div class="form_group">
         <label >Email</label>
-        <input type="text" >
+        <%= f.text_field :email %>
       </div>
     </div>
     <div class="fields_right">
       <div class="form_group">
         <label >Имя</label>
-        <input type="text" >
+        <%= f.text_field :name %>
       </div>
     </div>
     <div class="msg">
         <label > Сообщение</label>
-        <input type="text-area" >
+        <%= f.text_field :message %>
     </div>
     <div class="button">
-        <input type="submit" class="sub" value="Отправить" >
+     <%= f.submit "Отправить", class:'sub'   %>
     </div>
-  </form>
+  <% end %>
 </div>
 
     <div class="reviews_list">

@@ -1,0 +1,79 @@
+<%= render '/layouts/basic_styles.html.erb' %>
+
+<div class="buy_page reviews">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+      
+  <% if flash[:notice] %>
+
+    <div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox" checked hidden >
+  <div class="modal-wrap" aria-hidden="false" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Уведомление </h2>
+        <label class="btn-close" for="modal-1" aria-hidden="false">×</label>
+      </div>
+      <div class="modal-body">
+        <p><%= flash[:notice] %></p>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+
+<%  end  %>
+
+
+    <div class="project_heading">
+      <h1 class="h1">Отзывы покупателей недвижимости в Турциии</h1>
+    </div>
+
+    <div class="form_question review_form">
+<div class="heading">
+  <span>Оставьте свой отзыв</span>
+</div>
+  <%= form_for @review do |f| %>
+
+    <div class="fields_left">
+      <div class="form_group">
+        <label >Email</label>
+        <%= f.text_field :email %>
+      </div>
+    </div>
+    <div class="fields_right">
+      <div class="form_group">
+        <label >Имя</label>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="msg">
+        <label > Сообщение</label>
+        <%= f.text_field :content %>
+    </div>
+    <div class="button">
+     <%= f.submit "Отправить", class:'sub'   %>
+    </div>
+  <% end %>
+</div>
+
+    <div class="reviews_list">
+      <ul>
+      <% @reviews.each do |review| %>
+        <li>
+          <span class="heading"><%= review.name %></span>
+          <span class="content">
+            <%= review.content.html_safe %>
+          </span>
+        </li>
+      <% end %>  
+      </ul>
+    </div>
+  <%= will_paginate @reviews %>
+  </div>
+<%= render 'layouts/sidebar' %>
+<div class="clear"></div>
+
+</div>
