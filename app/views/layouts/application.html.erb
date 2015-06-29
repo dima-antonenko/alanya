@@ -77,60 +77,57 @@
 
   <!-- BEGIN footer-->
   <div class="footer">
+
+  <div class="menu">
+
     <div class="row">
       <ul>
-        <li><a href="#">Квартиры в Турции</a></li>
-        <li><a href="#">Квартиры в Кемере</a></li>
-        <li><a href="#">Квартиры в Мерсине</a></li>
-        <li><a href="#">Виллы в Авсалларе</a></li>
-        <li><a href="#">Виллы в Фетхие</a></li>
+        <% @footer_menu1.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
+      </ul>
+    </div>
+    <div class="row">
+
+      <ul>
+        <% @footer_menu2.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
+      </ul>
+    </div>
+    <div class="row">
+
+      <ul>
+        <% @footer_menu3.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
+      </ul>
+    </div>
+    <div class="row">
+
+      <ul>
+        <% @footer_menu4.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
+      </ul>
+    </div>
+    <div class="row">
+
+      <ul>
+        <% @footer_menu5.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
       </ul>
     </div>
     <div class="row">
       <ul>
-        <li><a href="#">Квартиры в Анталии</a></li>
-        <li><a href="#">Квартиры в Белеке</a></li>
-        <li><a href="#">Квартиры в Стамбуле</a></li>
-        <li><a href="#">Виллы в Махмутларе</a></li>
-        <li><a href="#">Виллы в Бардуме</a></li>
+        <% @footer_menu6.menu_items.each do |menu_item| %>
+          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+        <% end %>  
       </ul>
     </div>
-    <div class="row">
-      <ul>
-        <li><a href="#">Квартиры в Алании</a></li>
-        <li><a href="#">Квартиры в Силе</a></li>
-        <li><a href="#">Квартиры в Чешме</a></li>
-        <li><a href="#">Виллы  в Кестле</a></li>
-        <li><a href="#">Виллы в Измир</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="#">Квартиры в Авсалларе</a></li>
-        <li><a href="#">Квартиры в Фетхие</a></li>
-        <li><a href="#">Виллы в Турции</a></li>
-        <li><a href="#">Виллы в Кемере</a></li>
-        <li><a href="#">Виллы в Мерсине</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="#">Квартиры в Турции</a></li>
-        <li><a href="#">Квартиры в Кемере</a></li>
-        <li><a href="#">Квартиры в Мерсине</a></li>
-        <li><a href="#">Виллы в Авсалларе</a></li>
-        <li><a href="#">Виллы в Фетхие</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="#">Квартиры в Анталии</a></li>
-        <li><a href="#">Квартиры в Белеке</a></li>
-        <li><a href="#">Квартиры в Стамбуле</a></li>
-        <li><a href="#">Виллы в Махмутларе</a></li>
-        <li><a href="#">Виллы в Бардуме</a></li>
-      </ul>
-    </div>
+</div>
+
   </div>
   <!-- END footer-->
 </div>

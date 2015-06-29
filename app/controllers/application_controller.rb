@@ -22,6 +22,13 @@ class ApplicationController < ActionController::Base
 
   def menu
    @main_menu = Menu.where(descriptor: "main_menu").first
+   @footer_menu1 = Menu.where(descriptor:"foot_menu_1").first
+   @footer_menu2 = Menu.where(descriptor:"foot_menu_2").first
+   @footer_menu3 = Menu.where(descriptor:"foot_menu_3").first
+   @footer_menu4 = Menu.where(descriptor:"foot_menu_4").first
+   @footer_menu5 = Menu.where(descriptor:"foot_menu_5").first
+   @footer_menu6 = Menu.where(descriptor:"foot_menu_6").first
+
    @project_categories = ProjectCategory.all
    @question = Question.new(params[:question])
     
