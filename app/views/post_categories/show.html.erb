@@ -1,0 +1,31 @@
+<%= render '/layouts/basic_styles.html.erb' %>
+
+<div class="buy_page post_category">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+      
+    <div class="project_heading">
+      <h1 class="h1"><%= @post_category.title %></h1>
+    </div>
+
+    <div class="posts_list">
+      <ul>
+        <% @posts.each do |post| %>
+        <li>
+          <div class="head">
+            <a href="<%= post_category_post_path(post.post_category, post) %>"><%= post.title %></a>
+          </div>
+          <span class="lead">
+            <%= post.lead %>
+          </span>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <%= will_paginate @posts %>
+  </div>
+<%= render 'layouts/sidebar' %>
+<div class="clear"></div>
+
+</div>

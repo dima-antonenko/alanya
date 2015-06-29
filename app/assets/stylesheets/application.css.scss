@@ -1763,3 +1763,50 @@ nav{
     color: #4d4d4d;
   }
 }
+
+.post_category{
+  .posts_list{
+    width: 100%;
+    float: left;
+    ul{
+      margin: 20px;
+      li{
+        list-style: none;
+        width: 100%;
+        float: left;
+        margin: 10px 0;
+        .head{
+          background: #00aeac none repeat scroll 0 0;
+          border: 1px solid #00aeac;
+          border-radius: 5px;
+          float: left;
+          padding: 5px;
+          width: 100%;
+          a{
+             color: #626262;
+             font-family: Verdana;
+             font-size: 16px;
+          }
+        }
+        .lead{
+          color: #626262;
+          font-family: Verdana;
+          font-size: 13px;
+          padding: 0 10px;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+.post_show{
+  .content{ 
+    color: #626262;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 20px;
+    float: left;
+    line-height: 20px;
+  }
+}

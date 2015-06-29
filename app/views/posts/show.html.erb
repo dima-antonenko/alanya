@@ -1,0 +1,20 @@
+<%= render '/layouts/basic_styles.html.erb' %>
+
+<div class="buy_page post_show">
+  <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
+
+  <div class="buy_item">
+      
+    <div class="project_heading">
+      <h1 class="h1"><%= @post.title %></h1>
+    </div>
+
+    <div class="content">
+      <%= @post.text.html_safe %>
+    </div>
+    <%= render 'layouts/ask_form' %>
+  </div>
+<%= render 'layouts/sidebar' %>
+<div class="clear"></div>
+
+</div>

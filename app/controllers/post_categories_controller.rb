@@ -2,7 +2,7 @@ class PostCategoriesController < ApplicationController
   before_action :set_post_category, only: [:show]
 
   def show
-    @news_menu = Menu.where(place: "news_menu").first
+    @posts = @post_category.posts.paginate(:page => params[:page], :per_page => 10)
     
   end
 
