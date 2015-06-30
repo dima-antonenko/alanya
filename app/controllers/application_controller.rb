@@ -29,6 +29,13 @@ class ApplicationController < ActionController::Base
    @footer_menu5 = Menu.where(descriptor:"foot_menu_5").first
    @footer_menu6 = Menu.where(descriptor:"foot_menu_6").first
 
+
+   @sidebar_apartments = Menu.where(descriptor:"apartaments_in_turk_sidebar").first.menu_items.order(:position)
+   @sidebar_helpful_info = Menu.where(descriptor:"help_info_sidebar").first.menu_items.order(:position)
+   @sidebar_services = Menu.where(descriptor:"our_services_sidebar").first.menu_items.order(:position)
+   @sidebar_prices = Menu.where(descriptor:"our_prices_sidebar").first.menu_items.order(:position)
+   @sidebar_contacts = Menu.where(descriptor:"our_contacts_sidebar").first.menu_items.order(:position)
+
    @project_categories = ProjectCategory.all
    @question = Question.new(params[:question])
     

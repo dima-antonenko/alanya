@@ -321,22 +321,15 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="static_sities_list">
           <ul >
-            <li class="item"><a href="#">Недвижимость в Алании</a></li>
-            <li class="sub_item"><a href="#">Алания центр</a></li>
-            <li class="sub_item"><a href="#">Авсалар</a></li>
-            <li class="sub_item"><a href="#">Конаклы</a></li>
-            <li class="sub_item"><a href="#">Оба</a></li>
-            <li class="sub_item"><a href="#">Тохмур</a></li>
-            <li class="sub_item"><a href="#">Кестель</a></li>
-            <li class="sub_item"><a href="#">Махмутлар</a></li>
-            <li class="sub_item"><a href="#">Каргыджак</a></li>
-            <li class="sub_item"><a href="#">Газипаша</a></li>
-            <li class="item"><a href="#">Недвижимость в Антали</a></li>
-            <li class="item"><a href="#">Недвижимость в Сиде</a></li>
-            <li class="item"><a href="#">Недвижимость в Кемере</a></li>
-            <li class="item"><a href="#">Недвижимость в Бордуме</a></li>
-            <li class="item"><a href="#">Недвижимость в Белеке</a></li>
-            <li class="item"><a href="#">Недвижимость в Каш</a></li>
+            <% @sidebar_apartments.each do |item| %>
+              <% if item.menu_item_id == 0 %>
+                <% if item.sub_two == true %>
+                  <li class="sub_item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% else %>
+                  <li class="item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% end %>
+              <% end %>
+            <% end %>
           </ul>
   </div>
   </div>
@@ -347,13 +340,15 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="static_sities_list">
           <ul >
-            <li class="item"><a href="#">Процедура покупки</a></li>
-            <li class="item"><a href="#">Что такое ТАПУ ?</a></li>
-            <li class="item"><a href="#">Оформление вида на жительство</a></li>
-            <li class="item"><a href="#">Ипотечное кредитование</a></li>
-            <li class="item"><a href="#">Наследование</a></li>
-            <li class="item"><a href="#">Прибыль от аренды</a></li>
-            <li class="item"><a href="#">О Турции</a></li>
+            <% @sidebar_helpful_info.each do |item| %>
+              <% if item.menu_item_id == 0 %>
+                <% if item.sub_two == true %>
+                  <li class="sub_item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% else %>
+                  <li class="item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% end %>
+              <% end %>
+            <% end %>
           </ul>
   </div>
   </div>
@@ -365,12 +360,15 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="static_sities_list">
           <ul >
-            <li class="item"><a href="#">Обслуживание квартир после покупки</a></li>
-            <li class="item"><a href="#">Страхование недвижимости</a></li>
-            <li class="item"><a href="#">Сдать в аренду</a></li>
-            <li class="item"><a href="#">Ремонт квартир и вилл</a></li>
-            <li class="item"><a href="#">Трансфер из/в аэропорт</a></li>
-            <li class="item"><a href="#">Аренда автомобиля</a></li>
+            <% @sidebar_services.each do |item| %>
+              <% if item.menu_item_id == 0 %>
+                <% if item.sub_two == true %>
+                  <li class="sub_item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% else %>
+                  <li class="item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% end %>
+              <% end %>
+            <% end %>
           </ul>
   </div>
   </div>
@@ -382,8 +380,15 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="static_sities_list">
           <ul >
-            <li class="item"><a href="#">Отзывы клиентов</a></li>
-            <li class="item"><a href="#">Участие в выставках</a></li>
+            <% @sidebar_prices.each do |item| %>
+              <% if item.menu_item_id == 0 %>
+                <% if item.sub_two == true %>
+                  <li class="sub_item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% else %>
+                  <li class="item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% end %>
+              <% end %>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -394,8 +399,15 @@ html{
       <div class="filter_label_holder clearfix">
         <div class="static_sities_list">
           <ul >
-            <li class="item"><a href="#">Офис в Турции</a></li>
-            <li class="item"><a href="#">Офис в Москве</a></li>
+           <% @sidebar_contacts.each do |item| %>
+              <% if item.menu_item_id == 0 %>
+                <% if item.sub_two == true %>
+                  <li class="sub_item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% else %>
+                  <li class="item"><a href="<%= item.link %>"><%= item.title %></a></li> 
+                <% end %>
+              <% end %>
+            <% end %>
           </ul>
   </div>
   </div>
