@@ -1,6 +1,6 @@
 <%= render '/layouts/basic_styles.html.erb' %>
 
-<div class="buy_page company_info">
+<div class="buy_page peoples">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
 
   <div class="buy_item">
@@ -25,14 +25,32 @@
 
 
     <div class="project_heading">
-      <h1 class="h1"> <%= @page.title %></h1>
+      <h1 class="h1">Наша команда</h1>
     </div>
 
-<div class="text">
-  <%= @page.content.html_safe %>
-</div>
+    <div class="peoples_list">
+      <ul>
 
- <%= render 'layouts/ask_form' %>    
+      <% @managers.each do |manager| %>
+
+      <li>
+          <img src="/test2/2/6.png" class="avatar">
+          <div class="info">
+            <span class="name"><%= manager.name %></span>
+            <span class="post"><%= manager.description %></span>
+            <span class="phone">Телефон: <%= manager.phone %></span>
+            <span class="skype_name">Skype: <%= manager.skype %></span>
+            <span class="languages">Языки: <%= manager.languages %></span>
+            <span class="email"><%= manager.email %></span>
+          </div>
+      </li>
+
+      <% end %>
+
+      </ul>
+    </div>
+
+  <%= render 'layouts/ask_form' %>    
 
   </div>
 <%= render 'layouts/sidebar' %>

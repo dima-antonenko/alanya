@@ -11,33 +11,22 @@ class StaticController < ApplicationController
 		render 'home'
 	end
 
-	def delivery_and_pay
-		@text_delivery_and_pay = SiteVariable.where(place: "page_delivery_pay")
-		render 'delivery_and_pay'
-	end
-
-	def contacts
-		@text_contacts = SiteVariable.where(place: "page_contact")
-		render 'contacts'
-	end
+	
 
 	def company_info
+		@page = StaticPage.where(descriptor: "company_info").first
+		@youtube_link = @page.site_variables.where(descriptor: "youtube_link").first
+		@managers = Manager.where(company_info: true)
 		render '/static/company_info/show'
 	end
 
-	def peoples
-		render '/static/peoples/show'
-	end
-
 	def partners
+		@managers = Manager.where(elect: true)
 		render '/static/partners/show'
 	end
 
-	def reviews
-		render '/static/test/reviews'
-	end
-
 	def free_tour
+		@page = StaticPage.where(descriptor: "free_tour").first
 		render '/static/free_tour/show'
 	end
 
@@ -45,11 +34,4 @@ class StaticController < ApplicationController
 		render '/static/exhibition/show'
 	end
 
-	def sities
-		render '/static/test/sities'
-	end
-
-	def sity
-		render '/static/test/sity'
-	end
 end

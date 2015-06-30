@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @page = StaticPage.where(descriptor: "events").first
   end
 
   # GET /events/1

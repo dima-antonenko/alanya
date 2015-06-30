@@ -6,7 +6,7 @@ class ManagersController < ApplicationController
   end
 
   def index
-    @project_categories = Manager.all
+    @managers = Manager.all
   end
 
   def destroy

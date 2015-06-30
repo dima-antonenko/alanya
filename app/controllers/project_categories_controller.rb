@@ -7,7 +7,7 @@ class ProjectCategoriesController < ApplicationController
 
   def index
     @project_categories = ProjectCategory.all
-    @page =  DynamicPage.where(descriptor: "project_categories").first
+    @page =  StaticPage.where(descriptor: "project_categories").first
   end
 
 

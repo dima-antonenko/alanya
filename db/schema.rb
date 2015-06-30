@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627080819) do
+ActiveRecord::Schema.define(version: 20150630232306) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -180,9 +180,10 @@ ActiveRecord::Schema.define(version: 20150627080819) do
     t.string   "languages"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.boolean  "elect"
+    t.boolean  "company_info", default: false
   end
 
   add_index "managers", ["avatar"], name: "index_managers_on_avatar"
