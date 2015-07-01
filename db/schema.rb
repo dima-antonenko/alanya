@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630232306) do
+ActiveRecord::Schema.define(version: 20150701002611) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -520,6 +520,7 @@ ActiveRecord::Schema.define(version: 20150630232306) do
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "descriptor"
   end
 
   add_index "sliders", ["title"], name: "index_sliders_on_title"
@@ -534,6 +535,9 @@ ActiveRecord::Schema.define(version: 20150630232306) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "price"
+    t.string   "description"
+    t.string   "link"
   end
 
   add_index "slides", ["avatar_content_type"], name: "index_slides_on_avatar_content_type"
