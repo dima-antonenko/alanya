@@ -1,11 +1,18 @@
-MenuItem.create!([
-   {title: "Алания центр",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Авсалар",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Конаклы",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Оба",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Тохмур",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Кестель",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Махмутлар",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Каргыджак",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98},
-   {title: "Газипаша",  menu_id: 9, link: "/", sub_two: "false", menu_item_id: 98}
+DynamicProjectPage.create!([
+	 {title: "Недвижимость в Алании", project_category_id: 1},
+	 {title: "Алания центр", project_category_id: 2},
+	 {title: "Авсалар", project_category_id: 6},
+	 {title: "Конаклы", project_category_id: 11},
+	 {title: "Оба", project_category_id: 10},
+	 {title: "Тохмур", project_category_id: 15},
+	 {title: "Кестель", project_category_id: 8},
+	 {title: "Махмутлар", project_category_id: 9},
+	 {title: "Каргыджак", project_category_id: 12},
+	 {title: "Газипаша", project_category_id: 3},
+	 {title: "Недвижимость в Анталии", project_category_id: 2},
+	 {title: "Недвижимость в Сиде", project_category_id: 14},
+	 {title: "Недвижимость в Кемере", project_category_id: 7},
+	 {title: "Недвижимость в Бордуме", project_category_id: 4},
+	 {title: "Недвижимость в Белеке", project_category_id: 5},
+	 {title: "Недвижимость в Каш", project_category_id: 13},
 ])

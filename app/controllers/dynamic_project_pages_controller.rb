@@ -10,11 +10,18 @@ class DynamicProjectPagesController < ApplicationController
   # GET /dynamic_project_pages/1
   # GET /dynamic_project_pages/1.json
   def show
-    @projects = Project.where(@dynamic_project_page.query)
+    @projects = Project.all
+    if @dynamic_project_page.query
+       @projects = @projects.where(@dynamic_project_page.query)
+    end
+
     if @dynamic_project_page.project_category_id
        @projects = @projects.where(project_category_id: @dynamic_project_page.project_category_id)
     end 
-    render '/projects/search'
+
+    @projects = @projects.paginate(:page => params[:page], :per_page => 36)
+    @i = 1
+    render '/projects/dynamic'
   end
 
   # GET /dynamic_project_pages/new
