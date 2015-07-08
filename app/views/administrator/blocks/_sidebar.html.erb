@@ -18,7 +18,7 @@ Tasks.initDashboardWidget(); // init tash dashboard widget
 		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
 		<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
 		<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+		<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="300">
 			<li>
 				<a href="/administrator">
 					<i class="icon-home"></i>
@@ -41,12 +41,21 @@ Tasks.initDashboardWidget(); // init tash dashboard widget
 				</li>
 
 				<li>
-					<a href="/administrator/questions">
-						<i class="icon-home"></i>
-						<span class="title">Вопросы</span>
-					</a>
-				</li>
-
+				<a href="javascript:;">
+					<i class="icon-doc"></i>
+					<span class="title">Страницы</span>
+					<span class="arrow "></span>
+				</a>
+				<ul class="sub-menu">
+					<li>
+						<a href="/administrator/static_pages">
+						Статические</a>
+					</li>
+					<li>
+						<a href="/administrator/dynamic_project_pages">
+						Динамические</a>
+					</li>			
+				</ul>
 
 				<li>
 				<a href="javascript:;">
@@ -56,22 +65,19 @@ Tasks.initDashboardWidget(); // init tash dashboard widget
 				</a>
 				<ul class="sub-menu">
 					<li>
-						<a href="/administrator/projects">
+						<a href="/administrator/post_categories">
 						Категории записей</a>
+					</li>
+					<li>
+						<a href="/administrator/posts">
+						Записи</a>
 					</li>			
 				</ul>
 				
 				<li>
-					<a href="/administrator/project_categories">
-						<i class="icon-home"></i>
-						<span class="title">Записи</span>
-					</a>
-				</li>
-
-				<li>
 					<a href="/questions">
 						<i class="icon-home"></i>
-						<span class="title">Страницы</span>
+						<span class="title">Заявки</span>
 					</a>
 				</li>
 				

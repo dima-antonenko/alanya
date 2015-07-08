@@ -282,6 +282,24 @@
 																<%= f.text_field :year_build, class: "form-control" %>
 															</div>
 														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																До моря
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select :to_sea ,  @distance_list.collect {|value| [value]},{include_blank: 'Не выбрано'}, {class: "btn"} %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																На главной
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select :elect , options_for_select(@types_elect),{include_blank: 'Не выбрано'}, {class: "btn"} %>
+															</div>
+														</div>
 														
 													</div>
 												</div>
@@ -375,7 +393,7 @@
 								<div class="form-group">
 										<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 											<ul>
-												<li><%= f.select :some_manager, Manager.all.collect {|manager| [manager.name, manager.id ]}, {},{class: "btn"} %></li>
+												<li><%= f.select :some_manager, Manager.all.collect {|manager| [manager.name, manager.id ]}, { include_blank: 'Не выбрано'},{class: "btn"} %></li>
 												<li>
 													<%= f.submit(class: "btn blue-hoki btn-circle", value: "Добавить") %>
 												</li>

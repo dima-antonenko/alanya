@@ -3,7 +3,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
   before_action :set_project_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @project_categories = ProjectCategory.all
+    @project_categories = ProjectCategory.all.paginate(:page => params[:page], :per_page => 10)
   end
 
   def edit

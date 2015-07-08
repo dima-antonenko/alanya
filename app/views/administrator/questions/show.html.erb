@@ -1,0 +1,97 @@
+<style type="text/css">
+	.tab-content .form-group{
+		padding-bottom: 50px;
+	}
+	
+</style>
+
+<div class="page-content-wrapper">
+		<div class="page-content">
+			<div class="row">
+				<div class="col-md-12">
+
+						<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption">
+								<span class="caption-subject font-green-sharp bold uppercase">
+								<%= @question.email %> </span>
+								<span class="caption-helper"><%= @question.created_at.to_date %></span>
+								</div>
+								<div class="actions btn-set">
+									<a href="/administrator/questions" class="btn btn-default btn-circle"> Назад </a>
+									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
+									-->
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div class="tabbable">
+									<div class="tab-content no-space">
+										<div class="tab-pane active" id="tab_general">
+											<div class="row">
+											<div class="col-md-12 col-sm-12">
+												<div class="portlet blue-hoki box">
+													<div class="portlet-title">
+														<div class="caption">
+															Вопрос #<%= @question.id %>
+														</div>
+													</div>
+													<div class="portlet-body">
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																 Имя
+															</div>
+															<div class="col-md-7 value">
+																 <%= @question.name %>
+															</div>
+														</div>
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																 Email
+															</div>
+															<div class="col-md-7 value">
+																 <%= @question.email %>
+															</div>
+														</div>
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Телефон:
+															</div>
+															<div class="col-md-7 value">
+																 <%= @question.phone %>
+															</div>
+														</div>
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																 Skype:
+															</div>
+															<div class="col-md-7 value">
+																 <%= @question.skype %>
+															</div>
+														</div>
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																 Сообщение:
+															</div>
+															<div class="col-md-7 value">
+																 <%= @question.message %>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
+	</div>
+
+</div>
+

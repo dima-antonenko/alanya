@@ -61,6 +61,11 @@ Rails.application.routes.draw do
     resources :post_categories
     resources :posts
     resources :site_variables
+    resources :dynamic_project_pages
+    resources :static_pages
+
+    resources :project_application_mails
+
 
     resources :menus
     resources :menu_items
