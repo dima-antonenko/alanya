@@ -12,18 +12,12 @@
 					<div class="portlet box grey-cascade">
 						<div class="portlet-title">
 							<div class="caption">
-								Все адресаты
+								Пользователями была запрошена дополнительная информация об этих проетах
 							</div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="/administrator/projects/new" id="sample_editable_1_new" class="btn green">Добавить новый</a>
-											
-										</div>
-									</div>
 									<div class="col-md-6">
 									</div>
 								</div>
@@ -31,6 +25,9 @@
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
+								<th>
+									 id
+								</th>
 								<th>
 									 Имя
 								</th>
@@ -49,7 +46,10 @@
 							<% @project_application_mails.each do |item| %>
 								<tr class="odd gradeX">
 									<td>
-										<%= item.name %>
+										<%= item.id %>
+									</td>
+									<td>
+										<%= link_to item.name, administrator_project_application_mail_path(item) %>
 									</td>
 
 									<td>

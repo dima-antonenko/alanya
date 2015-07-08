@@ -73,6 +73,7 @@ Rails.application.routes.draw do
     resources :sliders
     resources :slides
 
+    resources :reviews
     resources :banners
   end
 

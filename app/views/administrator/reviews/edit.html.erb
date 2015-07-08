@@ -1,0 +1,82 @@
+<style type="text/css">
+	.tab-content .form-group{
+		padding-bottom: 50px;
+	}
+	
+</style>
+
+<div class="page-content-wrapper">
+		<div class="page-content">
+			<div class="row">
+				<div class="col-md-12">
+					<%= form_for([:administrator, @review], :multipart => true ) do |f| %>
+						<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="icon-basket font-green-sharp"></i>
+									<span class="caption-subject font-green-sharp bold uppercase">
+									<%= @review.name %> (<%= @review.email %>)</span>
+									<span class="caption-helper">режим редактирования</span>
+								</div>
+								<div class="actions btn-set">
+									<a href="/administrator/posts" class="btn btn-default btn-circle"> Назад </a>
+									 <%= f.submit(class: "btn green-haze btn-circle", value: "Обновить") %>
+									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
+									-->
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										
+									</ul>
+									<div class="tab-content no-space">
+										<div class="tab-pane active" id="tab_general">
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-2 control-label">Имя: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :name, class: "form-control" %>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Email: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :email, class: "form-control" %>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Опубликовано: </span>
+													</label>
+													<div class="col-md-10">
+														<%= f.select(:published, options_for_select([['Да', true], ['Нет', false]],  selected: @review.published), {include_blank: 'Не выбрано' }, {class: "btn"}) %>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Текст: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.cktext_area :content, class: "form-control edit" %>
+													</div>
+												</div>
+												
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<% end %>
+
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
+	</div>
+
+</div>
+
