@@ -57,6 +57,30 @@
 												</div>
 
 												<div class="form-group">
+													<label class="col-md-2 control-label">Цена: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :price, class: "form-control" %>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">Ссылка: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :link, class: "form-control" %>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">Описание: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_area :description, class: "form-control" %>
+													</div>
+												</div>
+
+												<div class="form-group">
 													<label class="col-md-2 control-label">Текст: </span>
 													</label>
 													<div class="col-md-10">
@@ -68,9 +92,9 @@
 													<label class="col-md-2 control-label">Изображение: </span>
 													</label>
 													<div class="col-md-10">
-														<%= f.file_field :avatar %>
+														
 													</div>
-													<%= image_tag @slide.avatar.url(:medium) %>
+													
 												</div>
 										
 											</div>

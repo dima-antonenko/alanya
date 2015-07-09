@@ -24,7 +24,7 @@ class Administrator::PostsController < AdministratorController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to '/administrator/posts', notice: 'Product category was successfully created.' }
+        format.html { redirect_to '/administrator/posts', notice: 'Информация обновлена' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -38,7 +38,7 @@ class Administrator::PostsController < AdministratorController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to '/administrator/posts', notice: 'Product category was successfully updated.' }
+        format.html { redirect_to '/administrator/posts', notice: 'Информация обновлена' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class Administrator::PostsController < AdministratorController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrator/posts', notice: 'Product category was successfully destroyed.' }
+      format.html { redirect_to '/administrator/posts', notice: 'Информация обновлена' }
       format.json { head :no_content }
     end
   end
@@ -61,8 +61,7 @@ class Administrator::PostsController < AdministratorController
 
   def post_params
       params.require(:post).permit(:title, :post_category_id, :text, :lead, :image,
-        :meta_title, :meta_description, :meta_keywords,  :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at,
-        :avatar)
+        :meta_title, :meta_description, :meta_keywords, :to_main_page, :mini_lead)
   end
 
   def set_post

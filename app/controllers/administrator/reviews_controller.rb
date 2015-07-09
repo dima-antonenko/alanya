@@ -60,7 +60,7 @@ class Administrator::ReviewsController < AdministratorController
   private
 
   def review_params
-      params.require(:review).permit(:published)
+      params.require(:review).permit(:published, :name, :email, :content)
   end
 
   def set_review

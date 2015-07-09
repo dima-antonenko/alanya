@@ -31,6 +31,10 @@
 											<a href="#tab_general" data-toggle="tab">
 											Основное </a>
 										</li>
+										<li >
+											<a href="#tab_blocks" data-toggle="tab">
+											Блоки </a>
+										</li>
 										<li>
 											<a href="#tab_seo" data-toggle="tab">
 											SEO
@@ -56,6 +60,40 @@
 													</div>
 												</div>
 
+											</div>
+										</div>
+
+										<div class="tab-pane" id="tab_blocks">
+											<div class="form-body">
+												<div class="table-responsive">
+											<table class="table table-striped table-hover table-bordered">
+											<thead>
+											<tr>
+												<th>
+													 Название
+												</th>
+												
+												<th>
+												</th>
+											</tr>
+											</thead>
+											<tbody>
+											<% @static_page.site_variables.each do |variable| %>
+											<tr>
+												<td>
+													<a href="#">
+													<%= variable.name %></a>
+												</td>
+												
+												<td>
+													<a href="<%= edit_administrator_site_variable_path(variable) %>" class="btn default btn-xs green-stripe">
+													Редактировать </a>
+												</td>
+											</tr>
+											<% end %>
+											</tbody>
+											</table>
+										</div>
 											</div>
 										</div>
 

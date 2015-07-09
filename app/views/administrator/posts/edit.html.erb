@@ -32,6 +32,11 @@
 											<a href="#tab_general" data-toggle="tab">
 											Основное </a>
 										</li>
+
+										<li>
+											<a href="#to_main" data-toggle="tab">
+											Публикация на главной </a>
+										</li>
 										
 										<li>
 											<a href="#tab_images" data-toggle="tab">
@@ -78,15 +83,36 @@
 
 											</div>
 										</div>
+										<div class="tab-pane" id="to_main">
+											<div class="form-body">
+												<div class="row static-info">
+															<div class="col-md-3 name">
+																Публикация на главной странице
+															</div>
+															<div class="col-md-9 value">
+																<%= f.select(:to_main_page, options_for_select([['Да', true], ['Нет', false]],  selected: @post.to_main_page), {include_blank: 'Не выбрано' }, {class: "btn"}) %>
+															</div>
+												</div>
+
+												<div class="row static-info">
+															<div class="col-md-3 name">
+																Лид
+															</div>
+															<div class="col-md-9 value">
+																<%= f.text_area :mini_lead, class: "form-control" %>
+															</div>
+												</div>
+											</div>
+										</div>
 										<div class="tab-pane" id="tab_images">
 											<div class="form-body">
 												<div class="form-group">
 													<label class="col-md-2 control-label">Изображение: </span>
 													</label>
 													<div class="col-md-10">
-														<%= f.file_field :avatar %>
+														
 													</div>
-													<%= image_tag @post.avatar.url(:big) %>
+													
 												</div>
 											</div>
 										</div>

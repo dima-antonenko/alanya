@@ -24,7 +24,7 @@ class Administrator::SlidesController < AdministratorController
 
     respond_to do |format|
       if @slide.save
-        format.html { redirect_to '/administrator/sliders', notice: 'Product category was successfully created.' }
+        format.html { redirect_to '/administrator/sliders', notice: 'Информация обновлена' }
         format.json { render :show, status: :created, location: @slide }
       else
         format.html { render :new }
@@ -38,7 +38,7 @@ class Administrator::SlidesController < AdministratorController
   def update
     respond_to do |format|
       if @slide.update(slide_params)
-        format.html { redirect_to '/administrator/sliders', notice: 'Product category was successfully updated.' }
+        format.html { redirect_to '/administrator/sliders', notice: 'Информация обновлена' }
         format.json { render :show, status: :ok, location: @slide }
       else
         format.html { render :edit }
@@ -50,7 +50,7 @@ class Administrator::SlidesController < AdministratorController
    def destroy
     @slide.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrator/sliders', notice: 'Product category was successfully destroyed.' }
+      format.html { redirect_to '/administrator/sliders', notice: 'Информация обновлена' }
       format.json { head :no_content }
     end
   end
@@ -61,7 +61,7 @@ class Administrator::SlidesController < AdministratorController
   private
 
   def slide_params
-      params.require(:slide).permit(:title,:slider_id, :title, :content, :avatar )
+      params.require(:slide).permit(:title,:slider_id, :title, :content, :avatar, :description, :link )
   end
 
   def set_slide
