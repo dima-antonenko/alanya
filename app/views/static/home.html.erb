@@ -16,7 +16,7 @@ margin: 0 auto;
             <div id="owl-demo" class="owl-carousel">
             
               <% @slider.slides.each do |slide| %>
-              <div class="item"><img src="test.png" alt="The Last of us">
+              <div class="item"><img src="<%= slide.image.normal %>" alt="The Last of us">
                 
                 <div class="description">
                   <span class="info">

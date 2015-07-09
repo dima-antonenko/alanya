@@ -92,10 +92,31 @@
 													<label class="col-md-2 control-label">Изображение: </span>
 													</label>
 													<div class="col-md-10">
-														
+														<%= f.file_field :image, class: "btn blue-hoki", id: "tab_images_uploader_pickfiles" %>
 													</div>
 													
 												</div>
+												<div class="form-group no_padding_bottom">
+										<table class="table table-bordered table-hover">
+											<thead>
+												<tr role="row" class="heading">
+													<th width="100%">
+														Изображение
+													</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="#" class="fancybox-button" data-rel="fancybox-button">
+															<img class="img-responsive" src="<%= @slide.image.mini_admin %>" alt="">
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 										
 											</div>
 										</div>

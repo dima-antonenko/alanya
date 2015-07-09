@@ -11,23 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701002611) do
+ActiveRecord::Schema.define(version: 20150709144628) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "link"
+    t.string   "image"
   end
 
-  add_index "banners", ["avatar_content_type"], name: "index_banners_on_avatar_content_type"
-  add_index "banners", ["avatar_file_name"], name: "index_banners_on_avatar_file_name"
-  add_index "banners", ["avatar_file_size"], name: "index_banners_on_avatar_file_size"
-  add_index "banners", ["avatar_updated_at"], name: "index_banners_on_avatar_updated_at"
   add_index "banners", ["created_at"], name: "index_banners_on_created_at"
   add_index "banners", ["link"], name: "index_banners_on_link"
   add_index "banners", ["title"], name: "index_banners_on_title"
@@ -244,24 +237,8 @@ ActiveRecord::Schema.define(version: 20150701002611) do
     t.string   "sity"
   end
 
-  create_table "post_categories", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "meta_title"
-    t.string   "meta_description"
-    t.string   "meta_keywords"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-  end
-
-  add_index "post_categories", ["meta_description"], name: "index_post_categories_on_meta_description"
-  add_index "post_categories", ["meta_keywords"], name: "index_post_categories_on_meta_keywords"
-  add_index "post_categories", ["meta_title"], name: "index_post_categories_on_meta_title"
-  add_index "post_categories", ["title"], name: "index_post_categories_on_title"
+# Could not dump table "post_categories" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "posts", force: :cascade do |t|
     t.integer  "post_category_id"
@@ -271,14 +248,11 @@ ActiveRecord::Schema.define(version: 20150701002611) do
     t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.boolean  "to_main_page",        default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "to_main_page",     default: false
     t.string   "mini_lead"
+    t.string   "avatar"
   end
 
   add_index "posts", ["lead"], name: "index_posts_on_lead"
@@ -529,21 +503,14 @@ ActiveRecord::Schema.define(version: 20150701002611) do
     t.integer  "slider_id"
     t.string   "title"
     t.string   "content"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "price"
     t.string   "description"
     t.string   "link"
+    t.string   "image"
   end
 
-  add_index "slides", ["avatar_content_type"], name: "index_slides_on_avatar_content_type"
-  add_index "slides", ["avatar_file_name"], name: "index_slides_on_avatar_file_name"
-  add_index "slides", ["avatar_file_size"], name: "index_slides_on_avatar_file_size"
-  add_index "slides", ["avatar_updated_at"], name: "index_slides_on_avatar_updated_at"
   add_index "slides", ["content"], name: "index_slides_on_content"
   add_index "slides", ["slider_id"], name: "index_slides_on_slider_id"
   add_index "slides", ["title"], name: "index_slides_on_title"

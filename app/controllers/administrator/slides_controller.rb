@@ -61,7 +61,7 @@ class Administrator::SlidesController < AdministratorController
   private
 
   def slide_params
-      params.require(:slide).permit(:title,:slider_id, :title, :content, :avatar, :description, :link )
+      params.require(:slide).permit(:title,:slider_id, :title, :content, :image, :description, :link )
   end
 
   def set_slide
