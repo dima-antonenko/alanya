@@ -60,7 +60,7 @@ class Administrator::PostsController < AdministratorController
   private
 
   def post_params
-      params.require(:post).permit(:title, :post_category_id, :text, :lead, :image,
+      params.require(:post).permit(:title, :post_category_id, :text, :lead, :avatar,
         :meta_title, :meta_description, :meta_keywords, :to_main_page, :mini_lead)
   end
 

@@ -97,7 +97,7 @@ margin: 0 auto;
             <% @helpful_news.each do |post| %>
             <li>
               <span class="title"><%= link_to post.title, post_category_post_url(post.post_category, post) %></span>
-              <img src="#" class="avatar">
+              <img src="<%= post.avatar.normal %>" class="avatar">
               <span class="mini-lead">
                 <%= post.mini_lead %>
               </span>
@@ -116,7 +116,7 @@ margin: 0 auto;
             <% @helpful_news.each do |post| %>
             <li>
               <span class="title"><%= link_to post.title, post_category_post_url(post.post_category, post) %></span>
-              <img src="#" class="avatar">
+              <img src="<%= post.avatar.normal %>" class="avatar">
               <span class="mini-lead">
                 <%= post.mini_lead %>
               </span>

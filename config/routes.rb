@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :reviews
 
   resources :events
+  resources :event_attacments
   resources :managers
 
   resources :dynamic_pages
@@ -63,6 +64,8 @@ Rails.application.routes.draw do
     resources :site_variables
     resources :dynamic_project_pages
     resources :static_pages
+
+    resources :events
 
     resources :project_application_mails
 
