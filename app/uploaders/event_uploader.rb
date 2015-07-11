@@ -33,6 +33,13 @@ class EventUploader < CarrierWave::Uploader::Base
    process :resize_to_fit => [85, 60]
   end
 
+  version :attacment_thumb do
+   process :resize_to_fit => [100, 100]
+  end
+
+  version :attacment_normal do
+   process :resize_to_fit => [1024, 768]
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   resources :reviews
 
-  resources :events
-  resources :event_attacments
+
+  resources :events  do
+    resources :event_attacments
+  end
+
   resources :managers
 
   resources :dynamic_pages

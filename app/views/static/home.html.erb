@@ -142,7 +142,7 @@ margin: 0 auto;
           <ul class="wiget_events_list">
             <% @events.each do |event| %>
             <li>
-              <img src="#" class="avatar"/>
+              <img src="<%= event.avatar.main_mage %>" class="avatar"/>
               <span class="title"><%= event.title %></span>
               <span class="description"><%= event.date.to_date %></span>
             </li>

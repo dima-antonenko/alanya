@@ -14,6 +14,10 @@
     font-size: 13px;
     line-height: 19px;
 }
+.fancybox-nav{
+  width: 10%;
+  height: 20%;
+}
 </style>
 
 <div class="buy_page exhibition">
@@ -47,7 +51,7 @@
       
       <% @events.each do |event| %>
         <li>
-          <img class="avatar" src="#">
+          <img class="avatar" src="<%= event.avatar.list %>">
           <span class="title"><%= event.title %></span>
           <a class="more various" href="#<%= "event#{event.id}" %>" rel="prettyPhoto[inline]">подробнее</a>
         </li>
@@ -61,21 +65,11 @@
         <h4><%= event.title %></h4>
         <div class="desc"><%= event.description.html_safe %></div>
         <ul class="gallery">
+        <% EventAttacment.where(event_id: event.id).each do |attacment| %>
           <li>
-            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
+            <a rel="example_group" href="<%= attacment.image.attacment_normal %>" ><img alt="" class="event_img" src="<%= attacment.image.attacment_thumb %>" /></a>
           </li>
-          <li>
-            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
-          </li>
-          <li>
-            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
-          </li>
-          <li>
-            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
-          </li>
-          <li>
-            <a rel="example_group" href="/test.png" ><img alt="" class="event_img" src="/test.png" /></a>
-          </li>
+       <% end %>
         </ul>
       </div>
     <% end %>

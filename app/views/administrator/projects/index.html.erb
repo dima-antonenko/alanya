@@ -9,7 +9,7 @@
 					<div id="prefix_262686894761" class="Metronic-alerts alert alert-success fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><%= flash[:notice] %></div>
 				<% end %>
 					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box grey-cascade">
+					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
 								Все проекты
@@ -69,7 +69,11 @@
 											<%= project.project_category.title %>
 									</td>
 									<td>
+										<% unless project.start_price.to_i > 1 %>
+										 Не указано
+										<% else %>
 										 <%= project.start_price %> &euro;
+										<% end %>
 									</td>
 									<td class="center">
 										 <%= project.final_price %> &euro;
