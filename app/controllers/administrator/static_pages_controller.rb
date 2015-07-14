@@ -23,7 +23,7 @@ class Administrator::StaticPagesController < AdministratorController
 
     respond_to do |format|
       if @static_page.save
-        format.html { redirect_to '/administrator/static_pages/index', notice: 'Информация обновлена' }
+        format.html { render :edit, notice: 'Страница создана' }
         format.json { render :show, status: :created, location: @static_page }
       else
         format.html { render :new }

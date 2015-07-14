@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     resources :managers
   end
 
+  resources :managers_projects
+
   resources :projects  do
     resources :project_application_mails
   end
@@ -69,6 +71,8 @@ Rails.application.routes.draw do
     resources :static_pages
 
     resources :events
+
+    resources :managers_projects
 
     resources :project_application_mails
 

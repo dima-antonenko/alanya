@@ -12,14 +12,13 @@
 						<div class="portlet light">
 							<div class="portlet-title">
 								<div class="caption">
-									<i class="icon-basket font-green-sharp"></i>
-									<span class="caption-subject font-green-sharp bold uppercase">
+									<span class="caption-subject blue bold ">
 									<%= @post_category.title %> </span>
 									<span class="caption-helper">редактирование категории</span>
 								</div>
 								<div class="actions btn-set">
 									<a href="/administrator/post_categories" class="btn btn-default btn-circle"> Назад </a>
-									 <%= f.submit(class: "btn green-haze btn-circle", value: "Обновить") %>
+									 <%= f.submit(class: "btn blue btn-circle", value: "Обновить") %>
 									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
 									-->
 								</div>
@@ -34,10 +33,6 @@
 										<li>
 											<a href="#tab_description" data-toggle="tab">
 											Описание </a>
-										</li>
-										<li>
-											<a href="#tab_images" data-toggle="tab">
-											Изображения </a>
 										</li>
 										<li>
 											<a href="#tab_seo" data-toggle="tab">
@@ -69,18 +64,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="tab-pane" id="tab_images">
-											<div class="form-body">
-												<div class="form-group">
-													<label class="col-md-2 control-label">Изображение: </span>
-													</label>
-													<div class="col-md-10">
-														<%# f.file_field :avatar %>
-													</div>
-													<%# image_tag @post_category.avatar.url(:medium) %>
-												</div>
-											</div>
-										</div>
+
 										<div class="tab-pane" id="tab_seo">
 											<div class="form-group">
 													<label class="col-md-2 control-label">Title: </span>

@@ -53,7 +53,7 @@ class Administrator::BannersController < AdministratorController
   private
 
   def banner_params
-      params.require(:banner).permit(:avatar, :title, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at, :avatar)
+      params.require(:banner).permit(:image, :title, :link)
   end
 
   def set_menu

@@ -39,6 +39,8 @@ class ApplicationController < ActionController::Base
    @project_categories = ProjectCategory.all
    @question = Question.new(params[:question])
     
+   @banner1 = Banner.where(descriptor:"free_tour_banner").first
+   @banner2 = Banner.where(descriptor:"turk_info_banner").first
   end
 
 

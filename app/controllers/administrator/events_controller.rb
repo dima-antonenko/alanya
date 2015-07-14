@@ -6,6 +6,31 @@ class Administrator::EventsController < AdministratorController
     @events = Event.all.paginate(:page => params[:page], :per_page => 10)
   end 
 
+  def new
+    @event = Event.new()
+  end
+
+  def create
+    @event = Event.new(event_params)
+    @event.assign_attributes(event_params)
+   
+    respond_to do |format|
+      if @event.save
+        if params[:images] != nil
+          params[:images].each do |image|
+            EventAttacment.create(event_id: @event.id, image: image)
+          end
+        end
+
+        format.html { redirect_to :back , notice: 'Информация обновлена' }
+        format.json { render :index, status: :ok, location: @event }
+      else
+        format.html { render :update, notice: 'Произошла ошибка' }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 
   def edit
     @event = Event.find(params[:id])
@@ -48,7 +73,7 @@ class Administrator::EventsController < AdministratorController
   end
 
   def set_event
-    @Event = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
 end

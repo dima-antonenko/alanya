@@ -416,12 +416,12 @@ html{
     <div class="filter_section static_menu_section type no_border">
       <div class="banners">
         <div class="banner">
-          <img src="/test2/1.png" class="sidebar_banner">
-          <a href="#" class="title">Бесплатный ознакомительный тур</a>
+          <img src="<%= @banner1.image.normal %>" class="sidebar_banner">
+          <a href="<%= @banner2.link %>" class="title"><%= @banner1.title %></a>
         </div>
         <div class="banner">
-          <img src="/test2/2.png" class="sidebar_banner">
-          <a href="#" class="title">Все о Турции</a>
+          <img src="<%= @banner2.image.normal %>" class="sidebar_banner">
+          <a href="<%= @banner2.link %>" class="title"><%= @banner2.title %></a>
         </div>  
       </div>   
 

@@ -32,14 +32,13 @@
 				<div class="portlet light">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="icon-basket font-green-sharp"></i>
-							<span class="caption-subject font-green-sharp bold uppercase">
-							Новый город </span>
+							<span class="caption-subject font-blue-sharp bold uppercase">
+							Новый город</span>
 							<span class="caption-helper">режим создания</span>
 						</div>
 						<div class="actions btn-set">
 							<a href="/administrator/projects" class="btn btn-default btn-circle"> Назад </a>
-							<%= f.submit(class: "btn blue-hoki btn-circle", value: "Создать") %>
+							<%= f.submit(class: "btn blue btn-circle", value: "Обновить") %>
 						</div>
 					</div>
 					<div class="portlet-body">
@@ -48,10 +47,6 @@
 								<li class="active">
 									<a href="#tab_general" data-toggle="tab">
 									Главная</a>
-								</li>
-								<li>
-									<a href="#tab_description" data-toggle="tab">
-									Описание </a>
 								</li>
 								<li>
 									<a href="#tab_images" data-toggle="tab">
@@ -72,24 +67,22 @@
 										<div class="col-md-10">
 											<%= f.text_field :title, class: "form-control" %>
 										</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane" id="tab_description">
-							<div class="form-body">
-								<div class="form-group">
-								</label>
+								    </div>
+								    <div class="form-group">
+								<label class="col-md-2 control-label">Описание: </span>
+										</label>
 								<div class="col-md-10">
 									<%= f.cktext_area :description, class: "form-control edit" %>
 								</div>
 							</div>
+							    </div>
 						</div>
-					</div>
+						
 					<div class="tab-pane" id="tab_images">
 						<div class="form-body">
 							<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 								<ul>
-									<li><%= f.file_field :avatar, class: "btn blue-hoki", id: "tab_images_uploader_pickfiles" %></li>
+									<li><%= f.file_field :avatar, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
 								</ul>
 							</div>
 							<div class="row">
@@ -125,24 +118,13 @@
 							<div class="form-group">
 								<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 									<ul>
-										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue-hoki", id: "tab_images_uploader_pickfiles" %></li>
+										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
 									</ul>
 									
 								</div>
-								<span class="caption-subject font-green-sharp bold uppercase all_images_string">
+								<span class="caption-subject font-blue-sharp bold uppercase all_images_string">
 								Все изображения проекта </span>
-								<table class="table table-bordered table-hover">
-									<thead>
-										<tr role="row" class="heading">
-											<th width="6%">
-												Изображение
-											</th>
-											<th width="94%">
-											</th>
-										</tr>
-									</thead>
-									
-								</table>
+								
 							</div>
 						</div>
 					</div>
@@ -162,7 +144,7 @@
 													<label class="col-md-2 control-label">Meta description: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.text_area :meta_title, class: "form-control" %>
+														 <%= f.text_area :meta_description, class: "form-control" %>
 													</div>
 												</div>
 							
@@ -170,7 +152,7 @@
 													<label class="col-md-2 control-label">Meta keywords: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.text_area :meta_title, class: "form-control" %>
+														 <%= f.text_area :meta_keywords, class: "form-control" %>
 													</div>
 												</div>
 							<div class="form-group">

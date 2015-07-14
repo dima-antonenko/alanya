@@ -33,7 +33,7 @@
 				<div class="portlet light">
 					<div class="portlet-title">
 						<div class="caption">
-							<span class="caption-subject blue bold uppercase">
+							<span class="caption-subject blue bold ">
 							<%= @project.name %> </span>
 							<span class="caption-helper">режим редактирования</span>
 						</div>
@@ -432,7 +432,7 @@
 													</td>
 														
 													<td>
-														<%= link_to 'Удалить', project_manager_path(@project, manager), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn default btn-sm" %>
+														<a href="" class="btn default btn-sm">Удалить </a>
 													</td>
 												</tr>
 												<% end %>

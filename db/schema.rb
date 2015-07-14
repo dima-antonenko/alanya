@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711151425) do
+ActiveRecord::Schema.define(version: 20150714150059) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150711151425) do
     t.datetime "updated_at", null: false
     t.string   "link"
     t.string   "image"
+    t.string   "descriptor"
   end
 
   add_index "banners", ["created_at"], name: "index_banners_on_created_at"

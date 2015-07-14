@@ -32,14 +32,13 @@
 				<div class="portlet light">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="icon-basket font-green-sharp"></i>
-							<span class="caption-subject font-green-sharp bold uppercase">
+							<span class="caption-subject font-blue-sharp bold uppercase">
 							<%= @event.title %> </span>
 							<span class="caption-helper">режим редактирования</span>
 						</div>
 						<div class="actions btn-set">
 							<a href="/administrator/projects" class="btn btn-default btn-circle"> Назад </a>
-							<%= f.submit(class: "btn blue-hoki btn-circle", value: "Обновить") %>
+							<%= f.submit(class: "btn blue btn-circle", value: "Обновить") %>
 						</div>
 					</div>
 					<div class="portlet-body">
@@ -79,7 +78,7 @@
 						<div class="form-body">
 							<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 								<ul>
-									<li><%= f.file_field :avatar, class: "btn blue-hoki", id: "tab_images_uploader_pickfiles" %></li>
+									<li><%= f.file_field :avatar, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
 								</ul>
 							</div>
 							<div class="row">
@@ -115,7 +114,7 @@
 							<div class="form-group">
 								<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 									<ul>
-										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue-hoki", id: "tab_images_uploader_pickfiles" %></li>
+										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
 									</ul>
 									
 								</div>
@@ -140,7 +139,7 @@
 												<img class="img-responsive" src="<%= event_attachment.image.mini_admin  %>" alt="">
 											</td>
 											<td>
-												<%= link_to 'Удалить', event_attachment, method: :delete, data: { confirm: 'Удалить ?' }, class: "btn default btn-sm" %>
+												<%# link_to 'Удалить', event_attachment, method: :delete, data: { confirm: 'Удалить ?' }, class: "btn default btn-sm" %>
 											</td>
 										</tr>
 										<%  end %>

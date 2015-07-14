@@ -12,14 +12,13 @@
 						<div class="portlet light">
 							<div class="portlet-title">
 								<div class="caption">
-									<i class="icon-basket font-green-sharp"></i>
-									<span class="caption-subject font-green-sharp bold uppercase">
-									Новая категория материалов </span>
-									
+									<span class="caption-subject blue bold ">
+									Новая категория записей </span>
+									<span class="caption-helper">режим создания</span>
 								</div>
 								<div class="actions btn-set">
 									<a href="/administrator/post_categories" class="btn btn-default btn-circle"> Назад </a>
-									 <%= f.submit(class: "btn green-haze btn-circle", value: "Создать") %>
+									 <%= f.submit(class: "btn blue btn-circle", value: "Обновить") %>
 									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
 									-->
 								</div>
@@ -64,7 +63,7 @@
 													<label class="col-md-2 control-label">Описание: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.cktext_area :description,  class: "form-control edit" %>
+														 <%= f.cktext_area :description, class: "form-control edit" %>
 													</div>
 												</div>
 											</div>
@@ -75,9 +74,9 @@
 													<label class="col-md-2 control-label">Изображение: </span>
 													</label>
 													<div class="col-md-10">
-														<%= f.file_field :avatar %>
+														<%# f.file_field :avatar %>
 													</div>
-													<%= image_tag @post_category.avatar.url(:medium) %>
+													<%# image_tag @post_category.avatar.url(:medium) %>
 												</div>
 											</div>
 										</div>
