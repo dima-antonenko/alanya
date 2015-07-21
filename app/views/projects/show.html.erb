@@ -28,9 +28,9 @@
 
     <div class="project_heading">
       <% if @project.custom_sku == false %>
-        <div class="item_price">id: <%= @project.sku %></div>
-      <% else %>
         <div class="item_price">id: <%= @project.id %></div>
+      <% else %>
+        <div class="item_price">id: <%= @project.sku %></div>
       <% end %>  
       <h1 class="h1"><%= @project.name %></h1>
     </div>
@@ -186,7 +186,7 @@
         <div class="share">
           <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
         </div>
-        <a class="print" href="#">Печать</a>
+        <a class="print" href="javascript:window.print(); void 0">Печать</a>
         <label class="send" for="to_email">Отправить по email</label>
       </div>
     </div>
@@ -219,7 +219,7 @@
     <li>
       <div class="manager">
         <div class="photo">
-          <img src="<%= manager.avatar.medium %>">
+          <img src="<%= manager.avatar.project %>">
         </div>
         <div class="description">
           <span class="field name"><%= manager.name %></span>

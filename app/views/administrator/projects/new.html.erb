@@ -33,13 +33,13 @@
 				<div class="portlet light">
 					<div class="portlet-title">
 						<div class="caption">
-							<span class="caption-subject blue bold ">
+							<span class="caption-subject blue-madison bold ">
 							Новый проект </span>
 							<span class="caption-helper">режим создания</span>
 						</div>
 						<div class="actions btn-set">
 							<a href="/administrator/projects" class="btn btn-default btn-circle"> Назад </a>
-							<%= f.submit(class: "btn blue btn-circle", value: "Сохранить") %>
+							<%= f.submit(class: "btn blue-madison btn-circle", value: "Сохранить") %>
 						</div>
 					</div>
 					<div class="portlet-body">
@@ -72,7 +72,7 @@
 									<div class="form-body">
 										<div class="row">
 											<div class="col-md-6 col-sm-12">
-												<div class="portlet blue box">
+												<div class="portlet blue-madison box">
 													<div class="portlet-title">
 														<div class="caption">
 															Основная информация
@@ -125,7 +125,7 @@
 												</div>
 											</div>
 											<div class="col-md-6 col-sm-12">
-												<div class="portlet blue box">
+												<div class="portlet blue-madison box">
 													<div class="portlet-title">
 														<div class="caption">
 															Подробности
@@ -179,7 +179,7 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6 col-sm-12">
-												<div class="portlet blue box">
+												<div class="portlet blue-madison box">
 													<div class="portlet-title">
 															<div class="caption">
 																Опции
@@ -239,7 +239,7 @@
 											</div>
 											
 											<div class="col-md-6 col-sm-12">
-												<div class="portlet blue box">
+												<div class="portlet blue-madison box">
 													<div class="portlet-title">
 														<div class="caption">
 															Прочее
@@ -323,7 +323,7 @@
 								<div class="form-body">
 									<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 										<ul>
-											<li><%= f.file_field :avatar, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
+											<li><%= f.file_field :avatar, class: "btn blue-madison", id: "tab_images_uploader_pickfiles" %></li>
 										</ul>
 									</div>
 									<div class="row">
@@ -355,11 +355,11 @@
 									<div class="form-group">
 										<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 											<ul>
-												<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
+												<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue-madison", id: "tab_images_uploader_pickfiles" %></li>
 											</ul>
 											
 										</div>
-										<span class="caption-subject blue bold uppercase all_images_string">
+										<span class="caption-subject blue-madison bold uppercase all_images_string">
 										Все изображения проекта </span>
 										
 									</div>
@@ -371,7 +371,7 @@
 											<ul>
 												<li><%= f.select :some_manager, Manager.all.collect {|manager| [manager.name, manager.id ]}, { include_blank: 'Не выбрано'},{class: "btn"} %></li>
 												<li>
-													<%= f.submit(class: "btn blue btn-circle", value: "Добавить") %>
+													<%= f.submit(class: "btn blue-madison btn-circle", value: "Добавить") %>
 												</li>
 
 												

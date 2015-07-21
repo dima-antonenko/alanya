@@ -32,13 +32,13 @@
 				<div class="portlet light">
 					<div class="portlet-title">
 						<div class="caption">
-							<span class="caption-subject font-blue-sharp bold uppercase">
+							<span class="caption-subject font-blue-madison bold uppercase">
 							<%= @project_category.title %> </span>
 							<span class="caption-helper">режим редактирования</span>
 						</div>
 						<div class="actions btn-set">
 							<a href="/administrator/projects" class="btn btn-default btn-circle"> Назад </a>
-							<%= f.submit(class: "btn blue btn-circle", value: "Обновить") %>
+							<%= f.submit(class: "btn blue-madison btn-circle", value: "Обновить") %>
 						</div>
 					</div>
 					<div class="portlet-body">
@@ -82,7 +82,7 @@
 						<div class="form-body">
 							<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 								<ul>
-									<li><%= f.file_field :avatar, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
+									<li><%= f.file_field :avatar, class: "btn blue-madison", id: "tab_images_uploader_pickfiles" %></li>
 								</ul>
 							</div>
 							<div class="row">
@@ -118,11 +118,11 @@
 							<div class="form-group">
 								<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
 									<ul>
-										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue", id: "tab_images_uploader_pickfiles" %></li>
+										<li><%= file_field_tag  "images[]", type: :file, multiple: true, class: "btn blue-madison", id: "tab_images_uploader_pickfiles" %></li>
 									</ul>
 									
 								</div>
-								<span class="caption-subject font-blue-sharp bold uppercase all_images_string">
+								<span class="caption-subject font-blue-madison bold uppercase all_images_string">
 								Все изображения проекта </span>
 								<table class="table table-bordered table-hover">
 									<thead>

@@ -25,14 +25,14 @@
 
 
     <div class="project_heading">
-      <h1 class="h1">О компании</h1>
+      <h1 class="h1">Наша история</h1>
     </div>
 
     <div class="persons_list">
       <ul>
         <% @managers.each do |manager| %>
         <li>
-          <img src="/test2/2/5.png" class="avatar">
+          <img src="<%= manager.avatar.company_info %>" class="avatar">
           <span class="name"><%= manager.name %></span>
           <span class="post"><%= manager.description %></span>
         </li>

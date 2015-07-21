@@ -34,7 +34,7 @@
       <% @managers.each do |manager| %>
 
       <li>
-          <img src="/test2/2/6.png" class="avatar">
+          <img src="<%= manager.avatar.managers_list %>" class="avatar">
           <div class="info">
             <span class="name"><%= manager.name %></span>
             <span class="post"><%= manager.description %></span>

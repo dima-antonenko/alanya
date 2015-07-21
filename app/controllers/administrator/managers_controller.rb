@@ -61,7 +61,7 @@ class Administrator::ManagersController < AdministratorController
   private
 
   def manager_params
-      params.require(:manager).permit(:name, :description, :languages, :skype, :avatar, :email, :phone )
+      params.require(:manager).permit(:name, :description, :languages, :skype, :avatar, :email, :phone, :elect, :company_info )
   end
 
   def set_manager

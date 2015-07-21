@@ -21,6 +21,9 @@ class ApplicationController < ActionController::Base
 
 
   def menu
+
+   @head_variables = SiteVariable.where(static_page_id: 0)  
+
    @main_menu = Menu.where(descriptor: "main_menu").first
    @footer_menu1 = Menu.where(descriptor:"foot_menu_1").first
    @footer_menu2 = Menu.where(descriptor:"foot_menu_2").first

@@ -12,14 +12,13 @@
 						<div class="portlet light">
 							<div class="portlet-title">
 								<div class="caption">
-									<i class="icon-basket font-green-sharp"></i>
-									<span class="caption-subject font-green-sharp bold uppercase">
+									<span class="caption-subject font-blue-madison bold ">
 									 <%= @site_variable.name %></span>
 									
 								</div>
 								<div class="actions btn-set">
 									<a href="/administrator/site_variables" class="btn btn-default btn-circle"> Назад </a>
-									 <%= f.submit(class: "btn green-haze btn-circle", value: "Обновить") %>
+									 <%= f.submit(class: "btn blue-madison btn-circle", value: "Обновить") %>
 									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
 									-->
 								</div>
@@ -37,15 +36,30 @@
 													</div>
 												</div>
 
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">Дескриптор: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :descriptor, class: "form-control edit" %>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">Страница: </span>
+													</label>
+													<div class="col-md-10">
+														 <%= f.text_field :static_page_id, class: "form-control edit" %>
+													</div>
+												</div>
+
 												<div class="form-group">
 													<label class="col-md-2 control-label">Значение: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.text_area :value, class: "form-control edit" %>
+														 <%= f.cktext_area :value, class: "form-control edit" %>
 													</div>
 												</div>
-
-												
 
 											</div>
 										</div>

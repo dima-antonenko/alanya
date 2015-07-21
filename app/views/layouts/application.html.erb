@@ -32,13 +32,13 @@
 <div class="before_nav">
   
   <div class="other">
-    <span class="mail"><img src="/src/email_open.png">info@alanypropetries.com</span>
-    <span class="skype_in_head"><img src="/src/skype.png">alanypropetries</span>  
+    <span class="mail"><img src="/src/email_open.png"><%= @head_variables.where(descriptor: "email").first.value %></span>
+    <span class="skype_in_head"><img src="/src/skype.png"><%= @head_variables.where(descriptor: "skype").first.value %></span>  
   </div>
   <div class="phones">
-    <span class= "phone">Телефон для всех регионов России: +7 123 456 78</span>
-    <span class= "phone">Телефон в Турции: +7 123 456 78</span>
-    <span class= "phone">Телефон в Москве: +7 123 456 78</span>
+    <span class= "phone">Телефон для всех регионов России: <%= @head_variables.where(descriptor: "phone_all_ru").first.value %></span>
+    <span class= "phone">Телефон в Турции:  <%= @head_variables.where(descriptor: "phone_turk").first.value %></span>
+    <span class= "phone">Телефон в Москве:  <%= @head_variables.where(descriptor: "phone_msk").first.value %></span>
   </div>
 </div>
 

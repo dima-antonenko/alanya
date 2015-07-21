@@ -85,6 +85,8 @@ Rails.application.routes.draw do
 
     resources :reviews
     resources :banners
+
+   
   end
 
   #devise_for :users

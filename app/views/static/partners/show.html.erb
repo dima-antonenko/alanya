@@ -32,7 +32,7 @@
       <ul>
        <% @managers.each do |manager| %>
         <li>
-          <img src="#" class="avatar">
+          <img src="<%= manager.avatar.partners %>" class="avatar">
           <div class="info">
             <span class="name"><%= manager.name %></span>
             <span class="post"><%= manager.description %></span>

@@ -6,10 +6,10 @@
 			<div class="row">
 				<div class="col-md-12">
 					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box grey-cascade">
+					<div class="portlet box blue-madison">
 						<div class="portlet-title">
 							<div class="caption">
-								Все проекты
+								Все сотрудники
 							</div>
 						</div>
 						<div class="portlet-body">
@@ -17,7 +17,7 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="/administrator/projects/new" id="sample_editable_1_new" class="btn green">Добавить новый</a>
+											<a href="/administrator/managers/new" id="sample_editable_1_new" class="btn green">Добавить новый</a>
 											
 										</div>
 									</div>
@@ -32,13 +32,13 @@
 									 Название
 								</th>
 								<th>
-									 
+									 Должность
 								</th>
 								<th>
-									 
+									Email
 								</th>
 								<th>
-									 
+									 Телефон
 								</th>
 								<th>
 									 
@@ -53,16 +53,16 @@
 									</td>
 									<td>
 										
-											<%# product.product_category.name %>
+											<%= manager.description %>
 									</td>
 									<td>
-										 <%# product.price %>
+										 <%= manager.email %>
 									</td>
 									<td class="center">
-										 <%# product.sku %>
+										 <%= manager.phone %>
 									</td>
 									<td>
-										 <%# link_to 'Удалить', administrator_product_path(product), method: :delete, data: { confirm: 'Удалить товар ?' } %>
+										 <%= link_to 'Удалить', administrator_manager_path(manager), method: :delete, data: { confirm: 'Удалить ?' } %>
 									</td>
 								</tr>
 							<% end %>

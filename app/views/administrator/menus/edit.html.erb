@@ -5,9 +5,43 @@
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="portlet blue-madison box">
+						<div class="portlet-title">
+							<div class="caption">
+								Иерархия пунктов
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="tree_1" class="tree-demo">
+								<ul>
+									<% @menu.menu_items.each do |item| %>
+										<% if item.menu_item == nil %>
+											<li >
+												<a href="<%= edit_administrator_menu_item_path(item) %>">
+												 <%= item.title %></a>
+
+												 <% if item.menu_items %>
+												 	<ul>
+												 		<% item.menu_items.each do |item| %>
+															<li>
+																<a href="<%= edit_administrator_menu_item_path(item) %>">
+																<%= item.title %> </a>
+															</li>
+														<% end %>
+													</ul>
+												<% end %>
+											</li>
+										<% end %>
+									<% end %>	
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
 					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box grey-cascade">
+					<div class="portlet box blue-madison">
 						<div class="portlet-title">
 							<div class="caption">
 								<%= @menu.title %>
@@ -50,7 +84,7 @@
 
 								</td>
 								<td>
-									 <% if item.menu_item_id != 1 %>
+									 <% if item.menu_item != nil %>
 									 	<%= item.menu_item.title %>
 									 <% else  %>
 									 	Корневой пункт меню
