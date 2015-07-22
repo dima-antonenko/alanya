@@ -7,6 +7,7 @@ class ManagersController < ApplicationController
 
   def index
     @managers = Manager.all
+     @question = Question.new(params[:question])
   end
 
   def destroy

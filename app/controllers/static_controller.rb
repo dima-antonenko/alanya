@@ -10,10 +10,9 @@ class StaticController < ApplicationController
 		@i = 1
 		render 'home'
 	end
-
 	
-
 	def company_info
+		@question = Question.new(params[:question])
 		@page = StaticPage.where(descriptor: "company_info").first
 		@youtube_link = @page.site_variables.where(descriptor: "youtube_link").first
 		@managers = Manager.where(company_info: true)
@@ -21,17 +20,23 @@ class StaticController < ApplicationController
 	end
 
 	def partners
+		 @question = Question.new(params[:question])
 		@managers = Manager.where(elect: true)
 		render '/static/partners/show'
 	end
 
 	def free_tour
+		@question = Question.new(params[:question])
 		@page = StaticPage.where(descriptor: "free_tour").first
 		render '/static/free_tour/show'
 	end
 
-	def exhibition
-		render '/static/exhibition/show'
+	def contacts
+		@question = Question.new(params[:question])
+		@page = StaticPage.where(descriptor: "page_contacts").first
+		render '/static/contacts/show'
 	end
+
+	
 
 end

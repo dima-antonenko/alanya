@@ -468,7 +468,7 @@ input.labelauty:checked + label{
 
 .filter_section h2{
     font-size: 24px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .filter_section.type{
@@ -503,7 +503,7 @@ input.labelauty:checked + label{
 }
 
 .prices_list input{
-  font-size: 18px;
+  font-size: 20px;
    padding: 2px 15px 1px;
    width: 90px;
 }
@@ -1290,7 +1290,8 @@ nav{
       color: #44c4e4 ;
     }
     .avatar{
-      width: 40%;
+      width: 88px;
+      height: 88px;
       float: left;
       margin: 0 10px 0 0;
     }
@@ -1319,7 +1320,8 @@ nav{
     margin: 0 10px 15px 0;
 
     .avatar{
-      width: 40%;
+      width: 122px;
+      height: 122px;
       float: left;
     }
     .title{
@@ -1811,7 +1813,16 @@ nav{
   }
 }
 #send4{
-  width: 71px !important;
+  width: 45%;
+  clear: both;
   height: 30px !important;
+}
+
+.banners_lasts{
+  margin-bottom: -15px !important;
+}
+
+.prices_list input{
+  line-height: 23px;
 }
 

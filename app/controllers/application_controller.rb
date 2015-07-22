@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
    @sidebar_contacts = Menu.where(descriptor:"our_contacts_sidebar").first.menu_items.order(:position)
 
    @project_categories = ProjectCategory.all
-   @question = Question.new(params[:question])
+   
     
    @banner1 = Banner.where(descriptor:"free_tour_banner").first
    @banner2 = Banner.where(descriptor:"turk_info_banner").first

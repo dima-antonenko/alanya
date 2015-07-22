@@ -37,8 +37,11 @@
     <div class="buy_item_text">
       <div class="buy_item_photos clearfix">
         <div class="fotorama">
-          <img src="<%= @project.avatar.normal %>" />
-
+          <% if @project.avatar %>
+            <img src="<%= @project.avatar.normal %>" />
+          <% else %>
+            <img src="/test.png" />
+          <% end %>
           <% @project_attacments.each do |project_attachment| %>
               <img src="<%= project_attachment.image.normal %>" />                                  
           <% end  %>
@@ -170,7 +173,7 @@
 
 <label>Ежемесячный платеж: </label>
    <div class="input" id="cor5">
-   <input name="platez" value="263"  type="text" readonly/>
+   <input name="platez" value="20.73"  type="text" readonly/>
    </div>
 <button type="button" class="credit_condirm" id="send4">посчитать</button>
 </form>

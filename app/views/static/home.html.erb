@@ -113,7 +113,7 @@ margin: 0 auto;
         </div>
         <div class="content " style="padding: 0px;">
           <ul class="news_line">
-            <% @helpful_news.each do |post| %>
+            <% @helpful_posts.each do |post| %>
             <li>
               <span class="title"><%= link_to post.title, post_category_post_url(post.post_category, post) %></span>
               <img src="<%= post.avatar.normal %>" class="avatar">

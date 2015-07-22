@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @page = StaticPage.where(descriptor: "events").first
+    @question = Question.new(params[:question])
   end
 
   # GET /events/1

@@ -297,7 +297,7 @@
 																На главной
 															</div>
 															<div class="col-md-2 value">
-																<%= f.select :elect , options_for_select(@types_elect),{include_blank: 'Не выбрано'}, {class: "btn"} %>
+																<%= f.select(:elect, options_for_select([['Да', 'true'], ['Нет', false]], selected: @project.elect), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
 														

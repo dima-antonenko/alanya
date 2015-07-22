@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /products/1.json
 
   def show
-
+    @question = Question.new(params[:question])
     @project_attacments = ProjectAttacment.where(project_id: @project.id)
   end
 
@@ -105,9 +105,33 @@ class ProjectsController < ApplicationController
           @types_object_list.each do |type_object|
             @distance_list.each do |distance|
               @type_deals_list.each do |type_deal|
-                Project.create(name: "test #{@i}", project_category_id: project_category.id, rooms: rooms, type_object: type_object, to_sea: distance, 
-                  type_deal: type_deal)
-                @i = @i + 1
+                while @i < 2000 do
+                  Project.create(
+
+                    name: "test #{@i}",
+                    project_category_id: project_category.id,
+                    rooms: rooms,
+                    type_object: type_object,
+                    to_sea: distance, 
+                    type_deal: type_deal,
+                    description: "this is description",
+                    final_price: 3000,
+                    year_build: 2014,
+                    mount_build: 11,
+                    has_conditioning: true, 
+                    has_white_goods: true, 
+                    has_furniture: true, 
+                    has_water_heater: true, 
+                    has_tapu: true, 
+                    has_iskana: true, 
+                    to_airport: 200,
+                    custom_sku: false,
+                    to_sea: 200,
+                    elect: false,
+                    meta_title: "this is demo"
+                    )
+                  @i = @i + 1
+                end
               end  
             end  
           end 
@@ -115,6 +139,12 @@ class ProjectsController < ApplicationController
       end  
     end  
     render 'projects/search'
+  end
+
+
+  def remove_bad_sample
+    Project.where(meta_title: "this is demo").destroy_all
+    render 'projects/search' 
   end
 
 

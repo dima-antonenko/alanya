@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
 
   def show
-   
+   @question = Question.new(params[:question])
   end
 
   
