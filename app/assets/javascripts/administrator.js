@@ -1,4 +1,4 @@
-
+//= require jquery-labelauty
 
 //= require jquery
 //= require jquery_ujs
