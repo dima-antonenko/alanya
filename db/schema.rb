@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714150059) do
+ActiveRecord::Schema.define(version: 20150723072026) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -406,8 +406,6 @@ ActiveRecord::Schema.define(version: 20150714150059) do
     t.string   "name"
     t.string   "sku"
     t.text     "description"
-    t.string   "start_price"
-    t.string   "final_price"
     t.string   "type_deal"
     t.string   "rooms"
     t.integer  "area"
@@ -442,7 +440,6 @@ ActiveRecord::Schema.define(version: 20150714150059) do
   add_index "projects", ["area"], name: "index_projects_on_area"
   add_index "projects", ["condition"], name: "index_projects_on_condition"
   add_index "projects", ["description"], name: "index_projects_on_description"
-  add_index "projects", ["final_price"], name: "index_projects_on_final_price"
   add_index "projects", ["has_conditioning"], name: "index_projects_on_has_conditioning"
   add_index "projects", ["has_furniture"], name: "index_projects_on_has_furniture"
   add_index "projects", ["has_iskana"], name: "index_projects_on_has_iskana"
@@ -454,7 +451,6 @@ ActiveRecord::Schema.define(version: 20150714150059) do
   add_index "projects", ["project_category_id"], name: "index_projects_on_project_category_id"
   add_index "projects", ["rooms"], name: "index_projects_on_rooms"
   add_index "projects", ["sku"], name: "index_projects_on_sku"
-  add_index "projects", ["start_price"], name: "index_projects_on_start_price"
   add_index "projects", ["to_center"], name: "index_projects_on_to_center"
   add_index "projects", ["type_deal"], name: "index_projects_on_type_deal"
   add_index "projects", ["year_build"], name: "index_projects_on_year_build"
