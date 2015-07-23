@@ -27,4 +27,4 @@ production:
   database: dima-ant_alany87
   username: dima-ant_alany87
   password: 4typMyGkE
-  host: postgresql2.locum.ru
+  host: postgresql6.locum.ru
