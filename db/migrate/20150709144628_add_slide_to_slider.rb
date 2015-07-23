@@ -23,7 +23,7 @@ class AddSlideToSlider < ActiveRecord::Migration
 
   	add_column :slides, :image, :string, index: true
   	add_column :banners, :image, :string, index: true
-  	add_column :post_categories, :string, :avatar, index: true
+  	#add_column :post_categories, :string, :avatar, index: true
   	add_column :posts, :avatar, :string, index: true 	
   end
 end
