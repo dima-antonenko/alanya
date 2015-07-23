@@ -53,7 +53,7 @@
           <ul>
              <% main_item.menu_items.order(:position).each do |second_level_item| %>
               <% if second_level_item.sub_two == true  %>
-                <li><a class="sub" href="<%= second_level_item.link %><"><%= second_level_item.title %></a></li>
+                <li><a class="sub" href="<%= second_level_item.link %>"><%= second_level_item.title %></a></li>
               <% else %>
                 <li><a href="<%= second_level_item.link %>"><%= second_level_item.title %></a></li>
               <% end %>
