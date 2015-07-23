@@ -1,6 +1,6 @@
 class AddSlideToSlider < ActiveRecord::Migration
   def change
-  	remove_column :slides, :avatar_file_name
+  	#remove_column :slides, :avatar_file_name
   	remove_column :slides, :avatar_content_type
   	remove_column :slides, :avatar_file_size
   	remove_column :slides, :avatar_updated_at
