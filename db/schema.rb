@@ -435,6 +435,8 @@ ActiveRecord::Schema.define(version: 20150723072026) do
     t.integer  "final_pice",          default: 0
     t.integer  "to_sea"
     t.boolean  "elect"
+    t.string   "final_price"
+    t.string   "start_price"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"
