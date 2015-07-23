@@ -155,7 +155,11 @@ border-bottom: 1px solid #e1e1e1;
         <% else %>
         <span class="sku">id: <%= project.sku %></span>
         <% end %>
+        <% if project.avatar.normal != nil %>
            <img src="<%= project.avatar.normal %>">
+        <% else %>   
+          <img src="/test.png">
+        <% end %>
           
           <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
           <table class="table">

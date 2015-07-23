@@ -105,7 +105,7 @@ class ProjectsController < ApplicationController
           @types_object_list.each do |type_object|
             @distance_list.each do |distance|
               @type_deals_list.each do |type_deal|
-                while @i < 2000 do
+                while @i < 7000 do
                   Project.create(
 
                     name: "test #{@i}",
@@ -126,7 +126,6 @@ class ProjectsController < ApplicationController
                     has_iskana: true, 
                     to_airport: 200,
                     custom_sku: false,
-                    to_sea: 200,
                     elect: false,
                     meta_title: "this is demo"
                     )

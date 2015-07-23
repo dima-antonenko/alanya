@@ -61,6 +61,8 @@ group :development, :test do
 	gem 'binding_of_caller'
 	gem 'bullet'
 
+  gem "letter_opener"
+
 	gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'

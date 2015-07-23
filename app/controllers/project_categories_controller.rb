@@ -2,6 +2,7 @@ class ProjectCategoriesController < ApplicationController
   before_action :set_project_category, only: [:show]
 
   def show
+     @question = Question.new(params[:question])
      @project_category_attachments = ProjectCategoryAttacment.where(project_category_id: @project_category.id)
   end
 
