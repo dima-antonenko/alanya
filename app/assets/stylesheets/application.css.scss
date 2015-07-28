@@ -1826,3 +1826,8 @@ nav{
   line-height: 23px;
 }
 
+.sities_list{
+  input.labelauty:not(:checked):not([disabled]) + label{
+    width: 67px !important;
+  }
+}

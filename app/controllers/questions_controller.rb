@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save(question_params)
-        #UserMailer.welcome_email(@question).deliver_later
+        UserMailer.welcome_email(@question).deliver
         format.html { redirect_to :back,
                       notice: 'Вопрос успешно отправлен' }
       else
