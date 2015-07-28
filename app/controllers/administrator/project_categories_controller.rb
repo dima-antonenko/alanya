@@ -76,7 +76,7 @@ class Administrator::ProjectCategoriesController < AdministratorController
   def project_category_params
     params.require(:project_category).permit(:title, :description,
                                              :meta_title, :meta_description, :meta_keywords,  :meta_copyright,
-                                             :avatar)
+                                             :avatar, :position)
   end
 
   def set_project_category

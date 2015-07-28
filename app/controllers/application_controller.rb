@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
    @sidebar_prices = Menu.where(descriptor:"our_prices_sidebar").first.menu_items.order(:position)
    @sidebar_contacts = Menu.where(descriptor:"our_contacts_sidebar").first.menu_items.order(:position)
 
-   @project_categories = ProjectCategory.all
+   @project_categories = ProjectCategory.all.order(:position)
    
     
    @banner1 = Banner.where(descriptor:"free_tour_banner").first

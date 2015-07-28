@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723072026) do
+ActiveRecord::Schema.define(version: 20150728135515) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -389,6 +389,7 @@ ActiveRecord::Schema.define(version: 20150723072026) do
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.string   "meta_copyright"
+    t.integer  "position"
   end
 
   add_index "project_categories", ["avatar"], name: "index_project_categories_on_avatar"
