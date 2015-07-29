@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
 	def home
 		@slider = Slider.where(descriptor: "main").first
-		@projects = Project.where(elect: true).limit(10)
+		@projects = Project.where(elect: true).limit(11)
 		@page = StaticPage.where(descriptor: "home").first
 		@block2 = @page.site_variables.where(descriptor: "houses_in_turc").first
 		@helpful_news = Post.where(post_category_id: 1, to_main_page: true)
