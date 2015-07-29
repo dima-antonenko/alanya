@@ -11,7 +11,7 @@ class SlideUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   version :normal do
-   process :resize_to_fit => [708, 270]
+   process :resize_to_fit => [708, 400]
   end
 
   version :mini_admin do

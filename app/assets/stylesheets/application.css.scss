@@ -1280,6 +1280,11 @@ nav{
      margin-left: 15px;
      height: 215px;
 
+     span{
+      line-height: 11px;
+
+     }
+
     .title{
       width: 100%;
       float: left;
@@ -1298,9 +1303,11 @@ nav{
     .mini-lead{
       width: 65%;
       text-align: left;
-      line-height: 12px;
-      font-size: 10px;
+      line-height: 12px !important;
+      font-size: 12px;
     }
+    
+
 
     .more{
 
@@ -1562,7 +1569,7 @@ nav{
 .item img{
   width: 100%;
   float: left;
-  height: 270px;
+  height: 400px;
 }
 
 .events_list{
@@ -1806,14 +1813,14 @@ nav{
   .content{ 
     color: #626262;
     font-family: Verdana;
-    font-size: 14px;
-    padding: 20px;
+    font-size: 12px;
+    padding: 10px;
     float: left;
-    line-height: 20px;
+    line-height: 18px;
   }
 }
 #send4{
-  width: 45%;
+  width: 83%;
   clear: both;
   height: 30px !important;
 }
@@ -1826,8 +1833,68 @@ nav{
   line-height: 23px;
 }
 
-.sities_list{
-  input.labelauty:not(:checked):not([disabled]) + label{
-    width: 67px !important;
+.id_search{
+  margin-bottom: 20px;
+  input{
+    width: 100%;
+    float: left;
+    clear: both;
+    height: 37px;
+  }
+}
+
+.buy_filter{
+  .submit{
+    margin-top: 30px;
+    margin-bottom: -10px;
+  }
+}
+.end input, .start input{
+  height: 31px;
+}
+
+.filter_section h2{
+  .static_menu{
+  font-size: 16px !important;
+  }
+}
+
+.mini_boder{
+  ul{
+    li{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+      margin-left: -12px;
+      margin-right: -12px;
+      padding-left: 12px;
+    }
+  }
+}
+
+.static_sities_list{
+  a:hover{
+    color: #00aeac;
+  }
+}
+
+.content{
+  
+  p{
+    font-size: 12px;
+    
+    float: left;
+    line-height: 18px;
+  }
+}
+
+.main_page_description{
+  margin-bottom: 15px;
+  .content{
+    padding: 10px;
+  }
+}
+
+#calculator{
+  label{
+    font-size: 13px !important;
   }
 }

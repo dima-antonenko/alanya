@@ -52,7 +52,8 @@
       <div class="buttons" id='basic-modal'>
             
        <label class="more" for="send_add">Узнать больше</label>
-       <a href="/free_tour">Посмотреть</a>
+       <label class="more" for="free_tour">Посмотреть</label>
+       
       </div>
     
       <div class="clear"></div>
@@ -75,6 +76,23 @@
             <%= f.text_field :email, class: "textbox", placeholder: "Email" %>
                <%= f.submit "Отправить", class:'btn btn-form sub'   %>
           <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="modal">
+  <input class="modal-open" id="free_tour" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Заказать тур</h2>
+        <label class="btn-close" for="free_tour" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+         zz
       </div>
     </div>
   </div>
@@ -128,7 +146,7 @@
         <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
       </div>
       <div class="price_area to_coast">
-        <span>в стоимость входит</span>
+        <span>В стоимость входит</span>
       </div>
       <div class="project_info to_coast_list">
 
@@ -175,7 +193,7 @@
    <div class="input" id="cor5">
    <input name="platez" value="20.73"  type="text" readonly/>
    </div>
-<button type="button" class="credit_condirm" id="send4">посчитать</button>
+<button type="button" class="credit_condirm" id="send4">Расчитать кредит</button>
 </form>
 
       </div>

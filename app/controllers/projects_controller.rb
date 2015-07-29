@@ -83,8 +83,12 @@ class ProjectsController < ApplicationController
     
     @projects = @projects.paginate(:page => params[:page], :per_page => 36)
 
-   
-    render 'projects/search'
+    if params[:id_project]
+      @project = Project.find(params[:id_project].to_i)
+      redirect_to @project
+    else
+      render 'projects/search'
+    end 
 
   end
 
