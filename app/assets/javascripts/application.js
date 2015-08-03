@@ -18,6 +18,7 @@
 //= require fotorama
 //= require jquery-labelauty
 
+
 $(document).ready(function() {
     $(".to-labelauty").labelauty();
     $("#owl-demo").owlCarousel({
@@ -48,6 +49,11 @@ $(document).ready(function() {
     closeEffect : 'none',
     cyclic: 'false'
   });
+
+    $('.spoiler_links').click(function(){
+  $(this).parent().children('div.spoiler_body').toggle('normal');
+  return false;
+ });
 
 
     var Ld = "<img src='load.gif' alt='' />";
@@ -91,6 +97,9 @@ $("#h4").html(error);
 erForm = "";}
     return false;
 });
+
+
+
 
 });
 

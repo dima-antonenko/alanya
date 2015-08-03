@@ -104,6 +104,7 @@ Rails.application.routes.draw do
   get '/sities', to: 'static#sities'
   get '/sity', to: 'static#sity'
 
+   get '/this_test', to: 'static#this_test'
 
   match "/sample" => "projects#sample_data", via: [ :get, :post, :patch, :delete ]
   match "/remove_bad_sample" => "projects#remove_bad_sample", via: [ :get, :post, :patch, :delete ]

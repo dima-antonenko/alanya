@@ -92,7 +92,24 @@
         <label class="btn-close" for="free_tour" aria-hidden="true">×</label>
       </div>
       <div class="modal-body">
-         zz
+          <%= form_for(@question) do |f| %>
+          <span class="info">Поля, которые отмечены <span class="red">*</span> обязательны для заполнения</span>
+            <label>Имя <span class="red">*</span></label>
+            <%= f.text_field :name, class: "textbox" %>
+
+            <label>Email </label>  
+            <%= f.text_field :email, class: "textbox" %>
+
+             <label>№ телефона <span class="red">*</span></label> 
+            <%= f.text_field :phone, class: "textbox" %>
+
+             <label>Skype </label> 
+            <%= f.text_field :skype, class: "textbox"%>
+
+            <label>Сообщение </label> 
+            <%= f.text_field :message,class: "textbox", value: "Я хочу заказать ознакомительный тур для объекта #{@project.id}" %>
+               <%= f.submit "Отправить", class:'btn btn-form sub'   %>
+          <% end %>
       </div>
     </div>
   </div>
@@ -255,7 +272,10 @@
    <% end %>
   </ul>
 </div>
-<%= render 'layouts/ask_form' %>    
+<%= render 'layouts/ask_form' %> 
+
+
+
   </div>
 <%= render 'layouts/sidebar' %>
 <div class="clear"></div>

@@ -150,6 +150,9 @@ class ProjectsController < ApplicationController
     render 'projects/search' 
   end
 
+  def pay_chart
+    
+  end
 
   private
   # Use callbacks to share common setup or constraints between actions.

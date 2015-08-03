@@ -1,21 +1,22 @@
 <div class="form_question">
 <div class="heading">
   <span>Задайте свой вопрос</span>
+  <span class="info">Поля, которые отмечены * обязательны для заполнения</span>
 </div>
   <%= form_for(@question) do |f| %>
     <div class="fields_left">
       <div class="form_group">
-        <label > Имя</label>
+        <label > Имя <span class="red">*</span></label>
         <%= f.text_field :name %>
       </div>
       <div class="form_group">
-        <label > Телефон</label>
+        <label > Телефон  <span class="red">*</span></label>
         <%= f.text_field :phone %>
       </div>
     </div>
     <div class="fields_right">
       <div class="form_group">
-        <label > Email</label>
+        <label > Email </label>
         <%= f.text_field :email %>
       </div>
       <div class="form_group">

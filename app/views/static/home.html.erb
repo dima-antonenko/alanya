@@ -5,6 +5,10 @@ max-width: 700px;
 height: 500px;
 margin: 0 auto;
 }
+
+.mini-lead{
+  line-height: 10px !important; 
+}
 </style>
 <div class="buy_page index_project">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
@@ -41,6 +45,12 @@ margin: 0 auto;
       </div>
       <div class="content">
         <%= @page.content.html_safe %>
+        <div>
+ <a href="" class="spoiler_links">Развернуть</a>
+ <div class="spoiler_body">
+    <%= @spoiler_content.value.html_safe %>
+ </div>
+</div>
       </div>
     </div>
     <ul class="apartment_list home_products clearfix">

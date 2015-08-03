@@ -872,7 +872,9 @@ input.labelauty:checked + label{
           width: 70%;
           height: 30px;
         }
-      }  
+      }
+
+
     }
 
     .msg{
@@ -1279,7 +1281,7 @@ nav{
     margin-bottom: 15px;
      margin-left: 15px;
      height: 215px;
-
+      line-height: 16px;
      span{
       line-height: 11px;
 
@@ -1303,7 +1305,7 @@ nav{
     .mini-lead{
       width: 65%;
       text-align: left;
-      line-height: 12px !important;
+      line-height: 10px !important;
       font-size: 12px;
     }
     
@@ -1896,5 +1898,56 @@ nav{
 #calculator{
   label{
     font-size: 13px !important;
+  }
+}
+
+.spoiler_body {display:none;}
+
+.spoiler_links {
+  cursor:pointer;
+  padding: 5 15px;
+  border-radius: 3px;
+  color: white !important;
+  background-color: #f27321;
+  padding: 1px 30px;
+  position: relative;
+  float: left;
+  clear: both;
+}
+
+.modal-body{
+  .info{
+    float: left;
+    clear: both;
+  }
+  label{
+    float: left;
+    clear: both;
+  }
+  .red{
+    color: red;
+  }
+  input{
+    margin-bottom: 3px;
+  }
+}
+
+.form_question{
+  .info{
+    float: left;
+    clear: both;
+    font-weight: normal;
+  }
+
+  .heading{
+    span{
+      float: left;
+      clear: both;
+    }
+
+  }
+
+  .red{
+    color: red;
   }
 }

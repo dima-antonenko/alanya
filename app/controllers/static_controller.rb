@@ -8,6 +8,7 @@ class StaticController < ApplicationController
 		@helpful_posts = Post.where(post_category_id: 2, to_main_page: true)
 		@events = Event.all.order(:date).limit(4)
 		@i = 1
+		@spoiler_content = @page.site_variables.where(descriptor: "spoiler_content").first
 		render 'home'
 	end
 	
