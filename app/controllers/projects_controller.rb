@@ -7,6 +7,23 @@ class ProjectsController < ApplicationController
   def show
     @question = Question.new(params[:question])
     @project_attacments = ProjectAttacment.where(project_id: @project.id)
+
+    @basic_price = 2000
+    @stavka = 0.06
+    @time_years =  10
+    @time_mounts = @time_years * 12
+    
+    @total_price = @basic_price + @basic_price * @time_years * @stavka
+    @mount_pay = @total_price / @time_mounts 
+    @current_mount = 1
+    @values = []
+
+   while @total_price > 0
+     @total_price =  @total_price - @mount_pay
+     @values << @total_price  
+     @current_mount = @current_mount + 1 
+   end 
+
   end
 
   def index
@@ -83,7 +100,7 @@ class ProjectsController < ApplicationController
     
     @projects = @projects.paginate(:page => params[:page], :per_page => 36)
 
-    if params[:id_project]
+    if params[:id_project].size > 0
       @project = Project.find(params[:id_project].to_i)
       redirect_to @project
     else
@@ -150,8 +167,19 @@ class ProjectsController < ApplicationController
     render 'projects/search' 
   end
 
-  def pay_chart
-    
+  def credit_calc
+    @basic_price = 2000
+    @stavka = 0.06
+    @time_years =  10
+    @time_mounts = @time_years * 12
+
+    @total_price = @basic_price + @basic_price * @time_years * @stavka
+    @mount_pay = @total_price / @time_mounts 
+    @current_mount = 1
+    @mount = 1
+    @year = 1
+    render file: 'projects/this_test', layout: false
+
   end
 
   private

@@ -32,6 +32,8 @@ class ProjectApplicationMailsController < ApplicationController
       if @project.project_application_mails.create( project_application_mail_params )
         UserMailer.welcome_email(@project_application_mail).deliver_later
         redirect_to :back, notice: 'Ваш запрос отправлен, спасибо!'
+      else
+        redirect_to :back, notice: 'Письмо не отправлено, проверьте правильность вводимых данных'
       end
   end
 

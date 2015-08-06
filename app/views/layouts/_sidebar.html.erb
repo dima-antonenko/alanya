@@ -314,7 +314,12 @@ html{
       <h2><span class="has-tooltip" title="">Поиск по ID</span></h2>
       
 
-         <div class="start"><input type="text" name="id_project" size="25" placeholder="введите id проекта"></div>
+         <div class="start">
+         <%= text_field_tag :id_project, params[:id_project], placeholder: "введите id проекта" %>
+         <!--
+         <input type="text" name="id_project" size="25" placeholder="введите id проекта">
+         -->
+         </div>
          
     
 

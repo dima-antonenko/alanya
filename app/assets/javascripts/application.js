@@ -19,6 +19,7 @@
 //= require jquery-labelauty
 
 
+
 $(document).ready(function() {
     $(".to-labelauty").labelauty();
     $("#owl-demo").owlCarousel({
@@ -98,6 +99,12 @@ erForm = "";}
     return false;
 });
 
+
+
+
+$('#send4').click(function(){
+  $('#send5').click();
+});
 
 
 

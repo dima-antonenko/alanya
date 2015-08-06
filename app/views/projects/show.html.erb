@@ -210,7 +210,10 @@
    <div class="input" id="cor5">
    <input name="platez" value="20.73"  type="text" readonly/>
    </div>
-<button type="button" class="credit_condirm" id="send4">Расчитать кредит</button>
+<button type="button" class="credit_condirm" id="send4" data-fancybox-type="iframe" href="http://localhost:3000/this_test">Расчитать кредит</button>
+
+    <a class="various credit_condirm" data-fancybox-type="iframe" class="credit_condirm" id="send5" href="http://localhost:3000/this_test">График платежа</a>
+
 </form>
 
       </div>
@@ -272,9 +275,9 @@
    <% end %>
   </ul>
 </div>
+<canvas height="450" id="canvas" width="600"></canvas>
+
 <%= render 'layouts/ask_form' %> 
-
-
 
   </div>
 <%= render 'layouts/sidebar' %>

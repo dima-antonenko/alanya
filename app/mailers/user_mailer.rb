@@ -3,7 +3,8 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(question)
     @mail_info = question
-    mail(to: 'd.antonenko94@mail.ru', subject: 'Welcome to My Awesome Site')
+    @project = Project.find(question.project_id)
+    mail(to: @mail_info.email, subject: "#{@project.name}")
   end
 
 end
