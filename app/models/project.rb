@@ -10,4 +10,7 @@ class Project < ActiveRecord::Base
 
 	has_and_belongs_to_many :managers
 	
+
+	extend FriendlyId
+  	 friendly_id :url, use: :slugged
 end

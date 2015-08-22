@@ -94,6 +94,10 @@ class Administrator::ProjectsController < AdministratorController
     end
   end
 
+
+
+  
+
   private
 
   def project_params

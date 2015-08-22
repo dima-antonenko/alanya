@@ -35,6 +35,8 @@ gem 'seed_dump'
 
 gem 'will_paginate', '~> 3.0.6'
 
+gem 'friendly_id', '~> 5.1.0'
+
 #gem 'rmagick', '2.13.4'
 
 
