@@ -2,43 +2,27 @@ Rails.application.routes.draw do
 
 
   resources :reviews
-
-
   resources :events  do
     resources :event_attacments
   end
-
   resources :managers
-
   resources :dynamic_pages
-
   resources :dynamic_project_pages
-
   resources :project_attacments
   resources :project_category_attacments
-
-  mount Ckeditor::Engine => '/ckeditor'
   resources :static_pages
-
-
+  mount Ckeditor::Engine => '/ckeditor'
   resources :post_categories, only: [:show] do
     resources :posts, only: [:show]
   end
-
   resources :project_categories  do
     resources :projects
   end
-
-
   resources :questions, only: [:create]
-
-  
   resources :projects  do
     resources :managers
   end
-
   resources :managers_projects
-
   resources :projects  do
     resources :project_application_mails
   end
@@ -54,9 +38,7 @@ Rails.application.routes.draw do
 
 
  devise_for :users, controllers: { sessions: "users/sessions" }
-
-
-
+  
   namespace :administrator do
     resources :projects
     resources :questions
@@ -67,11 +49,8 @@ Rails.application.routes.draw do
     resources :site_variables
     resources :dynamic_project_pages
     resources :static_pages
-
     resources :events
-
     resources :managers_projects
-
     resources :project_application_mails
 
 
@@ -87,8 +66,7 @@ Rails.application.routes.draw do
    
   end
 
-  #devise_for :users
-
+ 
   get '/administrator', to: 'administrator#dashboard'
   get '/delivery_and_pay', to: 'static#delivery_and_pay'
   get '/contacts', to: 'static#contacts'
@@ -98,20 +76,14 @@ Rails.application.routes.draw do
   get '/partners', to: 'static#partners'
   get '/reviews', to: 'static#reviews'
   get '/free_tour', to: 'static#free_tour'
-  get '/exhibition', to: 'static#exhibition'
-  get '/sities', to: 'static#sities'
-  get '/sity', to: 'static#sity'
 
-   get '/this_import', to: 'projects#import'
-   get '/this_test', to: 'projects#import_show'
+  get '/import_projects', to: 'administrator#import_projects'
+  get '/import_articles', to: 'administrator#import_articles'
 
-  match "/sample" => "projects#sample_data", via: [ :get, :post, :patch, :delete ]
-  match "/remove_bad_sample" => "projects#remove_bad_sample", via: [ :get, :post, :patch, :delete ]
 
   #get '/search', to: 'project#search'
   match "/search" => "projects#search", via: [ :get, :post, :patch, :delete ]
-  get '/this_import', to: 'projects#import'
-   get '/import_articles', to: 'projects#import_articles'
+  
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
   get '/administrator/blocks_in_footer', to: 'administrator/site_variables#blocks_in_footer'
