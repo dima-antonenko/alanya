@@ -512,8 +512,8 @@ class AdministratorController < ApplicationController
 
       @projects = Project.all
       @projects.each do |project|
-        if project.url == nil && project.slug != nil
-          project.url = project.slug
+        if project.slug == nil && project.url != nil
+          project.slug = project.url
           project.save
         end 
       end  

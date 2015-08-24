@@ -59,11 +59,11 @@ class Administrator::DynamicProjectPagesController < AdministratorController
   private
 
   def dynamic_project_page_params
-      params.require(:dynamic_project_page).permit(:title, :description, :query, :project_category_id, :meta_title, :meta_description, :meta_keywords)
+      params.require(:dynamic_project_page).permit(:title, :description, :query, :project_category_id, :meta_title, :meta_description, :meta_keywords, :slug)
   end
 
   def set_dynamic_project_page
-      @dynamic_project_page = DynamicProjectPage.find(params[:id])
+      @dynamic_project_page = DynamicProjectPage.friendly.find(params[:id])
     end
 
 end

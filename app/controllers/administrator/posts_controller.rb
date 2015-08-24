@@ -3,7 +3,7 @@ class Administrator::PostsController < AdministratorController
    before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.paginate(:page => params[:page], :per_page => 36)
     render 'administrator/posts/index'
   end
 
@@ -61,11 +61,11 @@ class Administrator::PostsController < AdministratorController
 
   def post_params
       params.require(:post).permit(:title, :post_category_id, :text, :lead, :avatar,
-        :meta_title, :meta_description, :meta_keywords, :to_main_page, :mini_lead)
+        :meta_title, :meta_description, :meta_keywords, :to_main_page, :mini_lead, :slug)
   end
 
   def set_post
-      @post = Post.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 
 end

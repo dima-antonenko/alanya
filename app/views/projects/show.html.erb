@@ -160,7 +160,11 @@
 
         <div class="line bg_light"><span class="type">До центра:</span>  <span class="value"><%= @project.to_center %> м</span></div>
         <div class="line bg_dark"><span class="type">До аэропорта:</span>  <span class="value"><%= @project.to_airport %> м</span></div>
-        <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
+        <% if @project.mount_build != nil %>
+        <div class="line bg_light"><span class="type">Месяц и год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
+        <% else %>
+          <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.year_build %></span></div>
+        <% end %>
       </div>
       <div class="price_area to_coast">
         <span>В стоимость входит</span>
@@ -275,7 +279,7 @@
    <% end %>
   </ul>
 </div>
-<canvas height="450" id="canvas" width="600"></canvas>
+
 
 <%= render 'layouts/ask_form' %> 
 
