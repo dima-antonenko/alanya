@@ -65,7 +65,7 @@ class Administrator::PostCategoriesController < AdministratorController
   end
 
   def set_post_category
-      @post_category = PostCategory.find(params[:id])
+      @post_category = PostCategory.friendly.find(params[:id])
   end
 
 end

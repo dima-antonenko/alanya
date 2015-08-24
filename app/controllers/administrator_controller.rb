@@ -510,6 +510,14 @@ class AdministratorController < ApplicationController
         end
       end
 
+      @projects = Project.all
+      @projects.each do |project|
+        if project.url == nil && project.slug != nil
+          project.url = project.slug
+          project.save
+        end 
+      end  
+
       respond_to do |format|
 
         format.html { redirect_to '/' , notice: 'Импорт завершен' }

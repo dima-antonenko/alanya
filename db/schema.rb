@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822221548) do
+ActiveRecord::Schema.define(version: 20150824075718) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20150822221548) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "project_category_id"
+    t.string   "url"
+    t.string   "slug"
   end
 
   add_index "dynamic_project_pages", ["description"], name: "index_dynamic_project_pages_on_description"
@@ -182,7 +184,7 @@ ActiveRecord::Schema.define(version: 20150822221548) do
     t.boolean  "to_main_page",     default: false
     t.string   "mini_lead"
     t.string   "avatar"
-    t.string   "url"
+    t.string   "slug"
   end
 
   add_index "posts", ["lead"], name: "index_posts_on_lead"
@@ -223,6 +225,7 @@ ActiveRecord::Schema.define(version: 20150822221548) do
     t.string   "meta_keywords"
     t.string   "meta_copyright"
     t.integer  "position"
+    t.string   "slug"
   end
 
   add_index "project_categories", ["avatar"], name: "index_project_categories_on_avatar"
@@ -379,6 +382,8 @@ ActiveRecord::Schema.define(version: 20150822221548) do
     t.datetime "updated_at",       null: false
     t.string   "descriptor"
     t.string   "meta_copyright"
+    t.string   "url"
+    t.string   "slug"
   end
 
   add_index "static_pages", ["content"], name: "index_static_pages_on_content"

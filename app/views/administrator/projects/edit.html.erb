@@ -21,13 +21,12 @@
 		margin: 0px auto;
 	}
 </style>
-
 <div class="page-content-wrapper">
 	<div class="page-content">
 		<div class="row">
 			<div class="col-md-12">
 				<% if flash[:notice] %>
-					<div id="prefix_262686894761" class="Metronic-alerts alert alert-success fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><%= flash[:notice] %></div>
+				<div id="prefix_262686894761" class="Metronic-alerts alert alert-success fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><%= flash[:notice] %></div>
 				<% end %>
 				<%= form_for([:administrator, @project], :multipart => true ) do |f| %>
 				<div class="portlet light">
@@ -66,6 +65,11 @@
 										SEO
 									</a>
 								</li>
+								<li>
+									<a href="#tab_other" data-toggle="tab">
+										Прочее
+									</a>
+								</li>
 							</ul>
 							<div class="tab-content no-space">
 								<div class="tab-pane active" id="tab_general">
@@ -87,16 +91,14 @@
 																<%= f.text_field :name, class: "form-control" %>
 															</div>
 														</div>
-
 														<div class="row static-info">
 															<div class="col-md-5 name">
-																Автоматический артикул
+																Кастомный артикул
 															</div>
 															<div class="col-md-7 value">
 																<%= f.select(:custom_sku, options_for_select([['Да', true],['Нет', false]], selected: @project.custom_sku), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
-
 														<div class="row static-info">
 															<div class="col-md-5 name">
 																Артикул
@@ -154,7 +156,7 @@
 															</div>
 															<div class="col-md-7 value">
 																<%= f.select(:type_object, options_for_select([['Квартира', 'flat'],['Пентхаус', 'penthouse'], ['Квартира или пентхаус', 'flat_and_penthouse']],
-																 selected: @project.type_object), {include_blank: 'Не выбрано'},{class: "btn"} ) %>
+																selected: @project.type_object), {include_blank: 'Не выбрано'},{class: "btn"} ) %>
 															</div>
 														</div>
 														<div class="row static-info">
@@ -181,10 +183,10 @@
 											<div class="col-md-6 col-sm-12">
 												<div class="portlet blue-madison box">
 													<div class="portlet-title">
-															<div class="caption">
-																Опции
-															</div>
+														<div class="caption">
+															Опции
 														</div>
+													</div>
 													<div class="portlet-body">
 														<div class="row static-info">
 															<div class="col-md-5 name">
@@ -243,7 +245,7 @@
 													<div class="portlet-title">
 														<div class="caption">
 															Прочее
-															</div>
+														</div>
 													</div>
 													<div class="portlet-body">
 														
@@ -282,7 +284,6 @@
 																<%= f.text_field :year_build, class: "form-control" %>
 															</div>
 														</div>
-
 														<div class="row static-info">
 															<div class="col-md-5 name">
 																До моря
@@ -291,7 +292,6 @@
 																<%= f.select :to_sea ,  @distance_list.collect {|value| [value]},{include_blank: 'Не выбрано'}, {class: "btn"} %>
 															</div>
 														</div>
-
 														<div class="row static-info">
 															<div class="col-md-5 name">
 																На главной
@@ -391,101 +391,229 @@
 							</div>
 							<div class="tab-pane" id="tab_managers">
 								<div class="form-group">
-										<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
-											<ul>
-												<li><%= f.select :some_manager, Manager.all.collect {|manager| [manager.name, manager.id ]}, { include_blank: 'Не выбрано'},{class: "btn"} %></li>
-												<li>
-													<%= f.submit(class: "btn blue-madison btn-circle", value: "Добавить") %>
-												</li>
-
-												
-											</ul>
+									<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10 buttons_actions">
+										<ul>
+											<li><%= f.select :some_manager, Manager.all.collect {|manager| [manager.name, manager.id ]}, { include_blank: 'Не выбрано'},{class: "btn"} %></li>
+											<li>
+												<%= f.submit(class: "btn blue-madison btn-circle", value: "Добавить") %>
+											</li>
 											
-										</div>
-										<table class="table table-bordered table-hover">
-											<thead>
-												<tr role="row" class="heading">
-													<th width="6%">
-														Изображение
-													</th>
-													<th width="30%">
-														Имя
-													</th>
-													<th width="30%">
-														Должность
-													</th>
-													<th width="34%">
-													</th>
-												</tr>
-											</thead>
-											<tbody>
-												<% @project.managers.each do |manager| %>
-												<tr>
-													<td>
-														<img class="img-responsive" src="<%= manager.avatar.mini_admin %>" alt="">
-													</td>
-													<td>
-														<%= manager.name %>
-													</td>
-													<td>
-														<%= manager.description %>
-													</td>
-														
-													<td>
-														<a href="" class="btn default btn-sm">Удалить </a>
-													</td>
-												</tr>
-												<% end %>
-											</tbody>
-										</table>
+										</ul>
+										
 									</div>
+									<table class="table table-bordered table-hover">
+										<thead>
+											<tr role="row" class="heading">
+												<th width="6%">
+													Изображение
+												</th>
+												<th width="30%">
+													Имя
+												</th>
+												<th width="30%">
+													Должность
+												</th>
+												<th width="34%">
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<% @project.managers.each do |manager| %>
+											<tr>
+												<td>
+													<img class="img-responsive" src="<%= manager.avatar.mini_admin %>" alt="">
+												</td>
+												<td>
+													<%= manager.name %>
+												</td>
+												<td>
+													<%= manager.description %>
+												</td>
+												
+												<td>
+													<a href="" class="btn default btn-sm">Удалить </a>
+												</td>
+											</tr>
+											<% end %>
+										</tbody>
+									</table>
+								</div>
 							</div>
 							<div class="tab-pane" id="tab_seo">
 								<div class="form-group">
+									<div class="form-group">
+									<label class="col-md-2 control-label">URL: </span>
+								</label>
+								<div class="col-md-10">
+									<%= f.text_field :slug, class: "form-control" %>
+								</div>
+							</div>
+							
 							
 							<div class="form-group">
-													<label class="col-md-2 control-label">Title: </span>
-													</label>
-													<div class="col-md-10">
-														 <%= f.text_area :meta_title, class: "form-control" %>
-													</div>
-												</div>
-
-							<div class="form-group">
-													<label class="col-md-2 control-label">Meta description: </span>
-													</label>
-													<div class="col-md-10">
-														 <%= f.text_area :meta_description, class: "form-control" %>
-													</div>
-												</div>
-							
-							<div class="form-group">
-													<label class="col-md-2 control-label">Meta keywords: </span>
-													</label>
-													<div class="col-md-10">
-														 <%= f.text_area :meta_keywords, class: "form-control" %>
-													</div>
-												</div>
-							<div class="form-group">
-													<label class="col-md-2 control-label">Meta copyritght: </span>
-													</label>
-													<div class="col-md-10">
-														 <%= f.text_area :meta_copyright, class: "form-control" %>
-													</div>
-												</div>
-							<div class="form-group">
-								<% params.each do |param| %>
-									<%= param %></br>
-								<%  end  %>
-							</div>											
-
-												
-																	
+							<label class="col-md-2 control-label">Title: </span>
+						</label>
+						<div class="col-md-10">
+							<%= f.text_area :meta_title, class: "form-control" %>
+						</div>
+					</div>
+					<div class="form-group">
+					<label class="col-md-2 control-label">Meta description: </span>
+				</label>
+				<div class="col-md-10">
+					<%= f.text_area :meta_description, class: "form-control" %>
+				</div>
+			</div>
+			
+			<div class="form-group">
+			<label class="col-md-2 control-label">Meta keywords: </span>
+		</label>
+		<div class="col-md-10">
+			<%= f.text_area :meta_keywords, class: "form-control" %>
+		</div>
 	</div>
+	<div class="form-group">
+	<label class="col-md-2 control-label">Meta copyritght: </span>
+</label>
+<div class="col-md-10">
+	<%= f.text_area :meta_copyright, class: "form-control" %>
 </div>
 </div>
 </div>
 </div>
+<div class="tab-pane" id="tab_other">
+<p>Дополнительные параметры проекта, которые были импортированы, но не отображаются на сайте</p>
+								<div class="form-group">
+									
+<div class="col-md-6 col-sm-12">
+												<div class="portlet blue-madison box">
+													<div class="portlet-title">
+														<div class="caption">
+															Прочее
+														</div>
+													</div>
+													<div class="portlet-body">
+														
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Кол-во спален
+															</div>
+															<div class="col-md-7 value">
+																<%= f.text_field :bedrooms, class: "form-control" %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Кол-во ванных комнат
+															</div>
+															<div class="col-md-7 value">
+																<%= f.text_field :bathroom, class: "form-control" %>
+															</div>
+														</div>
+
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Балконы
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:balcony, options_for_select([['Есть', true], ['Нету', false]], selected: @project.balcony), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Кабельное телевидиние
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:cabel_tv, options_for_select([['Есть', true], ['Нету', false]], selected: @project.cabel_tv), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Интернет
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:internet, options_for_select([['Есть', true], ['Нету', false]], selected: @project.internet), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+													</div>
+
+
+												</div>
+
+											</div>
+
+<div class="col-md-6 col-sm-12">
+												<div class="portlet blue-madison box">
+												<div class="portlet-title">
+														<div class="caption">
+															Прочее
+														</div>
+														</div>
+													
+													<div class="portlet-body">
+														
+														
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Парковка
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:parking, options_for_select([['Есть', true], ['Нету', false]], selected: @project.parking), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Лифт
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:elevator, options_for_select([['Есть', true], ['Нету', false]], selected: @project.elevator), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Сад
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:garden, options_for_select([['Есть', true], ['Нету', false]], selected: @project.garden), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Бассеин
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:internet, options_for_select([['Есть', true], ['Нету', false]], selected: @project.internet), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+
+													</div>
+
+
+												</div>
+
+											
+											</div>											
+
+
+							</div>
+
+</div>							
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 <% end %>
 </div>

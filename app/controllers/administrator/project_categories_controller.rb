@@ -76,11 +76,11 @@ class Administrator::ProjectCategoriesController < AdministratorController
   def project_category_params
     params.require(:project_category).permit(:title, :description,
                                              :meta_title, :meta_description, :meta_keywords,  :meta_copyright,
-                                             :avatar, :position)
+                                             :avatar, :position, :slug)
   end
 
   def set_project_category
-    @project_category = ProjectCategory.find(params[:id])
+    @project_category = ProjectCategory.friendly.find(params[:id])
   end
 
 end

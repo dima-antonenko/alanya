@@ -157,7 +157,7 @@ border-bottom: 1px solid #e1e1e1;
         <% end %>
            <img src="<%= project.avatar.normal %>">
           
-          <div class="title"><a href="<%= project_category_project_path(project.project_category.id, project.id) %>"><%= project.name %></a></div>
+          <div class="title"><a href="<%= project_path(project) %>"><%= project.name %></a></div>
           <table class="table">
             <tr>
               <th>город:</th>
@@ -168,7 +168,7 @@ border-bottom: 1px solid #e1e1e1;
               <td><%= project.rooms %></td>
             </tr>
           </table>
-          <a class="btn" href="<%= project_category_project_path(project.project_category.id, project.id) %>">Подробнее</a>
+          <a class="btn" href="<%= project_path(project) %>">Подробнее</a>
           <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
         </div>
       </div>

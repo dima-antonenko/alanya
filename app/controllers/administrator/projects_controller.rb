@@ -9,7 +9,7 @@ class Administrator::ProjectsController < AdministratorController
   end
 
   def edit
-    @project = Project.find(params[:id])
+    #@project = Project.find(params[:id])
     @project_attachments = ProjectAttacment.where(project_id: @project.id)
     @distance_list = [10, 100, 200, 400, 500, 800, 1000, 1500]
     @types_elect =  { "Отображать" => true, "Не отображать" => false }
@@ -103,11 +103,12 @@ class Administrator::ProjectsController < AdministratorController
   def project_params
     params.require(:project).permit(:description, :meta_title, :meta_description,:meta_copyright, :meta_keywords, :avatar, :project_category_id,
                                     :name, :sku, :start_price, :final_price, :type_deal, :rooms, :area, :condition, :to_center, :mount_build, :year_build, :has_conditioning, :has_white_goods, :has_furniture,
-                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning, :some_manager, :custom_sku, :elect)
+                                    :has_water_heater, :has_tapu, :has_iskana, :type_object, :to_airport, :project_attachments_attributes, :has_conditioning, :some_manager, :custom_sku, :elect,
+                                    :slug, :url, :bedrooms, :bathroom, :balcony, :cabel_tv, :internet, :parking, :elevator, :garden, :pool)
   end
 
   def set_project
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
 
 end

@@ -15,9 +15,10 @@ Rails.application.routes.draw do
   resources :post_categories, only: [:show] do
     resources :posts, only: [:show]
   end
-  resources :project_categories  do
-    resources :projects
-  end
+
+  resources :project_categories 
+  resources :projects
+ 
   resources :questions, only: [:create]
   resources :projects  do
     resources :managers
