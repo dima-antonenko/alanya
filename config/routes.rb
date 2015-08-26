@@ -78,6 +78,7 @@ Rails.application.routes.draw do
   get '/reviews', to: 'static#reviews'
   get '/free_tour', to: 'static#free_tour'
 
+
   get '/import_projects', to: 'administrator#import_projects'
   get '/import_articles', to: 'administrator#import_articles'
 

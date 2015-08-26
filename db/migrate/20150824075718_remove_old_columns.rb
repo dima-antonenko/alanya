@@ -1,7 +1,7 @@
 class RemoveOldColumns < ActiveRecord::Migration
   def change
-  	#remove_column :post_categories,       :url
-  	#remove_column :dynamic_project_pages, :url 
-  	#remove_column :static_pages,          :url
+  	remove_column :projects, :final_price
+  	remove_column :projects, :final_price
+  	add_column :projects, :final_price, :integer, index: true
   end
 end

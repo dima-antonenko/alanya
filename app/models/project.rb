@@ -13,4 +13,9 @@ class Project < ActiveRecord::Base
 
 	extend FriendlyId
   	 friendly_id :slug, use: :slugged
+
+
+  	 attr_accessor :first_pay, :time_pay, :stavka_pay
+
+  	 
 end

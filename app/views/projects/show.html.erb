@@ -1,5 +1,27 @@
 <%= render '/layouts/basic_styles.html.erb' %>
+<style type="text/css">
+  .none{
+    display: none;
+  }
 
+    .credit_table{
+  border: 1px solid black;
+  margin: 0px auto;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+
+.credit_table td{
+    padding: 10px 20px ;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+ .none_right{
+  border-right: none !important; 
+ }
+
+</style>
 <div class="buy_page">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
 
@@ -193,35 +215,37 @@
 
       </div>
       <div class="project_info credit">
-        <form action="#" method="post" id="calculator">
+      
+   <%# form_for(@project, :multipart => true ) do |f| %>
+  <%= form_for(@project) do |f| %> 
 
    <label>Первоначальный взнос: </label>
    <div class="input" id="cor5">
-   <input name="first_pay" value="3000" id="posName" type="text" />
+   <%= f.text_field :first_pay %>
    </div>
 
    <label>Срок кредита, лет: </label>
    <div class="input" id="cor5">
-   <input name="year" value="11" id="1" type="text" />
+   <%= f.text_field :time_pay %>
    </div>
    
    <label>Процентная ставка: </label>
    <div class="input" id="cor5">
-   <input name="procent" value="6" type="text" />
+   <%= f.text_field :stavka_pay %>
    </div>
 
 <label>Ежемесячный платеж: </label>
    <div class="input" id="cor5">
-   <input name="platez" value="20.73"  type="text" readonly/>
+   <input name="platez" value="<%= @mounts_pay %>"  type="text" readonly/>
    </div>
-<button type="button" class="credit_condirm" id="send4" data-fancybox-type="iframe" href="http://localhost:3000/this_test">Расчитать кредит</button>
 
-    <a class="various credit_condirm" data-fancybox-type="iframe" class="credit_condirm" id="send5" href="http://alanya.dima-antonenko.lclients.ru/this_test">График платежа</a>
+   
+    <%= f.submit("Расчитать", {class: "credit_condirm"})  %>
+    <a class="more credit_condirm various grafik_pay"  href="#credit_link" rel="prettyPhoto[inline]">График платежа</a>
 
-</form>
+<% end %>
 
       </div>
-
 
     </div>
 
@@ -287,4 +311,44 @@
 <%= render 'layouts/sidebar' %>
 <div class="clear"></div>
 
+</div>
+<div class="none">
+  <div id="credit_link">
+    <h4>График выплат по кредиту</h4> <a href="javascript:print();"><i>распечатать</i></a>
+    <p>Нужно выплатить: <%= @total_pay%> &euro; за <%= @mounts %> месяцев</p>
+    <p>Ежемесячный платеж: <%=  @mounts_pay %> &euro;</p>
+
+    <table class="credit_table">
+    <tr class="fixed">
+      <td>Год</td>
+      <td>Месяц</td>
+      <td class="none_right">Остаток платежа</td>
+
+    </tr>
+    <% while @total_pay > 0 %>
+      <tr>
+      
+      <td >
+        <%= @current_year %>
+      </td>
+      <td>
+        <%= @current_mount %>
+      </td>
+      <td class="none_right">
+
+        <%=  sprintf("%.0f", @total_pay) %> &euro;
+        
+      </td>
+      <% if @current_mount < 12 %>
+        <% @current_mount += 1 %>
+      <% else %> 
+      <% @current_mount = 1; @current_year += 1 %> 
+      <% end %>
+      <% @total_pay = @total_pay - @mounts_pay %>
+    <% end %>
+    
+
+  </table>
+
+  </div>
 </div>

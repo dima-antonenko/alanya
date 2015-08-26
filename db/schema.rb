@@ -272,7 +272,6 @@ ActiveRecord::Schema.define(version: 20150824075718) do
     t.integer  "final_pice",          default: 0
     t.integer  "to_sea"
     t.boolean  "elect"
-    t.string   "final_price"
     t.string   "start_price"
     t.string   "slug"
     t.string   "url"
@@ -285,6 +284,7 @@ ActiveRecord::Schema.define(version: 20150824075718) do
     t.boolean  "elevator",            default: false
     t.boolean  "garden",              default: false
     t.boolean  "pool",                default: false
+    t.integer  "final_price"
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"
