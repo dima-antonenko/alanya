@@ -79,8 +79,11 @@ Rails.application.routes.draw do
   get '/free_tour', to: 'static#free_tour'
 
 
-  get '/import_projects', to: 'administrator#import_projects'
-  get '/import_articles', to: 'administrator#import_articles'
+  get '/import_projects', to: 'administrator/import#import_projects'
+  get '/import_articles', to: 'administrator/import#import_articles'
+
+  get '/delete_import_projects', to: 'administrator/import#delete_import_projects'
+  get '/delete_import_articles', to: 'administrator/import#delete_import_articles'
 
 
   #get '/search', to: 'project#search'
