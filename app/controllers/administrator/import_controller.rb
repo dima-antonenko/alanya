@@ -626,7 +626,7 @@ class Administrator::ImportController < AdministratorController
         @post.title = post[0][:title]
         @post.lead = post[0][:teaser]
         @post.post_category_id = 1
-        @post.url = post[0][:url]
+        @post.slug = post[0][:url]
         @post.text = post[0][:body]
 
         if File.exist?("public/old/posts/#{post[0][:photo]}") == true
@@ -640,7 +640,7 @@ class Administrator::ImportController < AdministratorController
       end
 
 
-      render 'projects/import'
+      redirect_to '/'
   end
 
   def delete_import_projects
@@ -648,7 +648,7 @@ class Administrator::ImportController < AdministratorController
   	redirect_to '/', notice: "Проекты удалены"
   end
 
-  def delete_import_posts
+  def delete_import_articles
   	Post.destroy_all.where(meta_description: "this is imported")
   	redirect_to '/', notice: "Записи удалены"
   end
