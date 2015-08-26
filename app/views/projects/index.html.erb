@@ -161,7 +161,13 @@ border-bottom: 1px solid #e1e1e1;
           <img src="/test.png">
         <% end %>
           
-          <div class="title"><a href="<%= project_path(project) %>"><%= project.name %></a></div>
+          <div class="title"><a href="<%= project_path(project) %>">
+          <% if project.name.size > 45 %>
+            <%= project.name.truncate(45) %>
+          <% else %>
+            <%= project.name %> 
+          <% end %>
+          </a></div>
           <table class="table">
             <tr>
               <th>город:</th>

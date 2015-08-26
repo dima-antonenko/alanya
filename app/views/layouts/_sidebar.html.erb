@@ -91,11 +91,11 @@ input.second:not(:checked):not([disabled]) + label{
 }
 
 .second li .labelauty-unchecked{
-  padding: 0px 8.5px;
+  padding: 0px 7.5px;
 }
 
 .second li .labelauty-checked{
-  padding: 0px 5.5px;
+  padding: 0px 4.7px;
 }
 
 input.sity:not(:checked):not([disabled]) + label{
@@ -198,6 +198,15 @@ h2 {
 html{
   font-family: Verdana !important;
 }
+
+.villa_and_pent_label label{
+    width: 121px !important;
+  }
+
+  input.villa_and_pent_label:not(:checked):not([disabled]) + label{
+    width: 100%;
+  }
+
 </style>
 <div class="buy_filter">
   
@@ -216,7 +225,7 @@ html{
       
       <h2><span class="has-tooltip" title="">Тип недвижимости</span></h2>
       <div class="types_list">
-        <ul>
+        <ul class="first">
             <li>
                 <input name="1 + 0" class="to-labelauty type_project synch-icon labelauty" type="checkbox"  id="a" style="display: none;"  data-labelauty="1+0">
             </li>
@@ -238,13 +247,17 @@ html{
         </ul>
          <ul class="second">
             <li>
-                <input name="flat" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="e" style="display: none;"  data-labelauty="Студия">
+                <input name="flat" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="e" style="display: none;"  data-labelauty="Квартира">
             </li>
             <li>
                 <input name="penthouse" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="f" style="display: none;"  data-labelauty="Пентхауз">
             </li>
             <li>
                 <input name="flat_and_penthouse" class="to-labelauty type_project big synch-icon labelauty" type="checkbox" id="g" style="display: none;"  data-labelauty="Вилла">
+            </li>
+            <br>
+            <li>
+                <input name="villa_and_penthouse" class="to-labelauty villa_and_pent_label type_project big synch-icon labelauty" type="checkbox" id="h" style="display: none;"  data-labelauty="Вилла и петнхауз">
             </li>
            
         </ul>

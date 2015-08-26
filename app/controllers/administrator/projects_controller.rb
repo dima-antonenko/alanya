@@ -56,7 +56,7 @@ class Administrator::ProjectsController < AdministratorController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    @project = Project.find(params[:id])
+ #   @project = Project.find(params[:id])
     @project.assign_attributes(project_params)
 
     if params[:project][:some_manager]

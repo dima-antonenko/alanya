@@ -42,6 +42,7 @@ class ProjectsController < ApplicationController
      def search
        @project_categories = ProjectCategory.all
        @projects = Project.all
+       @all_project = Project.all
        @i = 1
 
        @sities_query_array = Array.new
@@ -89,6 +90,10 @@ class ProjectsController < ApplicationController
          @projects = @projects.where(type_object: @types_object_query_array)
        end
 
+       if params[:villa_and_penthouse] == 'on'
+        @projects.where(type_object: ['flat_and_penthouse', 'penthouse'])
+       end 
+
        if @distance_query_array.count > 0
          @projects = @projects.where(to_sea: @distance_query_array)
        end
@@ -103,14 +108,15 @@ class ProjectsController < ApplicationController
 
        if params[:max_price].to_i >0
          @projects = @projects.where( "final_price <= :min_price ", {min_price: params[:max_price]})
-
        end
 
        @projects = @projects.paginate(:page => params[:page], :per_page => 36)
 
        if params[:id_project].size > 0
-         @project = Project.find(params[:id_project].to_i)
+         if  Project.where(sku: params[:id_project]).count > 0
+          @project = Project.where(sku: params[:id_project]).first
          redirect_to @project
+       end
        else
          render 'projects/search'
        end
