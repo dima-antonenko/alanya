@@ -11,6 +11,14 @@
  *= require fotorama
  *= require_self
  *= require fancybox
+ *= require demo
+ *= require basic
+
+ *= require owl.carousel
+ *= require owl.theme
+
+ *= require jquery-labelauty
+ *= require lby-main
  */
 
 .img a:focus, a.buy_item_map:focus {
