@@ -1,0 +1,6744 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'MyriadPro';
+  src: url("font/MyriadPro-Light.eot");
+  src: local("☺"), url("font/MyriadPro-Light.ttf") format("truetype"), url("font/MyriadPro-Light.svg") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url("font/mpr-webfont.eot");
+  src: url("font/mpr-webfont.eot?#iefix") format("embedded-opentype"), url("font/mpr-webfont.woff") format("woff"), url("font/mpr-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url("font/myriadpro-bold-webfont.eot");
+  src: url("font/myriadpro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("font/myriadpro-bold-webfont.woff") format("woff"), url("font/myriadpro-bold-webfont.ttf") format("truetype"), url("font/myriadpro-bold-webfont.svgz#MyriadPro") format("svg"), url("font/myriadpro-bold-webfont.svg#MyriadPro") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 37, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+html, body {
+  height: 100%;
+  min-width: 990px;
+}
+
+/* line 38, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+body {
+  font-family: Verdana;
+  /*
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
+  font-family: Georgia,"Times New Roman", serif;
+  font-family: "Courier New", Courier, monospace;
+   */
+  margin: 0;
+  color: #6d6e70;
+  background: #bdbdbd;
+}
+
+/* line 50, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+img {
+  border: none;
+}
+
+/*-----------------------------------*/
+/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+/*::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+/* line 55, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a {
+  color: #6d6e70;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+/*a:visited { color: #551a8b; }*/
+/* line 64, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a:hover {
+  color: #ff9226;
+}
+
+/* line 65, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 66, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 68, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 70, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/* Tooltips
+-----------------------------------------------*/
+/* line 73, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip, .ui-tooltip .arrow:after {
+  background: #FAEBD8;
+  border: 1px solid white;
+}
+
+/* line 77, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip {
+  max-width: 300px;
+  font-family: Verdana;
+  padding: 6px 10px;
+  color: #6d6e70;
+  font-size: 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #BDBDBD;
+  z-index: 200;
+  position: absolute;
+}
+
+/* line 88, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip .arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+  z-index: 200;
+}
+
+/* line 98, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip .arrow.top {
+  top: -16px;
+  bottom: auto;
+  z-index: 200;
+}
+
+/* line 103, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip .arrow.left {
+  left: 50%;
+  z-index: 200;
+}
+
+/* line 107, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip .arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+
+/* line 120, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ui-tooltip .arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}
+
+/* line 124, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.has-tooltip {
+  cursor: help;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* line 129, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+form {
+  margin: 0;
+}
+
+/* line 130, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 132, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 134, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 136, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  color: #6d6e70;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'MyriadPro';
+  padding: 2px 10px 1px;
+  border: 1px solid #d7d7d7;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 73px;
+  background: #f9f9f9;
+}
+
+/* line 150, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+input.error,
+textarea.error {
+  color: #ed1c24;
+}
+
+/* line 155, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 157, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+/* line 159, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+/* line 161, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  width: auto;
+  *width: 13px;
+  *height: 13px;
+}
+
+/* line 162, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 163, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 165, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 166, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Colors for form validity */
+/* line 170, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+input:invalid, textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 176, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 177, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+td {
+  vertical-align: top;
+}
+
+/*-----------------------------------*/
+/* line 180, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+}
+
+/* line 185, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.none {
+  display: none !important;
+}
+
+/* line 187, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 188, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 189, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.visible {
+  visibility: visible !important;
+}
+
+/* line 191, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.clear {
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 192, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 194, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 195, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 197, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.fleft {
+  float: left !important;
+}
+
+/* line 198, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.fright {
+  float: right !important;
+}
+
+/* line 200, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.vat {
+  vertical-align: top !important;
+}
+
+/* line 201, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.vam {
+  vertical-align: middle !important;
+}
+
+/* line 202, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.vab {
+  vertical-align: bottom !important;
+}
+
+/* line 204, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+body .opacity {
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 211, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transition {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+/* line 218, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.border-radius2 {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 222, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  background: #eeeeee;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 231, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.min_width {
+  width: 962px;
+  padding: 0 14px;
+  margin: auto;
+}
+
+/* ICONS
+-----------------------------------------------------------------------------*/
+/* line 239, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 244, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.fot_rss {
+  background: url(/images/fot_rss.png) no-repeat 1px 0 #c6c8ca;
+  width: 18px;
+  height: 18px;
+}
+
+/* line 249, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.fot_fb {
+  background: url(/images/fot_fb.png) no-repeat 0 0 #c6c8ca;
+  width: 18px;
+  height: 18px;
+}
+
+/* line 254, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.email_icon {
+  background: url(/images/email_icon.png) no-repeat 0 0;
+  width: 14px;
+  height: 9px;
+  vertical-align: top;
+  margin: 0 0 0 4px;
+  position: relative;
+  top: 3px;
+}
+
+/* line 263, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.plane_arrive {
+  background: url(/images/plane_arrive.png) no-repeat 0 0;
+  width: 23px;
+  height: 21px;
+}
+
+/* line 268, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.plane_off {
+  background: url(/images/plane_off.png) no-repeat 0 0;
+  width: 24px;
+  height: 21px;
+}
+
+/* BTNS
+-----------------------------------------------------------------------------*/
+/* line 276, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn {
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0px 3px 0px #a4a4a4;
+  box-shadow: 0 0px 3px 0px #a4a4a4;
+  background: #f27321;
+  font-size: 11px;
+  line-height: 120%;
+  padding: 5px 12px;
+}
+
+/* line 299, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn:hover {
+  background-color: #bec0c2;
+}
+
+/* line 300, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn:active,
+.btn.on {
+  color: #000000;
+  background: #f27321;
+}
+
+/* line 305, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a.btn:link,
+a.btn:visited,
+a.btn:hover {
+  color: #ffffff;
+}
+
+/* line 310, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a.btn:active {
+  color: #000000;
+}
+
+/* line 311, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.gray {
+  background: #939598;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: white;
+  padding: 2px 6px 1px;
+}
+
+/* line 319, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.gray:hover {
+  background: #bec0c2;
+}
+
+/* line 320, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.gray.back_btn {
+  width: 68px;
+  float: left;
+}
+
+/* line 324, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.big.send_offer {
+  float: right;
+  width: 222px;
+  font-size: 19px;
+  line-height: 21px;
+  padding: 6px 0 3px;
+}
+
+/* line 331, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.white {
+  background: white;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4d4d4d;
+  padding: 2px 6px 1px;
+}
+
+/* line 339, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.green {
+  background: white;
+  text-transform: none;
+  padding: 2px;
+  color: #4D4D4D;
+}
+
+/* line 345, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.green.act {
+  background: #00aeac;
+  color: white;
+}
+
+/* line 349, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.inet {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 355, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.big {
+  font-size: 22px;
+  line-height: 22px;
+  padding: 12px 0 8px;
+}
+
+/* line 360, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.middle {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 6px 10px 5px;
+}
+
+/* line 365, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn_input {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 369, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn_input .input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 380, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn_input input {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  z-index: 1;
+  font-size: 1000px;
+  width: auto !important;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+/* line 392, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.header {
+  background: url(/img/header.png) no-repeat 0 23px;
+  margin: 0 -3px;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 14px 0 0 24px;
+}
+
+/* line 399, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.logo {
+  float: left;
+  width: 129px;
+  height: 56px;
+  margin: 0 0 0 26px;
+}
+
+/* line 405, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.logo img {
+  vertical-align: bottom;
+}
+
+/* line 406, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav {
+  padding: 0;
+  margin: 14px 0 0 76px;
+  list-style: none;
+  float: left;
+  width: 695px;
+  border-collapse: collapse;
+}
+
+/* line 414, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .search_item {
+  cursor: pointer;
+}
+
+/* line 415, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .search_input {
+  position: relative;
+  z-index: 1;
+  padding: 0 25px 0 7px;
+}
+
+/* line 420, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .search_input input {
+  width: 100%;
+  padding-left: 7px;
+  padding-right: 25px;
+  margin: 0 -25px 0 -7px;
+}
+
+/* line 426, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .search_btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1;
+  background: url(/images/search_icon.png) no-repeat 0 0;
+  width: 17px;
+  height: 15px;
+  margin: -8px 4px 0 0;
+}
+
+/* line 437, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .td .div {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 441, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .td {
+  width: auto;
+  text-transform: uppercase;
+  color: #f27321;
+  text-align: center;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+  height: 40px;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+/* line 456, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav a, .nav span {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 457, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+/* line 461, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav a:hover {
+  color: #bec0c2;
+}
+
+/* line 464, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav a.act {
+  text-decoration: none !important;
+}
+
+/* line 467, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.nav .nav_active {
+  background: url(/images/nav_active.png) no-repeat 0 0;
+  width: 96px;
+  height: 26px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  margin: 4px 0 0 -48px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+/* line 481, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.content {
+  padding: 0 0 90px;
+}
+
+/* line 484, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.content .h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* line 488, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_content .h2 {
+  margin: 0;
+}
+
+/* line 491, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.content .clmn_left {
+  width: 222px;
+  float: left;
+}
+
+/* line 495, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.content .clmn_right {
+  width: 714px;
+  float: right;
+}
+
+/* line 499, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav {
+  padding: 0;
+  margin: 25px 0;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 507, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav .li {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 513, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav a {
+  color: #6d6e70;
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+}
+
+/* line 519, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav a.large {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 520, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav a:hover {
+  color: #00aeac;
+}
+
+/* line 523, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav .shadow {
+  width: 222px;
+  height: 25px;
+  background: url(/images/sidebar_nav_shadow.png) no-repeat 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+}
+
+/* line 531, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.sidebar_nav .shadow.bottom {
+  background-position: 0 -25px;
+  top: 100%;
+}
+
+/* line 535, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.top_sidebar {
+  padding: 10px 0 0;
+}
+
+/* line 539, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.top_offer {
+  float: right;
+  width: 710px;
+  padding: 2px;
+  margin: 24px 0 24px -6px;
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 551, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.toffer_inner {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* line 556, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.toffer_holder {
+  background: #6d6e70;
+  color: white;
+  float: right;
+  padding: 4px 8px 0 15px;
+  min-height: 84px;
+  min-width: 200px;
+}
+
+/* line 564, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.toffer_holder .btn {
+  float: right;
+  -webkit-box-shadow: 0 0px 3px 0px #545454;
+  box-shadow: 0 0px 3px 0px #545454;
+}
+
+/* line 569, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.toffer_holder .title {
+  display: block;
+  margin: 0 0 11px;
+}
+
+/* line 573, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.toffer_holder .cost {
+  display: block;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/* line 578, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list {
+  padding: 0;
+  margin: 0 0 -10px -23px;
+  list-style: none;
+  color: #4d4d4d;
+}
+
+/* line 584, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .li {
+  background: url(/img/apatment_list_bg.png) repeat-y;
+  width: 222px;
+  float: left;
+  margin: 0 0 23px 23px;
+}
+
+/* line 590, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apatment_list_top {
+  background: url(/img/apatment_list_top.png) no-repeat 0 0;
+}
+
+/* line 593, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apatment_list_bot {
+  background: url(/img/apatment_list_bot.png) no-repeat 0 bottom;
+  min-height: 67px;
+  padding: 3px 3px 9px;
+}
+
+/* line 598, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .title {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+  margin: 12px 12px 3px;
+}
+
+/* line 604, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .table {
+  font-size: 12px;
+  line-height: 14px;
+  width: 192px;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  text-align: right;
+  margin: 0 12px 5px;
+}
+
+/* line 613, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .table th {
+  padding: 3px 0;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 618, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .table td {
+  padding: 3px 0;
+}
+
+/* line 621, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .btn {
+  float: right;
+  margin-right: 12px;
+  margin-left: 5px;
+}
+
+/* line 626, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.apartment_list .prise {
+  overflow: hidden;
+  margin-left: 12px;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 1px 0 0;
+}
+
+/* line 633, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.text {
+  font-size: 12px;
+  line-height: 15px;
+  color: #939598;
+}
+
+/* line 639, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter {
+  margin: 0 0 25px;
+}
+
+/* line 642, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  positon: relative;
+}
+
+/* line 643, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter h1,
+.filter h2,
+.filter h3 {
+  margin: 0;
+}
+
+/* line 646, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.h1, h1 {
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0;
+}
+
+/* line 652, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter .h1, .filter h1,
+.results .h1, .result h1 {
+  margin: 0 0 10px 250px;
+}
+
+/* line 656, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter h2,
+.results h2 {
+  margin: 0 0 14px;
+}
+
+/* line 658, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter .inner {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 0 15px;
+}
+
+/* line 667, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.results .clmn.fleft {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 0 15px;
+}
+
+/* line 676, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter .clmn.fleft,
+.results .clmn.fleft {
+  width: 223px;
+  padding: 0 6px;
+  border-right: 1px solid #e3e3e3;
+}
+
+/* line 682, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter .clmn.fright {
+  width: 686px;
+  padding: 0 19px;
+  border-left: 1px solid #e3e3e3;
+  margin-left: -1px;
+}
+
+/* line 689, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section h2 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/* line 693, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_label {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+/* line 700, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_label input {
+  display: none;
+}
+
+/* line 701, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.first {
+  border-top: 0 !important;
+}
+
+/* line 702, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter .clmn.fleft .filter_section,
+.results .clmn.fleft .filter_section,
+.results .clmn.fleft .filter_section {
+  padding: 8px 5px 5px;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 708, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.square.filter_section {
+  margin: 0 0 12px;
+}
+
+/* line 712, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.square.filter_section .id input {
+  width: 183px;
+  display: block;
+  margin: 8px 0 0;
+}
+
+/* line 718, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city h2 {
+  margin-bottom: 9px;
+}
+
+/* line 721, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .btn {
+  display: block;
+  width: 125px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
+  clear: both;
+}
+
+/* line 729, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label_holder {
+  margin: 0 -7px 0 -22px;
+}
+
+/* line 732, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label {
+  float: left;
+  width: 126px;
+  padding: 3px 0 0;
+  height: 135px;
+  color: #4d4d4d;
+  background: url(/images/filter_label_city.png) no-repeat 0 4px #f2f2f2;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 0 23px 17px;
+  position: relative;
+}
+
+/* line 746, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label .title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 8px 5px 0;
+}
+
+/* line 754, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label img {
+  width: 120px;
+  height: 105px;
+}
+
+/* line 759, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.readmore {
+  display: none;
+  position: absolute;
+  top: 0;
+  background: #000;
+  opacity: .6;
+  color: #fff;
+  font-size: 12px;
+  width: 120px;
+  margin: 3px 3px 0;
+}
+
+/* line 770, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.readmore a {
+  font-weight: bold;
+  display: block;
+  color: #fff;
+}
+
+/* line 775, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.readmore a:link,
+.readmore a:active,
+.readmore a:visited {
+  text-decoration: none;
+}
+
+/* line 780, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.readmore a:hover {
+  text-decoration: underline;
+}
+
+/* line 783, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label:hover .readmore {
+  display: block;
+}
+
+/* line 785, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label.act {
+  color: white !important;
+  background-color: #02afad;
+}
+
+/* line 790, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.city .filter_label:hover {
+  color: #bec0c2;
+}
+
+/*filter_section.type*/
+/* line 795, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.type {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 9px;
+  padding-top: 15px !important;
+}
+
+/* line 801, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.type .filter_label_holder {
+  margin-left: -8px;
+}
+
+/* line 804, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.field .filter_label,
+.filter_section.type .filter_label {
+  background: white;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 3px 0px #a4a4a4;
+  box-shadow: 1px 1px 3px 0px #a4a4a4;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  color: #4d4d4d;
+  padding: 2px 10px 1px;
+  margin: 0 0 8px 8px;
+}
+
+/* line 818, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.field .filter_label:hover,
+.filter_section.type .filter_label:hover {
+  background: #e6e7e8;
+}
+
+/* line 822, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.field .filter_label.big,
+.filter_section.type .filter_label.big {
+  margin: 0 -6px 8px 8px;
+}
+
+/* line 826, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.field .filter_label.act,
+.filter_section.type .filter_label.act {
+  background-color: #00aeac;
+  color: white;
+}
+
+/*filter_section.distance*/
+/* line 833, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.distance {
+  color: #4d4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 15px !important;
+}
+
+/* line 839, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.distance h2 {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 9px;
+}
+
+/* line 844, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.distance .filter_label {
+  background: url(/img/distance_label.png) no-repeat 0 0;
+  width: 42px;
+  overflow: hidden;
+  float: left;
+  vertical-align: top;
+  text-align: center;
+  padding: 18px 0 0;
+  height: 15px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 859, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.distance .filter_label.act {
+  background-position: 0 -84px;
+}
+
+/*filter_section.cost*/
+/* line 862, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 866, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost input {
+  width: 102px;
+}
+
+/* line 867, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost .rent input {
+  width: 158px;
+  padding: 2px 2px 2px;
+  font-size: 12px;
+}
+
+/* line 868, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost .rent .percents {
+  width: 16px;
+}
+
+/* .filter_section.cost h2{margin-bottom: 5px} */
+/* line 870, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost .percents {
+  width: 15px;
+}
+
+/* line 873, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost .filter_label {
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: -4px;
+  margin-top: 9px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 2px 4px 0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 886, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.cost .filter_label.act {
+  -webkit-box-shadow: 1px 1px 3px 0px #a4a4a4;
+  box-shadow: 1px 1px 3px 0px #a4a4a4;
+  background-color: #00aeac;
+  color: white;
+  text-decoration: none;
+}
+
+/* filter_section.period */
+/* line 895, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.period {
+  position: relative;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 901, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.period .filter_label.act {
+  background: #ababab;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: white;
+}
+
+/* line 907, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.period .filter_label {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 2px 0px #a4a4a4;
+  box-shadow: 1px 1px 2px 0px #a4a4a4;
+  background: white;
+  padding: 1px 8px 2px;
+  margin: 6px 1px 10px;
+}
+
+/* line 916, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.filter_section.period input {
+  width: 80px;
+}
+
+/* POPUP */
+/* line 920, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.body_scroll {
+  overflow-y: scroll;
+}
+
+/* line 923, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.wrapper_popup {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 1;
+  margin-left: -50%;
+}
+
+/* line 930, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background: url(/images/back_bg.png) repeat;
+  left: 0;
+  top: 0;
+}
+
+/* line 939, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+#cboxOverlay {
+  background: url(/images/back_bg.png) repeat;
+}
+
+/* line 943, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.popup_table {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+}
+
+/* line 951, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.popup_table.hide {
+  left: -100%;
+  top: -100%;
+}
+
+/* line 955, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.popup_table .pt_td {
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* line 959, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.popup, #colorbox {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 30px 5px #000000;
+  box-shadow: 0px 1px 30px 5px #000000;
+  /* margin: 30px auto; */
+  position: relative;
+  z-index: 2;
+  padding: 5px;
+  width: 670px;
+  background: #f1f1f1;
+}
+
+/* line 971, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.close, #cboxClose {
+  height: 14px;
+  padding: 0 22px 0 0;
+  background: url(/images/close.png) no-repeat right 0;
+  display: block;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 14px;
+  color: #bec0c2;
+}
+
+/* line 981, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.popup .close, #cboxClose {
+  position: absolute;
+  /* right: -22px; */
+  /* top: -22px; */
+  right: 0;
+  top: 0;
+  width: 59px;
+}
+
+/* line 990, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+#colorbox.property_box #cboxTitle {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  color: #000;
+}
+
+/* line 997, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+#colorbox.property_box {
+  padding: 0;
+}
+
+/* line 1001, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+#colorbox.property_box #cboxClose {
+  top: 7px;
+  right: 8px;
+  text-indent: -9999px;
+  padding: 0;
+  width: 14px;
+}
+
+/* line 1009, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.datepicker_holder {
+  margin: 6px 0 -6px;
+  left: 0;
+  top: 102px;
+  width: 223px;
+  position: absolute;
+}
+
+/* line 1017, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_links {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #e3e3e3;
+  width: 800px;
+  margin: 30px auto 0;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0 50px 15px;
+}
+
+/* line 1027, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_links .shadow {
+  background: url(/images/main_links_shadow.png) no-repeat center 0;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+/* line 1035, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink_separ {
+  width: 1px;
+  height: 70px;
+  background: #e3e3e3;
+  float: left;
+}
+
+/* line 1041, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink {
+  width: 159px;
+  text-align: center;
+  float: left;
+  color: #939598;
+  text-decoration: none;
+}
+
+/* line 1048, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink:hover {
+  color: #939598;
+}
+
+/* line 1049, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink i {
+  display: block;
+  margin: 0 auto 6px;
+  height: 45px;
+  background: url(/images/main_links_icons.png) no-repeat 0 0;
+}
+
+/* line 1056, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink1 i {
+  background-position: 0 bottom;
+  width: 48px;
+}
+
+/* line 1060, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink1:hover i {
+  background-position: 0 0;
+}
+
+/* line 1062, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink2 i {
+  width: 53px;
+  background-position: -163px bottom;
+}
+
+/* line 1066, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink2:hover i {
+  background-position: -163px 0;
+}
+
+/* line 1068, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink3 i {
+  width: 43px;
+  background-position: -328px bottom;
+}
+
+/* line 1072, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink3:hover i {
+  background-position: -328px 0;
+}
+
+/* line 1074, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink4 i {
+  width: 43px;
+  background-position: -485px bottom;
+}
+
+/* line 1077, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink4:hover i {
+  background-position: -485px 0;
+}
+
+/* line 1079, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink5 i {
+  width: 51px;
+  background-position: -650px bottom;
+}
+
+/* line 1083, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mlink5:hover i {
+  background-position: -650px 0;
+}
+
+/* line 1085, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.email_subscribe {
+  text-align: center;
+  color: #939598;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 25px 0;
+}
+
+/* line 1092, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.email_subscribe .email_input {
+  width: 200px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 2px 10px 1px;
+  margin: 0 10px;
+}
+
+/* line 1100, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offers {
+  margin: 0 -25px 0 0;
+}
+
+/* line 1103, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link {
+  background: url(/images/offers_bg.png) no-repeat center bottom;
+  padding: 0 0 8px;
+  width: 222px;
+  height: 175px;
+  float: left;
+  margin: 0 24px 0 0;
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 1115, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link:hover {
+  color: white;
+}
+
+/* line 1116, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link img {
+  width: 218px;
+  height: 171px;
+  border: 2px solid white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 0px #b9b9b9;
+  box-shadow: 0 1px 2px 0px #b9b9b9;
+}
+
+/* line 1125, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link .offer_info {
+  position: absolute;
+  width: 204px;
+  padding: 2px 7px;
+  bottom: 10px;
+  z-index: 2;
+  left: 2px;
+  background: url(/images/orange_blank.png) repeat;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+/* line 1138, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link .title {
+  font-weight: bold;
+}
+
+/* line 1139, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link .price {
+  float: right;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 6px 0 5px 10px;
+}
+
+/* line 1145, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.offer_link.new .offer_info {
+  background-image: url(/images/blue_blank.png);
+}
+
+/* line 1146, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ribbon_plus_orange {
+  position: absolute;
+  right: 2px;
+  bottom: 10px;
+  z-index: 2;
+  background: url(/images/ribbon_plus_orange.png) no-repeat 0 0;
+  width: 32px;
+  height: 31px;
+}
+
+/* line 1155, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ribbon_plus_blue {
+  position: absolute;
+  right: 2px;
+  bottom: 10px;
+  z-index: 2;
+  background: url(/images/ribbon_plus_blue.png) no-repeat 0 0;
+  width: 32px;
+  height: 31px;
+}
+
+/* line 1164, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ribbon_hot_dial {
+  background: url(/images/ribbon_hot_dial.png) no-repeat 0 0;
+  width: 98px;
+  height: 98px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/* line 1173, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ribbon_new {
+  background: url(/images/ribbon_new.png) no-repeat 0 0;
+  width: 98px;
+  height: 98px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/* line 1182, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_text {
+  margin: 30px 0;
+  padding: 0 0 0 120px;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  width: 725px;
+}
+
+/* line 1190, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_text a {
+  color: #f27321;
+}
+
+/* line 1191, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_text a:hover {
+  text-decoration: none;
+}
+
+/* line 1192, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_text h3 {
+  margin: 0 0 17px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+/* line 1197, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_text p {
+  margin: 0;
+}
+
+/* line 1201, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.btn.usk_question.big {
+  float: left;
+  clear: left;
+  font-size: 19px;
+  line-height: 22px;
+  width: 222px;
+  padding: 6px 0 2px;
+  margin: 30px 0 60px;
+}
+
+/* line 1211, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.some_tour {
+  text-align: center;
+  display: block;
+  background: url(/images/some_tour.png) no-repeat 0 0;
+  width: 216px;
+  padding: 3px;
+  overflow: hidden;
+  height: 264px;
+  float: left;
+  clear: left;
+  color: #4d4d4d;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 1226, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.some_tour:hover {
+  color: #4d4d4d;
+}
+
+/* line 1227, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.some_tour .img_holder {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 7px;
+}
+
+/* line 1233, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.some_tour .title {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* line 1246, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.some_tour .text2 {
+  display: block;
+  color: #00aeac;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 13px 0 0;
+}
+
+/* line 1253, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.services_page {
+  margin-top: 10px;
+  padding-bottom: 100px;
+}
+
+/* line 1257, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.services_content {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 17px;
+  margin: 12px 0 0;
+}
+
+/* line 1270, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.services_content p:first-of-type {
+  margin-top: 0;
+}
+
+/* line 1271, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.services_content ul {
+  padding: 0 0 0 14px;
+  margin-left: 0;
+}
+
+/* line 1275, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.services_page .right_clmn {
+  float: right;
+  width: 712px;
+}
+
+/* line 1281, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_filter {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 223px;
+  padding: 0 6px;
+  float: left;
+  clear: left;
+  margin: 30px 0 0;
+}
+
+/* line 1294, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_filter .filter_section {
+  padding: 1px 5px 5px;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 1298, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_filter h1, .buy_filter h2, .buy_filter h3 {
+  margin: 0;
+}
+
+/* line 1299, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.cities {
+  margin-bottom: 13px;
+  margin-top: 3px;
+}
+
+/* line 1303, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.cities .filter_label {
+  text-decoration: underline;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32%;
+  vertical-align: top;
+  margin: 12px 0 0;
+}
+
+/* line 1315, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.cities .filter_label.act {
+  text-decoration: none;
+  color: #00aeac;
+}
+
+/* line 1320, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+  width: 680px;
+  padding: 15px;
+  margin: 25px 1px 0 0;
+}
+
+/* line 1332, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .h1 {
+  overflow: hidden;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  color: #4d4d4d;
+  font-weight: normal;
+}
+
+/* line 1340, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .item_price {
+  float: right;
+  font-size: 24px;
+  line-height: 24px;
+  border-left: 1px solid #e1e1e1;
+  height: 36px;
+  min-width: 120px;
+  padding: 0 10px;
+  text-align: center;
+  margin: 0 0 10px;
+  color: #4d4d4d;
+}
+
+/* line 1352, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .hr {
+  height: 1px;
+  background: #e1e1e1;
+  margin: 10px 0;
+}
+
+/* line 1357, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .buy_item_text {
+  width: 450px;
+  float: left;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4d4d4d;
+}
+
+/* line 1364, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .buy_item_photos {
+  margin: 0 0 0 -12px;
+}
+
+/* line 1367, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .buy_item_photos .img {
+  width: 103px;
+  height: 77px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  float: left;
+  margin: 0 0 12px 12px;
+}
+
+/* line 1376, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_photos .img img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+/* line 1381, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_photos .img.big {
+  width: 450px;
+  height: 250px;
+}
+
+/* line 1385, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_photos .play {
+  width: 32px;
+  height: 27px;
+  background: url(/images/play.png) no-repeat 0 0;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -14px -16px;
+}
+
+/* line 1396, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item .buy_item_info {
+  width: 205px;
+  float: right;
+}
+
+/* line 1400, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_info .line {
+  color: #4d4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  border-top: 1px solid #e1e1e1;
+  padding: 1px 0 5px;
+}
+
+/* line 1407, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.bt0 {
+  border-top: 0 !important;
+}
+
+/* line 1408, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_map {
+  background: url(/images/buy_item_map.png) no-repeat 0 0;
+  width: 197px;
+  padding: 4px;
+  height: 133px;
+  display: block;
+  margin: 25px auto 0;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+/* line 1419, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a.buy_item_map {
+  color: #6d6e70;
+  text-decoration: none;
+}
+
+/* line 1423, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+a.buy_item_map:hover {
+  color: #00aeac;
+}
+
+/* line 1426, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_map .map {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 111px;
+}
+
+/* line 1432, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_map .title {
+  display: block;
+  margin: 3px 0 0;
+}
+
+/* line 1436, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_map .marker {
+  background: url(/images/map_marker.png) no-repeat 0 0;
+  width: 27px;
+  margin: -14px -17px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
+/* line 1448, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers_title {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0 0 6px;
+  font-weight: 100;
+}
+
+/* line 1454, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 0 -32px;
+}
+
+/* line 1459, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .li {
+  background: url(/images/relative_item.png) no-repeat 0 0;
+  width: 199px;
+  padding: 3px;
+  height: 103px;
+  float: left;
+  margin: 0 0 0 32px;
+}
+
+/* line 1467, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .relative_offer_content {
+  float: right;
+  width: 113px;
+}
+
+/* line 1471, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .title {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4d4d4d;
+}
+
+/* line 1477, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .text {
+  font-size: 12px;
+  line-height: 16px;
+  color: #4d4d4d;
+  border-top: 1px solid  #e1e1e1;
+  border-bottom: 1px solid  #e1e1e1;
+  margin: 4px 0 11px;
+}
+
+/* line 1485, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .price {
+  float: left;
+  clear: left;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 4px 0 0;
+}
+
+/* line 1492, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+/* line 1497, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .img img {
+  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1498, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.relative_offers .btn {
+  float: right;
+  clear: right;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  margin: 3px 0 0;
+}
+
+/* line 1505, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.buy_item_text .btn.gray.back_btn {
+  margin-top: 9px;
+}
+
+/* line 1508, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 37px 0 30px;
+}
+
+/* line 1519, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .clmn_left .h2 {
+  text-align: center;
+}
+
+/* line 1520, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .clmn_left {
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  width: 210px;
+  padding: 15px;
+}
+
+/* line 1526, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .phone {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 2px;
+}
+
+/* line 1531, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .clmn_left p {
+  margin: 9px 0 20px;
+}
+
+/* line 1532, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .clmn_right {
+  float: right;
+  padding: 15px;
+  width: 680px;
+}
+
+/* line 1537, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hr {
+  border-top: 1px solid #e2e2e2;
+}
+
+/* line 1538, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .hr {
+  margin: 20px -5px;
+}
+
+/* line 1539, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .h2 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 auto 15px;
+}
+
+/* line 1546, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send_holder {
+  margin: 0 0 0 -32px;
+}
+
+/* line 1549, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send {
+  float: left;
+  margin: 0 0 0 32px;
+  display: block;
+  width: 192px;
+  padding: 6px;
+  height: 212px;
+  overflow: hidden;
+  background: url(/images/persone_send.png) no-repeat 0 0;
+  color: #4d4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}
+
+/* line 1563, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send.act {
+  background-position: 0 bottom;
+  color: white;
+}
+
+/* line 1564, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send img {
+  width: 194px;
+  height: 170px;
+  vertical-align: bottom;
+}
+
+/* line 1569, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send input {
+  display: none;
+}
+
+/* line 1572, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.persone_send .name {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 6px 0 -1px;
+}
+
+/* line 1579, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.other_contacts,
+.skype {
+  color: #4d4d4d !important;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  background: url(/images/skype.png) no-repeat right center white;
+  -webkit-box-shadow: 0px 1px 2px 0px #b9b9b9;
+  box-shadow: 0px 1px 2px 0px #b9b9b9;
+  display: block;
+  text-decoration: none;
+  padding: 9px 50px 10px 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+
+/* line 1596, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.other_contacts {
+  background-image: none;
+  padding: 3px 0 4px;
+}
+
+/* line 1600, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.other_contacts:hover,
+.skype:hover {
+  background-color: #bec0c2;
+}
+
+/* line 1602, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .form_right {
+  float: right;
+  width: 450px;
+}
+
+/* line 1606, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .form_left {
+  float: left;
+  width: 205px;
+  margin: 0 25px 0 0;
+}
+
+/* line 1611, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 1616, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select .sel_val {
+  background: url(/images/select_arrow.png) no-repeat right center white;
+  -webkit-box-shadow: 0px 1px 2px 0px #b9b9b9;
+  box-shadow: 0px 1px 2px 0px #b9b9b9;
+  display: block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  color: #4d4d4d;
+  padding: 1px 31px 2px 10px;
+}
+
+/* line 1628, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select.act .sel_val {
+  z-index: 2;
+  background-image: url(/images/select_arrow_act.png);
+  background-color: #00aeac;
+  color: white;
+}
+
+/* line 1634, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select .sel_val span {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
+/* line 1640, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select.act .sel_optns {
+  display: block;
+}
+
+/* line 1641, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select .sel_optns {
+  display: none;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  left: 0;
+  padding: 4px;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  max-height: 300px;
+  background: #f5f5f5;
+  border: 1px solid #d3d3d3;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: -3px 0 0;
+}
+
+/* line 1658, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select .sel_optn {
+  display: block;
+  cursor: pointer;
+  margin: 0 -4px;
+  padding: 0 4px;
+}
+
+/* line 1664, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.select .sel_optn:hover {
+  background-color: #eeeeee;
+}
+
+/* line 1665, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.form .input {
+  width: 183px;
+  display: block;
+  margin: 0 0 12px;
+}
+
+/* line 1670, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.form textarea {
+  width: 428px;
+  height: 133px;
+  resize: none;
+  margin: 0 0 5px;
+}
+
+/* line 1676, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.label_send_to_me {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+/* line 1680, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.label_send_to_me input {
+  margin-right: 5px;
+}
+
+/* line 1681, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.contacts_page .send_btn {
+  float: right;
+  width: 203px;
+  font-size: 19px;
+  line-height: 24px;
+  padding: 5px 0 1px;
+  margin: 15px 0 0;
+}
+
+/* line 1690, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider_holder {
+  background: url(/images/main_slider_shadow.png) no-repeat center bottom;
+  padding: 0 0 19px;
+  margin: 0 0 30px;
+}
+
+/* line 1695, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider {
+  height: 426px;
+  overflow: hidden;
+  background: white;
+  -webkit-box-shadow: 0px 1px 2px 0px #b9b9b9;
+  box-shadow: 0px 1px 2px 0px #b9b9b9;
+  display: block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid white;
+  position: relative;
+  z-index: 1;
+  margin: 40px 0 0;
+}
+
+/* line 1709, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .toggles {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 4;
+}
+
+/* line 1715, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .toggle {
+  background: url(/images/slider_toggles.png) no-repeat 0 0;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+/* line 1723, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .toggle.act {
+  cursor: default;
+  background-position: -14px 0;
+}
+
+/* line 1727, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .arrow {
+  background: url(/images/slider_arrows.png) no-repeat 0 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 5;
+  margin: -50px 0 0;
+  cursor: pointer;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 1738, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .arrow:hover {
+  background-position: -40px 0;
+}
+
+/* line 1739, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .arrow.right {
+  background-position: 0 bottom;
+  left: auto;
+  right: 0;
+}
+
+/* line 1744, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .arrow.right:hover {
+  background-position: -40px bottom;
+}
+
+/* line 1746, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item.act {
+  z-index: 2;
+}
+
+/* line 1747, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 958px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 1756, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_info {
+  position: absolute;
+  right: 60px;
+  bottom: 25px;
+  width: 380px;
+  z-index: 2;
+}
+
+/* line 1763, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_header {
+  background: url(/images/blue_blank.png) repeat;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  line-height: 26px;
+  overflow: hidden;
+  display: block;
+  margin: 0 0 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 1775, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_price {
+  float: right;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+/* line 1781, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_content {
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px;
+  background: url(/images/white_blank.png) repeat;
+  display: block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 1791, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_text {
+  display: block;
+}
+
+/* line 1794, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_more:hover {
+  text-decoration: underline;
+}
+
+/* line 1795, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.main_slider .item_more {
+  color: #ff9226;
+  cursor: pointer;
+}
+
+/* Pagination
+-------------------------------------------------------*/
+/* line 1802, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pagination {
+  width: 712px;
+}
+
+/* line 1805, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pagination a,
+.pagination a:link,
+.pagination a:visited,
+.pagination .pages,
+.pagination .current {
+  color: #939598;
+  font-size: 12px;
+  line-height: 120%;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #D6D6D6;
+  padding: 5px 8px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/* line 1823, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pagination a:hover,
+.pagination a:active,
+.pagination a.on,
+.pagination .current {
+  color: #00aeac;
+  text-decoration: underline;
+  border-color: #00aeac;
+}
+
+/* line 1831, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pagination .current {
+  text-decoration: none;
+}
+
+/* line 1839, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_clmn {
+  width: 232px;
+  float: left;
+  margin: 0 30px 0 50px;
+}
+
+/* line 1844, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* line 1848, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field {
+  margin: 10px 0 15px;
+}
+
+/* line 1851, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field .label {
+  display: block;
+}
+
+/* line 1854, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field .input {
+  width: 210px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 3px 10px 2px;
+}
+
+/* line 1861, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field.inline {
+  padding: 0 0 0 108px;
+}
+
+/* line 1864, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field.inline .label {
+  float: left;
+  margin-left: -108px;
+  width: 100px;
+  padding: 4px 0 0;
+}
+
+/* line 1870, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field.inline .input {
+  width: 103px;
+}
+
+/* line 1873, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_form .field .input.small {
+  width: 24px;
+}
+
+/* line 1874, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_plane {
+  background: white;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 3px 0px #a4a4a4;
+  box-shadow: 1px 1px 3px 0px #a4a4a4;
+  color: #4d4d4d;
+  position: relative;
+  z-index: 1;
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 15px;
+}
+
+/* line 1888, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer_plane .plane_arrive,
+.transfer_plane .plane_off {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  z-index: 1;
+  margin: 0 13px 0 0;
+}
+
+/* line 1896, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.transfer .field .filter_label {
+  margin: 2px 0 10px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 1901, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mt_5 {
+  margin-top: -5px !important;
+}
+
+/* line 1902, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mb_10 {
+  margin-bottom: -10px !important;
+}
+
+/* line 1904, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.person_form_info {
+  margin: 20px 0 0;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+/* line 1909, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.person_form_info .field {
+  margin: 0 35px 0 0;
+  width: 195px;
+}
+
+/* line 1910, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.person_form_info .input {
+  color: black;
+  width: 173px !important;
+}
+
+/* line 1911, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.person_form_info .btn {
+  float: right;
+  margin: 10px 0 0;
+  width: 115px;
+}
+
+/* line 1916, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+/* line 1917, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.ml_20 {
+  margin-left: -20px !important;
+}
+
+/* line 1919, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inner_slider_holder {
+  margin: 0;
+}
+
+/* line 1922, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inner_slider {
+  height: 257px;
+  margin: 25px 0 0;
+}
+
+/* line 1926, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inner_slider .item {
+  width: 708px;
+}
+
+/* line 1929, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inner_slider .item_info {
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  width: 203px;
+}
+
+/* line 1935, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.inner_slider .item_header {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* line 1942, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.about_us {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 17px;
+  margin: 12px 0 0;
+}
+
+/* line 1955, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.about_us .h2 {
+  margin: 0;
+}
+
+/* line 1956, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.exposition_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* line 1964, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.exposition_list .li {
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 17px;
+  width: 220px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+
+/* line 1975, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.exposition_list .img_holder {
+  display: block;
+  min-height: 105px;
+  margin: 0 0 20px;
+}
+
+/* line 1980, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.other_expositions {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* line 1986, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_page .right_clmn {
+  width: 712px;
+  float: right;
+}
+
+/* line 1990, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_page .sidebar_nav a {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* line 1995, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_page .sidebar_nav .title a {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* line 1999, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_content {
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+}
+
+/* line 2005, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_content .h3 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 5px;
+}
+
+/* line 2010, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.earthquake_map {
+  background: url(/images/earthquake_map.png) no-repeat 0 0;
+  height: 28px;
+  padding: 12px 0 0;
+  width: 222px;
+  overflow: hidden;
+  text-align: center;
+  color: #4d4d4d;
+  text-decoration: none;
+  float: left;
+  clear: left;
+  /* cursor: pointer; */
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 30px;
+}
+
+/* line 2026, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.earthquake_map:hover, .earthquake_map.act {
+  background-position: 0 bottom;
+  color: white;
+}
+
+/* line 2027, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.photo_list {
+  padding: 0;
+  margin: 0 0 0 -20px;
+  list-style: none;
+}
+
+/* line 2032, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.photo_list .li {
+  float: left;
+  margin: 0 0 20px 20px;
+}
+
+/* line 2036, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.photo_list .img {
+  width: 218px;
+  height: 145px;
+  display: block;
+  padding: 2px;
+}
+
+/* line 2042, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.photo_list .img img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  border: 2px solid white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(186, 186, 186, 0.4);
+  box-shadow: 0px 1px 1px 0px rgba(186, 186, 186, 0.4);
+}
+
+/* line 2052, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_text {
+  font-size: 12px;
+  line-height: 15px;
+  width: 676px;
+  margin: 0 auto 30px;
+}
+
+/* line 2058, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_text.inner {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 2062, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link {
+  position: relative;
+  text-align: center;
+  float: left;
+  height: 24px;
+  padding: 6px 6px 0;
+  /* width: 223px; */
+  background: url(/images/order_link_bg.png) repeat-x 0 0;
+  text-decoration: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  margin: 0 20px 0 0;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 2081, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link:before, .order_link:after {
+  background: url(/images/order_link.png) no-repeat 0 0;
+  /* float: left; */
+  position: absolute;
+  top: 0px;
+  content: '';
+  width: 7px;
+  height: 30px;
+  /* background: red; */
+  display: block;
+}
+
+/* line 2092, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link:before {
+  left: -6px;
+}
+
+/* line 2095, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link:after {
+  background-position: -216px 0;
+  /* float: right; */
+  right: -6px;
+}
+
+/* line 2101, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link:hover {
+  background-position: 0 bottom;
+  color: white;
+}
+
+/* line 2106, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_link:hover:after, .order_link:hover:before {
+  background-position-y: bottom;
+}
+
+/* line 2110, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_popup {
+  width: 450px;
+}
+
+/* line 2113, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_info {
+  padding: 0 0 10px;
+}
+
+/* line 2114, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_img {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+/* line 2118, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_table {
+  width: 214px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* line 2123, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_table .td2 {
+  text-align: right;
+}
+
+/* line 2124, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_table thead th {
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 2128, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_table tfoot td {
+  border-top: 1px solid #e5e5e5;
+}
+
+/* line 2132, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_form {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+/* line 2136, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_form .help_text {
+  margin: 5px 0 0 10px;
+}
+
+/* line 2137, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_form .input {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/* line 2142, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_form textarea {
+  margin: 10px 0 5px;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/* line 2147, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.order_form .btn.big {
+  width: 223px;
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* line 2155, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_page .right_clmn {
+  width: 712px;
+  float: right;
+}
+
+/* line 2160, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_results .main_title {
+  margin: 0 0 10px;
+}
+
+/* line 2163, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_results .sidebar_nav {
+  float: left;
+  clear: left;
+  width: 240px;
+}
+
+/* line 2169, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter {
+  text-align: center;
+  padding: 8px 15px 20px;
+  width: 210px;
+  float: left;
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 2181, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .hr {
+  margin: 0 -5px;
+}
+
+/* line 2184, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .h2 {
+  margin: 0 auto 14px;
+}
+
+/* line 2187, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .input {
+  width: 183px;
+  display: block;
+  margin: 0 auto 15px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* line 2194, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .btn.big {
+  width: 125px;
+  margin: 20px auto 0;
+  display: block;
+}
+
+/* line 2199, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_content {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 20px;
+  width: 672px !important;
+}
+
+/* line 2209, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_content .h2 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: #fbfbfb;
+  margin: 0;
+  position: relative;
+  bottom: -8px;
+  padding: 0 15px 0 0;
+  color: #4d4d4d;
+  font-weight: normal;
+}
+
+/* line 2221, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list {
+  padding: 0;
+  margin: 0 0 0 -18px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 2229, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list .li {
+  overflow: hidden;
+  padding: 0 0 0 230px;
+  position: relative;
+  z-index: 1;
+  margin: 25px 0 10px 18px;
+}
+
+/* line 2236, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list .img {
+  float: left;
+  margin: 0 0 0 -230px;
+  width: 205px;
+  display: block;
+}
+
+/* line 2242, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list img {
+  width: 100%;
+}
+
+/* line 2245, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list .title {
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #4d4d4d;
+  display: block;
+}
+
+/* line 2252, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list .text {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4d4d4d;
+}
+
+/* line 2261, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list.small .li {
+  width: 210px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  padding: 0;
+}
+
+/* line 2270, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list.small .img {
+  width: 102px;
+  float: none;
+  margin: 0 0 6px;
+}
+
+/* line 2277, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_list.small .more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 11px;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+/* line 2287, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pager {
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+/* line 2291, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pager .paget_item {
+  border: 1px solid #d6d6d6;
+  background: #f8f8f8;
+  font-size: 12px;
+  line-height: 15px;
+  float: left;
+  margin: 0 2px 0 0;
+  color: #939598;
+  text-align: center;
+  padding: 4px 5px 0;
+  min-width: 12px;
+  height: 18px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* line 2307, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pager .paget_item.info {
+  border: 1px solid #d6d6d6;
+  color: #939598;
+  width: 100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 2314, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pager span.paget_item {
+  color: #00aeac;
+  border-color: #00aeac;
+}
+
+/* line 2318, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.pager a.paget_item:hover {
+  color: #ff9226;
+  border-color: #ff9226;
+}
+
+/* line 2324, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .filter_label {
+  background: white;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 3px 0px #a4a4a4;
+  box-shadow: 1px 1px 3px 0px #a4a4a4;
+  text-align: center;
+  display: block;
+  margin: 17px 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* line 2336, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .filter_label.act {
+  -webkit-box-shadow: 1px 1px 3px 0px #a4a4a4;
+  box-shadow: 1px 1px 3px 0px #a4a4a4;
+  background-color: #00aeac;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 2344, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .filter_label:hover {
+  background: #e6e7e8;
+}
+
+/* line 2347, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.search_filter .filter_label.act {
+  background-color: #00aeac;
+  color: white;
+}
+
+/* line 2352, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list {
+  background: #fbfbfb;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 3px 0px #a4a4a4;
+  box-shadow: 0px 0px 3px 0px #a4a4a4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 15px 15px;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 2363, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list .li {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 0 0 228px;
+  margin: 15px 0 0;
+}
+
+/* line 2370, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list .info {
+  color: #4d4d4d;
+  padding: 0 0 30px;
+}
+
+/* line 2374, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list .img {
+  position: relative;
+  z-index: 1;
+  float: left;
+  bottom: -1px;
+  margin: 0 0 0 -228px;
+  width: 205px;
+  background: #fbfbfb;
+  padding: 0 23px 0 0;
+}
+
+/* line 2384, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list .img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* line 2385, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.new_list .more {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  color: #ff9226;
+  text-decoration: none;
+}
+
+/* line 2392, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_text .more_link {
+  color: #ff9226;
+  text-decoration: none;
+}
+
+/* line 2396, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_text .more_link:hover {
+  text-decoration: underline;
+}
+
+/* line 2397, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_next {
+  float: right;
+  color: #6d6e70;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+  margin: 5px 15px 0;
+}
+
+/* line 2405, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.city_next:hover {
+  color: #ff9226;
+}
+
+/* line 2407, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_block {
+  margin: 0 -9px;
+}
+
+/* line 2410, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_info {
+  padding: 6px 6px 20px;
+  background: #f1f1f1;
+  border: 1px solid #e2e2e2;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0 0 25px;
+}
+
+/* line 2418, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat {
+  width: 216px;
+  float: left;
+}
+
+/* line 2422, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat .img {
+  width: 100%;
+}
+
+/* line 2425, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat .img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* line 2426, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat table {
+  width: 100%;
+  padding: 0;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 9px 0 0;
+}
+
+/* line 2433, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat table thead th {
+  text-align: left;
+  padding: 0 0 5px;
+}
+
+/* line 2437, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat table td {
+  padding: 0;
+}
+
+/* line 2440, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat table tfoot td {
+  padding: 11px 0 0;
+}
+
+/* line 2443, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_flat .td2 {
+  text-align: right;
+}
+
+/* line 2444, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_info .legend {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+/* line 2448, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_info .legend .line {
+  padding: 4px 0 0 30px;
+  overflow: hidden;
+}
+
+/* line 2452, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_info .legend .color {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: -4px 0 0 -30px;
+  background: #00aeab;
+}
+
+/* line 2460, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar {
+  width: 448px;
+  float: right;
+  margin: 0 0 -27px;
+}
+
+/* line 2465, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_line {
+  padding: 0 0 0 105px;
+  overflow: hidden;
+}
+
+/* line 2469, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_line.cal_header {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+/* line 2472, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_line.cal_header .cal_day {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #929292;
+}
+
+/* line 2478, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_month {
+  margin: 0 0 0 -105px;
+  width: 105px;
+  float: left;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 9px 0 0;
+}
+
+/* line 2486, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_day {
+  float: left;
+  width: 49px;
+  padding: 9px 0 0;
+  height: 30px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 23px;
+  color: #000000;
+}
+
+/* line 2496, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_day.cal_other_month {
+  color: #6d6e70;
+}
+
+/* line 2499, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_line.odd .cal_day {
+  background: #e6e7e8;
+}
+
+/* line 2502, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reserv_calendar .cal_day.active {
+  background: #00aeab !important;
+  color: white !important;
+}
+
+/* line 2507, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_block .input {
+  width: 212px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 7px 10px 5px;
+}
+
+/* line 2513, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.reservation_block .btn_check {
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
+
+/* line 2518, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list {
+  padding: 0;
+  margin: -20px 0 -10px;
+  list-style: none;
+}
+
+/* line 2523, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list .li {
+  border-top: 1px solid #e0e0e0;
+  padding: 25px 0 20px 230px;
+}
+
+/* line 2527, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list .left_info {
+  text-align: center;
+  margin: 0 0 0 -230px;
+  width: 200px;
+  float: left;
+}
+
+/* line 2533, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list .title {
+  text-align: left;
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  margin: 1px 0 10px;
+}
+
+/* line 2541, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list a {
+  text-decoration: none;
+  color: #ff9226;
+}
+
+/* line 2545, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.partners_list a:hover {
+  color: #4d4d4d;
+}
+
+/* line 2548, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hot_offer_left {
+  float: left;
+  width: 196px;
+  padding: 0 12px 9px;
+  margin: 0 0 0 -245px;
+  border: 2px solid white;
+  background: #6d6e70;
+  color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 2559, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hot_offer_left img {
+  width: 220px;
+  margin: 0 -12px 8px;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 2565, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hot_offer_left .prise {
+  float: left;
+  font-size: 29px;
+  line-height: 30px;
+  margin: 32px 0 0;
+}
+
+/* line 2571, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.hot_offer_left .btn {
+  float: right;
+  margin: 34px -5px 0 0;
+}
+
+/* line 2575, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list {
+  padding: 0;
+  margin: 0 0 0 -22px;
+  list-style: none;
+}
+
+/* line 2580, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list .li {
+  background: url(/images/project_item_bg.png) no-repeat 0 0;
+  width: 198px;
+  padding: 3px 12px;
+  height: 374px;
+  float: left;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 20px 22px;
+}
+
+/* line 2591, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list .li img {
+  width: 216px;
+  margin: 0 -9px 12px;
+}
+
+/* line 2595, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list .title {
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: bold;
+  display: block;
+  padding: 0 0 2px;
+  margin: 0 0 3px;
+}
+
+/* line 2602, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list .status {
+  border-bottom: 1px solid #e0e0e0;
+  display: block;
+  padding: 0 0 4px;
+  margin: 0 0 8px;
+}
+
+/* line 2608, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+.project_list .info {
+  display: block;
+  overflow: hidden;
+  height: 180px;
+}
+
+/*здесь стили для хрома*/
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 2616, /home/dima/Rails/alanya/app/assets/stylesheets/main/main.css.scss */
+  .exposition_list {
+    font-size: 1px;
+  }
+}
+/*! Fotorama 3.0.8 | http://fotoramajs.com/license/  */
+
+.fotorama__noise,.fotorama__thumbs_previews,.fotorama__caption_overlay,.fotorama_fullscreen .fotorama__caption{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAA7VBMVEX////6+vr5+fn09PTr6+v29vb4+Pj8/Pzx8fH19fXz8/P39/fu7u7y8vLq6urt7e39/f3+/v7v7+/w8PDm5ubn5+f7+/vl5eXp6ens7Ozi4uLf39/o6Ojj4+Pg4ODe3t7a2trd3d3h4eHk5OTT09PZ2dnb29vW1tbU1NTX19fc3NzV1dXY2NjMzMzR0dHGxsbQ0NDOzs7S0tLPz8/Nzc3Hx8fJycnLy8u8vLzFxcW1tbXIyMjKysq5ubnExMTDw8O4uLi6urrBwcHAwMC2tra+vr7CwsKoqKi7u7u9vb2xsbG3t7ezs7OsrKy0tLREM1c6AAAAT3RSTlMNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NrbSxDwAACP9JREFUeF692mWSJll6hNETyPAxMyRTcSMMCWH/y9GvlsnKNJ1TVZlaQJhF3PuC++Mh4oLtyEcMfBR8SgYZBezjlHrtXIJ7lhDKreK8i4N1QMCGhOwHUVnoRqrU3A2VDuRAtH1byppTHohsuiVKmgt9VhATELCm38uJJnUPR5Y9hQk/bzoHmWE2Vsc2yslffSKRtmLuI6uqf4XV5AesKcQ1eOTabHTU5byJLcG6/udfJxaX1Q3ZQB8x4FgxA2a8kYgBG8sZTVw5RPwrTQhbbsxNHMTpxQHtTAHE5VkDW0hMQ3/LofwXbvEh7ieqDuORLauQ4UJbLVBBCI1pL5TmwApd3o4nFxj7NOgqKGHG7i+7EMmbaZh3gukKt71+S3D+xDGPGQjpaarVgRw5DIx7SpalgXZt81sNGWGIC4qZpO6Fl6Pb0/qkL+8rG/R4B7A0ZPRPffaXce63JDEmhAGYw8q1wySN5qPkUsBtmhr5ZDYHkLIf3EekcNcCPFIoQm/Fg7Gg6PKpnq4bWjHabsyYGNDOusAqOfNuaaYJRM0FqgiN0i2FcbfG9nwf5hmiiGy8wPAU9HpGkXdWB93ZOWGPcur9k15qLNKb3Ff7YZysMh2BoSLkcUbT3PePkt47e3tpg53LNDcr1w7Xwk4f7XKI4WTmoEH/wnRIPx6pr9kcLyfeSDf6toYcLIyLNqaf8efI5iFO5PkE6C6Fy0eH8gJ5x2qqJUTAEwiGSkQbrjSKO+2NN9bVaHq0rLUFzWYtfCOXIYT0MErwMcXhyTTqE8B2LvdC7XZldrVoaLixNry7fbyshBMmEfSj0SkJ396gvsW5G8INAsQXWkygCENDPFqOubJSpjMjqKAXBwAAOvjay5yB5RypBX3A8ofOR2SBC5BK/7hVD4qCYT3DpZopisvvLrwbtQ+qsu5uN5ztVnUP2Jg7lUi6X+zupL+UWOlIYSDkQzshU2LaXQ+oUE1rIUOBbJwOdosV2gICPBXVdT7PMuw8CccfbkVlTk1x2O5ffzoutL5mTEydx0NgJmgHxQN/tP2ef42s1xvk0Isfyr2KBsx7G6UUGKUMOPa+T1DJXLE3zM4Pw61vOeoW5hR4ImFiNP4JTMZuATnJUT2w3q5ySRsRBeiCcQbIwD/xa2oqMEhI4ZRs1niPEnwofT/PMRdM77HYS66wtRSDN6peuk3gp1BZMHKnoPQXRuZ0bPbxzdWsxt0m7907mZ/V+h302vAsV2WR8VqqKrmfuHjx3nb73S9wv0exFLeJvg/s2HIZAuyb4b+ZDJDLL5yLEjuu1Q76burYyF2Lft4KcDXF8KJ3aUBSnQJ/3iZvaVfhFb+rI/Tni0ZV3hDPYI+pYqeMFvJEWKwYRSvC1R5MIInAgK18zXvZbcuTPxH+vknCx93gkegeEdJsV5dW6H9P1BeupAZkjmTqIRj/tGSToHteVpnyzga2RBtuK6ah64zmJ2x6HYMV9JhuMJ4ZhgOMKiW12mhT/juDwqzILZjQFsbXmZBKx2iOwZNDdoPxIIz224Uy/dFMLJz4Ptn603wcsoGFevWA/RZ5238Eve9uDWvRSaYRYRqseqvlM5LkhWbNVzXXzUUtuTlB/OOiQzN+7/0i1TDbjwbpiJ93TPgRth/SFaklOqxYLVabRhGo5+ge3PWFU8sV8rQwFw0U5jsCk/05Rh/HyjKmv/n8Cv6ewMgKUZPJ7mm5Ypq8dS5zOlCrIGb4Z2WWzzDDNcN8SKPNeMIUw6CZYVEcCrt3DxPgQNOx4922dVGE7o5EiA28qSHFVD8wqW0K+O6jZiufSz8r2m8/kuer8pkuexnz4jW0bzyYxARnfSwOG5qP+sQaIuY9ix8eELaaCsYIGTPsYbRGrhK7t/4obWGth/HfkdaWfT96izVkemUUDscQ6TkTmVpIxnh85AhDYU436oDQjPGnFrMMiWRNBlxYPN+3fLtDbntBxRPE/ZOGCp3dYHFJvDR/602fhTbXpzwpaNAP8qMe2bNK13N2/EUWzv+UQCIYmi2WZ6E8Ilbp905tmSn2R4O7ZlHd0HH+4ov8fdvz5h54/9dVFEyoVVpj6d03O+SzkCLeAbKKdjuTMR6m4GopXrPahU34UxvQCXZg0Yjq1OAUTUp69YiYc2lufZ0woPfAzuvXFq/f7ong9SeXPo2ATxSqS8NGbvjyrfPt+vf5Ff3Mm7yMXQXHVzbzevqvLyZexVHzcz1jCO747Nhfx0mss4UN4R01olG/ZlB2vzGKCHtraWy4Rn6DJ8TCnDuzGMBmWkAQFFNge1j0p+IjvZfYr8+jK7hmgbkEd+HTZDWVVFDoqCZ1SZ4P+AXHQ/vFmPcLVe3BJLthFQKc/SwObvm4HNgerwLz5Tzw+XgHOUq2qdhQl7mmeEv38AI26fWd75t7vgS9HkczmJmdUNZzGdwV/5G7albAeBbpvy+yFrsJRT3wzeDxWV/w8hruynB+KDGfMYwtwO+s+TWNnS8oyK/WG15IaD1/2geTV/2gbySYs0F8Mm2PqL8LBxUUdrc3wf9OM3DsE8e78UqNSWLkU43VS821V1J0nwv4h9dHOLzCsh2o5RUX6ah66yHbPnNrL5RBgSmOh11NHdiOVRX5KU1/1ZqNLwJWbL86mvrDEDIYbV2VNK291TvD5GQPtRoCvXKB3TNa9/VJFFsonY69LjCFP5lpUtKh8G9Q2ydERgPdXtUTOia73vtL/IPA1ztKmO+Z36TFBWH2n20Mq/dXL5PemUSkgY1J046Rz52gC8X07RuhK5NM4yYy4SiaAj5wPAxUjmQwK1HtOAGmvpX3UiMGs67zX2SZ1S5/mxNBoPQqGYPb9McF69lCc3ftevtMwv4yxe0VOQQM2H4OC/tD05U6Wh5OPJSn9DowMVuoMuMokl2nX6PQv2KGf/HH++q8op+dev5BUvp/h7XjVaM0XIFxJaGX+N7XbVLPOZKXCNP/f2DBF2UuX5ne+8wXvU5zPvOXyMtEz6/B5j8PlF4W0Z0VzN8Z3Q3tQTQ4efzm52k/VGRat+k4DCwhYqMG8Aq07nMy+0JR8jMW+pkc4IU4xWc85lUmJc6vnjz8N6MLmuXZKNefAAAAAElFTkSuQmCC")}.fotorama_shadows .fotorama__wrap:before,.fotorama_shadows .fotorama__wrap:after,.fotorama_shadows .fotorama__thumbs_previews:before,.fotorama_shadows .fotorama__thumbs_previews:after,.fotorama_csstransitions .fotorama__wrap_style_touch .fotorama__shaft,.fotorama__thumb__dot,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumbs-shaft,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumb-border,.fotorama__arr,.fotorama__fsi{-webkit-transition-timing-function:cubic-bezier(0.1,0,0.25,1);-moz-transition-timing-function:cubic-bezier(0.1,0,0.25,1);-o-transition-timing-function:cubic-bezier(0.1,0,0.25,1);transition-timing-function:cubic-bezier(0.1,0,0.25,1)}.fotorama_shadows .fotorama__wrap:before,.fotorama_shadows .fotorama__wrap:after,.fotorama_shadows .fotorama__thumbs_previews:before,.fotorama_shadows .fotorama__thumbs_previews:after,.fotorama__thumb__dot,.fotorama__arr,.fotorama__fsi{-webkit-transition-duration:333ms;-moz-transition-duration:333ms;-o-transition-duration:333ms;transition-duration:333ms}.fotorama_csstransitions .fotorama__wrap_style_touch .fotorama__shaft,.fotorama__thumb:hover .fotorama__thumb__dot,.fotorama__thumb_selected .fotorama__thumb__dot,.fotorama__thumb_selected:hover .fotorama__thumb__dot,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumbs-shaft,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumb-border{-webkit-transition-duration:0;-moz-transition-duration:0;-o-transition-duration:0;transition-duration:0}.fotorama_csstransitions .fotorama__wrap_style_touch .fotorama__shaft,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumbs-shaft,.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumb-border{-webkit-transform:translate(0,0);-moz-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}.fullscreen,.fotorama__wrap,.fotorama__wrap_style_fade .fotorama__frame{background:-webkit-gradient(radial,50% 50%,0,50% 50%,500,color-stop(0%,#f3f2f1),color-stop(12.8%,#f3f2f1),color-stop(100%,#cacac9));background:-webkit-radial-gradient(#f3f2f1,#f3f2f1 64px,#cacac9 500px);background:-moz-radial-gradient(#f3f2f1,#f3f2f1 64px,#cacac9 500px);background:-o-radial-gradient(#f3f2f1,#f3f2f1 64px,#cacac9 500px);background:radial-gradient(#f3f2f1,#f3f2f1 64px,#cacac9 500px);background-color:#cacac9}.fotorama-outer,.fotorama__caption-outer{margin:0;padding:0}.fotorama{-webkit-tap-highlight-color:rgba(0,0,0,0);*zoom:1;position:relative;margin:0;padding:0}.fotorama img{max-width:99999px!important;min-width:0!important;width:auto}.fotorama:active,.fotorama:focus{outline:none}.fullscreen{width:100%!important;height:100%!important;overflow:hidden!important}.fullscreen *{visibility:hidden;overflow:visible}.fotorama_fullscreen{visibility:visible;position:fixed!important;top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%!important;height:100%!important;margin:auto!important;z-index:2147483647!important;-webkit-box-sizing:border-box!important;-moz-box-sizing:border-box!important;-o-box-sizing:border-box!important;-ms-box-sizing:border-box!important;box-sizing:border-box!important}.fotorama_fullscreen *{visibility:visible}.fotorama_fullscreen .fotorama__wrap,.fotorama_fullscreen .fotorama__thumbs{margin:0!important}.fotorama_fullscreen.fotorama_fullscreen_quirks{position:absolute!important}.fotorama__wrap{position:relative;overflow:hidden;*zoom:1;margin:0;padding:0;-webkit-user-select:none;-moz-user-select:-moz-none;-khtml-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none}.fotorama__noise{top:0;left:0;bottom:0;right:0;position:absolute}.fotorama_shadows .fotorama__wrap:before,.fotorama_shadows .fotorama__wrap:after,.fotorama_shadows .fotorama__thumbs_previews:before,.fotorama_shadows .fotorama__thumbs_previews:after{content:"";display:block;position:absolute;text-decoration:none;top:3px;bottom:3px;width:10px;height:auto;-webkit-transition-property:all;-moz-transition-property:all;-o-transition-property:all;transition-property:all;z-index:10;*display:none!important}.fotorama_shadows .fotorama__wrap:before,.fotorama_shadows .fotorama__thumbs_previews:before{-webkit-box-shadow:rgba(0,0,0,0.5) 2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;-moz-box-shadow:rgba(0,0,0,0.5) 2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;box-shadow:rgba(0,0,0,0.5) 2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;left:-25px}.fotorama_shadows .fotorama__wrap:after,.fotorama_shadows .fotorama__thumbs_previews:after{-webkit-box-shadow:rgba(0,0,0,0.5) -2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;-moz-box-shadow:rgba(0,0,0,0.5) -2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;box-shadow:rgba(0,0,0,0.5) -2px 0 8px,rgba(0,0,0,0.5) 0 0 3px;right:-25px}.fotorama_shadows .fotorama__wrap_shadow:before,.fotorama_shadows .fotorama__thumbs_shadow:before{left:-10px}.fotorama_shadows .fotorama__wrap_shadow:after,.fotorama_shadows .fotorama__thumbs_shadow:after{right:-10px}.fotorama_shadows .fotorama__wrap_shadow_no-left:before,.fotorama_shadows .fotorama__thumbs_shadow_no-left:before{left:-25px}.fotorama_shadows .fotorama__wrap_shadow_no-right:after,.fotorama_shadows .fotorama__thumbs_shadow_no-right:after{right:-25px}.fotorama_shadows.fotorama_vertical .fotorama__wrap:before,.fotorama_shadows.fotorama_vertical .fotorama__wrap:after,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_previews:before,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_previews:after{top:auto;left:3px;right:3px;width:auto;height:10px;-webkit-box-shadow:black,0,0,10px;-moz-box-shadow:black,0,0,10px;box-shadow:black,0,0,10px}.fotorama_shadows.fotorama_vertical .fotorama__wrap:before,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_previews:before{-webkit-box-shadow:rgba(0,0,0,0.5) 0 2px 8px,rgba(0,0,0,0.5) 0 0 3px;-moz-box-shadow:rgba(0,0,0,0.5) 0 2px 8px,rgba(0,0,0,0.5) 0 0 3px;box-shadow:rgba(0,0,0,0.5) 0 2px 8px,rgba(0,0,0,0.5) 0 0 3px;top:-25px}.fotorama_shadows.fotorama_vertical .fotorama__wrap:after,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_previews:after{-webkit-box-shadow:rgba(0,0,0,0.5) 0 -2px 8px,rgba(0,0,0,0.5) 0 0 3px;-moz-box-shadow:rgba(0,0,0,0.5) 0 -2px 8px,rgba(0,0,0,0.5) 0 0 3px;box-shadow:rgba(0,0,0,0.5) 0 -2px 8px,rgba(0,0,0,0.5) 0 0 3px;bottom:-25px}.fotorama_shadows.fotorama_vertical .fotorama__wrap_shadow:before,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_shadow:before{top:-10px}.fotorama_shadows.fotorama_vertical .fotorama__wrap_shadow:after,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_shadow:after{bottom:-10px}.fotorama_shadows.fotorama_vertical .fotorama__wrap_shadow_no-left:before,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_shadow_no-left:before{top:-25px}.fotorama_shadows.fotorama_vertical .fotorama__wrap_shadow_no-right:after,.fotorama_shadows.fotorama_vertical .fotorama__thumbs_shadow_no-right:after{bottom:-25px}.fotorama_shadows.fotorama_fullscreen .fotorama__wrap:before,.fotorama_shadows.fotorama_fullscreen .fotorama__wrap:after,.fotorama_shadows.fotorama_fullscreen .fotorama__thumbs_previews:before,.fotorama_shadows.fotorama_fullscreen .fotorama__thumbs_previews:after{display:none}.fotorama__shaft{position:absolute;top:0;left:0;margin:0;padding:0}.fotorama_csstransitions .fotorama__wrap_style_touch *{-webkit-backface-visibility:hidden}.fotorama_csstransitions .fotorama__wrap_style_touch .fotorama__shaft{-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;transition-property:transform}.fotorama_csstransitions .fotorama__thumbs_previews *{-webkit-backface-visibility:hidden}.fotorama__wrap_style_touch .fotorama__shaft{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;cursor:-o-grab;cursor:-ms-grab;cursor:grab;*cursor:move!important}.fotorama__wrap_style_touch .fotorama__shaft_grabbing{cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:-o-grabbing;cursor:-ms-grabbing;cursor:grabbing}.fotorama__wrap_style_fade .fotorama__shaft,.fotorama_no-csstransitions .fotorama__shaft,.fotorama_no-csstransitions .fotorama__thumbs-shaft{-webkit-transform:translate(0,0)!important;-moz-transform:translate(0,0)!important;-ms-transform:translate(0,0)!important;-o-transform:translate(0,0)!important;transform:translate(0,0)!important}.fotorama__wrap_with-div{border:1px solid #7f7f7f}.fotorama__thumbs{text-align:center;position:relative;min-height:18px;margin:0;padding:0;font-size:0;line-height:0;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none}.fotorama_vertical .fotorama__thumbs{position:absolute;top:0;left:0;width:18px}.fotorama__thumbs-shaft{text-align:left;margin:0;padding:0;display:-moz-inline-box;-moz-box-orient:vertical;display:inline-block;vertical-align:middle;*vertical-align:auto;*display:inline;*zoom:1}.fotorama__thumb{display:-moz-inline-box;-moz-box-orient:vertical;display:inline-block;vertical-align:middle;*vertical-align:auto;*display:inline;*zoom:1;cursor:pointer;position:relative;width:18px;height:18px;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0.3)}.fotorama__thumb__dot{display:block;width:6px;height:6px;position:relative;top:6px;left:6px;-webkit-border-radius:6px;-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px;border-radius:6px;background-color:#7f7f7f;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);opacity:0.5;-webkit-transition-property:opacity;-moz-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}.fotorama__thumb:hover .fotorama__thumb__dot{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);opacity:0.75}.fotorama__thumb_selected,.fotorama__thumb_selected:hover{cursor:default}.fotorama__thumb_selected .fotorama__thumb__dot,.fotorama__thumb_selected:hover .fotorama__thumb__dot{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity:1}.fotorama__thumb_disabled{display:none;cursor:default}.fotorama__thumbs_previews{overflow:hidden;background-color:#d2d2d1}.fotorama__thumbs_previews .fotorama__thumbs-shaft{position:absolute;top:0;left:0;white-space:nowrap}.fotorama__thumbs_previews .fotorama__thumb{width:auto;background:rgba(127,127,127,0.25)}.fotorama__thumbs_previews .fotorama__thumb__img{width:auto;border:none;margin:0;padding:0}.fotorama__thumbs_previews .fotorama__thumb-border{border:solid;border-color:#00d1ff #00afea #008ed6;background:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,rgba(255,255,255,0.25)),color-stop(100%,rgba(55,55,55,0.05)));background:-webkit-linear-gradient(rgba(255,255,255,0.25),rgba(55,55,55,0.05));background:-moz-linear-gradient(rgba(255,255,255,0.25),rgba(55,55,55,0.05));background:-o-linear-gradient(rgba(255,255,255,0.25),rgba(55,55,55,0.05));background:linear-gradient(rgba(255,255,255,0.25),rgba(55,55,55,0.05));background-color:rgba(175,175,175,0.15);position:absolute;z-index:10;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-o-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;display:none}.fotorama_horizontal .fotorama__thumbs_previews .fotorama__thumb{margin-left:0!important}.fotorama_vertical .fotorama__thumbs_previews .fotorama__thumb{float:none;display:block;margin-top:0!important}.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumbs-shaft{-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;transition-property:transform}.fotorama_csstransitions .fotorama__thumbs_previews .fotorama__thumb-border{-webkit-transition-property:-webkit-transform,left,top,border,background,width,height;-moz-transition-property:-moz-transform,left,top,border,background,width,height;-o-transition-property:-o-transform,left,top,border,background,width,height;transition-property:transform left top border background width height}.fotorama__frame{position:absolute;overflow:hidden;top:0;left:0;margin:0;padding:0}.fotorama__frame *{z-index:2}.fotorama__frame_active{z-index:5}.fotorama__wrap_style_fade .fotorama__frame{left:0!important}.fotorama__img{position:absolute;margin:0!important;padding:0!important;top:0;left:0;z-index:1}.fotorama_shadows .fotorama__img{-webkit-box-shadow:0 0 5px rgba(0,0,0,0.25);-moz-box-shadow:0 0 5px rgba(0,0,0,0.25);box-shadow:0 0 5px rgba(0,0,0,0.25)}.fotorama__arr{display:block;position:absolute;font-family:sans-serif;width:44px;text-align:center;z-index:10;color:white;-webkit-transition-property:opacity,margin;-moz-transition-property:opacity,margin;-o-transition-property:opacity,margin;transition-property:opacity margin;font-size:18px;top:50%;line-height:72px;margin-top:-36px;text-shadow:black 0 0 5px;cursor:pointer;opacity:0;font-style:normal!important;-webkit-tap-highlight-color:rgba(255,255,255,0.15)}.fotorama__arr_prev{left:0;margin-left:0}.fotorama__arr_next{left:100%;margin-left:-44px}.fotorama__arr_disabled{cursor:default;*display:none}.fotorama_touch .fotorama__arr{opacity:1!important;-webkit-transition:none;-moz-transition:none;-o-transition:none;transition:none}.fotorama_touch .fotorama__arr_disabled{opacity:0.11!important}.fotorama__wrap_mouseover .fotorama__arr{opacity:0.6}.fotorama__wrap_mouseover .fotorama__arr:hover,.fotorama__wrap_mouseover .fotorama__arr_hover{opacity:1;text-shadow:black 0 0 5px,black 0 0 25px}.fotorama__wrap_mouseover .fotorama__arr_prev,.fotorama_touch .fotorama__arr_prev{margin-left:0}.fotorama__wrap_mouseover .fotorama__arr_next,.fotorama_touch .fotorama__arr_next{margin-left:-44px}.fotorama__wrap_mouseover .fotorama__arr_disabled,.fotorama__wrap_mouseover .fotorama__arr_disabled:hover,.fotorama_touch .fotorama__arr_disabled,.fotorama_touch .fotorama__arr_disabled:hover{opacity:0.11;text-shadow:none}.fotorama__wrap_mouseout .fotorama__arr{opacity:0}.fotorama__wrap_mouseout .fotorama__arr_prev{margin-left:-44px}.fotorama__wrap_mouseout .fotorama__arr_next{margin-left:0}.fotorama__wrap_style_fade .fotorama__arr_prev{margin-left:0}.fotorama__wrap_style_fade .fotorama__arr_next{margin-left:-44px}.fotorama_vertical .fotorama__arr{width:72px;line-height:44px;margin-top:0;margin-left:0;top:auto;left:50%;margin-left:-36px}.fotorama_vertical .fotorama__arr_prev{top:0;margin-top:0}.fotorama_vertical .fotorama__arr_next{bottom:0;margin-bottom:0}.fotorama_vertical .fotorama__wrap_mouseover .fotorama__arr_prev,.fotorama_vertical .fotorama_touch .fotorama__arr_prev{margin-top:0}.fotorama_vertical .fotorama__wrap_mouseover .fotorama__arr_next,.fotorama_vertical .fotorama_touch .fotorama__arr_next{margin-bottom:0}.fotorama_vertical .fotorama__wrap_mouseout .fotorama__arr_prev{margin-top:-44px}.fotorama_vertical .fotorama__wrap_mouseout .fotorama__arr_next{margin-bottom:-44px}.fotorama__caption{margin:0.5em 0;white-space:normal;position:relative}.fotorama__caption_overlay,.fotorama_fullscreen .fotorama__caption{background-color:#1e1d1c;color:white;z-index:15;margin:0;position:absolute;left:0;bottom:0;padding:5px 10px}.fotorama__fsi{position:absolute;width:32px;height:32px;right:0;top:0;opacity:0;font-size:0;line-height:0;z-index:20;cursor:pointer;-webkit-transition-property:opacity;-moz-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}.fotorama__fsi .i0{position:absolute;width:32px;height:32px;top:0;left:0;background:url("data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");border:none}.fotorama__fsi i{position:absolute;width:4px;height:4px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-o-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;border:1px solid #111}.fotorama__fsi .i1 .i1,.fotorama__fsi .i2 .i2,.fotorama__fsi .i3 .i3,.fotorama__fsi .i4 .i4{width:3px;height:3px;border-color:#eee;top:0;left:0;margin:0!important}.fotorama__fsi .i1{top:7px;left:7px;border-right:none;border-bottom:none;margin:2px 0 0 2px}.fotorama__fsi .i2{top:7px;left:18px;border-left:none;border-bottom:none;margin:2px 0 0}.fotorama__fsi .i3{top:18px;left:18px;border-top:none;border-left:none}.fotorama__fsi .i4{top:18px;left:7px;border-right:none;border-top:none;margin:0 0 0 2px}.fotorama__fsi.fotorama__fsi_hover .i1,.fotorama__fsi.fotorama__fsi_hover .i2,.fotorama__fsi.fotorama__fsi_hover .i3,.fotorama__fsi.fotorama__fsi_hover .i4{margin:1px 0 0 1px}.fotorama_fullscreen .fotorama__fsi .i1,.fotorama_fullscreen .fotorama__fsi .i2,.fotorama_fullscreen .fotorama__fsi .i3,.fotorama_fullscreen .fotorama__fsi .i4{margin:1px 0 0 1px}.fotorama_fullscreen .fotorama__fsi.fotorama__fsi_hover .i1{margin:2px 0 0 2px}.fotorama_fullscreen .fotorama__fsi.fotorama__fsi_hover .i2{margin:2px 0 0}.fotorama_fullscreen .fotorama__fsi.fotorama__fsi_hover .i3{margin:0}.fotorama_fullscreen .fotorama__fsi.fotorama__fsi_hover .i4{margin:0 0 0 2px}.fotorama__wrap_mouseover .fotorama__fsi,.fotorama_touch .fotorama__fsi{opacity:1}.fotorama__state{position:absolute;width:32px;height:32px;margin-left:-16px;margin-top:-16px;line-height:32px;font-size:32px;text-align:center;background-repeat:no-repeat;z-index:6;top:50%;left:auto;font-family:Georgia}.fotorama__state svg{width:32px;height:32px;display:none}.fotorama_vertical .fotorama__state{top:auto;left:50%}.fotorama_loading .fotorama__state span{top:-3px}.fotorama_loading .fotorama__thumb-border{border-style:dashed;background:none}.fotorama_error .fotorama__state{background-position:0 0!important}.fotorama_error .fotorama__state svg{display:block}.fotorama_error .fotorama__thumb-border{border-color:#ff002a #e50015 #c00!important;background:none;border-style:dashed}.fotorama_error .fotorama__thumb_selected .fotorama__thumb__dot{background-color:#e50015!important;background-color:rgba(229,0,21,0.5)!important}
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+/* line 25, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.img a:focus, a.buy_item_map:focus {
+  outline: none;
+}
+
+/* line 29, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.cboxIframe {
+  background: #f1f1f1;
+}
+
+/* line 33, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 37, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#ui-datepicker-div {
+  width: 223px;
+}
+
+/* line 40, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.ui-state-default, .ui-widget-content .ui-state-default {
+  padding: 8px 0;
+}
+
+/* line 44, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.results .apartment_list {
+  width: 735px;
+}
+
+/* line 48, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#datepicker-inner #ui-datepicker-div {
+  left: 0 !important;
+  top: 0 !important;
+  position: relative !important;
+}
+
+/* line 54, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#date-start, #date-end, #main-search-input {
+  outline: none;
+}
+
+/* line 58, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form .field_with_errors .input, .form .field_with_errors textarea {
+  border-color: red;
+}
+
+/* line 62, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.order_form .field_with_errors .input, .order_form .field_with_errors textarea {
+  color: #ed1c24;
+}
+/* line 66, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.order_form .field_with_errors .input::-webkit-input-placeholder, .order_form .field_with_errors textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ed1c24;
+}
+/* line 69, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.order_form .field_with_errors .input:-moz-placeholder, .order_form .field_with_errors textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ed1c24;
+}
+/* line 72, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.order_form .field_with_errors .input::-moz-placeholder, .order_form .field_with_errors textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ed1c24;
+}
+/* line 75, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.order_form .field_with_errors .input:-ms-input-placeholder, .order_form .field_with_errors textarea:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ed1c24;
+}
+
+/* line 80, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+label.with_error {
+  color: red;
+}
+
+/* line 83, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.transfer_form fieldset {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+/* line 91, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.transfer_in.disabled fieldset, .transfer_out.disabled fieldset {
+  opacity: .2;
+}
+/* line 94, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.transfer_in.disabled .disabled_layer, .transfer_out.disabled .disabled_layer {
+  bottom: 0;
+  width: 235px;
+  position: absolute;
+  height: 286px;
+  /* background: white; */
+  /* opacity: .2; */
+  z-index: 2;
+}
+
+/* line 105, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.btn.disabled {
+  background: #939598;
+  text-transform: none;
+  color: white;
+}
+
+/* line 114, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sidebar_nav span {
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+  color: #00aeac;
+}
+
+/* line 121, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.city_page .sidebar_nav .title span {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* line 125, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.city_page .sidebar_nav span {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* line 130, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.transfer_plane.act {
+  background-color: #00aeac;
+  color: white;
+}
+
+/* line 135, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apatment_list_bot {
+  position: relative;
+}
+
+/* line 139, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.offer_link .offer_info {
+  display: none;
+}
+
+/* line 144, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+a.offer_link:hover .offer_info {
+  display: block;
+}
+/* line 147, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+a.offer_link:hover .plus {
+  display: none;
+}
+
+/* line 152, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.play_video {
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+/* line 159, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_photos .property_video .play_video, .photo_list img.play_video {
+  height: 26px;
+  width: 32px;
+  margin-top: -13px;
+  margin-left: -16px;
+  border: 0;
+}
+
+/* line 167, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.main_slider .play_video {
+  outline: none;
+  -webkit-transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  background: url(/images/play_video.png) no-repeat;
+  width: 69px;
+  height: 68px;
+  margin-top: -34px;
+  margin-left: -34px;
+}
+
+/* line 183, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.main_slider .play_video:hover {
+  background-position: 0 -68px;
+}
+
+/* line 187, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.photo_list .img {
+  position: relative;
+}
+
+/* line 191, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_text {
+  float: left;
+  width: 240px;
+  padding-left: 6px;
+  margin-top: 16px;
+}
+/* line 197, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_text h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #4d4d4d;
+  line-height: 20px;
+  margin-left: 3px;
+}
+/* line 204, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_text h1 {
+  font-size: 128px;
+  color: #f27321;
+  font-weight: 400;
+  line-height: 55px;
+}
+/* line 210, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_text p {
+  font-size: 17px;
+}
+
+/* line 215, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_image {
+  position: relative;
+  left: -24px;
+  top: 4px;
+}
+
+/* line 221, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.error_back {
+  background: url(/images/error_back.png) no-repeat;
+  width: 222px;
+  height: 41px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  line-height: 45px;
+  position: absolute;
+  top: 555px;
+  left: 384px;
+}
+
+/* line 237, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list .title a {
+  text-decoration: none;
+}
+
+/* line 242, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_heading {
+  background-color: #00CCCA;
+  padding: 6px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #e1e1e1 !important;
+}
+
+/* line 248, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_heading .h1 {
+  font-size: 17px !important;
+  padding-left: 10px;
+}
+
+/* line 252, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item {
+  border: none;
+  padding: 0px;
+  width: 730px;
+}
+
+/* line 257, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_filter {
+  width: 200px;
+}
+
+/* line 260, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_text {
+  padding-left: 20px !important;
+  width: 430px;
+}
+
+/* line 264, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item .item_price {
+  min-width: 0;
+  border: 0;
+  font-size: 17px !important;
+}
+
+/* line 269, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_photos {
+  max-width: 462px !important;
+  padding-top: 20px;
+  margin: 0px !important;
+}
+
+/* line 274, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fotorama {
+  max-width: 470px !important;
+}
+
+/* line 277, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fotorama img {
+  height: 250px;
+  width: 470px;
+}
+
+/* line 281, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.description_project {
+  padding-top: 10px;
+}
+
+/* line 284, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.price_area {
+  color: #44C4E4;
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+
+/* line 289, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_info {
+  padding-left: 10px;
+  width: 205px !important;
+}
+
+/* line 293, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_info .line {
+  line-height: 19px;
+  color: #6d6e70;
+  font-size: 10px;
+  padding-top: 3px;
+}
+
+/* line 299, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_info .line .value {
+  float: right !important;
+}
+
+/* line 302, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_info {
+  margin-right: 20px;
+}
+
+/* line 305, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.line .type {
+  padding-left: 4px;
+}
+
+/* line 308, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.line .value {
+  padding-right: 4px;
+}
+
+/* line 311, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_text .buttons {
+  margin: 10px 0;
+}
+
+/* line 314, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item_text .buttons a {
+  font-size: 15px;
+  background-color: #00CCCA;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 7.5px 10.5px;
+  margin-right: 15px;
+  color: #4d4d4d;
+}
+
+/* line 323, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.manager_list {
+  float: right;
+  width: 290px;
+}
+
+/* line 327, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.manager_list .list .avatar {
+  width: 40%;
+}
+
+/* line 330, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.manager_list img {
+  height: 200px !important;
+  width: 120px !important;
+}
+
+/* line 334, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.description_project {
+  width: 400px;
+  padding-left: 20px;
+  float: left;
+  padding-top: 0;
+  font-size: 15px;
+}
+
+/* line 341, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.bg_dark {
+  background-color: #CCCCCC;
+}
+
+/* line 344, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.bg_light {
+  background-color: #EDEDED;
+}
+
+/* line 347, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.to_coast {
+  margin-top: 10px;
+}
+
+/* line 350, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.to_coast_list .line {
+  padding-left: 20px;
+}
+
+/* line 353, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit_input {
+  width: 100%;
+}
+
+/* line 356, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit {
+  margin-top: 10px;
+}
+
+/* line 359, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.distnce_list ul li {
+  display: inline-table;
+  margin: 0 -2px;
+}
+
+/* line 365, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.home:checked + label {
+  background: transparent url("/img/distance_label.png") no-repeat scroll 0 -84px;
+  background-color: none !important;
+  float: left;
+  height: 15px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  transition: none 0s ease 0s;
+  vertical-align: top;
+  width: 40px;
+}
+
+/* line 378, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.labelauty:not(:checked):not([disabled]) + label {
+  background: transparent url("/img/distance_label.png") no-repeat scroll 0 0;
+  background-color: none !important;
+  float: left;
+  height: 15px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  transition: none 0s ease 0s;
+  vertical-align: top;
+  width: 40px;
+}
+
+/* line 392, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list ul {
+  display: inline-table !important;
+  list-style: outside none none !important;
+  background: none !important;
+  background-color: none !important;
+  float: left;
+}
+
+/* line 400, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .first {
+  width: 33%;
+  margin-right: 3px;
+}
+
+/* line 405, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .first ul li {
+  margin-left: 2px;
+}
+
+/* line 410, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .second {
+  width: 33%;
+  margin-right: 3px;
+}
+
+/* line 415, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .third {
+  width: 30%;
+}
+
+/* line 420, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list ul li {
+  display: flex !important;
+  list-style: outside none none !important;
+  background: none !important;
+  background-color: none !important;
+  width: 62px;
+  margin-left: 1px !important;
+}
+
+/* line 429, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.sity.synch-icon + label {
+  background: none !important;
+  background-color: none !important;
+  color: #4d4d4d !important;
+}
+
+/* line 435, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list ul li label {
+  padding: 0 !important;
+}
+
+/* line 438, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .second li label {
+  padding: 0 !important;
+}
+
+/* line 442, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list .sity .labelauty-unchecked {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 447, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked, input.sity + label > span.labelauty-checked-image + span.labelauty-checked {
+  margin-left: 0px !important;
+  text-align: left !important;
+  width: auto !important;
+}
+
+/* line 452, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sities_list ul li {
+  padding-bottom: 5px;
+  font-family: Verdana;
+  font-size: 12px !important;
+  text-align: left !important;
+}
+
+/* line 459, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.sity + label > span.labelauty-checked-image + span.labelauty-checked {
+  color: #00aeac !important;
+  font-size: 12px !important;
+  text-align: left !important;
+}
+
+/* line 465, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.sity + label > span.labelauty-unchecked-image + span.labelauty-unchecked {
+  font-size: 12px !important;
+  text-align: left !important;
+  width: auto !important;
+}
+
+/* line 471, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.home:checked + label {
+  background-color: none !important;
+}
+
+/* line 474, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+input.labelauty:checked + label {
+  background-color: none !important;
+}
+
+/* line 478, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.filter_section h2 {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+/* line 483, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.filter_section.type {
+  margin-top: 10px;
+}
+
+/* line 486, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list .start {
+  width: 53%;
+  float: left;
+}
+
+/* line 491, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list .end {
+  width: 47%;
+  float: right;
+}
+
+/* line 498, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list ::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+/* line 502, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list ::-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 12px;
+}
+
+/* line 506, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 12px;
+}
+
+/* line 510, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list :-ms-input-placeholder {
+  font-size: 12px;
+}
+
+/* line 514, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list input {
+  font-size: 20px;
+  padding: 2px 15px 1px;
+  width: 90px;
+}
+
+/* line 522, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_sities_list ul {
+  margin-bottom: -20px;
+}
+/* line 525, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_sities_list ul li {
+  font-family: Verdana;
+  line-height: 24px;
+  list-style: outside none none;
+}
+/* line 533, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_sities_list ul .sub_item {
+  margin-left: 20px;
+}
+
+/* line 539, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item a :hover {
+  color: #00aeac;
+}
+
+/* line 543, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section .static_menu {
+  background-color: #00aeac;
+  border: 0 none;
+  border-radius: 4px;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 551, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section h2 {
+  padding: 5px 0;
+  background: #00aeac none repeat scroll 0 0;
+  margin-left: -12px;
+  margin-right: -12px;
+  font-size: 16px;
+  text-align: center;
+  color: #4d4d4d;
+}
+/* line 560, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section h2 span {
+  padding: 0px;
+}
+
+/* line 565, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_heading {
+  background-color: #00aeac;
+}
+
+/* line 570, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.demo {
+  max-width: 400px;
+  padding: 25px;
+  margin: 45px auto;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Стили модального окна */
+/* line 580, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-header h2 {
+  color: #555;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+/* кнопка закрытия окна */
+/* line 588, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal .btn-close {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+/* line 597, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal .btn-close:hover {
+  color: red;
+}
+
+/* слой затемнения */
+/* line 601, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-wrap:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+
+/* line 612, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+}
+
+/* активация слоя затемнения и модального блока */
+/* line 622, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block;
+}
+
+/* line 626, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 20%;
+}
+
+/* элементы модального окна */
+/* line 634, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-dialog {
+  background: #fefefe;
+  border: #555555 solid 1px;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  -webkit-transform: translate(-50%, -500%);
+  -ms-transform: translate(-50%, -500%);
+  -o-transform: translate(-50%, -500%);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  width: 80%;
+  max-width: 500px;
+  z-index: 103;
+}
+
+/* line 653, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body {
+  padding: 20px;
+}
+
+/* line 656, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body p {
+  margin: 0;
+}
+
+/* line 659, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-header,
+.modal-footer {
+  padding: 20px 20px;
+}
+
+/* line 663, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-header {
+  border-bottom: #eaeaea solid 1px;
+}
+
+/* line 666, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* line 670, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-footer {
+  border-top: #eaeaea solid 1px;
+  text-align: right;
+}
+
+/* адаптивные картинки в модальном блоке */
+/* line 675, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* кнопки */
+/* line 686, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.btn-primary {
+  background: #428bca;
+  border-color: #357ebd;
+  color: #fff;
+}
+
+/* line 691, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.btn-primary:hover {
+  background: #66A1D3;
+}
+
+/* Элементы формы контактов */
+/* line 696, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.textbox {
+  height: 45px;
+  width: 100%;
+  border-radius: 3px;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+/* line 706, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.message:focus,
+.textbox:focus {
+  outline: none;
+  border: #1895d7 1px solid;
+  color: #1895d7;
+}
+
+/* line 712, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.message {
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 120px;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  box-sizing: border-box;
+  -moz-border-radius: 3px;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* кнопка "отправить" формы */
+/* line 728, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.btn-form {
+  width: 100%;
+  height: 45px;
+  border: rgba(0, 0, 0, 0.2) 1px solid;
+  box-sizing: border-box;
+  background: #dedede;
+  color: #555;
+  transition: background .4s;
+}
+
+/* Изменение фона кнопки при наведении */
+/* line 738, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.btn-form:hover {
+  background: #f2f2f2;
+}
+
+/* line 741, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit {
+  border: none;
+}
+
+/* line 745, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit input {
+  height: 30px;
+  line-height: normal;
+  width: 170px;
+  font-family: Verdana;
+}
+
+/* line 752, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.description_project {
+  outline: 1px solid red;
+  float: left;
+  min-height: 350px;
+}
+
+/* line 758, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit_condirm {
+  padding: 0 10px;
+  border: 1px solid #00aeac;
+  border-radius: 3px;
+  color: white;
+  background: #00aeac;
+  width: 90px;
+  margin-top: 8px;
+}
+
+/* line 767, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list {
+  width: 260px;
+  float: right;
+  outline: 1px solid red;
+  margin-top: 25px;
+}
+/* line 773, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li {
+  height: 125px;
+  font-size: 10px;
+  list-style: outside none none;
+}
+/* line 778, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .photo {
+  width: 40%;
+  float: left;
+}
+/* line 782, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .photo img {
+  width: 105px;
+  height: 115px;
+}
+/* line 787, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .description {
+  width: 55%;
+  float: right;
+  padding-left: 4px;
+}
+/* line 791, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .description .field {
+  clear: both !important;
+  position: relative;
+}
+/* line 795, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .description .name {
+  font-weight: bold;
+  top: -5px;
+}
+/* line 800, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.managers_list ul li .manager .description .post {
+  margin-bottom: 5px;
+  font-style: oblique;
+}
+
+/* line 814, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buttons_before_qus {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+/* line 820, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buttons_before_qus .share {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 825, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buttons_before_qus .print {
+  color: #00aeac;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 20px;
+}
+/* line 836, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buttons_before_qus .send {
+  color: #00aeac;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 848, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question {
+  width: 100%;
+  float: left;
+  border-top: 1px solid  #4d4d4d;
+}
+/* line 853, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .fields_left {
+  width: 50%;
+  float: left;
+}
+/* line 859, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .fields_right {
+  width: 50%;
+  float: right;
+}
+
+/* line 866, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form {
+  padding-left: 20px;
+}
+/* line 869, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .fields_left .form_group, .form_question form .fields_right .form_group {
+  padding-left: 10px;
+}
+/* line 871, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .fields_left .form_group label, .form_question form .fields_right .form_group label {
+  clear: both !important;
+  float: left;
+  width: 100%;
+  font-family: verdana;
+  font-size: 13px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+/* line 880, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .fields_left .form_group input, .form_question form .fields_right .form_group input {
+  width: 70%;
+  height: 30px;
+}
+/* line 889, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .msg {
+  float: left;
+  clear: both;
+  padding-left: 10px;
+  width: 98%;
+  padding-top: 10px;
+}
+/* line 896, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .msg input {
+  width: 86%;
+  height: 60px;
+}
+/* line 901, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question form .msg label {
+  clear: both !important;
+  float: left;
+  width: 86%;
+  font-family: Verdana;
+  font-size: 13px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+/* line 917, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question {
+  margin-bottom: 40px;
+}
+/* line 920, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .heading {
+  font-family: Verdana !important;
+  font-weight: bold !important;
+  padding-bottom: 10px !important;
+  padding-left: 20px !important;
+  padding-top: 10px !important;
+}
+/* line 928, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .button {
+  width: 30%;
+  float: right;
+  clear: both;
+  padding-top: 10px;
+}
+/* line 933, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .button .sub {
+  background: #00aeac none repeat scroll 0 0;
+  border: 1px solid #00aeac;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  padding: 0 10px;
+  width: 96px;
+  height: 30px;
+}
+
+/* line 947, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body .textbox {
+  background-color: white !important;
+}
+
+/* line 953, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.main_menu li {
+  list-style: none;
+}
+
+/* line 958, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/*| Navigation |*/
+/* line 973, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul {
+  list-style: none;
+  position: relative;
+  float: right;
+  display: inline-table;
+}
+
+/* line 979, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul li {
+  float: left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+/* line 987, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul li:hover > ul {
+  display: block;
+  z-index: 10;
+}
+
+/* line 988, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul li {
+  float: left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+/* line 994, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #222;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 1003, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul ul {
+  display: none;
+  background: #fff;
+  position: absolute;
+  top: 50px;
+  box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 1011, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul ul li {
+  float: none;
+  position: relative;
+}
+
+/* line 1012, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul ul li a {
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* line 1016, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+nav ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+/* line 1023, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header {
+  padding: 0;
+}
+/* line 1027, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav {
+  width: 72%;
+  float: right;
+  padding-top: 10px;
+}
+/* line 1032, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav img {
+  width: 25px;
+  margin-top: -6px;
+  margin-right: 5px;
+}
+/* line 1038, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav .phones {
+  width: 63%;
+  float: left;
+}
+/* line 1041, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav .phones .phone {
+  text-align: right;
+  clear: both;
+  float: right;
+  padding-bottom: 3px;
+}
+/* line 1049, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav .other {
+  width: 33%;
+  text-align: left;
+  float: right;
+}
+/* line 1054, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav .other .mail {
+  padding-bottom: 4px;
+}
+/* line 1058, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header .before_nav .other .mail, .header .before_nav .other .skype_in_head {
+  float: left;
+  clear: both;
+  margin-top: 4px;
+}
+/* line 1066, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav {
+  float: left;
+  width: 100%;
+  background: transparent url("/src/bg_menu.png") no-repeat scroll 0 23px/960px auto;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 -3px;
+  padding: 14px 0 0 24px;
+  margin-top: -15px;
+}
+/* line 1076, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav ul {
+  padding-top: 16px;
+}
+/* line 1079, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav ul li a {
+  color: #4d4d4d;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0;
+  padding: 9px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 1088, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav ul li ul {
+  padding-top: 0px;
+}
+/* line 1091, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav ul li ul a {
+  padding: 5px 8px;
+}
+/* line 1097, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.header nav ul li ul .sub {
+  padding-left: 30px;
+}
+
+/* line 1107, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.content {
+  padding: 0px;
+}
+
+/* line 1110, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.wrapper {
+  background-color: #eeeeee;
+}
+
+/* line 1113, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.min_width {
+  width: 980px;
+}
+
+/* line 1117, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer {
+  width: 980px;
+  float: left;
+  background: #eeeeee none repeat scroll 0 0;
+  clear: both;
+  margin-left: -14px;
+  padding-top: 30px;
+}
+/* line 1126, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer .row {
+  width: 163px;
+  float: left;
+}
+/* line 1131, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer ul {
+  list-style: none;
+}
+/* line 1133, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer ul .last {
+  margin-right: -40px !important;
+}
+/* line 1137, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer ul li {
+  border-bottom: 1px solid gray;
+}
+/* line 1139, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.footer ul li a {
+  font-size: 10px;
+  margin-bottom: 7px;
+  padding-left: 20px;
+}
+
+/* line 1150, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+*, *::before, *::after {
+  font-family: Verdana !important;
+}
+
+/* line 1154, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list {
+  padding: 10px !important;
+  padding-right: 0px !important;
+  margin: 0 !important;
+}
+/* line 1159, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list .clear {
+  padding: 5px 0;
+}
+/* line 1163, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li {
+  margin: 0px !important;
+  margin-right: 16px !important;
+  width: 214px !important;
+}
+
+/* line 1173, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apatment_list_bot img {
+  height: 130px;
+  width: 207px;
+}
+
+/* line 1179, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.results h1 {
+  font-size: 20px !important;
+  padding-left: 10px;
+}
+
+/* line 1186, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item img {
+  width: 700px;
+  float: left;
+}
+/* line 1191, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .description {
+  width: 48%;
+  float: right;
+  z-index: 100;
+  margin-right: 20px;
+  margin-top: -170px;
+}
+/* line 1201, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .description .info {
+  background-color: #00aeac;
+  opacity: 0.85;
+  color: white;
+  border: 1px solid #00aeac;
+  border-radius: 5px;
+  padding: 10px;
+  float: right;
+  font-size: 14px;
+  width: 100%;
+  color: white;
+}
+/* line 1212, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .description .info .first {
+  float: left;
+  width: 60%;
+}
+/* line 1216, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .description .info .second {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+/* line 1222, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .description .info .price {
+  float: right;
+  width: 26%;
+  font-size: 18px;
+}
+/* line 1231, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .spoler {
+  background-color: white;
+  opacity: 0.85;
+  color: #4d4d4d;
+  width: 100%;
+  float: left;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+/* line 1242, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item .spoler a {
+  color: #ff9226;
+}
+
+/* line 1249, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#owl-demo .owl-controls {
+  width: 30%;
+  float: left;
+  margin-top: -25px;
+}
+/* line 1254, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#owl-demo .owl-buttons {
+  display: none;
+}
+
+/* line 1259, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.owl-theme .owl-controls .active span {
+  background: #00aeac;
+}
+
+/* line 1263, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.owl-theme .owl-controls .owl-page span {
+  background: white;
+}
+
+/* line 1268, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.page_row {
+  width: 100%;
+  float: left;
+}
+/* line 1271, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.page_row .heading {
+  background: #00aeac none repeat scroll 0 0;
+  padding: 6px 10px;
+  color: #4d4d4d;
+  font-size: 16px;
+  font-family: Verdana;
+}
+/* line 1278, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.page_row .content {
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* line 1284, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line {
+  padding: 10px 0;
+}
+/* line 1286, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li {
+  display: inline-table;
+  width: 31%;
+  float: left;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  height: 215px;
+  line-height: 16px;
+}
+/* line 1294, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li span {
+  line-height: 11px;
+}
+/* line 1299, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li .title {
+  width: 100%;
+  float: left;
+  clear: both;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  color: #44c4e4;
+}
+/* line 1308, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li .avatar {
+  width: 88px;
+  height: 88px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* line 1314, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li .mini-lead {
+  width: 65%;
+  text-align: left;
+  line-height: 10px !important;
+  font-size: 12px;
+}
+/* line 1323, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.news_line li .more {
+  color: #44c4e4;
+  line-height: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 1334, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.wiget_events_list li {
+  width: 45%;
+  float: left;
+  display: inline-table;
+  margin: 0 10px 15px 0;
+}
+/* line 1340, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.wiget_events_list li .avatar {
+  width: 122px;
+  height: 122px;
+  float: left;
+}
+/* line 1345, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.wiget_events_list li .title {
+  width: 55%;
+  float: right;
+  text-align: left;
+  font-size: 14px;
+  margin-left: 7px;
+  margin-bottom: 5px;
+}
+/* line 1353, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.wiget_events_list li .description {
+  width: 55%;
+  float: right;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+/* line 1364, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section .banners {
+  width: 100%;
+}
+/* line 1367, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section .banners .banner {
+  margin-bottom: 55px;
+}
+/* line 1370, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section .banners .banner img {
+  width: 100%;
+  height: 200px;
+}
+/* line 1375, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_menu_section .banners .banner .title {
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 15px;
+  color: #4d4d4d;
+  background-color: #00aeac;
+  float: left;
+}
+
+/* line 1388, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list {
+  padding-top: 0px !important;
+}
+/* line 1390, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li {
+  border-radius: 5px;
+}
+/* line 1392, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li .apatment_list_bot {
+  border-radius: 5px;
+  width: 100%;
+}
+/* line 1395, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li .apatment_list_bot img {
+  float: left !important;
+  z-index: 1 !important;
+  margin-top: -1px;
+}
+/* line 1400, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li .apatment_list_bot .title {
+  margin-left: 6px;
+  width: 100%;
+  height: 28px;
+  float: left;
+}
+/* line 1406, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list li .apatment_list_bot .sku {
+  color: white;
+  background: #ff9226;
+  padding: 2px 4px;
+  z-index: 5;
+  float: right;
+  margin-bottom: -31px;
+  margin-left: -10px;
+  border-radius: 5px;
+  border: 1px solid;
+  position: relative;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: 1px solid #ff9226;
+}
+
+/* line 1425, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apatment_list_top {
+  border-radius: 5px;
+}
+
+/* line 1429, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .persons_list {
+  width: 100%;
+  margin: 20px 0;
+}
+/* line 1433, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .persons_list ul li {
+  display: inline-table;
+  list-style: none;
+  width: 30%;
+  float: left;
+  margin-left: 18px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+/* line 1443, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .persons_list ul li .avatar {
+  width: 100%;
+  float: left;
+  height: 200px;
+}
+/* line 1448, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .persons_list ul li .name {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  color: #4d4d4d;
+  line-height: 25px;
+  clear: both;
+  text-align: center;
+  background: transparent url("/img/apatment_list_top.png") no-repeat scroll 0 bottom;
+}
+/* line 1458, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .persons_list ul li .post {
+  width: 100%;
+  float: left;
+  font-size: 12px;
+  color: #4d4d4d;
+  line-height: 24px;
+  clear: both;
+  text-align: center;
+  background: transparent url("/img/apatment_list_bot.png") no-repeat scroll 0 bottom;
+}
+/* line 1472, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .text {
+  width: 100%;
+  float: left;
+  padding: 0 20px;
+  margin: 15px 0;
+  font-family: Verdana;
+  font-size: 14px;
+  color: #4d4d4d;
+  line-height: 20px;
+}
+/* line 1483, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .video {
+  width: 100%;
+  float: left;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+/* line 1489, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.company_info .video iframe {
+  width: 670px;
+  height: 350px;
+}
+
+/* line 1497, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list {
+  margin-top: 15px;
+}
+/* line 1500, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li {
+  width: 47%;
+  float: left;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+/* line 1507, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .avatar {
+  width: 45%;
+  float: left;
+}
+/* line 1512, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info {
+  width: 51%;
+  float: right;
+  color: #4d4d4d;
+  font-size: 13px;
+  line-height: 19px;
+}
+/* line 1519, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .name {
+  color: black;
+  font-size: 16px;
+}
+/* line 1523, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .post {
+  margin-bottom: 6px;
+  float: left;
+  width: 100%;
+}
+/* line 1528, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .phone {
+  float: left;
+  width: 100%;
+}
+/* line 1532, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .languages {
+  float: left;
+  width: 100%;
+}
+/* line 1536, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .skype_man {
+  float: left;
+  width: 100%;
+}
+/* line 1540, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.peoples .peoples_list ul li .info .email {
+  float: left;
+  width: 100%;
+}
+
+/* line 1552, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.reviews .reviews_list {
+  margin: 0 20px;
+}
+/* line 1555, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.reviews .reviews_list ul li {
+  width: 100%;
+  list-style: none;
+}
+/* line 1558, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.reviews .reviews_list ul li .heading {
+  width: 100%;
+  float: left;
+  padding: 5px;
+  background: #00aeac;
+  border: 1px solid #00aeac;
+  border-radius: 5px;
+}
+/* line 1566, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.reviews .reviews_list ul li .content {
+  width: 100%;
+  float: left;
+  padding: 11px 15px;
+}
+
+/* line 1576, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.review_form {
+  border: none;
+}
+
+/* line 1580, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.item img {
+  width: 100%;
+  float: left;
+  height: 400px;
+}
+
+/* line 1586, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list {
+  margin: 20px 0 0 0;
+  font-family: Verdana;
+  color: #4d4d4d;
+}
+/* line 1590, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list ul {
+  width: 100%;
+}
+/* line 1592, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list ul li {
+  display: inline-table;
+  float: left;
+  width: 30%;
+  list-style: none;
+  margin-left: 14px;
+  margin-bottom: 30px;
+}
+/* line 1599, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list ul li .avatar {
+  float: left;
+  width: 40%;
+  clear: both;
+  height: 60px;
+}
+/* line 1605, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list ul li .title {
+  float: right;
+  width: 55%;
+}
+/* line 1609, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.events_list ul li .more {
+  float: right;
+  width: 55%;
+  color: #44c4e4;
+}
+
+/* line 1618, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.exhibition .text {
+  color: #4d4d4d;
+  padding: 10px;
+  margin-top: -20px;
+}
+
+/* line 1625, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list .prise {
+  font-size: 20px;
+}
+
+/* line 1630, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sity .sity_images {
+  width: 100%;
+  float: left;
+  list-style: none;
+  margin-bottom: 15px;
+}
+/* line 1635, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sity .sity_images li {
+  list-style: none;
+  width: 14%;
+  float: left;
+  margin-left: 16px;
+  background: #00aeac;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+/* line 1644, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sity .sity_images li .title {
+  text-align: center;
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+  float: left;
+  width: 100%;
+}
+/* line 1654, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sity .sity_images li img {
+  width: 100%;
+  width: 99px;
+  height: 99px;
+}
+/* line 1662, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.sity .desc {
+  font-family: Verdana;
+  font-size: 14px;
+  color: #4d4d4d;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* line 1671, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.price_area {
+  font-size: 15px !important;
+}
+
+/* line 1680, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_item .managers_list ul li .description .field {
+  width: 100%;
+  float: left;
+  clear: both;
+  line-height: 18px;
+}
+
+/* line 1692, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.project_info {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+/* line 1696, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buttons .more {
+  padding: 7.5px 10px;
+}
+
+/* line 1699, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list .prise {
+  font-size: 15px;
+  line-height: 21px;
+}
+
+/* line 1704, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apatment_list_bot img {
+  height: 130px;
+  width: 213px;
+}
+
+/* line 1709, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apatment_list_bot {
+  padding: 0 0 9px;
+}
+
+/* line 1712, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.apartment_list .btn {
+  margin-top: 0;
+  margin-right: 6px;
+}
+
+/* line 1716, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.credit {
+  border: none !important;
+}
+
+/* line 1720, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#content {
+  border: none;
+}
+
+/* line 1724, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.pagination {
+  margin: 15px;
+  width: 100%;
+  float: left;
+}
+/* line 1729, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.pagination .disabled {
+  background-color: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  color: #939598;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 120%;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+/* line 1747, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fancybox-outer .event_detail h4 {
+  color: #4d4d4d;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+/* line 1755, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fancybox-outer .event_detail .desc {
+  font-family: Verdana;
+  font-size: 13px;
+  line-height: 19px;
+  color: #4d4d4d;
+  margin: 10px;
+}
+/* line 1763, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fancybox-outer .event_detail ul li {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  display: inline;
+  list-style: none;
+}
+/* line 1769, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fancybox-outer .event_detail ul li img {
+  width: 100px;
+  height: 100px;
+}
+/* line 1778, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.fancybox-outer .exhibition
+.text p {
+  font-family: Verdana !important;
+  font-size: 13px !important;
+  line-height: 19px !important;
+  color: #4d4d4d;
+}
+
+/* line 1788, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list {
+  width: 100%;
+  float: left;
+}
+/* line 1791, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list ul {
+  margin: 20px;
+}
+/* line 1793, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list ul li {
+  list-style: none;
+  width: 100%;
+  float: left;
+  margin: 10px 0;
+}
+/* line 1798, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list ul li .head {
+  background: #00aeac none repeat scroll 0 0;
+  border: 1px solid #00aeac;
+  border-radius: 5px;
+  float: left;
+  padding: 5px;
+  width: 100%;
+}
+/* line 1805, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list ul li .head a {
+  color: #626262;
+  font-family: Verdana;
+  font-size: 16px;
+}
+/* line 1811, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_category .posts_list ul li .lead {
+  color: #626262;
+  font-family: Verdana;
+  font-size: 13px;
+  padding: 0 10px;
+  float: left;
+}
+
+/* line 1824, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.post_show .content {
+  color: #626262;
+  font-family: Verdana;
+  font-size: 12px;
+  padding: 10px;
+  float: left;
+  line-height: 18px;
+}
+
+/* line 1833, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#send4 {
+  width: 83%;
+  clear: both;
+  height: 30px !important;
+}
+
+/* line 1839, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.banners_lasts {
+  margin-bottom: -15px !important;
+}
+
+/* line 1843, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.prices_list input {
+  line-height: 23px;
+}
+
+/* line 1847, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.id_search {
+  margin-bottom: 20px;
+}
+/* line 1849, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.id_search input {
+  width: 100%;
+  float: left;
+  clear: both;
+  height: 37px;
+}
+
+/* line 1858, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.buy_filter .submit {
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
+/* line 1863, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.end input, .start input {
+  height: 31px;
+}
+
+/* line 1868, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.filter_section h2 .static_menu {
+  font-size: 16px !important;
+}
+
+/* line 1875, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.mini_boder ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 12px;
+}
+
+/* line 1885, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.static_sities_list a:hover {
+  color: #00aeac;
+}
+
+/* line 1892, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.content p {
+  font-size: 12px;
+  float: left;
+  line-height: 18px;
+}
+
+/* line 1900, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.main_page_description {
+  margin-bottom: 15px;
+}
+/* line 1902, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.main_page_description .content {
+  padding: 10px;
+}
+
+/* line 1908, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#calculator label {
+  font-size: 13px !important;
+}
+
+/* line 1913, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.spoiler_body {
+  display: none;
+}
+
+/* line 1915, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.spoiler_links {
+  cursor: pointer;
+  padding: 5 15px;
+  border-radius: 3px;
+  color: white !important;
+  background-color: #f27321;
+  padding: 1px 30px;
+  position: relative;
+  float: left;
+  clear: both;
+}
+
+/* line 1928, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body .info {
+  float: left;
+  clear: both;
+}
+/* line 1932, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body label {
+  float: left;
+  clear: both;
+}
+/* line 1936, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body .red {
+  color: red;
+}
+/* line 1939, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.modal-body input {
+  margin-bottom: 3px;
+}
+
+/* line 1945, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .info {
+  float: left;
+  clear: both;
+  font-weight: normal;
+}
+/* line 1952, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .heading span {
+  float: left;
+  clear: both;
+}
+/* line 1959, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.form_question .red {
+  color: red;
+}
+
+/* line 1965, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#calculator .various {
+  width: 40%;
+  float: left;
+  color: white;
+  height: 30px;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  width: 83%;
+}
+
+/* line 1977, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+#send5 {
+  display: none;
+}
+
+/* line 1981, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.grafik_pay {
+  width: 60%;
+  float: left;
+  font-size: 14px;
+  height: 27px;
+  text-align: center;
+  width: 83%;
+}
+
+/* line 1992, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.second li {
+  margin-top: 3px;
+}
+
+/* line 1998, /home/dima/Rails/alanya/app/assets/stylesheets/application.css.scss */
+.first li {
+  margin-top: 3px;
+}
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+
+.fancybox-skin {
+	position: relative;
+	background: #f9f9f9;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+.fancybox-opened {
+	z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+	position: relative;
+}
+
+.fancybox-inner {
+	overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url(/assets/fancybox_sprite-b9d6fddb0988440902fcfc72f371ecfa80ee2eb36073f9eebc17449ee41c886f.png);
+}
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8060;
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+  background: url(/assets/fancybox_loading-b8681cce947f5b28ed3181b11601e2470b40811722a49564d1271e7b40015064.gif) center center no-repeat;
+}
+
+.fancybox-close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 8040;
+}
+
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+  background: transparent url(/assets/blank-b1442e85b03bdcaf66dc58c7abb98745dd2687d86350be9a298a1d9382ac849b.gif); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+}
+
+.fancybox-prev {
+	left: 0;
+}
+
+.fancybox-next {
+	right: 0;
+}
+
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden;
+}
+
+.fancybox-prev span {
+	left: 10px;
+	background-position: 0 -36px;
+}
+
+.fancybox-next span {
+	right: 10px;
+	background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+	visibility: visible;
+}
+
+.fancybox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+
+.fancybox-lock body {
+    overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+    overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+  background: url(/assets/fancybox_overlay-a163bab86035b0ba62c98fbbd4d8b4f5edabbbb774eca0b5e9e5081b5711b2ab.png);
+}
+
+.fancybox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+	overflow: auto;
+	overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {
+	visibility: hidden;
+	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 8050;
+	text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	margin-right: -100%;
+	padding: 2px 20px;
+	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+	        border-radius: 15px;
+	text-shadow: 0 1px 2px #222;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 24px;
+	white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+	padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+
+	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url(/assets/fancybox_sprite@2x-6ab68245606bbe6ad87ea3f6a044c93f6c21a07e70924b35b68bfb3786d94cf0.png);
+		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+
+	#fancybox-loading div {
+    background-image: url(/assets/fancybox_loading@2x-73b27f9aeb7bc6ee3c4bd20742382f015efd89981a3706d2a29a50867849629c.gif);
+		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+}
+#fancybox-buttons {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	z-index: 8050;
+}
+
+#fancybox-buttons.top {
+	top: 10px;
+}
+
+#fancybox-buttons.bottom {
+	bottom: 10px;
+}
+
+#fancybox-buttons ul {
+	display: block;
+	width: 166px;
+	height: 30px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #111;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+	   -moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+	        box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+	background: rgb(50,50,50);
+	background: -moz-linear-gradient(top, rgb(68,68,68) 0%, rgb(52,52,52) 50%, rgb(41,41,41) 50%, rgb(51,51,51) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(68,68,68)), color-stop(50%,rgb(52,52,52)), color-stop(50%,rgb(41,41,41)), color-stop(100%,rgb(51,51,51)));
+	background: -webkit-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%);
+	background: -o-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%);
+	background: -ms-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%);
+	background: linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#222222',GradientType=0 );
+}
+
+#fancybox-buttons ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#fancybox-buttons a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background-color: transparent;
+  background-image: url(/assets/fancybox_buttons-e31c3a8c15610109580e0f787dceb6e0a33c5f365d4cdbd4ee76f2b33aef5822.png);
+	background-repeat: no-repeat;
+	outline: none;
+	opacity: 0.8;
+}
+
+#fancybox-buttons a:hover {
+	opacity: 1;
+}
+
+#fancybox-buttons a.btnPrev {
+	background-position: 5px 0;
+}
+
+#fancybox-buttons a.btnNext {
+	background-position: -33px 0;
+	border-right: 1px solid #3e3e3e;
+}
+
+#fancybox-buttons a.btnPlay {
+	background-position: 0 -30px;
+}
+
+#fancybox-buttons a.btnPlayOn {
+	background-position: -30px -30px;
+}
+
+#fancybox-buttons a.btnToggle {
+	background-position: 3px -60px;
+	border-left: 1px solid #111;
+	border-right: 1px solid #3e3e3e;
+	width: 35px
+}
+
+#fancybox-buttons a.btnToggleOn {
+	background-position: -27px -60px;
+}
+
+#fancybox-buttons a.btnClose {
+	border-left: 1px solid #111;
+	width: 35px;
+	background-position: -56px 0px;
+}
+
+#fancybox-buttons a.btnDisabled {
+	opacity : 0.4;
+	cursor: default;
+}
+#fancybox-thumbs {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 8050;
+}
+
+#fancybox-thumbs.bottom {
+	bottom: 2px;
+}
+
+#fancybox-thumbs.top {
+	top: 2px;
+}
+
+#fancybox-thumbs ul {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#fancybox-thumbs ul li {
+	float: left;
+	padding: 1px;
+	opacity: 0.5;
+}
+
+#fancybox-thumbs ul li.active {
+	opacity: 0.75;
+	padding: 0;
+	border: 1px solid #fff;
+}
+
+#fancybox-thumbs ul li:hover {
+	opacity: 1;
+}
+
+#fancybox-thumbs ul li a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #222;
+	background: #111;
+	outline: none;
+}
+
+#fancybox-thumbs ul li img {
+	display: block;
+	position: relative;
+	border: 0;
+	padding: 0;
+	max-width: none;
+}
+/*
+
+
+
+ */
+
+body {background:#fff; color:#333; font: 12px/22px verdana, arial, sans-serif; height:100%; margin:0 auto; width:100%;}
+h1 {color:#3a6d8c; font-size:34px; line-height:40px; margin:0;}
+h3 {color:#3a6d8c; font-size:22px; line-height:26px; font-weight:normal; margin:0 0 8px 0;}
+img {border:0;}
+#logo {margin-bottom:20px; width:300px;}
+#logo h1 {color:#666; letter-spacing:-1px; font-weight:normal;}
+#logo h1 span {color:#444; font-weight:bold;}
+#logo .title {color:#999; font-size:12px;}
+#container {margin:0 auto; padding-top:20px; width:800px;}
+#content {border-bottom:1px dotted #999; border-top:1px dotted #999; padding:20px 0;}
+#footer {clear:left; color:#888; margin:20px 0;}
+#footer a:link, #footer a:visited {color:#888; text-decoration:none;}
+#footer a:hover {color:#333; text-decoration:underline;}
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+
+/* Container */
+#simplemodal-container {height:360px; width:600px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	background: #00aeac;
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.9;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: white;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	opacity: 0.9;
+	background: #00aeac;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+/*!
+ * LABELAUTY jQuery Plugin Styles
+ *
+ * @file: jquery-labelauty.css
+ * @author: Francisco Neves (@fntneves)
+ * @site: www.francisconeves.com
+ * @license: MIT License
+ */
+
+/* Prevent text and blocks selection */
+
+input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
+input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+
+/* Hide original checkboxes. They are ugly! */
+input.labelauty { display: none !important; }
+
+/*
+ * Let's style the input
+ * Feel free to work with it as you wish!
+ */
+input.labelauty + label
+{
+	display: table;
+	font-size: 11px;
+	padding: 10px;
+	background-color: #efefef;
+	color: #b3b3b3;
+	cursor: pointer;
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+
+
+	transition: background-color 0.25s;
+	-moz-transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+	-o-transition: background-color 0.25s;
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+/* Stylish text inside label */
+
+input.labelauty + label > span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked
+{
+	display: inline-block;
+	line-height: 16px;
+	vertical-align: bottom;
+}
+
+/* Stylish icons inside label */
+
+input.labelauty + label > span.labelauty-unchecked-image,
+input.labelauty + label > span.labelauty-checked-image
+{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: left center;
+
+	transition: background-image 0.5s linear;
+	-moz-transition: background-image 0.5s linear;
+	-webkit-transition: background-image 0.5s linear;
+	-o-transition: background-image 0.5s linear;
+}
+
+/* When there's a label, add a little margin to the left */
+input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+{
+	margin-left: 7px;
+}
+
+/* When not Checked */
+input.labelauty:not(:checked):not([disabled]) + label:hover
+{
+	background-color: none;
+	color: #a7a7a7;
+}
+input.labelauty:not(:checked) + label > span.labelauty-checked-image
+{
+	display: none;
+}
+
+input.labelauty:not(:checked) + label > span.labelauty-checked
+{
+	display: none;
+}
+
+/* When Checked */
+input.labelauty:checked + label
+{
+	background-color: none;
+	color: #ffffff;
+}
+
+input.labelauty:checked:not([disabled]) + label:hover
+{
+	background-color: none;
+}
+input.labelauty:checked + label > span.labelauty-unchecked-image
+{
+	display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-unchecked
+{
+	display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-checked
+{
+	display: inline-block;
+}
+
+input.labelauty.no-label:checked + label > span.labelauty-checked
+{
+	display: block;
+}
+
+/* When Disabled */
+input.labelauty[disabled] + label
+{
+	opacity: 0.5;
+}
+
+/* Add a background to (un)checked images */
+input.labelauty + label > span.labelauty-unchecked-image
+{
+	background-image: url( images/input-unchecked.png );
+}
+
+input.labelauty + label > span.labelauty-checked-image
+{
+	background-image: url( images/input-checked.png );
+}
+/*
+ * LABELAUTY jQuery Plugin
+ * Styles of LABELAUTY website
+ *
+ * @author: Francisco Neves (@fntneves)
+ * @website: www.francisconeves.com
+ */
+
+/* Custom Fonts */
+
+@font-face{
+	font-family: 'open_sans_lightregular';
+	src: url('../fonts/opensans-light-webfont.eot');
+	src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/opensans-light-webfont.woff') format('woff'),
+		 url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+		 url('../fonts/opensans-light-webfont.svg#open_sans_lightregular') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* Reset Styles */
+* { outline: none !important; }
+a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
+body, img, span, ul, li, div, header, footer, article, section { padding: 0; margin: 0; border: 0; }
+
+/* Main Styles */
+html { height: 100%; background-color: #f8f8f8; }
+body { display: table; height: 100%; margin: 0 auto; width: 800px; background-color: #fdfdfd; font-size: 14px; font-family: "Tahoma"; color: #626262; }
+header { text-align: center; padding-top: 40px; }
+header h1 { margin-bottom: 15px; font-family: "open_sans_lightregular"; }
+header h4 { margin-top: 0; line-height: 25px; font-family: "open_sans_lightregular"; font-weight: normal; font-size: 14px; }
+
+div.separator { margin: 20px auto !important; width: 150px; border-bottom: 1px solid #DDD; }
+
+section#lby-content { text-align: center; }
+section#lby-content > #lby-demo { padding: 30px; margin: 0 auto; display: table; background-color: #f8f8f8; text-align: center; width: 400px; }
+section#lby-content > #lby-demo ul { list-style: none !important; float: left; }
+section#lby-content > #lby-demo ul#lby-radio-demo { float: right; }
+section#lby-content > #lby-demo ul li { list-style: none !important; margin: 2px 0 2px 0; text-align: left; }
+section#lby-content > #lby-demo ul li:last-child { margin-top: 0; }
+section#lby-content > #lby-demo ul li.header { text-align: left; opacity: 0.5; margin-bottom: 10px; }
+section#lby-content > #lby-demo ul li.header:not(:first-child) { margin-top: 15px; }
+
+footer { text-align: center; padding-bottom: 25px; }
+footer h4 { margin-bottom: 0; margin-top: 0; line-height: 25px; font-family: "open_sans_lightregular"; font-weight: normal; font-size: 14px; }
+
+
+input.to-labelauty-icon + label { display: inline-block; margin-right: 6px; }
+input.to-labelauty-icon + label:last-child { margin-right: 0; }
+
+input.labelauty + label { font-size: 11px; }
+
+input.labelauty + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/input-unchecked.png );
+}
+input.labelauty + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/input-checked.png );
+}
+
+input.labelauty.synch-icon + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/synch-unchecked.png );
+}
+input.labelauty.synch-icon + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/synch-checked.png );
+}
+
+input.labelauty.terms-icon + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/terms-unchecked.png );
+}
+input.labelauty.terms-icon + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/terms-checked.png );
+}
+
+input.labelauty.disabled-icon + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/input-disabled.png );
+}
+input.labelauty.disabled-icon + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/input-disabled.png );
+}
+
+a.button
+{
+	display: table;
+	font-size: 12px;
+	background-color: #3498db;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 15px 25px;
+	color: #FFF;
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+
+	transition: background-color 0.25s;
+	-moz-transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+	-o-transition: background-color 0.25s;
+}
+
+a.button:hover
+{
+	background-color: #72c5fd;
+}
+
+a.button:active
+{
+	background-color: #2a89c9;
+}

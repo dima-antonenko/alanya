@@ -7,18 +7,18 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *= require main
- *= require fotorama
+ *= require main/main
+ *= require main/fotorama
  *= require_self
- *= require fancybox
- *= require demo
- *= require basic
+ *= require fancybox 
+ *= require main/demo
+ *= require main/basic
 
- *= require owl.carousel
- *= require owl.theme
+ *= require main/owl.carousel
+ *= require main/owl.theme
 
- *= require jquery-labelauty
- *= require lby-main
+ *= require main/jquery-labelauty
+ *= require main/lby-main
  */
 
 .img a:focus, a.buy_item_map:focus {
@@ -362,7 +362,7 @@ margin-top: 10px;
 }
 
 input.home:checked + label{
-   background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 -84px;
+   background: rgba(0, 0, 0, 0) url("/img/distance_label.png") no-repeat scroll 0 -84px;
    background-color: none !important;
    float: left;
     height: 15px;
@@ -375,7 +375,7 @@ input.home:checked + label{
 }
 
 input.labelauty:not(:checked):not([disabled]) + label{
-  background: rgba(0, 0, 0, 0) url("/old/distance_label.png") no-repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("/img/distance_label.png") no-repeat scroll 0 0;
   background-color: none !important;
    float: left;
     height: 15px;
