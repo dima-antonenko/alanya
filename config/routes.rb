@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   end
 
 
+  patch '/projects/:id/project_info_mail' => 'projects#project_info_mail'
 
 
   root 'static#home'

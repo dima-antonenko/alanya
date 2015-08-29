@@ -155,7 +155,7 @@
 																Тип объекта
 															</div>
 															<div class="col-md-7 value">
-																<%= f.select(:type_object, options_for_select([['Квартира', 'flat'],['Пентхаус', 'penthouse'], ['Квартира или пентхаус', 'flat_and_penthouse']],
+																<%= f.select(:type_object, options_for_select([['Квартира', 'flat'],['Пентхаус', 'penthouse'], ['Вилла', 'flat_and_penthouse']],
 																selected: @project.type_object), {include_blank: 'Не выбрано'},{class: "btn"} ) %>
 															</div>
 														</div>

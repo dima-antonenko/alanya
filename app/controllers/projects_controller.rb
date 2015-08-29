@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  before_action :set_project, only: [:edit, :update, :destroy, :delete, :show, :credit_calc]
+  before_action :set_project, only: [:edit, :update, :destroy, :delete, :show, :credit_calc, :project_info_mail]
 
   # GET /products/1
   # GET /products/1.json
@@ -167,6 +167,12 @@ class ProjectsController < ApplicationController
 
      end
 
+     def project_info_mail
+
+       ProjectMailer.to_user_mail(@project, params[:project][:email_to_user_mail]).deliver_later
+       redirect_to :back, notice: "Информация отправлена"
+
+     end
 
      private
      # Use callbacks to share common setup or constraints between actions.

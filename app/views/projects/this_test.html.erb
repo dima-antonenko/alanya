@@ -17,37 +17,3 @@
  }
 
 </style>
-<h4>График выплат по кредиту</h4><a href="javascript:print();">распечатать</a>
-	<table class="credit_table">
-		<tr class="fixed">
-			<td>Год</td>
-			<td>Месяц</td>
-			<td class="none_right">Остаток платежа</td>
-		</tr>
-		<% while @total_price > 0 %>
-			<% if @total_price > 0  %>
-				<% @total_price =  @total_price - @mount_pay %>
-			<% end %>
-			<tr>
-			
-			<td >
-				<%= @year %>
-			</td>
-			<td>
-				<%= @mount %>
-			</td>
-			<td class="none_right">
-				<%=  sprintf("%.3f", @total_price) %> &euro;
-			</td>
-			<% 
-			   	if @mount == 12
-			   	  @mount = 0
-			   	  @year += 1
-			   	end	
-
-			   @mount += 1
-
-			 %>
-		</tr>
-		<% end %>
-	</table>

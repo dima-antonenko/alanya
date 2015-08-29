@@ -146,16 +146,9 @@ border-bottom: 1px solid #e1e1e1;
     <h1>Результаты поиска</h1>
   </div>
 
-      <% @list.each do |project| %>
-      
-        <% project[0].each do |value| %>
-           <%= value %> --  <%= value[1].class %><br/>
-         <% end %>
-        <hr/><hr/><br/>
-        
-
-      <% end %>
-    
+     <%= params %>
+    <br/>
+    <%= @project %>
   </div>
   <%= render 'layouts/sidebar' %>
   <div class="clear"></div>

@@ -1,0 +1,23 @@
+<body>
+	
+	<table>
+		<tr>
+			<td>Имя</td>
+			<td><%= @mail_info.name %></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><%= @mail_info.email %></td>
+		</tr>
+		<tr>
+			<td>Телефон</td>
+			<td><%= @mail_info.phone %></td>
+		</tr>
+		<tr>
+			<td>Skype</td>
+			<td><%= @mail_info.skype %></td>
+		</tr>
+	</table>
+<h3>Текст вопроса</h3>
+<%= @mail_info.message %>
+</body>

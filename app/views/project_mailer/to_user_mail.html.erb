@@ -1,0 +1,20 @@
+<body>
+  <p></p>
+  <table>
+    <tr>
+      <td>Название</td>
+      <td><%= @project.name %></td>
+    </tr>
+     <tr>
+      <td>Цена</td>
+      <td><%= @project.final_price %> </td>
+    </tr>
+    <tr>
+      <td>Артикул</td>
+      <td><%= @project.sku %> </td>
+    </tr>
+   
+  </table>
+<%= @project.description.html_safe %>
+
+</body>

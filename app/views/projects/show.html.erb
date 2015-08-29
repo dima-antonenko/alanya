@@ -283,8 +283,8 @@
         <label class="btn-close" for="to_email" aria-hidden="true">×</label>
       </div>
       <div class="modal-body">
-          <%= form_for ([@project, @project.project_application_mails.build]) do |f| %>
-            <%= f.text_field :email, class: "textbox", placeholder: "Email" %>
+          <%=  form_for @project, url: {action: "project_info_mail"} do |f| %>
+            <%= f.text_field :email_to_user_mail, class: "textbox", placeholder: "Email" %>
                <%= f.submit "Отправить", class:'btn btn-form sub'   %>
           <% end %>
       </div>
