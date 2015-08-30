@@ -1,12 +1,12 @@
 class ProjectMailer < ApplicationMailer
-  default from: "antonenkodima12@gmail.com"
+  default from: "iivan8212@gmail.com"
 
   #узнать больше 
   #адресат - администратор
   def info_email(application_mail)
     @mail_info = application_mail
     @project = Project.find(@mail_info.project_id)
-    mail(to: 'd.antonenko94@mail.ru', subject: "Заявка на получение дополнительной информации о проекте")
+    mail(to: 'iivan8212@gmail.com', subject: "Заявка на получение дополнительной информации о проекте")
   end
 
   #отправить по email
@@ -21,7 +21,7 @@ class ProjectMailer < ApplicationMailer
   #вопрос из формы "задать вопрос", которая есть на всех страницах сайта
   def question_mail(question)
     @mail_info = question
-    mail(to: "d.antonenko94@mail.ru", subject: "Вопрос с сайта alanyaproperties.ru")
+    mail(to: "iivan8212@gmail.com", subject: "Вопрос с сайта alanyaproperties.ru")
   end
 
 

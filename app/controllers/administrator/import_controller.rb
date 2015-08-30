@@ -330,6 +330,10 @@ class Administrator::ImportController < AdministratorController
         when '5+1'
           @project.rooms = '5 + 1'
           @project.type_object = 'flat'
+        end
+
+
+		case project[0][:property_type]
         when 'studio'
           @project.type_object = 'flat'
           if project[0][:rooms] == 1
@@ -337,16 +341,17 @@ class Administrator::ImportController < AdministratorController
           elsif project[0][:property_type] == 2
             @project.rooms = '1 + 1'
           elsif project[0][:property_type] == 3
-            @project.rooms = '1 + 2'
+            @project.rooms = '2 + 1'
           elsif project[0][:property_type] == 4
-            @project.rooms = '1 + 3'
+            @project.rooms = '3 + 1'
           elsif project[0][:property_type] == 5
-            @project.rooms = '1 + 4'
+            @project.rooms = '4 + 1'
           elsif project[0][:property_type] == 6
-            @project.rooms = '1 + 5'
+            @project.rooms = '5 + 1'
           else
-            @project.rooms = '1 + 5'
+            @project.rooms = '1 + 1'
           end
+
         when 'penthouse'
           @project.type_object = 'penthouse'
           if project[0][:rooms] == 1
@@ -354,38 +359,37 @@ class Administrator::ImportController < AdministratorController
           elsif project[0][:property_type] == 2
             @project.rooms = '1 + 1'
           elsif project[0][:property_type] == 3
-            @project.rooms = '1 + 2'
+            @project.rooms = '2 + 1'
           elsif project[0][:property_type] == 4
-            @project.rooms = '1 + 3'
+            @project.rooms = '3 + 1'
           elsif project[0][:property_type] == 5
-            @project.rooms = '1 + 4'
+            @project.rooms = '4 + 1'
           elsif project[0][:property_type] == 6
-            @project.rooms = '1 + 5'
+            @project.rooms = '5 + 1'
           else
-            @project.rooms = '1 + 5'
+            @project.rooms = '5 + 1'
           end
         when 'villa'
-          @project.type_object = 'villa'
+          @project.type_object = 'flat_and_penthouse'
 
           if project[0][:rooms] == 1
             @project.rooms = '1 + 0'
           elsif project[0][:property_type] == 2
             @project.rooms = '1 + 1'
           elsif project[0][:property_type] == 3
-            @project.rooms = '1 + 2'
+            @project.rooms = '2 + 1'
           elsif project[0][:property_type] == 4
-            @project.rooms = '1 + 3'
+            @project.rooms = '3 + 1'
           elsif project[0][:property_type] == 5
-            @project.rooms = '1 + 4'
+            @project.rooms = '4 + 1'
           elsif project[0][:property_type] == 6
-            @project.rooms = '1 + 5'
+            @project.rooms = '5 + 1'
           else
-            @project.rooms = '1 + 5'
+            @project.rooms = '5 + 1'
           end
-        else
-          @project.rooms = '1 + 0'
-          @project.type_object = 'flat'
+        
         end
+
 
         case project[0][:property_kind]
         when 'new_building'
@@ -419,10 +423,6 @@ class Administrator::ImportController < AdministratorController
 
         if project[0][:air_condition] == 1
           @project.condition = true
-        end
-
-        if project[0][:rooms] != nil
-          @project.rooms = project[0][:rooms]
         end
 
         if project[0][:pool] == 1

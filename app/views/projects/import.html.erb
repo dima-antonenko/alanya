@@ -145,10 +145,33 @@ border-bottom: 1px solid #e1e1e1;
   <div class="results">
     <h1>Результаты поиска</h1>
   </div>
+    <%= params %>
+<br/>
 
-     <%= params %>
-    <br/>
-    <%= @project %>
+<% @list.each do |project| %>
+  <%= project[0][:property_type] %>
+<% end %>
+  
+  <table style="width: 100%; float: left;">
+    <tr>
+      <td>Тип</td>
+      <td>Комнаты</td>
+      <td>Город</td>
+      <td>До моря</td>
+      <td>Стоимость</td>
+    </tr>
+    <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.type_object %></td>
+      <td><%= project.rooms %></td>
+      <td><%= project.project_category.title %></td>
+      <td><%= project.to_sea %></td>
+      <td><%= project.final_price %></td>
+    </tr>
+    <% end %>
+  </table> 
+
+
   </div>
   <%= render 'layouts/sidebar' %>
   <div class="clear"></div>
