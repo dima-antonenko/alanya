@@ -145,13 +145,7 @@ border-bottom: 1px solid #e1e1e1;
   <div class="results">
     <h1>Результаты поиска</h1>
   </div>
-    <%= params %>
-<br/>
 
-<% @list.each do |project| %>
-  <%= project[0][:property_type] %>
-<% end %>
-  
   <table style="width: 100%; float: left;">
     <tr>
       <td>Тип</td>
@@ -162,7 +156,15 @@ border-bottom: 1px solid #e1e1e1;
     </tr>
     <% @projects.each do |project| %>
     <tr>
-      <td><%= project.type_object %></td>
+      <td>
+      <% if project.type_object == 'flat' %>
+        Квартира
+      <% elsif project.type_object == 'penthouse'  %>
+        Пентхауз
+      <% elsif project.type_object == 'flat_and_penthouse' %>
+        Вилла
+      </td>
+      <% end %>
       <td><%= project.rooms %></td>
       <td><%= project.project_category.title %></td>
       <td><%= project.to_sea %></td>
