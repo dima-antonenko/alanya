@@ -6,6 +6,10 @@
 
   <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
+  
+<title><%= yield(:title)  %></title>
+<meta name="keywords" content="<%= yield(:description) %>">
+<meta name="description" content="<%= yield(:keywords) %>">
 </head>
 
 <body>

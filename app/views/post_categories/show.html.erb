@@ -1,3 +1,6 @@
+<% provide(:title, @post_category.meta_title) %>
+<% provide(:description, @post_category.meta_description) %>
+<% provide(:keywords, @post_category.meta_keywords) %>
 <%= render '/layouts/basic_styles.html.erb' %>
 
 <div class="buy_page post_category">

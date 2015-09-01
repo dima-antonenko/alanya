@@ -1,3 +1,6 @@
+<% provide(:title, @project.meta_title) %>
+<% provide(:description, @project.meta_description) %>
+<% provide(:keywords, @project.meta_keywords) %>
 <%= render '/layouts/basic_styles.html.erb' %>
 <style type="text/css">
   .none{

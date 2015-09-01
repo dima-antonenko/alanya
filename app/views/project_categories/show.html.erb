@@ -1,6 +1,7 @@
+<% provide(:title, @project_category.meta_title) %>
+<% provide(:description, @project_category.meta_description) %>
+<% provide(:keywords, @project_category.meta_keywords) %>
 <%= render '/layouts/basic_styles.html.erb' %>
-
-
 <div class="buy_page sity">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
 
