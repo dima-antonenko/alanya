@@ -20,7 +20,7 @@
 									<%= @menu_item.title %> </span>
 								</div>
 								<div class="actions btn-set">
-									<a href="/administrator/products" class="btn btn-default btn-circle"> Назад </a>
+									<a href="/administrator/menus" class="btn btn-default btn-circle"> Назад </a>
 									 <%= f.submit(class: "btn blue-madison btn-circle", value: "Обновить") %>
 									<!-- <button class="btn green-haze btn-circle">Сохранить</button>
 									-->
@@ -70,7 +70,7 @@
 													<label class="col-md-2 control-label">Родительский пункт: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.select :menu_item_id , MenuItem.all.collect {|menu_item| [menu_item.title, menu_item.id ]}, class: "form-control" %>
+														 <%= f.select :menu_item_id , MenuItem.where(menu_id: @menu_item.menu_id).collect {|menu_item| [menu_item.title, menu_item.id ]}, class: "form-control" %>
 													</div>
 												</div>
 

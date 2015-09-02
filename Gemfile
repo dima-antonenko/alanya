@@ -78,3 +78,4 @@ group :production do
 end
 
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'sitemap_generator'
