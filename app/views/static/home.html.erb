@@ -68,8 +68,9 @@ margin: 0 auto;
             <% else %>
             <span class="sku">id: <%= project.sku %></span>
             <% end %>
+            <a href="">
             <img src="<%= project.avatar.normal %>">
-            
+            </a>
             <div class="title"><a href="<%= project_path(project) %>">
             <% if project.name.size > 45 %>
             <%= project.name.truncate(45) %>
@@ -88,7 +89,7 @@ margin: 0 auto;
               </tr>
             </table>
             <a class="btn" href="<%= project_path(project) %>">Подробнее</a>
-            <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+            <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ",  format: "%n %u", precision: 0) %>&euro;</div>
           </div>
         </div>
       </li>

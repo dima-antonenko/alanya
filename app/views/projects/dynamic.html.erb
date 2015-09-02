@@ -173,7 +173,7 @@ border-bottom: 1px solid #e1e1e1;
             </tr>
           </table>
           <a class="btn" href="<%= project_path(project) %>">Подробнее</a>
-          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ",  format: "%n %u", precision: 0) %>&euro;</div>
         </div>
       </div>
     </li>

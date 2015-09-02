@@ -159,9 +159,9 @@
     <div class="buy_item_info">
       <div class="price_area">
         <% if @project.start_price.to_i > 0 %>
-          <span>цена:  <%= number_to_currency(@project.start_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro; -  <%= number_to_currency(@project.final_price, unit: "",delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</span>
+          <span>цена:  <%= number_to_currency(@project.start_price, unit: "", delimiter: " ",  format: "%n %u", precision: 0) %>&euro; -  <%= number_to_currency(@project.final_price, unit: "",delimiter: " ",  format: "%n %u", precision: 0) %>&euro;</span>
         <% else %> 
-          <span>цена: <%= number_to_currency(@project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</span>
+          <span>цена: <%= number_to_currency(@project.final_price, unit: "", delimiter: " ",  format: "%n %u", precision: 0) %>&euro;</span>
         <% end %>
       </div>
       <div class="project_info project_params">

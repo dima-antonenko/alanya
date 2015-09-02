@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
 
-
+ 
 
   def show
      @project = Project.friendly.find(params[:id])

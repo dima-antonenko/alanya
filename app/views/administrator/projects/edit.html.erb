@@ -300,6 +300,23 @@
 																<%= f.select(:elect, options_for_select([['Да', 'true'], ['Нет', false]], selected: @project.elect), {include_blank: 'Не выбрано'},{class: "btn"}) %>
 															</div>
 														</div>
+
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Публикация на странице "наши проекты"
+															</div>
+															<div class="col-md-2 value">
+																<%= f.select(:to_our_projects_page, options_for_select([['Да', 'true'], ['Нет', false]], selected: @project.to_our_projects_page), {include_blank: 'Не выбрано'},{class: "btn"}) %>
+															</div>
+														</div>
+														<div class="row static-info">
+															<div class="col-md-5 name">
+																Порядок
+															</div>
+															<div class="col-md-2 value">
+																<%= f.text_field :our_projects_page_order, class: "form-control"  %>
+															</div>
+														</div>
 														
 													</div>
 												</div>

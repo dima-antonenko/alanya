@@ -155,8 +155,9 @@ border-bottom: 1px solid #e1e1e1;
         <% else %>
         <span class="sku">id: <%= project.sku %></span>
         <% end %>
+          <a href="<%= project_path(project) %>">
            <img src="<%= project.avatar.normal %>">
-          
+          </a>
           <div class="title"><a href="<%= project_path(project) %>">
           <% if project.name.size > 38 %>
             <%= project.name.truncate(38) %>
@@ -175,7 +176,7 @@ border-bottom: 1px solid #e1e1e1;
             </tr>
           </table>
           <a class="btn" href="<%= project_path(project.id) %>">Подробнее</a>
-          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ' ",  format: "%n %u", precision: 0) %>&euro;</div>
+          <div class="prise"><%= number_to_currency(project.final_price, unit: "", delimiter: " ",  format: "%n %u", precision: 0) %>&euro;</div>
         </div>
       </div>
     </li>

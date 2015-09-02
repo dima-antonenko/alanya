@@ -9,6 +9,6 @@ require 'capistrano/rails'
 require 'capistrano/rails/assets'
 
 require 'capistrano/rails/migrations'
-
+require 'capistrano/sitemap_generator'
  
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

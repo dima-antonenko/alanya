@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901214857) do
+ActiveRecord::Schema.define(version: 20150902011534) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -229,14 +229,14 @@ ActiveRecord::Schema.define(version: 20150901214857) do
     t.integer  "to_center"
     t.integer  "mount_build"
     t.integer  "year_build"
-    t.boolean  "has_conditioning",    default: false
-    t.boolean  "has_white_goods",     default: false
-    t.boolean  "has_furniture",       default: false
-    t.boolean  "has_water_heater",    default: false
-    t.boolean  "has_tapu",            default: false
-    t.boolean  "has_iskana",          default: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.boolean  "has_conditioning",        default: false
+    t.boolean  "has_white_goods",         default: false
+    t.boolean  "has_furniture",           default: false
+    t.boolean  "has_water_heater",        default: false
+    t.boolean  "has_tapu",                default: false
+    t.boolean  "has_iskana",              default: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "avatar"
     t.string   "type_object"
     t.integer  "to_airport"
@@ -245,9 +245,9 @@ ActiveRecord::Schema.define(version: 20150901214857) do
     t.string   "meta_keywords"
     t.integer  "project_category_id"
     t.integer  "some_manager"
-    t.boolean  "custom_sku",          default: false
-    t.integer  "start_pice",          default: 0
-    t.integer  "final_pice",          default: 0
+    t.boolean  "custom_sku",              default: false
+    t.integer  "start_pice",              default: 0
+    t.integer  "final_pice",              default: 0
     t.integer  "to_sea"
     t.boolean  "elect"
     t.string   "start_price"
@@ -255,14 +255,16 @@ ActiveRecord::Schema.define(version: 20150901214857) do
     t.string   "url"
     t.integer  "bedrooms"
     t.integer  "bathroom"
-    t.boolean  "balcony",             default: false
-    t.boolean  "cabel_tv",            default: false
-    t.boolean  "internet",            default: false
-    t.boolean  "parking",             default: false
-    t.boolean  "elevator",            default: false
-    t.boolean  "garden",              default: false
-    t.boolean  "pool",                default: false
+    t.boolean  "balcony",                 default: false
+    t.boolean  "cabel_tv",                default: false
+    t.boolean  "internet",                default: false
+    t.boolean  "parking",                 default: false
+    t.boolean  "elevator",                default: false
+    t.boolean  "garden",                  default: false
+    t.boolean  "pool",                    default: false
     t.integer  "final_price"
+    t.boolean  "to_our_projects_page",    default: false
+    t.integer  "our_projects_page_order", default: 1
   end
 
   add_index "projects", ["area"], name: "index_projects_on_area"

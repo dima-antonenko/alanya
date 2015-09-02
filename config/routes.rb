@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get 'persons/profile'
 
 
+
  devise_for :users, controllers: { sessions: "users/sessions" }
   
   namespace :administrator do
@@ -70,7 +71,6 @@ Rails.application.routes.draw do
 
  
   get '/administrator', to: 'administrator#dashboard'
-  get '/delivery_and_pay', to: 'static#delivery_and_pay'
   get '/contacts', to: 'static#contacts'
 
   get '/company_info', to: 'static#company_info'
@@ -79,6 +79,7 @@ Rails.application.routes.draw do
   get '/reviews', to: 'static#reviews'
   get '/free_tour', to: 'static#free_tour'
 
+  get '/our_projects', to: 'static#our_projects'
 
   get '/import_projects', to: 'administrator/import#import_projects'
   get '/import_articles', to: 'administrator/import#import_articles'
