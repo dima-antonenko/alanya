@@ -74,18 +74,6 @@
 
         </div>
       
-      <div class="fotorama" data-width="700" data-ratio="700/467" data-max-width="100%"  data-allowfullscreen="native">
- <% if @project.avatar %>
-            <img src="<%= @project.avatar.normal %>" />
-          <% else %>
-            <img src="/test.png" />
-          <% end %>
-          <% @project_attacments.each do |project_attachment| %>
-              <img src="<%= project_attachment.image.normal %>" />                                  
-          <% end  %>
-</div>
-
-      </div>
       
       <div class="buttons" id='basic-modal'>
             
