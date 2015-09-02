@@ -3,27 +3,24 @@
 <% provide(:keywords, @project.meta_keywords) %>
 <%= render '/layouts/basic_styles.html.erb' %>
 <style type="text/css">
-  .none{
-    display: none;
-  }
-
-    .credit_table{
-  border: 1px solid black;
-  margin: 0px auto;
-  width: 100%;
-  position: relative;
-  float: left;
+.none{
+display: none;
 }
-
+.credit_table{
+border: 1px solid black;
+margin: 0px auto;
+width: 100%;
+position: relative;
+float: left;
+}
 .credit_table td{
-    padding: 10px 20px ;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-  }
- .none_right{
-  border-right: none !important; 
- }
-
+padding: 10px 20px ;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+}
+.none_right{
+border-right: none !important;
+}
 </style>
 <div class="buy_page">
   <%# render_cell :property, :sidebar, for: @property.property_for, city: @property.city %>
@@ -53,33 +50,28 @@
 
     <div class="project_heading">
       <% if @project.custom_sku == false %>
-        <div class="item_price">id: <%= @project.id %></div>
-      <% else %>
         <div class="item_price">id: <%= @project.sku %></div>
+      <% else %>
+        <div class="item_price">id: <%= @project.id %></div>
       <% end %>  
       <h1 class="h1"><%= @project.name %></h1>
     </div>
     <div class="buy_item_text">
       <div class="buy_item_photos clearfix">
-        <div class="fotorama" data-allowfullscreen="true">
-        
-          <% if @project.avatar %>
-            <img src="<%= @project.avatar.normal %>" />
-          <% else %>
-            <img src="/test.png" />
-          <% end %>
+        <div class="fotorama">
+          <img src="<%= @project.avatar.normal %>" />
+
           <% @project_attacments.each do |project_attachment| %>
-            <img src="<%= project_attachment.image.normal %>" />                               
+              <img src="<%= project_attachment.image.normal %>" />                                  
           <% end  %>
 
         </div>
-      
+      </div>
       
       <div class="buttons" id='basic-modal'>
             
        <label class="more" for="send_add">Узнать больше</label>
-       <label class="more" for="free_tour">Посмотреть</label>
-       
+       <a href="/free_tour">Посмотреть</a>
       </div>
     
       <div class="clear"></div>
@@ -100,40 +92,6 @@
           <p>Прошу выслать информацию по объекту id: <%= @project.id %></p>
             <%= f.text_field :name, class: "textbox", placeholder: "Имя" %>
             <%= f.text_field :email, class: "textbox", placeholder: "Email" %>
-               <%= f.submit "Отправить", class:'btn btn-form sub'   %>
-          <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
- <div class="modal">
-  <input class="modal-open" id="free_tour" type="checkbox" hidden>
-  <div class="modal-wrap" aria-hidden="true" role="dialog">
-    <label class="modal-overlay" for="modal"></label>
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h2>Заказать тур</h2>
-        <label class="btn-close" for="free_tour" aria-hidden="true">×</label>
-      </div>
-      <div class="modal-body">
-          <%= form_for(@question) do |f| %>
-          <span class="info">Поля, которые отмечены <span class="red">*</span> обязательны для заполнения</span>
-            <label>Имя <span class="red">*</span></label>
-            <%= f.text_field :name, class: "textbox" %>
-
-            <label>Email </label>  
-            <%= f.text_field :email, class: "textbox" %>
-
-             <label>№ телефона <span class="red">*</span></label> 
-            <%= f.text_field :phone, class: "textbox" %>
-
-             <label>Skype </label> 
-            <%= f.text_field :skype, class: "textbox"%>
-
-            <label>Сообщение </label> 
-            <%= f.text_field :message,class: "textbox", value: "Я хочу заказать ознакомительный тур для объекта #{@project.id}" %>
                <%= f.submit "Отправить", class:'btn btn-form sub'   %>
           <% end %>
       </div>
@@ -186,14 +144,10 @@
 
         <div class="line bg_light"><span class="type">До центра:</span>  <span class="value"><%= @project.to_center %> м</span></div>
         <div class="line bg_dark"><span class="type">До аэропорта:</span>  <span class="value"><%= @project.to_airport %> м</span></div>
-        <% if @project.mount_build != nil %>
-        <div class="line bg_light"><span class="type">Месяц и год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
-        <% else %>
-          <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.year_build %></span></div>
-        <% end %>
+        <div class="line bg_light"><span class="type">Год постройки:</span>  <span class="value"><%= @project.mount_build %>.<%= @project.year_build %></span></div>
       </div>
       <div class="price_area to_coast">
-        <span>В стоимость входит</span>
+        <span>в стоимость входит</span>
       </div>
       <div class="project_info to_coast_list">
 
@@ -218,38 +172,33 @@
         <% end %>
 
       </div>
-      <div class="project_info credit">
+ <div class="project_info credit">
       
-   <%# form_for(@project, :multipart => true ) do |f| %>
-  <%= form_for(@project) do |f| %> 
-
-   <label>Первоначальный взнос: </label>
-   <div class="input" id="cor5">
-   <%= f.text_field :first_pay %>
-   </div>
-
-   <label>Срок кредита, лет: </label>
-   <div class="input" id="cor5">
-   <%= f.text_field :time_pay %>
-   </div>
-   
-   <label>Процентная ставка: </label>
-   <div class="input" id="cor5">
-   <%= f.text_field :stavka_pay %>
-   </div>
-
-<label>Ежемесячный платеж: </label>
-   <div class="input" id="cor5">
-   <input name="platez" value="<%= @mounts_pay %>"  type="text" readonly/>
-   </div>
-
-   
-    <%= f.submit("Расчитать", {class: "credit_condirm"})  %>
-    <a class="more credit_condirm various grafik_pay"  href="#credit_link" rel="prettyPhoto[inline]">График платежа</a>
-
-<% end %>
-
+      <%# form_for(@project, :multipart => true ) do |f| %>
+      <%= form_for(@project) do |f| %>
+      <label>Первоначальный взнос: </label>
+      <div class="input" id="cor5">
+        <%= f.text_field :first_pay %>
       </div>
+      <label>Срок кредита, лет: </label>
+      <div class="input" id="cor5">
+        <%= f.text_field :time_pay %>
+      </div>
+      
+      <label>Процентная ставка: </label>
+      <div class="input" id="cor5">
+        <%= f.text_field :stavka_pay %>
+      </div>
+      <label>Ежемесячный платеж: </label>
+      <div class="input" id="cor5">
+        <input name="platez" value="<%= @mounts_pay %>"  type="text" readonly/>
+      </div>
+      
+      <%= f.submit("Расчитать", {class: "credit_condirm"})  %>
+      <a class="more credit_condirm various grafik_pay"  href="#credit_link" rel="prettyPhoto[inline]">График платежа</a>
+      <% end %>
+    </div>
+
 
     </div>
 
@@ -257,31 +206,31 @@
       <%= @project.description.html_safe %>
       <div class="buttons_before_qus">
         <div class="share">
-          <script type="text/javascript" src="https://yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
+          <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
         </div>
-        <a class="print" href="javascript:window.print(); void 0">Печать</a>
+        <a class="print" href="#">Печать</a>
         <label class="send" for="to_email">Отправить по email</label>
       </div>
     </div>
     
-        <div class="modal">
-  <input class="modal-open" id="to_email" type="checkbox" hidden>
-  <div class="modal-wrap" aria-hidden="true" role="dialog">
-    <label class="modal-overlay" for="modal-2"></label>
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h2>Отправка информации об объекте на почту</h2>
-        <label class="btn-close" for="to_email" aria-hidden="true">×</label>
-      </div>
-      <div class="modal-body">
+     <div class="modal">
+    <input class="modal-open" id="to_email" type="checkbox" hidden>
+    <div class="modal-wrap" aria-hidden="true" role="dialog">
+      <label class="modal-overlay" for="modal-2"></label>
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h2>Отправка информации об объекте на почту</h2>
+          <label class="btn-close" for="to_email" aria-hidden="true">×</label>
+        </div>
+        <div class="modal-body">
           <%=  form_for @project, url: {action: "project_info_mail"} do |f| %>
-            <%= f.text_field :email_to_user_mail, class: "textbox", placeholder: "Email" %>
-               <%= f.submit "Отправить", class:'btn btn-form sub'   %>
+          <%= f.text_field :email_to_user_mail, class: "textbox", placeholder: "Email" %>
+          <%= f.submit "Отправить", class:'btn btn-form sub'   %>
           <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
@@ -292,7 +241,7 @@
     <li>
       <div class="manager">
         <div class="photo">
-          <img src="<%= manager.avatar.project %>">
+          <img src="<%= manager.avatar.medium %>">
         </div>
         <div class="description">
           <span class="field name"><%= manager.name %></span>
@@ -307,30 +256,25 @@
    <% end %>
   </ul>
 </div>
-
-
-<%= render 'layouts/ask_form' %> 
-
+<%= render 'layouts/ask_form' %>    
   </div>
 <%= render 'layouts/sidebar' %>
 <div class="clear"></div>
 
-</div>
-<div class="none">
-  <div id="credit_link">
-    <h4>График выплат по кредиту</h4> <a href="javascript:print();"><i>распечатать</i></a>
-    <p>Нужно выплатить: <%= @total_pay%> &euro; за <%= @mounts %> месяцев</p>
-    <p>Ежемесячный платеж: <%=  @mounts_pay %> &euro;</p>
 
-    <table class="credit_table">
+<div class="none">
+<div id="credit_link">
+  <h4>График выплат по кредиту</h4> <a href="javascript:print();"><i>распечатать</i></a>
+  <p>Нужно выплатить: <%= @total_pay%> &euro; за <%= @mounts %> месяцев</p>
+  <p>Ежемесячный платеж: <%=  @mounts_pay %> &euro;</p>
+  <table class="credit_table">
     <tr class="fixed">
       <td>Год</td>
       <td>Месяц</td>
       <td class="none_right">Остаток платежа</td>
-
     </tr>
     <% while @total_pay > 0 %>
-      <tr>
+    <tr>
       
       <td >
         <%= @current_year %>
@@ -339,20 +283,22 @@
         <%= @current_mount %>
       </td>
       <td class="none_right">
-
         <%=  sprintf("%.0f", @total_pay) %> &euro;
         
       </td>
       <% if @current_mount < 12 %>
-        <% @current_mount += 1 %>
-      <% else %> 
-      <% @current_mount = 1; @current_year += 1 %> 
+      <% @current_mount += 1 %>
+      <% else %>
+      <% @current_mount = 1; @current_year += 1 %>
       <% end %>
       <% @total_pay = @total_pay - @mounts_pay %>
-    <% end %>
-    
-
+      <% end %>
+      
+    </tr>
   </table>
+</div>
+</div>
 
-  </div>
+
+
 </div>
