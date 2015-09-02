@@ -41,6 +41,7 @@ class StaticController < ApplicationController
   def our_projects
     @projects = Project.where(to_our_projects_page: true).order(:our_projects_page_order).paginate(:page => params[:page], :per_page => 36)
     @page = StaticPage.where(descriptor: 'our_projects').first
+    @i = 1
     render '/static/our_projects'
   end
 
